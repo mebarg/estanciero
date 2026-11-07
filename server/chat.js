@@ -19,6 +19,7 @@ export class FileChatStore {
   if(this.directory){await mkdir(this.directory,{recursive:true,mode:0o700});const file=path.join(this.directory,'chat.json');await writeFile(file+'.tmp',JSON.stringify([...next]),{mode:0o600});await rename(file+'.tmp',file);}
   this.messages=next;return {message,duplicate:false};
  });this.tail=work.catch(()=>{});return work;}
+ prune(validCodes){const work=this.tail.then(async()=>{const next=new Map([...this.messages].filter(([code])=>validCodes.includes(code)));if(next.size===this.messages.size)return;if(this.directory){const file=path.join(this.directory,'chat.json');await writeFile(file+'.tmp',JSON.stringify([...next]),{mode:0o600});await rename(file+'.tmp',file);}this.messages=next;});this.tail=work.catch(()=>{});return work;}
  async close(){await this.tail;}
 }
 

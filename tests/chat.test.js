@@ -22,7 +22,7 @@ test('chat en archivo persiste, aísla salas y deduplica al reiniciar',async()=>
   const duplicate=await restored.append('ABCD2345',member,input);assert.equal(duplicate.duplicate,true);assert.equal(duplicate.message.id,first.message.id);
   await restored.append('ABCD2345',{id:1,name:'Luis',piece:1},input);assert.equal((await restored.history('ABCD2345')).length,2);
   for(let n=0;n<102;n++)await restored.append('ABCD2345',member,chatInput({id:'retained_'+n,text:String(n)}));
-  assert.equal((await restored.history('ABCD2345')).length,100);assert.equal((await restored.history('ABCD2345'))[0].text,'2');await restored.close();
+  assert.equal((await restored.history('ABCD2345')).length,100);assert.equal((await restored.history('ABCD2345'))[0].text,'2');await restored.prune([]);assert.deepEqual(await restored.history('ABCD2345'),[]);const empty=new FileChatStore(directory);await empty.load();assert.deepEqual(await empty.history('ABCD2345'),[]);await restored.close();
  }finally{await rm(directory,{recursive:true,force:true});}
 });
 
@@ -38,5 +38,6 @@ test('chat PostgreSQL conserva historial, revierte fallos y mantiene intactas la
   await chat.append(a.room.code,member,chatInput({id:'rollback_01',text:'Ahora sí'}));assert.equal((await chat.history(a.room.code)).length,2);
   for(let n=0;n<102;n++)await chat.append(a.room.code,member,chatInput({id:'retained_'+n,text:String(n)}));
   const history=await chat.history(a.room.code);assert.equal(history.length,100);assert.equal(history[0].text,'2');assert.equal(history.at(-1).text,'101');assert.deepEqual(await store.lookup(a.room.code),a.room);
+  await engine.pool.query('DELETE FROM estanciero_rooms WHERE code = $1',[a.room.code]);assert.deepEqual(await chat.history(a.room.code),[]);
  }finally{await store.close();await engine.close();}
 });

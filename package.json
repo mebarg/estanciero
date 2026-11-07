@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
-    "test": "node tests/game.test.js && node tests/online.test.js && node tests/online-client.test.js && node tests/ui.test.js && node tests/transport.test.js && node tests/experience.test.js && node tests/postgres.test.js && node tests/chat.test.js",
+    "test": "node tests/game.test.js && node tests/online.test.js && node tests/online-client.test.js && node tests/ui.test.js && node tests/transport.test.js && node tests/experience.test.js && node tests/postgres.test.js && node tests/chat.test.js && node tests/lobby.test.js",
     "build": "node scripts/build.mjs",
     "start": "node scripts/serve.mjs",
     "db:init": "node scripts/db-init.mjs"

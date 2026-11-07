@@ -1,0 +1,9 @@
+const minute=60000,day=24*60*minute;
+export function lobbyPolicy(env=process.env){
+ const value=(key,fallback,unit)=>{const n=Number(env[key]??fallback);if(!Number.isFinite(n)||n<=0)throw new Error(key+' debe ser positivo.');return n*unit;};
+ return {offline:value('ESTANCIERO_OFFLINE_MINUTES',10,minute),waiting:value('ESTANCIERO_WAITING_HOURS',24,60*minute),playing:value('ESTANCIERO_PLAYING_DAYS',30,day),finished:value('ESTANCIERO_FINISHED_DAYS',7,day),request:value('ESTANCIERO_REQUEST_SECONDS',120,1000)};
+}
+export function roomSummary(room){return {code:room.code,title:room.title||'Mesa de '+room.members[0].name,visibility:room.visibility||'private',phase:room.game?.phase||null,createdAt:room.createdAt,lastActivityAt:room.lastActivityAt||room.createdAt,disconnectedAt:room.disconnectedAt??null,members:room.members.map(({id,name,piece})=>({id,name,piece}))};}
+export function expiredRoom(room,now,policy){const ttl=room.phase==='over'?policy.finished:room.phase?policy.playing:policy.waiting;return now-Date.parse(room.lastActivityAt)>=ttl;}
+export function visibleRooms(rooms,connected,now,policy){return rooms.filter(room=>room.visibility==='public'&&room.phase!=='over'&&!expiredRoom(room,now,policy)&&(connected(room.code).length||now-Date.parse(room.disconnectedAt||room.lastActivityAt)<policy.offline)).map(room=>{const online=connected(room.code);return {code:room.code,title:room.title,host:room.members[0].name,members:room.members,started:!!room.phase,connected:online.length,hostOnline:online.includes(0),status:online.length?(room.phase?'playing':'waiting'):'offline',canRequest:!room.phase&&room.members.length<6&&online.includes(0)};});}
+export function visitorName(name){if(typeof name!=='string'||!name.trim()||name.trim().length>24)throw new Error('Usá un nombre de 1 a 24 caracteres.');return name.trim();}

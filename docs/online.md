@@ -1,18 +1,37 @@
-# Salas privadas online
+# Salas online
 
 Implementación: 3 de noviembre de 2026. El modo local comparte el motor y mantiene su guardado independiente.
 
 ## Uso
 
-1. Ejecutar `npm install` y `npm run dev`. Si estaba abierto el servidor estático anterior, detenerlo y reiniciar este comando.
+1. Ejecutar `npm install` y `npm run dev`.
 2. Abrir `http://localhost:5187`, elegir “Nueva partida” y “Jugar online”.
-3. Crear la sala con nombre y pieza. Copiar la invitación.
-4. Cada participante abre el enlace, escribe su nombre y elige una pieza libre. También puede ingresar el código manualmente; “Ver piezas disponibles” consulta las piezas ocupadas.
-5. Quien creó la sala comienza la partida con entre dos y seis integrantes.
+3. En “Salas”, escribir el nombre y solicitar un lugar en una mesa pública en espera.
+4. El anfitrión recibe la solicitud en su sala de espera y acepta o rechaza. La persona aceptada elige una pieza libre y entra; recién entonces ocupa un lugar. Las solicitudes vencen a los dos minutos, se cancelan si el visitante se desconecta y no se conservan al reiniciar el servidor.
+5. En “Crear sala”, indicar nombre de mesa y visibilidad. Las públicas aparecen en el lobby y requieren aprobación, incluso si se accede con su código. Las privadas quedan ocultas y permiten entrar directamente por invitación desde “Unirme a una sala”. Las salas anteriores a esta actualización siguen siendo privadas.
+6. Quien creó la sala inicia la partida con entre dos y seis integrantes. Al comenzar se cancelan las solicitudes restantes. Las partidas empezadas se muestran en el lobby, pero no admiten jugadores nuevos ni espectadores.
+
+El lobby actualiza la lista cada diez segundos mientras está abierto y permite actualizarla manualmente. Sólo publica nombres, piezas, cantidad de participantes y disponibilidad, sin estado de juego ni credenciales.
 
 Cada dispositivo debe abrir el mismo servidor. Para probar en una red local, usar la IP real de la computadora del servidor en lugar de `localhost`. No se modificaron la configuración de la red ni las reglas del firewall.
 
 El navegador conserva las credenciales de las salas en las que entró. Al volver con el enlace, la opción de unirse recupera el asiento si existe una credencial para esa sala. También hay un botón para retomar la sala anterior. Borrar los datos del navegador elimina esa posibilidad: el código compartido no permite suplantar a otro jugador. Dos perfiles o dispositivos distintos conservan identidades independientes; dos pestañas del mismo perfil que retoman la misma credencial representan al mismo jugador.
+
+## Salas abandonadas
+
+La presencia se cuenta por participante: varias pestañas de una misma persona no ocupan varios lugares. Si todos se desconectan, la sala aparece como “Sin jugadores conectados” durante diez minutos y luego se oculta del lobby. Todavía se puede recuperar por enlace o credencial guardada.
+
+Cada minuto se eliminan salas desconectadas con estos plazos de inactividad:
+
+| Estado | Plazo |
+| --- | --- |
+| En espera | 24 horas |
+| Partida empezada | 30 días |
+| Partida terminada | 7 días |
+
+Las partidas terminadas desaparecen del lobby inmediatamente. Volver a conectar, entrar, jugar o enviar un mensaje reinicia el plazo de actividad. Las salas con participantes conectados no se eliminan por este mantenimiento. Consultar el lobby no prolonga la vida de otras mesas. Al borrar una sala se borra también su chat.
+
+El inicio del servidor prepara la información de presencia de las salas guardadas y ejecuta la limpieza; los clientes reconstruyen su presencia al reconectar. Los plazos se configuran en `.env` con `ESTANCIERO_OFFLINE_MINUTES`, `ESTANCIERO_WAITING_HOURS`, `ESTANCIERO_PLAYING_DAYS`, `ESTANCIERO_FINISHED_DAYS` y `ESTANCIERO_REQUEST_SECONDS`. Los cambios se aplican tras reiniciar. La instalación continúa usando un solo proceso PM2 para la presencia y las solicitudes.
 
 ## Chat de texto
 

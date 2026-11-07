@@ -15,14 +15,14 @@ CREATE TABLE IF NOT EXISTS estanciero_rooms (
 // Cada operación reutiliza las reglas de RoomStore con una sola sala en memoria.
 // PostgreSQL mantiene la autoridad y el bloqueo; no hay una caché de todas las partidas.
 export class PostgresRoomStore {
-  constructor({pool,poolConfig,dice,maxRooms=200,logger=console}={}){
-    this.pool=pool||new Pool(poolConfig);this.dice=dice;this.maxRooms=maxRooms;this.pending=new Set();
+  constructor({pool,poolConfig,dice,maxRooms=200,now=()=>Date.now(),logger=console}={}){
+    this.now=now;this.pool=pool||new Pool(poolConfig);this.dice=dice;this.maxRooms=maxRooms;this.pending=new Set();
     this.pool.on?.('error',error=>logger.error('Conexión PostgreSQL interrumpida:',error.code||'error'));
   }
   async load(){await this.pool.query(ROOM_SCHEMA);}
   async health(){await this.pool.query('SELECT 1');}
   publicRoom(room,online=[]){return RoomStore.prototype.publicRoom.call(null,room,online);}
-  local(room=null){const store=new RoomStore({dice:this.dice,maxRooms:this.maxRooms});if(room)store.rooms.set(room.code,structuredClone(room));return store;}
+  local(room=null){const store=new RoomStore({dice:this.dice,maxRooms:this.maxRooms,now:this.now});if(room)store.rooms.set(room.code,structuredClone(room));return store;}
   decode(row){if(!row)return null;const room=validateRoom(row.data);if(row.code!==room.code||Number(row.revision)!==room.revision)throw new Error('La sala guardada tiene una revisión inconsistente.');return room;}
   async lookup(code){
     code=normalizeRoomCode(code);
@@ -56,15 +56,25 @@ export class PostgresRoomStore {
     const selected=await client.query('SELECT code, revision, data FROM estanciero_rooms WHERE code = $1 FOR UPDATE',[code]);
     const current=this.decode(selected.rows[0]);if(!current)throw new Error('No encontramos esa sala. Revisá el código.');
     const local=this.local(current),result=await operation(local);
-    if(result.room.revision!==current.revision){
+    if(JSON.stringify(result.room)!==JSON.stringify(current)){
       validateRoom(result.room);
       const updated=await client.query('UPDATE estanciero_rooms SET revision = $2, data = $3::jsonb, updated_at = now() WHERE code = $1 AND revision = $4',[code,result.room.revision,JSON.stringify(result.room),current.revision]);
       if(updated.rowCount!==1)throw new Error('La sala cambió mientras se guardaba la jugada.');
     }
     return result;
   });}
-  join(code,input){return this.mutate(code,store=>store.join(code,input));}
+  join(code,input,options){return this.mutate(code,store=>store.join(code,input,options));}
   start(code,token){return this.mutate(code,store=>store.start(code,token));}
   command(code,token,input){return this.mutate(code,store=>store.command(code,token,input));}
+  async listRooms(){
+    const {rows}=await this.pool.query(`SELECT code, data->>'title' AS title, COALESCE(data->>'visibility','private') AS visibility, data->'game'->>'phase' AS phase, data->>'createdAt' AS "createdAt", COALESCE(data->>'lastActivityAt',data->>'createdAt') AS "lastActivityAt", data->>'disconnectedAt' AS "disconnectedAt", (SELECT jsonb_agg(jsonb_build_object('id',m->'id','name',m->'name','piece',m->'piece')) FROM jsonb_array_elements(data->'members') m) AS members FROM estanciero_rooms`);
+    return rows.map(row=>({...row,title:row.title||'Mesa de '+row.members[0].name}));
+  }
+  async prepareOffline(now){await this.pool.query(`UPDATE estanciero_rooms SET data = jsonb_set(jsonb_set(data,'{lastActivityAt}',CASE WHEN data->'disconnectedAt' = 'null'::jsonb THEN to_jsonb($1::text) ELSE COALESCE(data->'lastActivityAt',data->'createdAt') END),'{disconnectedAt}',COALESCE(NULLIF(data->'disconnectedAt','null'::jsonb),to_jsonb($1::text)))`,[new Date(now).toISOString()]);}
+  touch(code){return this.mutate(code,store=>store.touch(code));}
+  markPresence(code,connected,now){return this.mutate(code,store=>store.markPresence(code,connected,now));}
+  async purgeExpired(now,policy,active=[]){return this.transaction(async client=>{
+    const {rows}=await client.query(`DELETE FROM estanciero_rooms WHERE code <> ALL($1::text[]) AND COALESCE(data->>'lastActivityAt',data->>'createdAt')::timestamptz <= CASE WHEN data->'game'->>'phase' = 'over' THEN $2::timestamptz WHEN data->'game'->>'phase' IS NOT NULL THEN $3::timestamptz ELSE $4::timestamptz END RETURNING code`,[active,new Date(now-policy.finished).toISOString(),new Date(now-policy.playing).toISOString(),new Date(now-policy.waiting).toISOString()]);return rows.map(row=>row.code);
+  });}
   async close(){await Promise.allSettled([...this.pending]);await this.pool.end();}
 }

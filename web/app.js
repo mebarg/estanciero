@@ -1,4 +1,5 @@
 import { TableSounds, TableExperience, centerOf } from './experience.js';
+import { Lounge } from './lounge.js';
 import { ChatPanel } from './chat.js';
 import { OnlineSession } from './online.js';
 import { spaces, createGame, act, money, ownsGroup, rentFor, validSave, upgradeSave, bankStock, buildProblem, RULES, managerFor } from './game.js';
@@ -11,11 +12,12 @@ const key = 'estanciero-partida-v1';
 let state = createGame(['Jugador 1','Jugador 2']), selected=1, rolling=false, saved=false;
 try { const stored=upgradeSave(JSON.parse(localStorage.getItem(key))); if(stored&&validSave(stored)){state=stored;saved=true;} } catch { /* El juego sigue disponible sin almacenamiento. */ }
 let localState=state, onlineMode=false, onlineEntry='create';
-const online=new OnlineSession({onRoom:receiveOnline,onChat:(messages,meta)=>chat.update(messages,meta),onChatStatus:text=>chat.status(text),onStatus:status=>{
+const online=new OnlineSession({onRoom:receiveOnline,onChat:(messages,meta)=>chat.update(messages,meta),onChatStatus:text=>chat.status(text),onAdmission:request=>lounge.admission(request),onLobbyRequests:requests=>lounge.hostRequests(requests),onStatus:status=>{
   $('online-status').textContent=status;
   $('retry-online').hidden=!online.pendingCommand||online.pending;
   if(onlineMode&&online.room?.game)render();
 }});
+const lounge=new Lounge({session:online,document});
 const chat=new ChatPanel({session:online,document});
 const sounds=new TableSounds();
 const experience=new TableExperience({dice:$('dice'),total:$('dice-total'),caption:$('motion-caption'),count:$('motion-count'),sounds,
@@ -314,11 +316,14 @@ function showRules() {
   }
 }
 function entryMode(kind) {
-  onlineEntry=kind;const joining=kind==='join';
+  onlineEntry=kind;const joining=kind==='join',listing=kind==='lounge';
+  $('lounge-view').hidden=!listing;$('online-form').hidden=listing;$('create-room-fields').hidden=joining;
+  $('tab-lounge').setAttribute('aria-pressed',String(listing));
+  if(listing)void lounge.refresh();
   $('room-code-field').hidden=!joining;$('join-code').required=joining;
   $('online-submit').textContent=joining?'Entrar a la sala':'Crear sala';
-  $('tab-create').setAttribute('aria-pressed',String(!joining));$('tab-join').setAttribute('aria-pressed',String(joining));
-  $('online-form-note').textContent=joining?'Ingresá el código que te compartieron. Si ya estabas en esa sala, recuperaremos tu lugar.':'Vas a crear una sala privada para 2 a 6 jugadores.';
+  $('tab-create').setAttribute('aria-pressed',String(kind==='create'));$('tab-join').setAttribute('aria-pressed',String(joining));
+  $('online-form-note').textContent=joining?'Ingresá el código que te compartieron. Si ya estabas en esa sala, recuperaremos tu lugar.':'Creá una mesa pública con aprobación o una privada por invitación.';
   $('online-error').textContent='';fillOnlinePieces();
 }
 function fillOnlinePieces(taken=[]) {
@@ -327,12 +332,13 @@ function fillOnlinePieces(taken=[]) {
   $('online-piece').value=String(taken.includes(current)?pieces.findIndex((_,i)=>!taken.includes(i)):current);
 }
 function openOnline(code='') {
-  $('mode-dialog').close();$('online-dialog').showModal();entryMode(code?'join':'create');
+  $('mode-dialog').close();$('online-dialog').showModal();entryMode(code?'join':'lounge');
   $('join-code').value=code;$('resume-online').hidden=!online.remembered();
 }
 $('choose-local').onclick=async()=>{if(onlineMode)await returnLocal();$('mode-dialog').close();$('setup-dialog').showModal();};
 $('choose-online').onclick=()=>openOnline();
 $('close-mode').onclick=()=>$('mode-dialog').close();$('close-online').onclick=()=>$('online-dialog').close();
+$('tab-lounge').onclick=()=>entryMode('lounge');
 $('tab-create').onclick=()=>entryMode('create');$('tab-join').onclick=()=>entryMode('join');
 $('inspect-room').onclick=async()=>{try{const room=await online.inspect($('join-code').value.trim().toUpperCase());fillOnlinePieces(room.members.map(m=>m.piece));$('online-form-note').textContent=room.started?'La partida ya empezó. Sólo pueden volver sus participantes.':room.members.map(m=>m.name).join(', ')+' ya están en la mesa.';}catch(error){$('online-error').textContent=error.message;}};
 $('online-form').addEventListener('submit',async event=>{
@@ -340,7 +346,7 @@ $('online-form').addEventListener('submit',async event=>{
   try{
     const code=$('join-code').value.trim().toUpperCase(),credential=onlineEntry==='join'?online.remembered(code):null;
     if(credential)await online.resume(credential);
-    else await online.enter(onlineEntry,{name:$('online-name').value.trim(),piece:Number($('online-piece').value),code});
+    else await online.enter(onlineEntry,{name:$('online-name').value.trim(),piece:Number($('online-piece').value),code,title:$('room-title').value,visibility:$('room-visibility').value});
   }catch(error){$('online-error').textContent=error.message;}
   finally{$('online-submit').disabled=false;}
 });
@@ -353,6 +359,7 @@ $('copy-invite').onclick=async()=>{
   try{await navigator.clipboard.writeText(url.href);$('online-status').textContent='Invitación copiada';}
   catch{showInfo(`<h2>Invitá a tu mesa.</h2><p>Compartí este enlace o el código ${esc(online.room.code)}.</p><input aria-label="Enlace de invitación" readonly value="${esc(url.href)}">`);}
 };
+const loungeTimer=setInterval(()=>{if($('online-dialog').open&&onlineEntry==='lounge')void lounge.refresh();},10000);loungeTimer.unref?.();
 nameFields(); render();fillOnlinePieces();syncSoundButton();
 const invite=new URL(location.href).searchParams.get('sala');
 if(invite)openOnline(invite.toUpperCase());

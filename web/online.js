@@ -1,6 +1,6 @@
 const savedKey='estanciero-online-v1';
 export class OnlineSession {
-  constructor({onRoom,onStatus,onChat=()=>{},onChatStatus=()=>{},loadClient=()=>import('/socket.io/socket.io.esm.min.js')}){this.onChat=onChat;this.onChatStatus=onChatStatus;this.messages=[];this.chatCode=null;this.chatPending=null;this.loadClient=loadClient;this.onRoom=onRoom;this.onStatus=onStatus;this.room=null;this.playerId=null;this.credential=null;this.socket=null;this.ready=false;this.pending=false;this.pendingCommand=null;}
+  constructor({onRoom,onStatus,onChat=()=>{},onChatStatus=()=>{},onAdmission=()=>{},onLobbyRequests=()=>{},loadClient=()=>import('/socket.io/socket.io.esm.min.js')}){this.onAdmission=onAdmission;this.onLobbyRequests=onLobbyRequests;this.admission=null;this.onChat=onChat;this.onChatStatus=onChatStatus;this.messages=[];this.chatCode=null;this.chatPending=null;this.loadClient=loadClient;this.onRoom=onRoom;this.onStatus=onStatus;this.room=null;this.playerId=null;this.credential=null;this.socket=null;this.ready=false;this.pending=false;this.pendingCommand=null;}
   remembered(code=null){try{const value=JSON.parse(localStorage.getItem(savedKey));if(value?.sessions){const key=code?.toUpperCase()??value.lastCode;return value.sessions[key]?{code:key,token:value.sessions[key]}:null;}return value?.code&&value?.token&&(!code||value.code===code.toUpperCase())?value:null;}catch{return null;}}
   remember(){try{let old=JSON.parse(localStorage.getItem(savedKey))||{};const sessions={...(old.sessions||{}),...(old.code?{[old.code]:old.token}:{}),[this.credential.code]:this.credential.token};localStorage.setItem(savedKey,JSON.stringify({lastCode:this.credential.code,sessions}));}catch{}}
 
@@ -8,9 +8,11 @@ export class OnlineSession {
     if(this.socket)return;
     let io;try{({io}=await this.loadClient());}catch{throw new Error('El modo online necesita el servidor del juego. Abrilo con npm run dev o desde su dirección publicada.');}
     this.socket=io({autoConnect:false,reconnection:true});
+    this.socket.on('lobby:requests',requests=>this.onLobbyRequests(requests));
+    this.socket.on('lobby:request-status',request=>{this.admission=request;this.onAdmission(request);});
     this.socket.on('chat:message',data=>{if(data.code===this.credential?.code)this.receiveChat(data.code,[data.message]);});
     this.socket.on('room:state',room=>{if(this.credential?.code===room.code)this.receive(room);});
-    this.socket.on('disconnect',()=>{this.ready=false;this.onStatus('Sin conexión. Intentando recuperar tu lugar…');});
+    this.socket.on('disconnect',()=>{if(this.admission){this.admission={...this.admission,status:'cancelled'};this.onAdmission(this.admission);}this.ready=false;this.onStatus('Sin conexión. Intentando recuperar tu lugar…');});
     this.socket.on('connect_error',()=>{this.ready=false;this.onStatus('No pudimos conectar. Seguimos intentando…');});
     this.socket.on('connect',async()=>{
       if(!this.credential||!this.room)return;
@@ -32,12 +34,19 @@ export class OnlineSession {
     await new Promise((resolve,reject)=>{const timer=setTimeout(()=>{this.socket.off('connect',done);reject(new Error('No pudimos conectar con el servidor. Intentá nuevamente.'));},8000);const done=()=>{clearTimeout(timer);resolve();};this.socket.once('connect',done);});
   }
   receive(room){if(this.room?.code===room.code&&room.revision<this.room.revision)return;this.room=room;if(this.playerId!==null)this.onRoom(room);}
+  async adopt(result){
+    this.admission=null;this.onAdmission(null);this.credential={code:result.room.code,token:result.token};this.playerId=result.playerId;this.ready=true;
+    this.remember();this.receive(result.room);this.onStatus('Conectado');await this.refreshChat();return result;
+  }
+  async listLobby(){await this.ensureConnected();return (await this.request('lobby:list')).rooms;}
+  async requestSeat(code,name){await this.ensureConnected();const {request}=await this.request('lobby:request',{code,name});if(this.admission?.id!==request.id||this.admission?.status==='pending'){this.admission=request;this.onAdmission(request);}return request;}
+  async cancelSeat(){await this.request('lobby:cancel');this.admission=null;this.onAdmission(null);}
+  async decideSeat(id,accept){return this.request('lobby:decide',{id,accept});}
+  async claimSeat(id,piece){return this.adopt(await this.request('lobby:claim',{id,piece}));}
   async enter(kind,input){
     await this.ensureConnected();
     const result=await this.request('room:'+kind,input);
-    this.credential={code:result.room.code,token:result.token};this.playerId=result.playerId;this.ready=true;
-    this.remember();
-    this.receive(result.room);this.onStatus('Conectado');await this.refreshChat();return result;
+    return this.adopt(result);
   }
   async resume(credential){
     if(!credential)throw new Error('No hay una sala guardada para recuperar.');
@@ -94,6 +103,7 @@ export class OnlineSession {
   }
   async leave(){
     if(this.socket?.connected)try{await this.request('room:leave');}catch{}
+    this.admission=null;this.onAdmission(null);this.onLobbyRequests([]);
     this.messages=[];this.chatCode=null;this.chatPending=null;this.onChat([],{code:null,history:true,added:[]});
     this.credential=null;this.room=null;this.playerId=null;this.ready=false;this.pendingCommand=null;this.pending=false;
     this.socket?.disconnect();this.socket=null;

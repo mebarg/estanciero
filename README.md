@@ -1,6 +1,6 @@
 # Estanciero, una nueva mesa
 
-Juego de mesa Estanciero para navegador. De 2 a 6 personas pueden compartir un dispositivo o entrar a una sala privada online desde sus propios equipos. No requiere cuentas.
+Juego de mesa Estanciero para navegador. De 2 a 6 personas pueden compartir un dispositivo o entrar a una sala online desde sus propios equipos. No requiere cuentas.
 
 ## Abrir el juego
 
@@ -21,7 +21,7 @@ El comando opcional `npm run build` copia la interfaz a `dist/`. En hosting est�
 
 ## Jugar online
 
-En “Nueva partida”, elegir “Jugar online”. Una persona crea la sala con su nombre y pieza, copia la invitación y la comparte. Las demás abren el enlace o ingresan el código, eligen otra pieza y entran. Quien creó la sala inicia la partida cuando haya entre 2 y 6 participantes.
+En “Nueva partida”, elegir “Jugar online”. La pestaña “Salas” muestra las mesas públicas en espera y en juego. Para sumarse a una mesa en espera, escribir el nombre y solicitar un lugar; el anfitrión acepta o rechaza y la persona aceptada elige una pieza libre. También se puede crear una sala privada para entrar directamente por invitación. Quien creó la sala inicia la partida cuando haya entre 2 y 6 participantes.
 
 Para probar en dos dispositivos de la misma red, ambos deben abrir la dirección de la computadora que ejecuta el servidor, por ejemplo `http://192.168.1.50:5187`, usando su IP real. Un enlace que dice `localhost` sólo sirve en esa misma computadora. Para jugar desde distintas casas hace falta alojar el servidor en Internet con HTTPS y almacenamiento persistente.
 
@@ -46,13 +46,15 @@ Para versionar el código y actualizar el servidor desde GitHub: [guía de Git](
 - Hipotecas, levantamientos, ventas de mejoras, propuestas de venta y remates.
 - Deudas antes de la quiebra y remate de bienes entregados al banco.
 - Consulta de tarjetas y cartera de títulos.
+- Lobby de salas públicas, solicitudes de ingreso con aprobación del anfitrión y salas privadas por invitación.
+- Limpieza automática de salas abandonadas, con recuperación antes del vencimiento.
 - Chat de texto privado por sala, con mensajes sin leer y recuperación de los últimos 100 mensajes.
 - Guardado automático local y guardado de salas online en el servidor, con recuperación del asiento y de la partida.
 - Diseño adaptable y controles de tablero accesibles por teclado.
 
 ## Funciones pendientes
 
-Copropiedad, trueques simultáneos de paquetes, variantes de partida corta, inteligencia artificial y emparejamiento público. El juego en red ya está implementado mediante salas privadas. El juego local incluye hipotecas, remates, compraventas y una etapa para reunir dinero antes de quebrar.
+Copropiedad, trueques simultáneos de paquetes, variantes de partida corta, inteligencia artificial y espectadores. El juego en red ya está implementado mediante salas privadas. El juego local incluye hipotecas, remates, compraventas y una etapa para reunir dinero antes de quebrar.
 
 ## Archivos
 
