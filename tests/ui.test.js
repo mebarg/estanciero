@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import { readFileSync } from 'node:fs';
 import * as game from '../web/game.js';
+import { ChatPanel } from '../web/chat.js';
 import { OnlineSession } from '../web/online.js';
 import { cards } from '../web/cards.js';
 import { pieces,pieceWindow,pieceSheet } from '../web/pieces.js';
@@ -16,17 +17,17 @@ function boot({animationSleep,animate=false}={}){
   constructor(tag='div'){this.tagName=tag;this.children=[];this.listeners={};this.open=false;this.value='2';this.dataset={};this.className='';this.classList={toggle(){},contains:name=>this.className.split(' ').includes(name)};}
   set innerHTML(html){this.html=html;for(const m of html.matchAll(/id="([^"]+)"/g))nodes.set(m[1],new Element());}
   get innerHTML(){return this.html??'';}
-  setAttribute(k,v){this[k]=v;}append(...els){this.children.push(...els);}replaceChildren(){this.children=[];}
+  setAttribute(k,v){this[k]=v;}append(...els){this.children.push(...els);}replaceChildren(...els){this.children=els;}focus(){this.focused=true;}
   addEventListener(name,fn){(this.listeners[name]??=[]).push(fn);}showModal(){this.open=true;}
   close(){if(!this.open)return;this.open=false;queueMicrotask(()=>{for(const fn of this.listeners.close??[])fn();});}
   insertAdjacentHTML(_,html){this.innerHTML=this.innerHTML+html;}
  }
  for(const m of readFileSync(new URL('../web/index.html',import.meta.url),'utf8').matchAll(/id="([^"]+)"/g))nodes.set(m[1],new Element());
  const dialogs=()=>['mode-dialog','online-dialog','setup-dialog','info-dialog','arrival-dialog'].map(id=>nodes.get(id));
- const document={getElementById:id=>nodes.get(id)||null,createElementNS:(_,tag)=>new Element(tag),querySelectorAll:selector=>selector==='dialog'?dialogs():[]};
+ const document={getElementById:id=>nodes.get(id)||null,createElement:tag=>new Element(tag),createElementNS:(_,tag)=>new Element(tag),querySelectorAll:selector=>selector==='dialog'?dialogs():[]};
  const data=new Map(),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,v)};
  class TestExperience extends TableExperience {constructor(options){super({...options,canAnimate:()=>animate,reduced:()=>false,...(animationSleep?{sleep:animationSleep}:{})});}}
- const context=vm.createContext({...game,OnlineSession,TableSounds,TableExperience:TestExperience,centerOf,cards,pieces,pieceWindow,pieceSheet,polygons,document,localStorage,crypto,structuredClone,Uint32Array,Uint8Array,setTimeout,queueMicrotask,URL,location:{href:'http://localhost:5187/'},history:{replaceState(){}},console});
+ const context=vm.createContext({...game,ChatPanel,OnlineSession,TableSounds,TableExperience:TestExperience,centerOf,cards,pieces,pieceWindow,pieceSheet,polygons,document,localStorage,crypto,structuredClone,Uint32Array,Uint8Array,setTimeout,queueMicrotask,URL,location:{href:'http://localhost:5187/'},history:{replaceState(){}},console});
  vm.runInContext(readFileSync(new URL('../web/app.js',import.meta.url),'utf8').replace(/^import .*;\n/gm,''),context);
  return {nodes,run:code=>vm.runInContext(code,context),data};
 }
@@ -87,4 +88,16 @@ test('tocar los dados tira sólo cuando corresponde y bloquea otra tirada durant
  await nodes.get('dice').listeners.click[0]();assert.equal(run('state.motion.sequence'),1);
  run("state=createGame(['Ana','Luis']);onlineMode=true;online.ready=true;online.playerId=1;online.room={members:[{connected:true},{connected:true}]};render();");
  assert.equal(nodes.get('dice').disabled,true);assert.equal(run('canRollDice()'),false);
+});
+
+test('chat: texto seguro, mensajes sin leer, apertura y limpieza al volver a local',async()=>{
+ const {nodes,run}=boot();
+ run("online.playerId=0;online.refreshChat=async()=>{};chat.update([{id:'msg1',playerId:1,name:'Luis',piece:1,text:'<img src=x onerror=alert(1)>',createdAt:'2026-11-07T12:00:00.000Z'}],{code:'ABCD2345',history:false,added:[{playerId:1}]});");
+ assert.equal(nodes.get('chat-button').hidden,false);assert.equal(nodes.get('chat-unread').textContent,'1');
+ const message=nodes.get('chat-messages').children[0];assert.equal(message.children[1].textContent,'<img src=x onerror=alert(1)>');assert.equal(message.children[1].innerHTML,'');
+ nodes.get('chat-button').onclick();assert.equal(nodes.get('chat-panel').hidden,false);assert.equal(nodes.get('chat-unread').hidden,true);
+ run("online.sendChat=async text=>{if(text==='fallo')throw new Error('Sin conexión');};");
+ nodes.get('chat-input').value='hola';await nodes.get('chat-form').listeners.submit[0]({preventDefault(){}});assert.equal(nodes.get('chat-input').value,'');
+ nodes.get('chat-input').value='fallo';await nodes.get('chat-form').listeners.submit[0]({preventDefault(){}});assert.equal(nodes.get('chat-input').value,'fallo');assert.equal(nodes.get('chat-error').textContent,'Sin conexión');
+ await run('online.leave()');assert.equal(nodes.get('chat-button').hidden,true);assert.equal(nodes.get('chat-panel').hidden,true);assert.equal(nodes.get('chat-messages').children.length,0);
 });

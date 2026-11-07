@@ -46,12 +46,13 @@ Para versionar el código y actualizar el servidor desde GitHub: [guía de Git](
 - Hipotecas, levantamientos, ventas de mejoras, propuestas de venta y remates.
 - Deudas antes de la quiebra y remate de bienes entregados al banco.
 - Consulta de tarjetas y cartera de títulos.
+- Chat de texto privado por sala, con mensajes sin leer y recuperación de los últimos 100 mensajes.
 - Guardado automático local y guardado de salas online en el servidor, con recuperación del asiento y de la partida.
 - Diseño adaptable y controles de tablero accesibles por teclado.
 
 ## Funciones pendientes
 
-Copropiedad, trueques simultáneos de paquetes, variantes de partida corta, inteligencia artificial, chat y emparejamiento público. El juego en red ya está implementado mediante salas privadas. El juego local incluye hipotecas, remates, compraventas y una etapa para reunir dinero antes de quebrar.
+Copropiedad, trueques simultáneos de paquetes, variantes de partida corta, inteligencia artificial y emparejamiento público. El juego en red ya está implementado mediante salas privadas. El juego local incluye hipotecas, remates, compraventas y una etapa para reunir dinero antes de quebrar.
 
 ## Archivos
 

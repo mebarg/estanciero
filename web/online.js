@@ -1,6 +1,6 @@
 const savedKey='estanciero-online-v1';
 export class OnlineSession {
-  constructor({onRoom,onStatus,loadClient=()=>import('/socket.io/socket.io.esm.min.js')}){this.loadClient=loadClient;this.onRoom=onRoom;this.onStatus=onStatus;this.room=null;this.playerId=null;this.credential=null;this.socket=null;this.ready=false;this.pending=false;this.pendingCommand=null;}
+  constructor({onRoom,onStatus,onChat=()=>{},onChatStatus=()=>{},loadClient=()=>import('/socket.io/socket.io.esm.min.js')}){this.onChat=onChat;this.onChatStatus=onChatStatus;this.messages=[];this.chatCode=null;this.chatPending=null;this.loadClient=loadClient;this.onRoom=onRoom;this.onStatus=onStatus;this.room=null;this.playerId=null;this.credential=null;this.socket=null;this.ready=false;this.pending=false;this.pendingCommand=null;}
   remembered(code=null){try{const value=JSON.parse(localStorage.getItem(savedKey));if(value?.sessions){const key=code?.toUpperCase()??value.lastCode;return value.sessions[key]?{code:key,token:value.sessions[key]}:null;}return value?.code&&value?.token&&(!code||value.code===code.toUpperCase())?value:null;}catch{return null;}}
   remember(){try{let old=JSON.parse(localStorage.getItem(savedKey))||{};const sessions={...(old.sessions||{}),...(old.code?{[old.code]:old.token}:{}),[this.credential.code]:this.credential.token};localStorage.setItem(savedKey,JSON.stringify({lastCode:this.credential.code,sessions}));}catch{}}
 
@@ -8,6 +8,7 @@ export class OnlineSession {
     if(this.socket)return;
     let io;try{({io}=await this.loadClient());}catch{throw new Error('El modo online necesita el servidor del juego. Abrilo con npm run dev o desde su dirección publicada.');}
     this.socket=io({autoConnect:false,reconnection:true});
+    this.socket.on('chat:message',data=>{if(data.code===this.credential?.code)this.receiveChat(data.code,[data.message]);});
     this.socket.on('room:state',room=>{if(this.credential?.code===room.code)this.receive(room);});
     this.socket.on('disconnect',()=>{this.ready=false;this.onStatus('Sin conexión. Intentando recuperar tu lugar…');});
     this.socket.on('connect_error',()=>{this.ready=false;this.onStatus('No pudimos conectar. Seguimos intentando…');});
@@ -36,13 +37,37 @@ export class OnlineSession {
     const result=await this.request('room:'+kind,input);
     this.credential={code:result.room.code,token:result.token};this.playerId=result.playerId;this.ready=true;
     this.remember();
-    this.receive(result.room);this.onStatus('Conectado');return result;
+    this.receive(result.room);this.onStatus('Conectado');await this.refreshChat();return result;
   }
   async resume(credential){
     if(!credential)throw new Error('No hay una sala guardada para recuperar.');
     if(credential.code!==this.credential?.code){this.room=null;this.playerId=null;}
     this.credential=credential;await this.ensureConnected();
-    const result=await this.request('room:resume',credential);this.playerId=result.playerId;this.ready=true;this.remember();this.receive(result.room);this.onStatus('Conectado');return result;
+    const result=await this.request('room:resume',credential);this.playerId=result.playerId;this.ready=true;this.remember();this.receive(result.room);this.onStatus('Conectado');await this.refreshChat();return result;
+  }
+  receiveChat(code,messages,{history=false}={}){
+    if(code!==this.credential?.code)return;
+    if(this.chatCode!==code){this.chatCode=code;this.messages=[];this.chatPending=null;}
+    const old=new Set(this.messages.map(message=>message.id));
+    const added=messages.filter(message=>!old.has(message.id));
+    const merged=new Map((history?[...messages,...this.messages]:[...this.messages,...messages]).map(message=>[message.id,message]));
+    this.messages=[...merged.values()].sort((a,b)=>a.createdAt.localeCompare(b.createdAt)).slice(-100);
+    this.onChat(this.messages,{code,history,added});
+  }
+  async refreshChat(){
+    const code=this.credential?.code;if(!code)return;
+    if(this.chatCode!==code){this.chatCode=code;this.messages=[];this.chatPending=null;this.onChat([],{code,history:true,added:[]});}
+    try{const result=await this.request('chat:history');if(this.credential?.code===code){this.receiveChat(code,result.messages,{history:true});this.onChatStatus('');}}
+    catch{if(this.credential?.code===code)this.onChatStatus('No se pudo cargar el historial. Volvé a abrir el chat para reintentar.');}
+  }
+  async sendChat(text){
+    if(!this.ready||!this.credential)throw new Error('Esperá a recuperar la conexión para enviar.');
+    text=text.trim();if(!text||text.length>500)throw new Error('Escribí un mensaje de hasta 500 caracteres.');
+    const code=this.credential.code;
+    if(!this.chatPending||this.chatPending.text!==text)this.chatPending={id:crypto.randomUUID(),text};
+    const pending=this.chatPending;
+    try{const result=await this.request('chat:send',pending);if(this.credential?.code===code){this.receiveChat(code,[result.message]);if(this.chatPending===pending)this.chatPending=null;}return result;}
+    catch(error){if(error.confirmed&&this.chatPending===pending)this.chatPending=null;throw error;}
   }
   async inspect(code){await this.ensureConnected();return (await this.request('room:inspect',{code})).room;}
   async start(){return this.request('room:start');}
@@ -69,6 +94,7 @@ export class OnlineSession {
   }
   async leave(){
     if(this.socket?.connected)try{await this.request('room:leave');}catch{}
+    this.messages=[];this.chatCode=null;this.chatPending=null;this.onChat([],{code:null,history:true,added:[]});
     this.credential=null;this.room=null;this.playerId=null;this.ready=false;this.pendingCommand=null;this.pending=false;
     this.socket?.disconnect();this.socket=null;
   }

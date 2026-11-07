@@ -3,10 +3,12 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { Server } from 'socket.io';
 import { RoomStore } from './rooms.js';
+import { FileChatStore,PostgresChatStore,chatInput } from './chat.js';
 
 export async function createApp({directory=path.resolve('data'),root=path.resolve('web'),dice,logger=console,roomStore}={}) {
   const store=roomStore||new RoomStore({directory,dice});
-  try{await store.load();}catch(error){await store.close();throw error;}
+  const chat=store.pool?new PostgresChatStore(store):new FileChatStore(store.directory);
+  try{await store.load();await chat.load();}catch(error){await store.close();throw error;}
   const server=http.createServer(async(req,res)=>{
     try {
       if(!['GET','HEAD'].includes(req.method)){res.writeHead(405).end();return;}
@@ -29,6 +31,7 @@ export async function createApp({directory=path.resolve('data'),root=path.resolv
   const broadcastRoom=room=>io.to(room.code).emit('room:state',snapshot(room));
   const broadcast=async code=>broadcastRoom(await store.lookup(code));
   const presence=code=>{void broadcast(code).catch(error=>logger.error('No se pudo actualizar la presencia:',error.code||'error'));};
+  const chatLimits=new Map();
   const ipLimits=new Map();
   function roomRate(socket){
     const ip=socket.handshake.address,now=Date.now();
@@ -65,8 +68,25 @@ export async function createApp({directory=path.resolve('data'),root=path.resolv
       if(!credential)throw new Error('Primero entrá a una sala.');
       const {room,duplicate}=await store.command(credential.code,credential.token,input);broadcastRoom(room);return {room:snapshot(room),duplicate:!!duplicate};
     });
+    handle('chat:history',async()=>{
+      if(!credential)throw new Error('Primero entrá a una sala.');
+      const seat={...credential};await store.authenticate(seat.code,seat.token);
+      return {code:seat.code,messages:await chat.history(seat.code)};
+    });
+    handle('chat:send',async input=>{
+      if(!credential)throw new Error('Primero entrá a una sala.');
+      const seat={...credential},validated=chatInput(input),{member}=await store.authenticate(seat.code,seat.token);
+      const now=Date.now(),key=seat.code+':'+member.id;
+      for(const [id,times] of chatLimits)if(now-times.at(-1)>10000)chatLimits.delete(id);
+      const recent=(chatLimits.get(key)||[]).filter(time=>now-time<10000);
+      if(recent.length>=5)throw new Error('Esperá unos segundos antes de enviar más mensajes.');
+      recent.push(now);chatLimits.set(key,recent);
+      const result=await chat.append(seat.code,member,validated);
+      if(!result.duplicate)io.to(seat.code).emit('chat:message',{code:seat.code,message:result.message});
+      return {code:seat.code,...result};
+    });
     handle('room:leave',async()=>{const code=socket.data.code;credential=null;socket.data={};if(code){await socket.leave(code);presence(code);}return {};});
     socket.on('disconnect',()=>{if(socket.data.code)presence(socket.data.code);});
   });
-  return {server,io,store,close:async()=>{await new Promise(resolve=>io.close(resolve));await store.close();}};
+  return {server,io,store,close:async()=>{await new Promise(resolve=>io.close(resolve));await chat.close();await store.close();}};
 }

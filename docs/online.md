@@ -14,6 +14,16 @@ Cada dispositivo debe abrir el mismo servidor. Para probar en una red local, usa
 
 El navegador conserva las credenciales de las salas en las que entró. Al volver con el enlace, la opción de unirse recupera el asiento si existe una credencial para esa sala. También hay un botón para retomar la sala anterior. Borrar los datos del navegador elimina esa posibilidad: el código compartido no permite suplantar a otro jugador. Dos perfiles o dispositivos distintos conservan identidades independientes; dos pestañas del mismo perfil que retoman la misma credencial representan al mismo jugador.
 
+## Chat de texto
+
+Dentro de una sala, el botón **Chat** abre la conversación antes de empezar o durante la partida. Muestra nombre, pieza y hora, con contador de mensajes sin leer. En móvil se abre sobre el tablero y puede cerrarse para seguir jugando. Enviar un mensaje no detiene las animaciones ni modifica turnos.
+
+Sólo los participantes autenticados pueden leer y escribir en su sala. El servidor asigna el remitente; los mensajes se muestran como texto. Se admiten hasta 500 caracteres y cinco envíos cada diez segundos por jugador. Los identificadores evitan duplicados al reintentar un mensaje cuya confirmación se perdió.
+
+Se conservan los últimos 100 mensajes por sala. Con PostgreSQL se guardan en `estanciero_chat`, separada de las jugadas; con archivo, en `data/chat.json`. El historial se recupera al reconectar y se puede reintentar su carga abriendo el panel. Un mensaje que falla queda escrito en el campo para reenviarlo. Volver al modo local limpia el panel; el historial permanece en la sala.
+
+La tabla se crea automáticamente al iniciar, y también con `npm run db:init`. Para instalar este cambio se requiere reiniciar el proceso Node y recargar los navegadores. No hace falta build.
+
 ## Reglas de coordinación
 
 - El servidor aplica las reglas. Recibe decisiones, nunca un estado de partida elegido por el cliente.

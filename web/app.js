@@ -1,4 +1,5 @@
 import { TableSounds, TableExperience, centerOf } from './experience.js';
+import { ChatPanel } from './chat.js';
 import { OnlineSession } from './online.js';
 import { spaces, createGame, act, money, ownsGroup, rentFor, validSave, upgradeSave, bankStock, buildProblem, RULES, managerFor } from './game.js';
 import { pieces, pieceWindow, pieceSheet } from './pieces.js';
@@ -10,11 +11,12 @@ const key = 'estanciero-partida-v1';
 let state = createGame(['Jugador 1','Jugador 2']), selected=1, rolling=false, saved=false;
 try { const stored=upgradeSave(JSON.parse(localStorage.getItem(key))); if(stored&&validSave(stored)){state=stored;saved=true;} } catch { /* El juego sigue disponible sin almacenamiento. */ }
 let localState=state, onlineMode=false, onlineEntry='create';
-const online=new OnlineSession({onRoom:receiveOnline,onStatus:status=>{
+const online=new OnlineSession({onRoom:receiveOnline,onChat:(messages,meta)=>chat.update(messages,meta),onChatStatus:text=>chat.status(text),onStatus:status=>{
   $('online-status').textContent=status;
   $('retry-online').hidden=!online.pendingCommand||online.pending;
   if(onlineMode&&online.room?.game)render();
 }});
+const chat=new ChatPanel({session:online,document});
 const sounds=new TableSounds();
 const experience=new TableExperience({dice:$('dice'),total:$('dice-total'),caption:$('motion-caption'),count:$('motion-count'),sounds,
   onBoard:()=>drawBoard(true),onChange:()=>render(),movingElement:()=>$('moving-token'),
