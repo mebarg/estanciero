@@ -1,0 +1,786 @@
+{
+  "source_sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf",
+  "records": 78,
+  "mentions": [
+    {
+      "literal_id": "text-42684",
+      "offset": 461716,
+      "offset_hex": "0x70b94",
+      "byte_length": 2,
+      "literal_offset": 461712,
+      "raw_token": "2",
+      "context": "摧㍩2",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-42836",
+      "offset": 463018,
+      "offset_hex": "0x710aa",
+      "byte_length": 2,
+      "literal_offset": 462992,
+      "raw_token": "3",
+      "context": " saco dobles 3 veces y va preso",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-42979",
+      "offset": 464110,
+      "offset_hex": "0x714ee",
+      "byte_length": 2,
+      "literal_offset": 464076,
+      "raw_token": "2",
+      "context": "Desea permanecer 2 turnos en descanso?",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-42984",
+      "offset": 464182,
+      "offset_hex": "0x71536",
+      "byte_length": 2,
+      "literal_offset": 464160,
+      "raw_token": "2",
+      "context": " permanece 2 turnos en descanso",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43025",
+      "offset": 464606,
+      "offset_hex": "0x716de",
+      "byte_length": 10,
+      "literal_offset": 464528,
+      "raw_token": "$1000",
+      "context": "Usted cayo en la comisaria. Debe pagar $1000 de multa, como tiene una tarjeta sale automaticamente.",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43054",
+      "offset": 464906,
+      "offset_hex": "0x7180a",
+      "byte_length": 12,
+      "literal_offset": 464828,
+      "raw_token": "$ 1000",
+      "context": "Usted cayo en la comisaria. Debe pagar $ 1000 de multa y tirar los dados, si saca dobles sale, si no pasara 2 turnos arrestado.",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43054",
+      "offset": 465044,
+      "offset_hex": "0x71894",
+      "byte_length": 2,
+      "literal_offset": 464828,
+      "raw_token": "2",
+      "context": "Usted cayo en la comisaria. Debe pagar $ 1000 de multa y tirar los dados, si saca dobles sale, si no pasara 2 turnos arrestado.",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43385",
+      "offset": 467400,
+      "offset_hex": "0x721c8",
+      "byte_length": 6,
+      "literal_offset": 467400,
+      "raw_token": "2,3",
+      "context": "2,3",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43414",
+      "offset": 467588,
+      "offset_hex": "0x72284",
+      "byte_length": 6,
+      "literal_offset": 467588,
+      "raw_token": "1,3",
+      "context": "1,3",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43419",
+      "offset": 467628,
+      "offset_hex": "0x722ac",
+      "byte_length": 6,
+      "literal_offset": 467628,
+      "raw_token": "1,2",
+      "context": "1,2",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43428",
+      "offset": 467728,
+      "offset_hex": "0x72310",
+      "byte_length": 2,
+      "literal_offset": 467728,
+      "raw_token": "6",
+      "context": "6",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43429",
+      "offset": 467736,
+      "offset_hex": "0x72318",
+      "byte_length": 2,
+      "literal_offset": 467736,
+      "raw_token": "5",
+      "context": "5",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43442",
+      "offset": 467852,
+      "offset_hex": "0x7238c",
+      "byte_length": 10,
+      "literal_offset": 467852,
+      "raw_token": "11,13",
+      "context": "11,13",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43447",
+      "offset": 467888,
+      "offset_hex": "0x723b0",
+      "byte_length": 8,
+      "literal_offset": 467888,
+      "raw_token": "9,13",
+      "context": "9,13",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43454",
+      "offset": 467968,
+      "offset_hex": "0x72400",
+      "byte_length": 8,
+      "literal_offset": 467968,
+      "raw_token": "9,11",
+      "context": "9,11",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43473",
+      "offset": 468092,
+      "offset_hex": "0x7247c",
+      "byte_length": 10,
+      "literal_offset": 468092,
+      "raw_token": "19,20",
+      "context": "19,20",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43480",
+      "offset": 468176,
+      "offset_hex": "0x724d0",
+      "byte_length": 10,
+      "literal_offset": 468176,
+      "raw_token": "17,20",
+      "context": "17,20",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43482",
+      "offset": 468192,
+      "offset_hex": "0x724e0",
+      "byte_length": 10,
+      "literal_offset": 468192,
+      "raw_token": "17,19",
+      "context": "17,19",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43497",
+      "offset": 468332,
+      "offset_hex": "0x7256c",
+      "byte_length": 10,
+      "literal_offset": 468332,
+      "raw_token": "24,26",
+      "context": "24,26",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43500",
+      "offset": 468348,
+      "offset_hex": "0x7257c",
+      "byte_length": 10,
+      "literal_offset": 468348,
+      "raw_token": "23,26",
+      "context": "23,26",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43503",
+      "offset": 468364,
+      "offset_hex": "0x7258c",
+      "byte_length": 10,
+      "literal_offset": 468364,
+      "raw_token": "23,24",
+      "context": "23,24",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43518",
+      "offset": 468520,
+      "offset_hex": "0x72628",
+      "byte_length": 4,
+      "literal_offset": 468520,
+      "raw_token": "30",
+      "context": "30",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43519",
+      "offset": 468532,
+      "offset_hex": "0x72634",
+      "byte_length": 4,
+      "literal_offset": 468532,
+      "raw_token": "29",
+      "context": "29",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43528",
+      "offset": 468596,
+      "offset_hex": "0x72674",
+      "byte_length": 10,
+      "literal_offset": 468596,
+      "raw_token": "33,34",
+      "context": "33,34",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43531",
+      "offset": 468612,
+      "offset_hex": "0x72684",
+      "byte_length": 10,
+      "literal_offset": 468612,
+      "raw_token": "32,34",
+      "context": "32,34",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43534",
+      "offset": 468628,
+      "offset_hex": "0x72694",
+      "byte_length": 10,
+      "literal_offset": 468628,
+      "raw_token": "32,33",
+      "context": "32,33",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43546",
+      "offset": 468720,
+      "offset_hex": "0x726f0",
+      "byte_length": 10,
+      "literal_offset": 468720,
+      "raw_token": "39,40",
+      "context": "39,40",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43549",
+      "offset": 468736,
+      "offset_hex": "0x72700",
+      "byte_length": 10,
+      "literal_offset": 468736,
+      "raw_token": "37,40",
+      "context": "37,40",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43552",
+      "offset": 468752,
+      "offset_hex": "0x72710",
+      "byte_length": 10,
+      "literal_offset": 468752,
+      "raw_token": "37,39",
+      "context": "37,39",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43569",
+      "offset": 468996,
+      "offset_hex": "0x72804",
+      "byte_length": 10,
+      "literal_offset": 468880,
+      "raw_token": "$5000",
+      "context": "Siga hasta Salta, Zona Norte. Si pasa por la salida cobre $5000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43579",
+      "offset": 469024,
+      "offset_hex": "0x72820",
+      "byte_length": 10,
+      "literal_offset": 469012,
+      "raw_token": "$3000",
+      "context": "Pague $3000 por gastos colegiales",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43592",
+      "offset": 469174,
+      "offset_hex": "0x728b6",
+      "byte_length": 2,
+      "literal_offset": 469160,
+      "raw_token": "3",
+      "context": "Vuelva 3 pasos atras",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43596",
+      "offset": 469262,
+      "offset_hex": "0x7290e",
+      "byte_length": 14,
+      "literal_offset": 469208,
+      "raw_token": "$10.000",
+      "context": "Ha ganado la grande. Cobre $10.000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43601",
+      "offset": 469340,
+      "offset_hex": "0x7295c",
+      "byte_length": 10,
+      "literal_offset": 469284,
+      "raw_token": "$5000",
+      "context": " pasa por la salida y cobra $5000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43623",
+      "offset": 469592,
+      "offset_hex": "0x72a58",
+      "byte_length": 10,
+      "literal_offset": 469580,
+      "raw_token": "$1000",
+      "context": "Cobre $1000 por intereses bancarios",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43628",
+      "offset": 469712,
+      "offset_hex": "0x72ad0",
+      "byte_length": 10,
+      "literal_offset": 469656,
+      "raw_token": "$3000",
+      "context": "Gano en las carreras. Cobre $3000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43633",
+      "offset": 469802,
+      "offset_hex": "0x72b2a",
+      "byte_length": 8,
+      "literal_offset": 469728,
+      "raw_token": "$300",
+      "context": "Multa por exceso de velocidad. Pague $300",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43644",
+      "offset": 469956,
+      "offset_hex": "0x72bc4",
+      "byte_length": 8,
+      "literal_offset": 469844,
+      "raw_token": "$500",
+      "context": "Sus propiedades tiene que ser reparadas, pague al banco $500 por cada chacra y $2500 por cada estancia",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43644",
+      "offset": 470002,
+      "offset_hex": "0x72bf2",
+      "byte_length": 10,
+      "literal_offset": 469844,
+      "raw_token": "$2500",
+      "context": "Sus propiedades tiene que ser reparadas, pague al banco $500 por cada chacra y $2500 por cada estancia",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43656",
+      "offset": 470176,
+      "offset_hex": "0x72ca0",
+      "byte_length": 10,
+      "literal_offset": 470056,
+      "raw_token": "$5000",
+      "context": "Siga hasta Santa Fe Zona Norte. Si pasa por la salida cobre $5000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43671",
+      "offset": 470292,
+      "offset_hex": "0x72d14",
+      "byte_length": 8,
+      "literal_offset": 470248,
+      "raw_token": "$400",
+      "context": "Multa caminera. Pague $400",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43684",
+      "offset": 470450,
+      "offset_hex": "0x72db2",
+      "byte_length": 10,
+      "literal_offset": 470332,
+      "raw_token": "$5000",
+      "context": "Haga un paseo hasta la Bodega. Si pasa por la salida cobre $5000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43692",
+      "offset": 470542,
+      "offset_hex": "0x72e0e",
+      "byte_length": 8,
+      "literal_offset": 470468,
+      "raw_token": "$800",
+      "context": "Por compra de semilla pague al banco $800 por cada chacra, $4000 por cada estancia",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43692",
+      "offset": 470586,
+      "offset_hex": "0x72e3a",
+      "byte_length": 10,
+      "literal_offset": 470468,
+      "raw_token": "$4000",
+      "context": "Por compra de semilla pague al banco $800 por cada chacra, $4000 por cada estancia",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43702",
+      "offset": 470716,
+      "offset_hex": "0x72ebc",
+      "byte_length": 10,
+      "literal_offset": 470640,
+      "raw_token": "$2000",
+      "context": "Ha ganado un concurso agricola. Cobre $2000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43709",
+      "offset": 470792,
+      "offset_hex": "0x72f08",
+      "byte_length": 10,
+      "literal_offset": 470732,
+      "raw_token": "$1000",
+      "context": "Pague su poliza de seguro con $1000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43717",
+      "offset": 470872,
+      "offset_hex": "0x72f58",
+      "byte_length": 8,
+      "literal_offset": 470824,
+      "raw_token": "$200",
+      "context": "Es su cumpleaños, cobre $200 de cada uno de los jugadores",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43724",
+      "offset": 470996,
+      "offset_hex": "0x72fd4",
+      "byte_length": 10,
+      "literal_offset": 470944,
+      "raw_token": "$1000",
+      "context": "Gastos de farmacia. Pague $1000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43735",
+      "offset": 471184,
+      "offset_hex": "0x73090",
+      "byte_length": 8,
+      "literal_offset": 471088,
+      "raw_token": "$200",
+      "context": "Ha obtenido un segundo premio de belleza. Cobre $200",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43743",
+      "offset": 471212,
+      "offset_hex": "0x730ac",
+      "byte_length": 8,
+      "literal_offset": 471200,
+      "raw_token": "$200",
+      "context": "Pague $200 de multa o levante una tarjeta de SUERTE",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43749",
+      "offset": 471308,
+      "offset_hex": "0x7310c",
+      "byte_length": 4,
+      "literal_offset": 471308,
+      "raw_token": "5%",
+      "context": "5% de interes sobre cedulas hipotecarias. Cobre $500",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43749",
+      "offset": 471404,
+      "offset_hex": "0x7316c",
+      "byte_length": 8,
+      "literal_offset": 471308,
+      "raw_token": "$500",
+      "context": "5% de interes sobre cedulas hipotecarias. Cobre $500",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43768",
+      "offset": 471652,
+      "offset_hex": "0x73264",
+      "byte_length": 8,
+      "literal_offset": 471592,
+      "raw_token": "$400",
+      "context": "Devolucion de impuesto, cobre $400",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43772",
+      "offset": 471724,
+      "offset_hex": "0x732ac",
+      "byte_length": 10,
+      "literal_offset": 471668,
+      "raw_token": "$1000",
+      "context": "Por venta de acciones cobre $1000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43778",
+      "offset": 471754,
+      "offset_hex": "0x732ca",
+      "byte_length": 10,
+      "literal_offset": 471740,
+      "raw_token": "$2000",
+      "context": "Hereda $2000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43786",
+      "offset": 471870,
+      "offset_hex": "0x7333e",
+      "byte_length": 10,
+      "literal_offset": 471792,
+      "raw_token": "$4000",
+      "context": "Error en los calculos del banco. Cobre $4000",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43791",
+      "offset": 471888,
+      "offset_hex": "0x73350",
+      "byte_length": 20,
+      "literal_offset": 471888,
+      "raw_token": "0123456789",
+      "context": "0123456789.,",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43873",
+      "offset": 472574,
+      "offset_hex": "0x735fe",
+      "byte_length": 16,
+      "literal_offset": 472572,
+      "raw_token": "$ 567890",
+      "context": " $ 567890",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43901",
+      "offset": 472826,
+      "offset_hex": "0x736fa",
+      "byte_length": 2,
+      "literal_offset": 472812,
+      "raw_token": "6",
+      "context": "Maximo 6 jugadores",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43918",
+      "offset": 473010,
+      "offset_hex": "0x737b2",
+      "byte_length": 2,
+      "literal_offset": 472992,
+      "raw_token": "1",
+      "context": "Idem con 1 chacra: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43922",
+      "offset": 473058,
+      "offset_hex": "0x737e2",
+      "byte_length": 2,
+      "literal_offset": 473040,
+      "raw_token": "2",
+      "context": "Idem con 2 chacras: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43926",
+      "offset": 473106,
+      "offset_hex": "0x73812",
+      "byte_length": 2,
+      "literal_offset": 473088,
+      "raw_token": "3",
+      "context": "Idem con 3 chacras: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43930",
+      "offset": 473154,
+      "offset_hex": "0x73842",
+      "byte_length": 2,
+      "literal_offset": 473136,
+      "raw_token": "4",
+      "context": "Idem con 4 chacras: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43934",
+      "offset": 473202,
+      "offset_hex": "0x73872",
+      "byte_length": 2,
+      "literal_offset": 473184,
+      "raw_token": "1",
+      "context": "Idem con 1 estancia: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43945",
+      "offset": 473380,
+      "offset_hex": "0x73924",
+      "byte_length": 2,
+      "literal_offset": 473380,
+      "raw_token": "1",
+      "context": "1 chacra vale: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43949",
+      "offset": 473420,
+      "offset_hex": "0x7394c",
+      "byte_length": 2,
+      "literal_offset": 473420,
+      "raw_token": "1",
+      "context": "1 estancia vale: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43953",
+      "offset": 473474,
+      "offset_hex": "0x73982",
+      "byte_length": 2,
+      "literal_offset": 473464,
+      "raw_token": "4",
+      "context": " mas 4 chacras",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43961",
+      "offset": 473554,
+      "offset_hex": "0x739d2",
+      "byte_length": 2,
+      "literal_offset": 473536,
+      "raw_token": "1",
+      "context": "Teniendo 1 compania cobrese 100 veces lo que indican los dados",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43961",
+      "offset": 473592,
+      "offset_hex": "0x739f8",
+      "byte_length": 6,
+      "literal_offset": 473536,
+      "raw_token": "100",
+      "context": "Teniendo 1 compania cobrese 100 veces lo que indican los dados",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43969",
+      "offset": 473686,
+      "offset_hex": "0x73a56",
+      "byte_length": 2,
+      "literal_offset": 473668,
+      "raw_token": "2",
+      "context": "Teniendo 2 compania cobrese 200 veces lo que indican los dados",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43969",
+      "offset": 473724,
+      "offset_hex": "0x73a7c",
+      "byte_length": 6,
+      "literal_offset": 473668,
+      "raw_token": "200",
+      "context": "Teniendo 2 compania cobrese 200 veces lo que indican los dados",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43980",
+      "offset": 473850,
+      "offset_hex": "0x73afa",
+      "byte_length": 2,
+      "literal_offset": 473832,
+      "raw_token": "3",
+      "context": "Teniendo 3 compania cobrese 300 veces lo que indican los dados",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43980",
+      "offset": 473888,
+      "offset_hex": "0x73b20",
+      "byte_length": 6,
+      "literal_offset": 473832,
+      "raw_token": "300",
+      "context": "Teniendo 3 compania cobrese 300 veces lo que indican los dados",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43988",
+      "offset": 473982,
+      "offset_hex": "0x73b7e",
+      "byte_length": 2,
+      "literal_offset": 473964,
+      "raw_token": "1",
+      "context": "Teniendo 1 ferrocarril: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43992",
+      "offset": 474038,
+      "offset_hex": "0x73bb6",
+      "byte_length": 2,
+      "literal_offset": 474020,
+      "raw_token": "2",
+      "context": "Teniendo 2 ferrocarril: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-43996",
+      "offset": 474094,
+      "offset_hex": "0x73bee",
+      "byte_length": 2,
+      "literal_offset": 474076,
+      "raw_token": "3",
+      "context": "Teniendo 3 ferrocarril: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-44000",
+      "offset": 474150,
+      "offset_hex": "0x73c26",
+      "byte_length": 2,
+      "literal_offset": 474132,
+      "raw_token": "4",
+      "context": "Teniendo 4 ferrocarril: $",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    },
+    {
+      "literal_id": "text-44091",
+      "offset": 475384,
+      "offset_hex": "0x740f8",
+      "byte_length": 2,
+      "literal_offset": 475296,
+      "raw_token": "2",
+      "context": "No tiene suerte, No tiro dobles y permanece 2 turnos en la carcel.",
+      "interpretation": "numeric-looking text, not an independently recovered numeric field"
+    }
+  ]
+}

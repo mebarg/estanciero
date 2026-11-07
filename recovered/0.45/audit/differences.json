@@ -1,0 +1,413 @@
+{
+  "scope": "EXE 0.45 versus current web application; indices 40/41 matched by title name, not silently conflated",
+  "differences": [
+    {
+      "exeIndex": 1,
+      "webIndex": 1,
+      "name": "Prov. Formosa Zona Sur",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 1,
+      "webIndex": 1,
+      "name": "Prov. Formosa Zona Sur",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 2,
+      "webIndex": 2,
+      "name": "Prov. Formosa Zona Centro",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 2,
+      "webIndex": 2,
+      "name": "Prov. Formosa Zona Centro",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 3,
+      "webIndex": 3,
+      "name": "Prov. Formosa Zona Norte",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 3,
+      "webIndex": 3,
+      "name": "Prov. Formosa Zona Norte",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 5,
+      "webIndex": 5,
+      "name": "Prov. Rio Negro Zona Sur",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 5,
+      "webIndex": 5,
+      "name": "Prov. Rio Negro Zona Sur",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 6,
+      "webIndex": 6,
+      "name": "Prov. Rio Negro Zona Norte",
+      "field": "hipoteca",
+      "exe": 1000.0,
+      "web": 1100
+    },
+    {
+      "exeIndex": 6,
+      "webIndex": 6,
+      "name": "Prov. Rio Negro Zona Norte",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 6,
+      "webIndex": 6,
+      "name": "Prov. Rio Negro Zona Norte",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 9,
+      "webIndex": 9,
+      "name": "Prov. Salta Zona Sur",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 9,
+      "webIndex": 9,
+      "name": "Prov. Salta Zona Sur",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 11,
+      "webIndex": 11,
+      "name": "Prov. Salta Zona Centro",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 11,
+      "webIndex": 11,
+      "name": "Prov. Salta Zona Centro",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 13,
+      "webIndex": 13,
+      "name": "Prov. Salta Zona Norte",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 13,
+      "webIndex": 13,
+      "name": "Prov. Salta Zona Norte",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 17,
+      "webIndex": 17,
+      "name": "Prov. Mendoza Zona Sur",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 17,
+      "webIndex": 17,
+      "name": "Prov. Mendoza Zona Sur",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 17,
+      "webIndex": 17,
+      "name": "Prov. Mendoza Zona Sur",
+      "field": "alquiler nivel 3",
+      "exe": 2500.0,
+      "web": 10500
+    },
+    {
+      "exeIndex": 19,
+      "webIndex": 19,
+      "name": "Prov. Mendoza Zona Centro",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 19,
+      "webIndex": 19,
+      "name": "Prov. Mendoza Zona Centro",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 20,
+      "webIndex": 20,
+      "name": "Prov. Mendoza Zona Norte",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 20,
+      "webIndex": 20,
+      "name": "Prov. Mendoza Zona Norte",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 23,
+      "webIndex": 23,
+      "name": "Prov. Santa Fe Zona Sur",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 23,
+      "webIndex": 23,
+      "name": "Prov. Santa Fe Zona Sur",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 24,
+      "webIndex": 24,
+      "name": "Prov. Santa Fe Zona Centro",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 24,
+      "webIndex": 24,
+      "name": "Prov. Santa Fe Zona Centro",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 26,
+      "webIndex": 26,
+      "name": "Prov. Santa Fe Zona Norte",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 26,
+      "webIndex": 26,
+      "name": "Prov. Santa Fe Zona Norte",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 29,
+      "webIndex": 29,
+      "name": "Prov. Tucuman Zona Sur",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 29,
+      "webIndex": 29,
+      "name": "Prov. Tucuman Zona Sur",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 30,
+      "webIndex": 30,
+      "name": "Prov. Tucuman Zona Norte",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 30,
+      "webIndex": 30,
+      "name": "Prov. Tucuman Zona Norte",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 32,
+      "webIndex": 32,
+      "name": "Prov. Cordoba Zona Sur",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 32,
+      "webIndex": 32,
+      "name": "Prov. Cordoba Zona Sur",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 33,
+      "webIndex": 33,
+      "name": "Prov. Cordoba Zona Centro",
+      "field": "compra",
+      "exe": 6000.0,
+      "web": 6400
+    },
+    {
+      "exeIndex": 33,
+      "webIndex": 33,
+      "name": "Prov. Cordoba Zona Centro",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 33,
+      "webIndex": 33,
+      "name": "Prov. Cordoba Zona Centro",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 34,
+      "webIndex": 34,
+      "name": "Prov. Cordoba Zona Norte",
+      "field": "compra",
+      "exe": 6400.0,
+      "web": 7000
+    },
+    {
+      "exeIndex": 34,
+      "webIndex": 34,
+      "name": "Prov. Cordoba Zona Norte",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 34,
+      "webIndex": 34,
+      "name": "Prov. Cordoba Zona Norte",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 37,
+      "webIndex": 37,
+      "name": "Prov. Buenos Aires Zona Sur",
+      "field": "compra",
+      "exe": 7000.0,
+      "web": 8000
+    },
+    {
+      "exeIndex": 37,
+      "webIndex": 37,
+      "name": "Prov. Buenos Aires Zona Sur",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 37,
+      "webIndex": 37,
+      "name": "Prov. Buenos Aires Zona Sur",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 39,
+      "webIndex": 39,
+      "name": "Prov. Buenos Aires Zona Centro",
+      "field": "compra",
+      "exe": 7000.0,
+      "web": 8000
+    },
+    {
+      "exeIndex": 39,
+      "webIndex": 39,
+      "name": "Prov. Buenos Aires Zona Centro",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 39,
+      "webIndex": 39,
+      "name": "Prov. Buenos Aires Zona Centro",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 40,
+      "webIndex": 41,
+      "name": "Prov. Buenos Aires Zona Norte",
+      "field": "compra",
+      "exe": 7400.0,
+      "web": 9000
+    },
+    {
+      "exeIndex": 40,
+      "webIndex": 41,
+      "name": "Prov. Buenos Aires Zona Norte",
+      "field": "chacra",
+      "exe": 1000.0,
+      "web": 4000
+    },
+    {
+      "exeIndex": 40,
+      "webIndex": 41,
+      "name": "Prov. Buenos Aires Zona Norte",
+      "field": "adicional estancia",
+      "exe": 1000.0,
+      "web": 4000
+    }
+  ]
+}

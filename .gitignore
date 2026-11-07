@@ -1,0 +1,28 @@
+node_modules/
+dist/
+data/
+*.log
+
+.env
+.env.*
+!.env.example
+
+# Paquetes y archivos originales; los recursos usados están en web/assets/.
+/estanciero-servidor*.tar.gz
+/apps/
+/basecd/
+/escaneos/
+/*.jpg
+/*.JPG
+/*.webp
+/*.mp3
+/*.pdf
+*.exe
+*.dll
+*.msi
+*.zip
+
+# Configuración privada del entorno de trabajo.
+/.agents/
+/.codex/
+/.aws/

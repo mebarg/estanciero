@@ -1,0 +1,43 @@
+index	name	zoneText	typeText	priceOrAmount	mortgage	houseCost	estateExtraCost	rents	siblingIndicesText
+0	Salida		e	5000.0				[null, null, null, null, null, null]	
+1	Prov. Formosa	Zona Sur	p	1000.0	500.0	1000.0	1000.0	[40.0, 200.0, 600.0, 1700.0, 3000.0, 4750.0]	2,3
+2	Prov. Formosa	Zona Centro	p	1000.0	500.0	1000.0	1000.0	[40.0, 200.0, 600.0, 1700.0, 3000.0, 4750.0]	1,3
+3	Prov. Formosa	Zona Norte	p	1200.0	600.0	1000.0	1000.0	[80.0, 400.0, 800.0, 3400.0, 6000.0, 9500.0]	1,2
+4	Impuesto a los Reditos		e	5000.0				[null, null, null, null, null, null]	
+5	Prov. Rio Negro	Zona Sur	p	2000.0	1000.0	1000.0	1000.0	[110.0, 570.0, 1700.0, 5150.0, 7600.0, 9500.0]	6
+6	Prov. Rio Negro	Zona Norte	p	2200.0	1000.0	1000.0	1000.0	[150.0, 750.0, 2000.0, 5700.0, 8500.0, 11500.0]	5
+7	Premio Ganadero		e	2500.0				[null, null, null, null, null, null]	
+8	Compania Petrolera		c	3800.0	1900.0			[null, null, null, null, null, null]	
+9	Prov. Salta	Zona Sur	p	2600.0	1300.0	1000.0	1000.0	[200.0, 1000.0, 2800.0, 8500.0, 12000.0, 14200.0]	11,13
+10	Destino		d					[null, null, null, null, null, null]	
+11	Prov. Salta	Zona Centro	p	2600.0	1300.0	1000.0	1000.0	[200.0, 1000.0, 2800.0, 8500.0, 12000.0, 14200.0]	9,13
+12	Ferrocarril General Belgrano		t	3600.0	1900.0			[null, 500.0, 1000.0, 2000.0, 4000.0, null]	
+13	Prov. Salta	Zona Norte	p	3000.0	1500.0	1000.0	1000.0	[230.0, 1150.0, 3400.0, 9500.0, 13000.0, 17000.0]	9,11
+14	Comisaria		e					[null, null, null, null, null, null]	
+15	Suerte		s					[null, null, null, null, null, null]	
+16	Bodega		c	3800.0	1900.0			[null, null, null, null, null, null]	
+17	Prov. Mendoza	Zona Sur	p	3400.0	1700.0	1000.0	1000.0	[250.0, 1350.0, 3800.0, 2500.0, 14200.0, 18000.0]	19,20
+18	Ferrocarril General San Martin		t	3600.0	1800.0			[null, 500.0, 1000.0, 2000.0, 4000.0, null]	
+19	Prov. Mendoza	Zona Centro	p	3400.0	1700.0	1000.0	1000.0	[250.0, 1350.0, 3800.0, 10500.0, 14200.0, 18000.0]	17,20
+20	Prov. Mendoza	Zona Norte	p	3800.0	1900.0	1000.0	1000.0	[300.0, 1500.0, 4200.0, 11500.0, 15000.0, 19000.0]	17,19
+21	Descanso		e					[null, null, null, null, null, null]	
+22	Ferrocarril General B. Mitre		t	3600.0	1800.0			[null, 500.0, 1000.0, 2000.0, 4000.0, null]	
+23	Prov. Santa Fe	Zona Sur	p	4200.0	2100.0	1000.0	1000.0	[350.0, 1700.0, 4750.0, 13000.0, 16000.0, 20000.0]	24,26
+24	Prov. Santa Fe	Zona Centro	p	4200.0	2100.0	1000.0	1000.0	[350.0, 1700.0, 4750.0, 13000.0, 16000.0, 20000.0]	23,26
+25	Destino		d					[null, null, null, null, null, null]	
+26	Prov. Santa Fe	Zona Norte	p	4600.0	2300.0	1000.0	1000.0	[400.0, 2000.0, 5750.0, 14000.0, 17000.0, 21000.0]	23,24
+27	Ferrocarril General Urquiza		t	3600.0	1700.0			[null, 500.0, 1000.0, 2000.0, 4000.0, null]	
+28	Libre estacionamiento		e					[null, null, null, null, null, null]	
+29	Prov. Tucuman	Zona Sur	p	5000.0	2500.0	1000.0	1000.0	[400.0, 2200.0, 6000.0, 15000.0, 18000.0, 21000.0]	30
+30	Prov. Tucuman	Zona Norte	p	5400.0	2700.0	1000.0	1000.0	[450.0, 2400.0, 6800.0, 16000.0, 19500.0, 23000.0]	29
+31	Ingenio		c	3800.0	1900.0			[null, null, null, null, null, null]	
+32	Prov. Cordoba	Zona Sur	p	6000.0	3000.0	1000.0	1000.0	[500.0, 2500.0, 6500.0, 17000.0, 21000.0, 24000.0]	33,34
+33	Prov. Cordoba	Zona Centro	p	6000.0	3000.0	1000.0	1000.0	[450.0, 2400.0, 6800.0, 16000.0, 19500.0, 23000.0]	32,34
+34	Prov. Cordoba	Zona Norte	p	6400.0	3200.0	1000.0	1000.0	[550.0, 2850.0, 8500.0, 19000.0, 23000.0, 27000.0]	32,33
+35	Marche Preso		e					[null, null, null, null, null, null]	
+36	Suerte		s					[null, null, null, null, null, null]	
+37	Prov. Buenos Aires	Zona Sur	p	7000.0	3500.0	1000.0	1000.0	[650.0, 3300.0, 9500.0, 22000.0, 25000.0, 30000.0]	39,40
+38	Destino		d					[null, null, null, null, null, null]	
+39	Prov. Buenos Aires	Zona Centro	p	7000.0	3500.0	1000.0	1000.0	[650.0, 3300.0, 9500.0, 22000.0, 25000.0, 30000.0]	37,40
+40	Prov. Buenos Aires	Zona Norte	p	7400.0	3700.0	1000.0	1000.0	[1000.0, 4000.0, 12000.0, 26000.0, 31000.0, 36000.0]	37,39
+41	Impuesto a las ventas		e	2000.0				[null, null, null, null, null, null]	

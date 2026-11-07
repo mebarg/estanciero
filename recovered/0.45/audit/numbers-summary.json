@@ -1,0 +1,59 @@
+{
+  "source": "recovered/0.45/estanciero.exe",
+  "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf",
+  "command": [
+    "objdump",
+    "-d",
+    "-Mintel",
+    "--insn-width=16",
+    "recovered/0.45/estanciero.exe"
+  ],
+  "coverage": {
+    "file_bytes": 602112,
+    "linear_disassembly_instruction_records_all_text_section": 253281,
+    "selected_native_corridor": {
+      "start_va": "0x475c10",
+      "end_va_exclusive": "0x48fec9",
+      "selection": "after final VB metadata and before import directory"
+    },
+    "native_candidate_instruction_records": 33085,
+    "prologue_seeds": 74,
+    "flow_candidate_instruction_records": 30901,
+    "extra_exact_decode_ranges": [
+      [
+        "0x4018c0",
+        "0x4018d2"
+      ],
+      [
+        "0x470bc8",
+        "0x470be1"
+      ],
+      [
+        "0x470c0c",
+        "0x470c25"
+      ],
+      [
+        "0x470c5c",
+        "0x470c75"
+      ]
+    ],
+    "ghidra_non_thunk_entry_anchors": 80,
+    "ghidra_body_ranges": 171,
+    "instruction_records_inside_ghidra_bodies": 30901,
+    "numeric_operands_inside_ghidra_bodies": 21059,
+    "all_numeric_operands_in_selected_records": 22026,
+    "floating_point_memory_reads": 24,
+    "unresolved_indirect_calls_or_jumps": 4179
+  },
+  "ghidra_procedure_inventory_evidence": "ev_995408bcd8f551546f0b46de2e36cd9df8f538a1d560430be254ecaf620ff3a3",
+  "limitations": [
+    "No target code was executed.",
+    "All numeric operands in the bounded native corridor are retained, including displacements and addresses.",
+    "Decoded instruction candidates are not guaranteed to be executed or reachable.",
+    "Prologue seeds/direct-flow traversal miss indirect dispatch destinations and can include cleanup paths.",
+    "Bytes decoded outside the selected native corridor are not called code; .text contains substantial image/form/string data.",
+    "Immediate float interpretations are bit-pattern candidates until data-flow or initialization establishes their type.",
+    "Economic semantics require a use-site trace; frequency/size alone does not establish a price or rule.",
+    "The 42-board-record initialization is interpreted separately by the main investigation."
+  ]
+}

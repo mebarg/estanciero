@@ -1,0 +1,2371 @@
+{
+  "source_sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf",
+  "defined_native_procedures": 80,
+  "classified_scope": "Ghidra-defined non-external, non-thunk functions; heuristically recovered boundaries are not a guarantee of original-source completeness",
+  "records": [
+    {
+      "address": "0x4018c8",
+      "name": "entry",
+      "info_evidence_id": "ev_01d7bd02cbe5dbd8044e24c242cd1983ef8fa16c45a991bf3848004a03b063e8",
+      "pseudocode_evidence_id": "ev_8aeca84e81c654cca45785fc53fff746c724d32a0fb145ea0763d1744c5d419f",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4018a4",
+            "end": "0x4018b3"
+          },
+          {
+            "start": "0x4018c8",
+            "end": "0x4018f4"
+          }
+        ],
+        "total_bytes": 61,
+        "span_bytes": 81,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1255,
+      "metadata_file": "procedures/4018c8.json",
+      "pseudocode_file": "procedures/4018c8.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x470bc8",
+      "name": "FUN_00470bc8",
+      "info_evidence_id": "ev_d0e80d4d290952ea267c2d3c4af734036fc1d6c90a86be0a8c5769e3f484b495",
+      "pseudocode_evidence_id": "ev_a039ef901c6c1dece892fed1076949d3899b1bfc7e279e496d2d28b46cbd7169",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x470bc8",
+            "end": "0x470be0"
+          }
+        ],
+        "total_bytes": 25,
+        "span_bytes": 25,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 579,
+      "metadata_file": "procedures/470bc8.json",
+      "pseudocode_file": "procedures/470bc8.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x470c0c",
+      "name": "FUN_00470c0c",
+      "info_evidence_id": "ev_741f57c33692eba1613af8ad2d3543aaad25919bc045e9c8b16d7ffad2655282",
+      "pseudocode_evidence_id": "ev_30607ff325e4397040cb508853c94d50f83680aeb6e615080ad54e213c206b67",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x470c0c",
+            "end": "0x470c24"
+          }
+        ],
+        "total_bytes": 25,
+        "span_bytes": 25,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 579,
+      "metadata_file": "procedures/470c0c.json",
+      "pseudocode_file": "procedures/470c0c.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x470c5c",
+      "name": "FUN_00470c5c",
+      "info_evidence_id": "ev_1d6b6c9235cae5721def9ee4241bbe96c982373e2617677633495c63f936c0f6",
+      "pseudocode_evidence_id": "ev_e56b4660e59286afe555ce185dcb0523d18a39f554305e080847cbb8edc8582e",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x470c5c",
+            "end": "0x470c74"
+          }
+        ],
+        "total_bytes": 25,
+        "span_bytes": 25,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 582,
+      "metadata_file": "procedures/470c5c.json",
+      "pseudocode_file": "procedures/470c5c.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x475c10",
+      "name": "FUN_00475c10",
+      "info_evidence_id": "ev_d768d7125f97829dbdb89220ac0b394c04c5c4db4dbb799995739b782b3667c6",
+      "pseudocode_evidence_id": "ev_9cb867817ea6424b3ebce44fb00c6c79d6a51dabfea5e247d04cfc5a7537459a",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x475c10",
+            "end": "0x475ca7"
+          }
+        ],
+        "total_bytes": 152,
+        "span_bytes": 152,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 749,
+      "metadata_file": "procedures/475c10.json",
+      "pseudocode_file": "procedures/475c10.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x475cb0",
+      "name": "FUN_00475cb0",
+      "info_evidence_id": "ev_c09d0cd33aaf3f146388a851659fdbff0152d0a350a3b1ed11c92cdd8358d685",
+      "pseudocode_evidence_id": "ev_d43bddfb5afd862160d3e0ab3a64477958aacae13789a2a5865058bd997714a6",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x475cb0",
+            "end": "0x475d47"
+          }
+        ],
+        "total_bytes": 152,
+        "span_bytes": 152,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 749,
+      "metadata_file": "procedures/475cb0.json",
+      "pseudocode_file": "procedures/475cb0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x475d50",
+      "name": "FUN_00475d50",
+      "info_evidence_id": "ev_053589405167bc7c87a7f4c79a1ea05116d678217c08fedf13072edf0c27a700",
+      "pseudocode_evidence_id": "ev_1fec4d848a89946649180393b256f3c96c76824276311f0ddb455157c633e302",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x475d50",
+            "end": "0x475de7"
+          }
+        ],
+        "total_bytes": 152,
+        "span_bytes": 152,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 749,
+      "metadata_file": "procedures/475d50.json",
+      "pseudocode_file": "procedures/475d50.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x475df0",
+      "name": "FUN_00475df0",
+      "info_evidence_id": "ev_b86119b2fd064092098ff322d0a1a165ec16fd4dd0788f3d43aba276d808c944",
+      "pseudocode_evidence_id": "ev_d3998321396d7e368d665b1374e12be7742b06561561a3789c5eee110414741a",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x475df0",
+            "end": "0x475fcf"
+          },
+          {
+            "start": "0x475fec",
+            "end": "0x475fec"
+          },
+          {
+            "start": "0x47600c",
+            "end": "0x476010"
+          }
+        ],
+        "total_bytes": 486,
+        "span_bytes": 545,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2216,
+      "metadata_file": "procedures/475df0.json",
+      "pseudocode_file": "procedures/475df0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x476020",
+      "name": "FUN_00476020",
+      "info_evidence_id": "ev_2d8f431b5ffd24f18433c452bab40ed3e6becfb90eaee189ab250d0da7878bb3",
+      "pseudocode_evidence_id": "ev_986204a66d14e97f8a1381604e0ff513e0cb793d64d30699f0a4382c67976a65",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x476020",
+            "end": "0x4760b4"
+          }
+        ],
+        "total_bytes": 149,
+        "span_bytes": 149,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 749,
+      "metadata_file": "procedures/476020.json",
+      "pseudocode_file": "procedures/476020.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4760c0",
+      "name": "FUN_004760c0",
+      "info_evidence_id": "ev_095bc03e5f465f4e0d30c41dd6bff396b471e3a5146abf4768fc783c3748a25b",
+      "pseudocode_evidence_id": "ev_b3743e93e3717e41ca7d9e343d5993ffc72c0276289604fcd5e5f108cc1bc277",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4760c0",
+            "end": "0x476676"
+          },
+          {
+            "start": "0x4766af",
+            "end": "0x4766af"
+          },
+          {
+            "start": "0x4766cf",
+            "end": "0x4766df"
+          }
+        ],
+        "total_bytes": 1481,
+        "span_bytes": 1568,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 10840,
+      "metadata_file": "procedures/4760c0.json",
+      "pseudocode_file": "procedures/4760c0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4766e0",
+      "name": "FUN_004766e0",
+      "info_evidence_id": "ev_ceb4938e62849110571d1cae08ae5752f37fb6c8fa95dafc48e8d9743d94b630",
+      "pseudocode_evidence_id": "ev_c4230c7b4ec7705847937744feff6921b54d6cbe003cc7bd0fb9401abf3e7f7f",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4766e0",
+            "end": "0x476853"
+          },
+          {
+            "start": "0x47685e",
+            "end": "0x47685e"
+          }
+        ],
+        "total_bytes": 373,
+        "span_bytes": 383,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1539,
+      "metadata_file": "procedures/4766e0.json",
+      "pseudocode_file": "procedures/4766e0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x476880",
+      "name": "FUN_00476880",
+      "info_evidence_id": "ev_458bbe95723bbb3e7c6ec0a393a9a201c9b4da92c2a5bc38472eda3e0547276f",
+      "pseudocode_evidence_id": "ev_ec339a1c39d932a9dccf4d5135ea618f637b13438a92a7cefcd4b40ac2ecabfb",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x476880",
+            "end": "0x476f71"
+          },
+          {
+            "start": "0x476fd5",
+            "end": "0x476fd5"
+          },
+          {
+            "start": "0x476ff5",
+            "end": "0x476ff9"
+          }
+        ],
+        "total_bytes": 1784,
+        "span_bytes": 1914,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 8343,
+      "metadata_file": "procedures/476880.json",
+      "pseudocode_file": "procedures/476880.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x477000",
+      "name": "FUN_00477000",
+      "info_evidence_id": "ev_644660478b61d8f47a064ffff8faead2fe8e7e8c775967fd610f9e1d845477e0",
+      "pseudocode_evidence_id": "ev_11e22c0454bfe1d64f7b35c86ad402f7d3a3c71cf035e8ace3eec1bf29fdf2fb",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x477000",
+            "end": "0x47712f"
+          }
+        ],
+        "total_bytes": 304,
+        "span_bytes": 304,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 28525,
+      "metadata_file": "procedures/477000.json",
+      "pseudocode_file": "procedures/477000.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x477130",
+      "name": "FUN_00477130",
+      "info_evidence_id": "ev_900db1aab0c5cfb173afd8eab1be6dc29d47f7ed7ba230d0324a4b3af09b85e3",
+      "pseudocode_evidence_id": "ev_69e5895c2c4c1e4a4cb5bff89ffdf64ae777cd1f67f60fc090ae9b752a4bff64",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x477130",
+            "end": "0x478145"
+          },
+          {
+            "start": "0x478187",
+            "end": "0x4781be"
+          }
+        ],
+        "total_bytes": 4174,
+        "span_bytes": 4239,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 21816,
+      "metadata_file": "procedures/477130.json",
+      "pseudocode_file": "procedures/477130.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4781e0",
+      "name": "FUN_004781e0",
+      "info_evidence_id": "ev_bbbd5ccb2132375a332f7e4a5e6a83f1fc8fdf78cc3b6bb1f6d67305d3f0e812",
+      "pseudocode_evidence_id": "ev_0a77763a191ad4816e78db052399ddfcd4946b6b35ba22bb5a343216abafba3a",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4781e0",
+            "end": "0x478473"
+          },
+          {
+            "start": "0x4784a0",
+            "end": "0x4784a0"
+          },
+          {
+            "start": "0x4784c0",
+            "end": "0x4784c4"
+          }
+        ],
+        "total_bytes": 666,
+        "span_bytes": 741,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2858,
+      "metadata_file": "procedures/4781e0.json",
+      "pseudocode_file": "procedures/4781e0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4784d0",
+      "name": "FUN_004784d0",
+      "info_evidence_id": "ev_b18182f4e36e8dbbb523ac4204088ffdcdf76459933ceff93d737b0cce003694",
+      "pseudocode_evidence_id": "ev_c1354e23b0d4c7f4dbd4be020a7a616ae9312256d20e65dd9c8d7cb6ea34e5ee",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4784d0",
+            "end": "0x478564"
+          }
+        ],
+        "total_bytes": 149,
+        "span_bytes": 149,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 804,
+      "metadata_file": "procedures/4784d0.json",
+      "pseudocode_file": "procedures/4784d0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x478570",
+      "name": "FUN_00478570",
+      "info_evidence_id": "ev_c2ae63f3abf6ebc7b2c1322e4381ddb89f92401dca7f0c2af5b0220f08b4f686",
+      "pseudocode_evidence_id": "ev_f6ac06291d119fff45ba26df7efe68f237a70440377f0ba3b979e814f20e7692",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x478570",
+            "end": "0x478dac"
+          },
+          {
+            "start": "0x478e0a",
+            "end": "0x478e0a"
+          },
+          {
+            "start": "0x478e2a",
+            "end": "0x478ebe"
+          }
+        ],
+        "total_bytes": 2259,
+        "span_bytes": 2383,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 8805,
+      "metadata_file": "procedures/478570.json",
+      "pseudocode_file": "procedures/478570.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x478ec0",
+      "name": "FUN_00478ec0",
+      "info_evidence_id": "ev_439507b3584a700fa62adefb0299a3a8edc17312fcd05969bb1e90db6da1d45d",
+      "pseudocode_evidence_id": "ev_9aa49d90012453dd1427132d0ca8d0c71fd670ebf9db6b4359f9be5a2e66a783",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x478ec0",
+            "end": "0x479259"
+          },
+          {
+            "start": "0x479286",
+            "end": "0x479286"
+          },
+          {
+            "start": "0x4792a6",
+            "end": "0x4792aa"
+          }
+        ],
+        "total_bytes": 928,
+        "span_bytes": 1003,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 4259,
+      "metadata_file": "procedures/478ec0.json",
+      "pseudocode_file": "procedures/478ec0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4792b0",
+      "name": "FUN_004792b0",
+      "info_evidence_id": "ev_8edbcaf59154ec218d994458207481cb1301f181313a4b4d87a4966d02e04cca",
+      "pseudocode_evidence_id": "ev_26651b7573f8c73af8551cf24ed1a44d99d3810bfc771f5977548c6a8b5c71c8",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4792b0",
+            "end": "0x4794b5"
+          },
+          {
+            "start": "0x4794f2",
+            "end": "0x4794f2"
+          }
+        ],
+        "total_bytes": 519,
+        "span_bytes": 579,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2384,
+      "metadata_file": "procedures/4792b0.json",
+      "pseudocode_file": "procedures/4792b0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x479520",
+      "name": "FUN_00479520",
+      "info_evidence_id": "ev_6c37ee61c570c7dca7921725612160f3c103483eec46ba31a145a33335d0f22f",
+      "pseudocode_evidence_id": "ev_0f4a1d1ec986117412163fde658d55b95c5f2ce6cd2f5f4fd0b202d125a12d98",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x479520",
+            "end": "0x47a6d1"
+          },
+          {
+            "start": "0x47a71b",
+            "end": "0x47a71b"
+          },
+          {
+            "start": "0x47a73b",
+            "end": "0x47a74f"
+          }
+        ],
+        "total_bytes": 4552,
+        "span_bytes": 4656,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 43826,
+      "metadata_file": "procedures/479520.json",
+      "pseudocode_file": "procedures/479520.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47a750",
+      "name": "FUN_0047a750",
+      "info_evidence_id": "ev_792d1c25901240782a915830a92994f0e05fe58ab7fbcadcb27be2046ca410da",
+      "pseudocode_evidence_id": "ev_65ef9a98f7135a38e229e2a804c9d2187131d909fece20de4907b33bd05247ec",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47a750",
+            "end": "0x47aa9e"
+          },
+          {
+            "start": "0x47aac6",
+            "end": "0x47ab12"
+          }
+        ],
+        "total_bytes": 924,
+        "span_bytes": 963,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 4299,
+      "metadata_file": "procedures/47a750.json",
+      "pseudocode_file": "procedures/47a750.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47ab40",
+      "name": "FUN_0047ab40",
+      "info_evidence_id": "ev_f94c9c66de2659ea31903b82b1e9e1f62c7fe32ab66b6a2199437caee30f5e6a",
+      "pseudocode_evidence_id": "ev_41da427379dd4eb8c829f7846135e143caa82038612fcb54f2313d01049df85d",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47ab40",
+            "end": "0x47b5d0"
+          },
+          {
+            "start": "0x47b61a",
+            "end": "0x47b626"
+          },
+          {
+            "start": "0x47b646",
+            "end": "0x47b65f"
+          }
+        ],
+        "total_bytes": 2744,
+        "span_bytes": 2848,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 14471,
+      "metadata_file": "procedures/47ab40.json",
+      "pseudocode_file": "procedures/47ab40.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47b660",
+      "name": "FUN_0047b660",
+      "info_evidence_id": "ev_72105d6661f55f2b50d796962b71dc32f202fb5643eabf1bde24c55c41b7e897",
+      "pseudocode_evidence_id": "ev_4863752f1eb4de465e527f47feb96cb02a88879f697761dd13888dc0c5890db8",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47b660",
+            "end": "0x47b766"
+          },
+          {
+            "start": "0x47b77f",
+            "end": "0x47b77f"
+          },
+          {
+            "start": "0x47b79f",
+            "end": "0x47b7a3"
+          }
+        ],
+        "total_bytes": 269,
+        "span_bytes": 324,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1548,
+      "metadata_file": "procedures/47b660.json",
+      "pseudocode_file": "procedures/47b660.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47b7b0",
+      "name": "FUN_0047b7b0",
+      "info_evidence_id": "ev_41579fd2535f3bec0f268b75e20618922db2f0695d96042d460b7983850b2497",
+      "pseudocode_evidence_id": "ev_31a9ce7a413787e6ac7c3cb1a3e6f99c6f56770c70dc1394c1a3977a5270b13d",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47b7b0",
+            "end": "0x47bc58"
+          },
+          {
+            "start": "0x47bc76",
+            "end": "0x47bc76"
+          }
+        ],
+        "total_bytes": 1194,
+        "span_bytes": 1223,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 5209,
+      "metadata_file": "procedures/47b7b0.json",
+      "pseudocode_file": "procedures/47b7b0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47bca0",
+      "name": "FUN_0047bca0",
+      "info_evidence_id": "ev_8585e83ec753e1ea0a929899152f1cbc1bf785884c6617f13c58aa3044071f6a",
+      "pseudocode_evidence_id": "ev_078a6f599f2608ce6e6604de83bc25147897180497ac31eb5aa6b118256d3cb6",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47bca0",
+            "end": "0x47cfab"
+          },
+          {
+            "start": "0x47cffa",
+            "end": "0x47d025"
+          }
+        ],
+        "total_bytes": 4920,
+        "span_bytes": 4998,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 23526,
+      "metadata_file": "procedures/47bca0.json",
+      "pseudocode_file": "procedures/47bca0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47d050",
+      "name": "FUN_0047d050",
+      "info_evidence_id": "ev_832d8bc09c77d42de1497f65fb52ecd031f89718800409300679b8ef9609e400",
+      "pseudocode_evidence_id": "ev_98f17be68c8a6dbf1d728e8a559018b5e908b4f073a87bc95c59fcc97f76a85d",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47d050",
+            "end": "0x47d2ea"
+          },
+          {
+            "start": "0x47d310",
+            "end": "0x47d310"
+          },
+          {
+            "start": "0x47d330",
+            "end": "0x47d334"
+          }
+        ],
+        "total_bytes": 673,
+        "span_bytes": 741,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2970,
+      "metadata_file": "procedures/47d050.json",
+      "pseudocode_file": "procedures/47d050.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47d340",
+      "name": "FUN_0047d340",
+      "info_evidence_id": "ev_6ced48faa153bdfa40bd550435e4c5f1db723b702d9ab1392cf3acce8701039c",
+      "pseudocode_evidence_id": "ev_9f02351052709b7b2d8b41de4f05b419abb5eeed2f7d26800cb47dfb5ed8d8b6",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47d340",
+            "end": "0x47d71c"
+          },
+          {
+            "start": "0x47d75d",
+            "end": "0x47d75d"
+          }
+        ],
+        "total_bytes": 990,
+        "span_bytes": 1054,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 4200,
+      "metadata_file": "procedures/47d340.json",
+      "pseudocode_file": "procedures/47d340.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47d780",
+      "name": "FUN_0047d780",
+      "info_evidence_id": "ev_6203c26b3dae9136c077ffe5dab26a39e4824f5c1b90b7f23b2b86250280f9a8",
+      "pseudocode_evidence_id": "ev_fedf30348cc0624d8d5e283baebc6890c4d7193102eb8007d561697233564083",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47d780",
+            "end": "0x47db5c"
+          },
+          {
+            "start": "0x47db9d",
+            "end": "0x47db9d"
+          }
+        ],
+        "total_bytes": 990,
+        "span_bytes": 1054,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 4198,
+      "metadata_file": "procedures/47d780.json",
+      "pseudocode_file": "procedures/47d780.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47dbc0",
+      "name": "FUN_0047dbc0",
+      "info_evidence_id": "ev_3725da80ab00643f7d0a00f378f9a156d7fb581debf20c416ecf42f52239d2d4",
+      "pseudocode_evidence_id": "ev_e2a57a9ae2233b2789ae8306a522379bf7f94effc9aceb0134335487530f45aa",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47dbc0",
+            "end": "0x47dc63"
+          },
+          {
+            "start": "0x47dc6e",
+            "end": "0x47dc6e"
+          }
+        ],
+        "total_bytes": 165,
+        "span_bytes": 175,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 858,
+      "metadata_file": "procedures/47dbc0.json",
+      "pseudocode_file": "procedures/47dbc0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47dc90",
+      "name": "FUN_0047dc90",
+      "info_evidence_id": "ev_834c387164aa159401bc8c3f2eb1be7a259f9fa2321c2a6e4e07154b53379080",
+      "pseudocode_evidence_id": "ev_e8a528f40c4280d8ce1c18b8e38e8512731ecc54a285040dc7c39b4ce19c2b28",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47dc90",
+            "end": "0x47de87"
+          },
+          {
+            "start": "0x47de92",
+            "end": "0x47de92"
+          }
+        ],
+        "total_bytes": 505,
+        "span_bytes": 515,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1904,
+      "metadata_file": "procedures/47dc90.json",
+      "pseudocode_file": "procedures/47dc90.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x47dec0",
+      "name": "FUN_0047dec0",
+      "info_evidence_id": "ev_e58f2980a3b84ee2608e33b322e1943a2a2ccfb03218a02e71f3938ca52a4468",
+      "pseudocode_evidence_id": "ev_1fb6ddde73659fc02d9572e3999148a405c6992968223401e46e0912cf331df4",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x47dec0",
+            "end": "0x47ffc0"
+          },
+          {
+            "start": "0x480039",
+            "end": "0x48006c"
+          },
+          {
+            "start": "0x48008c",
+            "end": "0x48009f"
+          }
+        ],
+        "total_bytes": 8521,
+        "span_bytes": 8672,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 54482,
+      "metadata_file": "procedures/47dec0.json",
+      "pseudocode_file": "procedures/47dec0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4800a0",
+      "name": "FUN_004800a0",
+      "info_evidence_id": "ev_c11cd5a0fc2dc5bf6f571335234820c3b5c19ef9251fc767c0e4f4f74001e57f",
+      "pseudocode_evidence_id": "ev_52917b2c26d9ee196cc33b500745b58adde3cbc726fe8308dd15ca2e7dcb8bbf",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4800a0",
+            "end": "0x4801e2"
+          },
+          {
+            "start": "0x4801ed",
+            "end": "0x4801ed"
+          }
+        ],
+        "total_bytes": 324,
+        "span_bytes": 334,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1350,
+      "metadata_file": "procedures/4800a0.json",
+      "pseudocode_file": "procedures/4800a0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x480210",
+      "name": "FUN_00480210",
+      "info_evidence_id": "ev_1aa0d994d62135525bbb3a3eedf3dbebb9e0aad120f1701ee6e8092f863dfa15",
+      "pseudocode_evidence_id": "ev_5a80f9ff4ee9ffdc6b67e3a8efe42f2d589da1acd097575727f3629c21648a4e",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x480210",
+            "end": "0x480333"
+          }
+        ],
+        "total_bytes": 292,
+        "span_bytes": 292,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1378,
+      "metadata_file": "procedures/480210.json",
+      "pseudocode_file": "procedures/480210.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x480340",
+      "name": "FUN_00480340",
+      "info_evidence_id": "ev_7c04ef331c35de880ee2a057f56598c93c293209db20c69f7ba77e02ca92bd50",
+      "pseudocode_evidence_id": "ev_3de721f12349deea0cfe874864b4863a16f83d91a8ca2e58a21d1b6b50d04aeb",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x480340",
+            "end": "0x48058e"
+          },
+          {
+            "start": "0x4805bb",
+            "end": "0x4805bb"
+          },
+          {
+            "start": "0x4805db",
+            "end": "0x4805df"
+          }
+        ],
+        "total_bytes": 597,
+        "span_bytes": 672,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2534,
+      "metadata_file": "procedures/480340.json",
+      "pseudocode_file": "procedures/480340.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4805e0",
+      "name": "FUN_004805e0",
+      "info_evidence_id": "ev_5f8d21b4ffc8eda6ccf7f106f654d5d9891c00a1068a9cc55df097b64b9407bf",
+      "pseudocode_evidence_id": "ev_62abb66e6b382df0d3d5e50aec0a5d2dba5bca07e657d22892a076f73f7b64d9",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4805e0",
+            "end": "0x4809ac"
+          },
+          {
+            "start": "0x4809e5",
+            "end": "0x4809e5"
+          }
+        ],
+        "total_bytes": 974,
+        "span_bytes": 1030,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 4656,
+      "metadata_file": "procedures/4805e0.json",
+      "pseudocode_file": "procedures/4805e0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x480a10",
+      "name": "FUN_00480a10",
+      "info_evidence_id": "ev_96d99e923160191bcce59d9019e208224621a64e1cae2f2c0aeb48e2f16a889d",
+      "pseudocode_evidence_id": "ev_72ac9d6e52bf62a2f81809c2c9a64811908b15555362f78013447b3c070064aa",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x480a10",
+            "end": "0x480ab8"
+          }
+        ],
+        "total_bytes": 169,
+        "span_bytes": 169,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 926,
+      "metadata_file": "procedures/480a10.json",
+      "pseudocode_file": "procedures/480a10.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x480ac0",
+      "name": "FUN_00480ac0",
+      "info_evidence_id": "ev_a71a6ebbf8c2ebbb058c39924c403a8a63dbd9e2732784ea9a6c65025bd44a64",
+      "pseudocode_evidence_id": "ev_9560e17483fa7a20af7f9cdd9229fbefb468efda102ed7b0a8cdd8a2c670ec19",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x480ac0",
+            "end": "0x480bfd"
+          },
+          {
+            "start": "0x480c08",
+            "end": "0x480c08"
+          },
+          {
+            "start": "0x480c28",
+            "end": "0x480c2c"
+          }
+        ],
+        "total_bytes": 324,
+        "span_bytes": 365,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1687,
+      "metadata_file": "procedures/480ac0.json",
+      "pseudocode_file": "procedures/480ac0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x480c30",
+      "name": "FUN_00480c30",
+      "info_evidence_id": "ev_4a1c4b79feacae5c761a33fdec080be4f8ba62602d4196c10106335c5c63ef63",
+      "pseudocode_evidence_id": "ev_d677343f9faf29bac3e9a1a6b6cabe91b8610c3c2eadbffa83ed435992a88656",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x480c30",
+            "end": "0x480dce"
+          },
+          {
+            "start": "0x480dd9",
+            "end": "0x480dd9"
+          }
+        ],
+        "total_bytes": 416,
+        "span_bytes": 426,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1667,
+      "metadata_file": "procedures/480c30.json",
+      "pseudocode_file": "procedures/480c30.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x480e00",
+      "name": "FUN_00480e00",
+      "info_evidence_id": "ev_a3fe415b224eb9fe29db69147f91b8e266bfd92bbc44d7ba7b159c0b2718d194",
+      "pseudocode_evidence_id": "ev_392bd270c8aa168411d1d2a1192973e50b6efd9c50552e5e14042d037bbad40f",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x480e00",
+            "end": "0x48197f"
+          },
+          {
+            "start": "0x48199d",
+            "end": "0x4819bf"
+          }
+        ],
+        "total_bytes": 2979,
+        "span_bytes": 3008,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 13563,
+      "metadata_file": "procedures/480e00.json",
+      "pseudocode_file": "procedures/480e00.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4819e0",
+      "name": "FUN_004819e0",
+      "info_evidence_id": "ev_a84490fab3d5f081eb0699a968bb82c4bfc885793e674a2e06129603aa7700bd",
+      "pseudocode_evidence_id": "ev_57d361c42aae3bc49acf54d9431b37329b1cd0805d028a9ddbd48168d136bdc1",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4819e0",
+            "end": "0x482044"
+          },
+          {
+            "start": "0x4820a0",
+            "end": "0x4820a0"
+          },
+          {
+            "start": "0x4820c0",
+            "end": "0x4820cf"
+          }
+        ],
+        "total_bytes": 1654,
+        "span_bytes": 1776,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 82134,
+      "metadata_file": "procedures/4819e0.json",
+      "pseudocode_file": "procedures/4819e0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4820d0",
+      "name": "FUN_004820d0",
+      "info_evidence_id": "ev_9a47705b643390a9b33134587bb05501bfc089bad18808203bcb58f0d8ff7491",
+      "pseudocode_evidence_id": "ev_15d6c67bbcc52b494b012c8784e5d61a88cf150cd090defca92a8a46fdd45aea",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4820d0",
+            "end": "0x483261"
+          },
+          {
+            "start": "0x4832ae",
+            "end": "0x4832ae"
+          },
+          {
+            "start": "0x4832ce",
+            "end": "0x4832df"
+          }
+        ],
+        "total_bytes": 4517,
+        "span_bytes": 4624,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 71297,
+      "metadata_file": "procedures/4820d0.json",
+      "pseudocode_file": "procedures/4820d0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4832e0",
+      "name": "FUN_004832e0",
+      "info_evidence_id": "ev_cf36536bb9ddbb51ad5e5eed8325bbaa4caced44cd53694f3222bcc099e4c5d7",
+      "pseudocode_evidence_id": "ev_14aadd59496246c18f6387e7b63b083a43c54ded381ffbc16920325eba25952b",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4832e0",
+            "end": "0x486c0d"
+          }
+        ],
+        "total_bytes": 14638,
+        "span_bytes": 14638,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 44969,
+      "metadata_file": "procedures/4832e0.json",
+      "pseudocode_file": "procedures/4832e0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x486c10",
+      "name": "FUN_00486c10",
+      "info_evidence_id": "ev_7e556ad7e31522eb7bd617e4ed62f581e20fc572c80d018b4a032ffb6855f09b",
+      "pseudocode_evidence_id": "ev_878f75d2d8ef2d3f095c12df603f7320be68d23845da157709c6938cc1616b38",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x486c10",
+            "end": "0x486ce9"
+          },
+          {
+            "start": "0x486d02",
+            "end": "0x486d02"
+          }
+        ],
+        "total_bytes": 219,
+        "span_bytes": 243,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1135,
+      "metadata_file": "procedures/486c10.json",
+      "pseudocode_file": "procedures/486c10.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x486d20",
+      "name": "FUN_00486d20",
+      "info_evidence_id": "ev_066403c1c35e5b04e104aac9d10a4b89fb74c89550404971df89e1080e107891",
+      "pseudocode_evidence_id": "ev_8f15a73843363bd5b05c1d3227d14a0b82d130d1eaca97a2080f9a2bc743002c",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x486d20",
+            "end": "0x487394"
+          },
+          {
+            "start": "0x48739f",
+            "end": "0x4873e7"
+          },
+          {
+            "start": "0x4873fb",
+            "end": "0x48740f"
+          }
+        ],
+        "total_bytes": 1747,
+        "span_bytes": 1776,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 20420,
+      "metadata_file": "procedures/486d20.json",
+      "pseudocode_file": "procedures/486d20.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x487410",
+      "name": "FUN_00487410",
+      "info_evidence_id": "ev_606aab65b05aa09829a19b80578daae61fca6f8a7bdc542a6b0523cd4c722482",
+      "pseudocode_evidence_id": "ev_5122af4d79f862f9a9011d9b3ae819347a2da457189adb758482fba14f0da192",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x487410",
+            "end": "0x4876ff"
+          }
+        ],
+        "total_bytes": 752,
+        "span_bytes": 752,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 8004,
+      "metadata_file": "procedures/487410.json",
+      "pseudocode_file": "procedures/487410.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x487700",
+      "name": "FUN_00487700",
+      "info_evidence_id": "ev_1f7a556428f3821f348181c33bd21dcd7df88b658458d1a84efd92a968404307",
+      "pseudocode_evidence_id": "ev_167293a6170d7b2dd6b5800883148f4d6623593c1ea23efbca9118519a2a3a33",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x487700",
+            "end": "0x487884"
+          },
+          {
+            "start": "0x487899",
+            "end": "0x487899"
+          },
+          {
+            "start": "0x4878ad",
+            "end": "0x4878bf"
+          }
+        ],
+        "total_bytes": 409,
+        "span_bytes": 448,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2278,
+      "metadata_file": "procedures/487700.json",
+      "pseudocode_file": "procedures/487700.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4878c0",
+      "name": "FUN_004878c0",
+      "info_evidence_id": "ev_9ba03667fed8585df98b7b5d14c38c1ac5a604ae5020fcd2bf85a04cce813ddb",
+      "pseudocode_evidence_id": "ev_c7d1426b3318624eeb4f20129d519a3a05e1910e2ab96010f9624f9fef45970f",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4878c0",
+            "end": "0x48792f"
+          }
+        ],
+        "total_bytes": 112,
+        "span_bytes": 112,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 527,
+      "metadata_file": "procedures/4878c0.json",
+      "pseudocode_file": "procedures/4878c0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x487930",
+      "name": "FUN_00487930",
+      "info_evidence_id": "ev_c9fa63ea9e458db4b5b1c52030bdded5d9b229a6c8225507b7293442e07e1385",
+      "pseudocode_evidence_id": "ev_06ad8dce8f2ba708547e7440b4daf9b6c89129408f86ee130a8b92761928f827",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x487930",
+            "end": "0x487b36"
+          },
+          {
+            "start": "0x487b53",
+            "end": "0x487b7c"
+          }
+        ],
+        "total_bytes": 561,
+        "span_bytes": 589,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2608,
+      "metadata_file": "procedures/487930.json",
+      "pseudocode_file": "procedures/487930.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x487b90",
+      "name": "FUN_00487b90",
+      "info_evidence_id": "ev_1408b5872d9b33bdb17ee58077c3f4fda8fd5e90386ce2b9dd230102a2c12bcc",
+      "pseudocode_evidence_id": "ev_3b46ec52fe5c7f13c9a70ea67d9f986ea1c3de6cc3b6487a617e77ee13bff018",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x487b90",
+            "end": "0x488566"
+          },
+          {
+            "start": "0x4885a3",
+            "end": "0x4885da"
+          }
+        ],
+        "total_bytes": 2575,
+        "span_bytes": 2635,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 10059,
+      "metadata_file": "procedures/487b90.json",
+      "pseudocode_file": "procedures/487b90.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4885f0",
+      "name": "FUN_004885f0",
+      "info_evidence_id": "ev_299c9ede1ef9bd3da547ed04a5f04b6b25c6417fd294147e68f3d95d328cf48e",
+      "pseudocode_evidence_id": "ev_2098827ba006d487d151b837e13a174e32436587b5567cd6fa427ca87b86016c",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4885f0",
+            "end": "0x48867d"
+          },
+          {
+            "start": "0x488697",
+            "end": "0x488697"
+          },
+          {
+            "start": "0x4886c7",
+            "end": "0x4886cb"
+          }
+        ],
+        "total_bytes": 148,
+        "span_bytes": 220,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 606,
+      "metadata_file": "procedures/4885f0.json",
+      "pseudocode_file": "procedures/4885f0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x4886d0",
+      "name": "FUN_004886d0",
+      "info_evidence_id": "ev_1e1aa6a8ae923b2047c09577d0fa093bc0fa38447ad91a51cc876e354ee101b4",
+      "pseudocode_evidence_id": "ev_f054b9186b7d49894e529afa4b6a8766ee2139c6b31d71f6822fa50dc1ee9695",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4886d0",
+            "end": "0x488b55"
+          },
+          {
+            "start": "0x488b86",
+            "end": "0x488bb4"
+          }
+        ],
+        "total_bytes": 1205,
+        "span_bytes": 1253,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 4368,
+      "metadata_file": "procedures/4886d0.json",
+      "pseudocode_file": "procedures/4886d0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x488bd0",
+      "name": "FUN_00488bd0",
+      "info_evidence_id": "ev_bef4d1d452dc871af12e1ae0437d1e742de6e04fd943e67efef77226846a6f6e",
+      "pseudocode_evidence_id": "ev_14e67f8fcf552150040a5083d62f4427940796604573fe4285087d14576e904e",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x488bd0",
+            "end": "0x488ffc"
+          },
+          {
+            "start": "0x489023",
+            "end": "0x48902c"
+          }
+        ],
+        "total_bytes": 1079,
+        "span_bytes": 1117,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 4423,
+      "metadata_file": "procedures/488bd0.json",
+      "pseudocode_file": "procedures/488bd0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x489040",
+      "name": "FUN_00489040",
+      "info_evidence_id": "ev_7c0f613f5b24b4210877516dd39a24b001918cafa0e1877d33a7d66ac5d8cd36",
+      "pseudocode_evidence_id": "ev_beb249ab29f3e587b7ea739cb96b8b347d6733e30dd5b1a38fb11ce2b47b82d9",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x489040",
+            "end": "0x489102"
+          },
+          {
+            "start": "0x48911c",
+            "end": "0x489125"
+          },
+          {
+            "start": "0x489155",
+            "end": "0x48915f"
+          }
+        ],
+        "total_bytes": 216,
+        "span_bytes": 288,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2587,
+      "metadata_file": "procedures/489040.json",
+      "pseudocode_file": "procedures/489040.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x489160",
+      "name": "FUN_00489160",
+      "info_evidence_id": "ev_1a5498410e77963167f6f9713d6c829c6809902fe5b69f17bd5c30a3fa51514c",
+      "pseudocode_evidence_id": "ev_9b4002b643e6d21ee19085122f1126791232104fd502a8db380ce9b193de8b51",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x489160",
+            "end": "0x489237"
+          },
+          {
+            "start": "0x489242",
+            "end": "0x489242"
+          },
+          {
+            "start": "0x489256",
+            "end": "0x48925a"
+          }
+        ],
+        "total_bytes": 222,
+        "span_bytes": 251,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1210,
+      "metadata_file": "procedures/489160.json",
+      "pseudocode_file": "procedures/489160.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x489260",
+      "name": "FUN_00489260",
+      "info_evidence_id": "ev_a3590c6cca809f8ffed42f452e639911cacf8c49507e47146135f2cc26755238",
+      "pseudocode_evidence_id": "ev_0914ce39ebcd88ad5733a5eeb33cea588d3f4630ddeab5862ef581455f5e61ce",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x489260",
+            "end": "0x4893c2"
+          },
+          {
+            "start": "0x4893eb",
+            "end": "0x4893eb"
+          }
+        ],
+        "total_bytes": 356,
+        "span_bytes": 396,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1735,
+      "metadata_file": "procedures/489260.json",
+      "pseudocode_file": "procedures/489260.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x489400",
+      "name": "FUN_00489400",
+      "info_evidence_id": "ev_69e4913011f30746d9dd0257337b3973743d34ca367deec5f7ebea01c698839d",
+      "pseudocode_evidence_id": "ev_05ef800f2ad1df59d96c4f5ce86153c48147f6e907a4ba0dd38560f4a09f9add",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x489400",
+            "end": "0x489959"
+          },
+          {
+            "start": "0x489970",
+            "end": "0x489984"
+          }
+        ],
+        "total_bytes": 1391,
+        "span_bytes": 1413,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 7556,
+      "metadata_file": "procedures/489400.json",
+      "pseudocode_file": "procedures/489400.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x489990",
+      "name": "FUN_00489990",
+      "info_evidence_id": "ev_a0244d025b8ed9052117d6f9e58350e0b68d3d8cabdba511ec55d4a59013095c",
+      "pseudocode_evidence_id": "ev_321f33253830a67efe30b299991711efeb92bf4b1bac89d9948f075e50dfadcf",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x489990",
+            "end": "0x489f36"
+          },
+          {
+            "start": "0x489f77",
+            "end": "0x489f99"
+          }
+        ],
+        "total_bytes": 1482,
+        "span_bytes": 1546,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 6348,
+      "metadata_file": "procedures/489990.json",
+      "pseudocode_file": "procedures/489990.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x489fc0",
+      "name": "FUN_00489fc0",
+      "info_evidence_id": "ev_fedd15f35f2ceb4772a053f9f6901992dcf6b12e8ee48354dc854579827f5127",
+      "pseudocode_evidence_id": "ev_99b529c4e22d86208986b3704013c6e715502d9544da1d3435099a82a54870c4",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x489fc0",
+            "end": "0x48a162"
+          },
+          {
+            "start": "0x48a16d",
+            "end": "0x48a16d"
+          }
+        ],
+        "total_bytes": 420,
+        "span_bytes": 430,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1977,
+      "metadata_file": "procedures/489fc0.json",
+      "pseudocode_file": "procedures/489fc0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48a190",
+      "name": "FUN_0048a190",
+      "info_evidence_id": "ev_3ee62108ec140037df01d4cbc17dcb9ad2c307d7fa2d6c0d3b586f2d58951815",
+      "pseudocode_evidence_id": "ev_0298851079f6a246656f87f98cb9d1b2c1dcc3a1ca67204d6e312496962fa96b",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48a190",
+            "end": "0x48a332"
+          },
+          {
+            "start": "0x48a33d",
+            "end": "0x48a33d"
+          }
+        ],
+        "total_bytes": 420,
+        "span_bytes": 430,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1954,
+      "metadata_file": "procedures/48a190.json",
+      "pseudocode_file": "procedures/48a190.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48a360",
+      "name": "FUN_0048a360",
+      "info_evidence_id": "ev_a2fbba6e7127140e4992bd9eb3393377746e529acd7b9d5188ba7cff11ab3f5c",
+      "pseudocode_evidence_id": "ev_8fefea817b2202466124d006f4b4c87ca9dc8919276940ddb571aaeb88d9b278",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48a360",
+            "end": "0x48a64d"
+          },
+          {
+            "start": "0x48a683",
+            "end": "0x48a683"
+          },
+          {
+            "start": "0x48a6a3",
+            "end": "0x48a6b4"
+          }
+        ],
+        "total_bytes": 769,
+        "span_bytes": 853,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 3342,
+      "metadata_file": "procedures/48a360.json",
+      "pseudocode_file": "procedures/48a360.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48a6c0",
+      "name": "FUN_0048a6c0",
+      "info_evidence_id": "ev_da9da825f1b4fe53170159d58011c4c08f1c1a0c74cea0aab5c0b57dea69f7d2",
+      "pseudocode_evidence_id": "ev_75c1b5ed683b899b06fb246e01dd258a40a3fe7779adbbae930181da30e3cb34",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48a6c0",
+            "end": "0x48afc0"
+          },
+          {
+            "start": "0x48b00d",
+            "end": "0x48b00d"
+          },
+          {
+            "start": "0x48b02d",
+            "end": "0x48b03f"
+          }
+        ],
+        "total_bytes": 2325,
+        "span_bytes": 2432,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 24239,
+      "metadata_file": "procedures/48a6c0.json",
+      "pseudocode_file": "procedures/48a6c0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48b040",
+      "name": "FUN_0048b040",
+      "info_evidence_id": "ev_80d4e00c112d0c4978990667e66aa97237f6db1b76b7e51197aa7dce17e70e44",
+      "pseudocode_evidence_id": "ev_379140d24113844d3c355e375a733697ab2cae1288e4b2c3d12f08dffcbe95be",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48b040",
+            "end": "0x48b0ab"
+          }
+        ],
+        "total_bytes": 108,
+        "span_bytes": 108,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 555,
+      "metadata_file": "procedures/48b040.json",
+      "pseudocode_file": "procedures/48b040.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48b0b0",
+      "name": "FUN_0048b0b0",
+      "info_evidence_id": "ev_094a5b14e74f5ddad3ed328bfa4323466e01fa068cdfa02c91f8b2381b0c5271",
+      "pseudocode_evidence_id": "ev_e05e2cbd7581b70fed5ccc05818b2aba57d2efcbe34cc904abc4975abc50dead",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48b0b0",
+            "end": "0x48b2ca"
+          },
+          {
+            "start": "0x48b2f4",
+            "end": "0x48b2f4"
+          },
+          {
+            "start": "0x48b314",
+            "end": "0x48b318"
+          }
+        ],
+        "total_bytes": 545,
+        "span_bytes": 617,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2597,
+      "metadata_file": "procedures/48b0b0.json",
+      "pseudocode_file": "procedures/48b0b0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48b320",
+      "name": "FUN_0048b320",
+      "info_evidence_id": "ev_50228cdc510b830ec99348c2c4383baa7aab6b88675b25092ddc114e009bb748",
+      "pseudocode_evidence_id": "ev_120153c5f05428173ecb6c71bc36bf7c9a9512ff6756143bf85081915503f621",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48b320",
+            "end": "0x48b3c3"
+          },
+          {
+            "start": "0x48b3ce",
+            "end": "0x48b3ce"
+          }
+        ],
+        "total_bytes": 165,
+        "span_bytes": 175,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 858,
+      "metadata_file": "procedures/48b320.json",
+      "pseudocode_file": "procedures/48b320.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48b3f0",
+      "name": "FUN_0048b3f0",
+      "info_evidence_id": "ev_5719fb1cc6d6f9c503f4d9abea8cc807cc5fc2bcd6f299847e008122bb31b713",
+      "pseudocode_evidence_id": "ev_4e39571fcab1877abcb7f2a4a00cc45212fa09820da93812ccc1552be29cb50d",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48b3f0",
+            "end": "0x48ceb3"
+          },
+          {
+            "start": "0x48cee8",
+            "end": "0x48cef1"
+          }
+        ],
+        "total_bytes": 6862,
+        "span_bytes": 6914,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 26647,
+      "metadata_file": "procedures/48b3f0.json",
+      "pseudocode_file": "procedures/48b3f0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48cf20",
+      "name": "FUN_0048cf20",
+      "info_evidence_id": "ev_83d51c721e851506681b1ee6c6bbe849708f0f49cf775243924613938efde6b3",
+      "pseudocode_evidence_id": "ev_2844dbde1f8d667fdac8ba9ea521aee9a01372b2c6584b81dd9133b0ea7cf4cf",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48cf20",
+            "end": "0x48d1d1"
+          },
+          {
+            "start": "0x48d1ff",
+            "end": "0x48d1ff"
+          },
+          {
+            "start": "0x48d21f",
+            "end": "0x48d223"
+          }
+        ],
+        "total_bytes": 696,
+        "span_bytes": 772,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 3372,
+      "metadata_file": "procedures/48cf20.json",
+      "pseudocode_file": "procedures/48cf20.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48d230",
+      "name": "FUN_0048d230",
+      "info_evidence_id": "ev_1b1b8029b55a91dd8475c5c35396da9d150728b21f01e6991b9e24f1b82f488e",
+      "pseudocode_evidence_id": "ev_0f306abac4d13a4a84c158846e71fb318b06511a81ac8c9a6d545b7b5802e3bb",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48d230",
+            "end": "0x48d2fa"
+          },
+          {
+            "start": "0x48d305",
+            "end": "0x48d305"
+          }
+        ],
+        "total_bytes": 204,
+        "span_bytes": 214,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1034,
+      "metadata_file": "procedures/48d230.json",
+      "pseudocode_file": "procedures/48d230.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48d330",
+      "name": "FUN_0048d330",
+      "info_evidence_id": "ev_63e318eb389eca7c91169256d003032b08d38465b47a7fe50a2771a0edbc6d91",
+      "pseudocode_evidence_id": "ev_bd300a37e6b4b88152e9c8a672bd006bd29dc77901f5208a83cfa987dba88dbf",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48d330",
+            "end": "0x48db19"
+          },
+          {
+            "start": "0x48db42",
+            "end": "0x48db54"
+          },
+          {
+            "start": "0x48db74",
+            "end": "0x48db7f"
+          }
+        ],
+        "total_bytes": 2057,
+        "span_bytes": 2128,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 20878,
+      "metadata_file": "procedures/48d330.json",
+      "pseudocode_file": "procedures/48d330.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48db80",
+      "name": "FUN_0048db80",
+      "info_evidence_id": "ev_fe4d1c024f3ef9171cae870e962d776775cf188508d78d5323a6fa19051db68b",
+      "pseudocode_evidence_id": "ev_392b2fcdffce152d32a14bf79e8858ddbe7460a477f5eec7dba1040ed9679a6e",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48db80",
+            "end": "0x48e00d"
+          },
+          {
+            "start": "0x48e022",
+            "end": "0x48e02b"
+          },
+          {
+            "start": "0x48e055",
+            "end": "0x48e05f"
+          }
+        ],
+        "total_bytes": 1187,
+        "span_bytes": 1248,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 10159,
+      "metadata_file": "procedures/48db80.json",
+      "pseudocode_file": "procedures/48db80.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48e060",
+      "name": "FUN_0048e060",
+      "info_evidence_id": "ev_c4bcb71ce9715736c644fe91f019a672eda6735b7514349ebebaf8ff79c7d56f",
+      "pseudocode_evidence_id": "ev_c15df811e219f7c4771506432ef7f02652709ff09d5594f5219b6d3293236895",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48e060",
+            "end": "0x48e103"
+          },
+          {
+            "start": "0x48e10e",
+            "end": "0x48e10e"
+          }
+        ],
+        "total_bytes": 165,
+        "span_bytes": 175,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 858,
+      "metadata_file": "procedures/48e060.json",
+      "pseudocode_file": "procedures/48e060.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48e130",
+      "name": "FUN_0048e130",
+      "info_evidence_id": "ev_a614ba4d99db2ed1aed3eae8c2e8555b7f0dca81f424e7a2c24000e5b29c6678",
+      "pseudocode_evidence_id": "ev_375b514255be32797d7829e52a0b7b04932337ad635c0a50fdf989134eca1a19",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48e130",
+            "end": "0x48e222"
+          },
+          {
+            "start": "0x48e22d",
+            "end": "0x48e22d"
+          }
+        ],
+        "total_bytes": 244,
+        "span_bytes": 254,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1197,
+      "metadata_file": "procedures/48e130.json",
+      "pseudocode_file": "procedures/48e130.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48e250",
+      "name": "FUN_0048e250",
+      "info_evidence_id": "ev_e5171fd98c8d1506d2ac5145a36e63bc2adca207af7c774eb231157d9e9af262",
+      "pseudocode_evidence_id": "ev_5fe91cda241badbda3d506243b3315d349451b68453d8ebacdc9706140702e6d",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48e250",
+            "end": "0x48e346"
+          },
+          {
+            "start": "0x48e351",
+            "end": "0x48e351"
+          }
+        ],
+        "total_bytes": 248,
+        "span_bytes": 258,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 1200,
+      "metadata_file": "procedures/48e250.json",
+      "pseudocode_file": "procedures/48e250.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48e380",
+      "name": "FUN_0048e380",
+      "info_evidence_id": "ev_872408b961062985640cadc09baa93520ffc59abcf0a3a588e515308724ccf23",
+      "pseudocode_evidence_id": "ev_dcf49ea9a83b52fc464a8ff6dca413e17eb057b5f02d63fbb8d1c1b41bec3f17",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48e380",
+            "end": "0x48e71d"
+          },
+          {
+            "start": "0x48e74c",
+            "end": "0x48e74c"
+          },
+          {
+            "start": "0x48e76c",
+            "end": "0x48e770"
+          }
+        ],
+        "total_bytes": 932,
+        "span_bytes": 1009,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 3877,
+      "metadata_file": "procedures/48e380.json",
+      "pseudocode_file": "procedures/48e380.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48e780",
+      "name": "FUN_0048e780",
+      "info_evidence_id": "ev_04aa196de14ef58fcaf935b1342f71725390c5ddc3cd7fe00da083c9ec948ca8",
+      "pseudocode_evidence_id": "ev_2310a7ca50fccf44d6fe0f4eee5fc221d1fee9a81a0d512078a915ae2f38c0fc",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48e780",
+            "end": "0x48e905"
+          },
+          {
+            "start": "0x48e910",
+            "end": "0x48e910"
+          }
+        ],
+        "total_bytes": 391,
+        "span_bytes": 401,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2012,
+      "metadata_file": "procedures/48e780.json",
+      "pseudocode_file": "procedures/48e780.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48e930",
+      "name": "FUN_0048e930",
+      "info_evidence_id": "ev_056caa82cdab59b2802e3846d540b804ac22fa363a537c3433752d15b16d7772",
+      "pseudocode_evidence_id": "ev_025bb1f5cba1b59b665110dcc133cf5918e6ff9c3417ce8eee41d12e0f09da78",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48e930",
+            "end": "0x48e9a3"
+          }
+        ],
+        "total_bytes": 116,
+        "span_bytes": 116,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 662,
+      "metadata_file": "procedures/48e930.json",
+      "pseudocode_file": "procedures/48e930.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48e9b0",
+      "name": "FUN_0048e9b0",
+      "info_evidence_id": "ev_cd6c184a5f553a1ca4918b0afe873666f5b1154c14ab4f60d98574f896e5464f",
+      "pseudocode_evidence_id": "ev_aabe015d5d6a3d40666273c2d1b5bd39d14e49e8323717c43b6121fdbf2b3172",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48e9b0",
+            "end": "0x48ea53"
+          },
+          {
+            "start": "0x48ea5e",
+            "end": "0x48ea5e"
+          }
+        ],
+        "total_bytes": 165,
+        "span_bytes": 175,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 858,
+      "metadata_file": "procedures/48e9b0.json",
+      "pseudocode_file": "procedures/48e9b0.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48ea80",
+      "name": "FUN_0048ea80",
+      "info_evidence_id": "ev_d865e57e2794d9d2fbe0ec0b54487e3399cb62a081a0a2b9b4d6479cce0b5a9b",
+      "pseudocode_evidence_id": "ev_f60821c3588a3b7ae5852cd8ad704cdb19c79d688cf9c88c80bc8f14669d4cb5",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48ea80",
+            "end": "0x48f0e1"
+          },
+          {
+            "start": "0x48f126",
+            "end": "0x48f126"
+          }
+        ],
+        "total_bytes": 1635,
+        "span_bytes": 1703,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 6759,
+      "metadata_file": "procedures/48ea80.json",
+      "pseudocode_file": "procedures/48ea80.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48f150",
+      "name": "FUN_0048f150",
+      "info_evidence_id": "ev_f0f31192e655ec0b1a7f3856d7964552aedc4b06f0c91fb0d7fd98fdd7b3294b",
+      "pseudocode_evidence_id": "ev_995e23d1ce02151ff67d528cedfed64cdb2a8a9868b0ee238ab946230a30e356",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48f150",
+            "end": "0x48f3d7"
+          },
+          {
+            "start": "0x48f3eb",
+            "end": "0x48f3fb"
+          }
+        ],
+        "total_bytes": 665,
+        "span_bytes": 684,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 2978,
+      "metadata_file": "procedures/48f150.json",
+      "pseudocode_file": "procedures/48f150.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48f420",
+      "name": "FUN_0048f420",
+      "info_evidence_id": "ev_be877c6281fcc9186192f823671b2ef9658ccb06747958b63339e5d4ed370b82",
+      "pseudocode_evidence_id": "ev_a423a25c3cf5c03bb5d76555582b17f0ec88fe7d1488ad49c429f53a682f24eb",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48f420",
+            "end": "0x48f7c1"
+          },
+          {
+            "start": "0x48f7fa",
+            "end": "0x48f7fa"
+          }
+        ],
+        "total_bytes": 931,
+        "span_bytes": 987,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 4137,
+      "metadata_file": "procedures/48f420.json",
+      "pseudocode_file": "procedures/48f420.pseudo.c",
+      "error": null
+    },
+    {
+      "address": "0x48f820",
+      "name": "FUN_0048f820",
+      "info_evidence_id": "ev_9e9f1b56529d79e95028c2d2131e2df036568bb9e9b45cae0434759bfa1685c8",
+      "pseudocode_evidence_id": "ev_126b0a69d5fc0ab8fc55819078ce26af50c8a77bdc919da2e3b6e4cf9a0bd53f",
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48f820",
+            "end": "0x48fe60"
+          },
+          {
+            "start": "0x48fe99",
+            "end": "0x48fea9"
+          }
+        ],
+        "total_bytes": 1618,
+        "span_bytes": 1674,
+        "non_contiguous": true,
+        "contains_entry": true
+      },
+      "pseudocode_available": true,
+      "pseudocode_bytes": 7417,
+      "metadata_file": "procedures/48f820.json",
+      "pseudocode_file": "procedures/48f820.pseudo.c",
+      "error": null
+    }
+  ]
+}

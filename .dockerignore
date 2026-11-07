@@ -1,0 +1,11 @@
+node_modules
+.git
+data
+dist
+apps
+recovered
+escaneos
+*.log
+
+.env
+.env.*

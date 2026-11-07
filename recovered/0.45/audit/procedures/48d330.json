@@ -1,0 +1,414 @@
+{
+  "info": {
+    "evidence_id": "ev_63e318eb389eca7c91169256d003032b08d38465b47a7fe50a2771a0edbc6d91",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_info",
+    "parameters": {
+      "procedure": "0x48d330"
+    },
+    "raw_result": {
+      "value": {
+        "name": "FUN_0048d330",
+        "entrypoint": "0x48d330",
+        "basicblock_count": 92,
+        "length": 2057,
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x48d330",
+              "end": "0x48db19"
+            },
+            {
+              "start": "0x48db42",
+              "end": "0x48db54"
+            },
+            {
+              "start": "0x48db74",
+              "end": "0x48db7f"
+            }
+          ],
+          "total_bytes": 2057,
+          "span_bytes": 2128,
+          "non_contiguous": true,
+          "contains_entry": true
+        },
+        "signature": "undefined __cdecl FUN_0048d330(uint param_1)",
+        "locals": [
+          {
+            "description": "undefined4 local_10 @ Stack[-0x10]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_28 @ Stack[-0x28]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_2c @ Stack[-0x2c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_30 @ Stack[-0x30]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_34 @ Stack[-0x34]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_38 @ Stack[-0x38]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_3c @ Stack[-0x3c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined2 local_44 @ Stack[-0x44]:2",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_4c @ Stack[-0x4c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_50 @ Stack[-0x50]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_54 @ Stack[-0x54]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_5c @ Stack[-0x5c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_60 @ Stack[-0x60]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_6c @ Stack[-0x6c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_74 @ Stack[-0x74]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_8 @ Stack[-0x8]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_80 @ Stack[-0x80]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_84 @ Stack[-0x84]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_88 @ Stack[-0x88]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_c @ Stack[-0xc]:4",
+            "provenance": "ghidra-function-database"
+          }
+        ],
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        }
+      },
+      "limitations": [
+        "Ghidra Listing reports a terminal call at 0x48db74 to 0x40165c MSVBVM60.DLL::__vbaFPException (external=false, thunk=true, hasNoReturn=false); fallthrough is excluded by Ghidra's flow model. The reason for the terminal flow is not established by this observation."
+      ]
+    },
+    "normalized_result": {
+      "name": "FUN_0048d330",
+      "entrypoint": "0x48d330",
+      "basicblock_count": 92,
+      "length": 2057,
+      "signature": "undefined __cdecl FUN_0048d330(uint param_1)",
+      "locals": [
+        {
+          "description": "undefined4 local_10 @ Stack[-0x10]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_28 @ Stack[-0x28]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_2c @ Stack[-0x2c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_30 @ Stack[-0x30]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_34 @ Stack[-0x34]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_38 @ Stack[-0x38]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_3c @ Stack[-0x3c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined2 local_44 @ Stack[-0x44]:2",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_4c @ Stack[-0x4c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_50 @ Stack[-0x50]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_54 @ Stack[-0x54]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_5c @ Stack[-0x5c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_60 @ Stack[-0x60]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_6c @ Stack[-0x6c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_74 @ Stack[-0x74]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_8 @ Stack[-0x8]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_80 @ Stack[-0x80]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_84 @ Stack[-0x84]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_88 @ Stack[-0x88]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_c @ Stack[-0xc]:4",
+          "provenance": "ghidra-function-database"
+        }
+      ],
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48d330",
+            "end": "0x48db19"
+          },
+          {
+            "start": "0x48db42",
+            "end": "0x48db54"
+          },
+          {
+            "start": "0x48db74",
+            "end": "0x48db7f"
+          }
+        ],
+        "total_bytes": 2057,
+        "span_bytes": 2128,
+        "non_contiguous": true,
+        "contains_entry": true
+      }
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Ghidra Listing reports a terminal call at 0x48db74 to 0x40165c MSVBVM60.DLL::__vbaFPException (external=false, thunk=true, hasNoReturn=false); fallthrough is excluded by Ghidra's flow model. The reason for the terminal flow is not established by this observation."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  },
+  "pseudocode": {
+    "evidence_id": "ev_bd300a37e6b4b88152e9c8a672bd006bd29dc77901f5208a83cfa987dba88dbf",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x48d330"
+    },
+    "raw_result": {
+      "value": "\n/* WARNING: Removing unreachable block (ram,0x0048d71e) */\n/* WARNING: Removing unreachable block (ram,0x0048d729) */\n/* WARNING: Removing unreachable block (ram,0x0048d72f) */\n/* WARNING: Removing unreachable block (ram,0x0048d73a) */\n/* WARNING: Removing unreachable block (ram,0x0048d740) */\n/* WARNING: Removing unreachable block (ram,0x0048d75d) */\n/* WARNING: Removing unreachable block (ram,0x0048d763) */\n/* WARNING: Removing unreachable block (ram,0x0048db74) */\n/* WARNING: Removing unreachable block (ram,0x0048d792) */\n\nvoid __cdecl FUN_0048d330(uint param_1)\n\n{\n  byte *pbVar1;\n  byte bVar2;\n  code cVar3;\n  code cVar4;\n  byte bVar5;\n  undefined1 uVar6;\n  short sVar7;\n  int *piVar8;\n  int iVar9;\n  int *piVar10;\n  uint uVar11;\n  uint *puVar12;\n  undefined4 *puVar13;\n  int iVar14;\n  undefined4 uVar15;\n  code *pcVar16;\n  int *piVar17;\n  code *pcVar18;\n  code *pcVar19;\n  code *pcStack_250;\n  code *pcStack_24c;\n  code *pcStack_248;\n  int iStack_244;\n  undefined4 uStack_238;\n  undefined4 *puStack_234;\n  undefined1 *puStack_230;\n  void *pvStack_22c;\n  undefined1 *puStack_228;\n  undefined1 *puStack_224;\n  int **ppiStack_220;\n  uint uStack_21c;\n  undefined4 *puStack_218;\n  undefined4 uStack_214;\n  int *piStack_210;\n  undefined1 *puStack_20c;\n  undefined4 *puStack_208;\n  undefined4 uStack_204;\n  undefined4 *puStack_200;\n  undefined4 uStack_1fc;\n  undefined4 uStack_1f8;\n  code *pcStack_1f0;\n  int *piStack_1ec;\n  uint uStack_1e8;\n  byte bStack_1dc;\n  byte bStack_1d4;\n  byte bStack_1cc;\n  undefined4 auStack_1b8 [2];\n  undefined2 uStack_1b0;\n  undefined4 auStack_1a8 [2];\n  undefined2 uStack_1a0;\n  undefined4 uStack_198;\n  undefined4 uStack_194;\n  int **ppiStack_190;\n  undefined4 uStack_18c;\n  undefined4 uStack_188;\n  int iStack_184;\n  undefined4 uStack_178;\n  int *piStack_174;\n  int iStack_170;\n  int *piStack_16c;\n  undefined *puStack_168;\n  int *piStack_164;\n  int *piStack_160;\n  int *piStack_15c;\n  int *piStack_158;\n  void *pvStack_144;\n  undefined1 *puStack_140;\n  undefined *puStack_13c;\n  int *piStack_138;\n  undefined *puStack_134;\n  int *piStack_128;\n  byte *pbStack_124;\n  code *pcStack_120;\n  int local_34 [7];\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined *local_c;\n  uint local_8;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xffffff6c;\n  local_c = &DAT_00401580;\n  local_8 = param_1 & 1;\n  piVar17 = (int *)(param_1 & 0xfffffffe);\n  ExceptionList = &pvStack_18;\n  (**(code **)(*piVar17 + 4))();\n  uVar11 = (uint)DAT_0049107a;\n  local_34[3] = 0;\n  local_34[2] = 0;\n  local_34[1] = 0;\n  local_34[0] = 0;\n  if (5 < uVar11 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  pbVar1 = (byte *)(piVar17 + 0xd);\n  *pbVar1 = *(byte *)(DAT_0049106c + 0x10 + (uVar11 - 1) * 0x2c);\n  *(byte *)((int)piVar17 + 0x35) = DAT_0049107a;\n  (**(code **)(*piVar17 + 0x30c))();\n  piVar8 = (int *)__vbaObjSet();\n  if (0x29 < *pbVar1) {\n    __vbaGenerateBoundsError();\n  }\n  if (0x29 < *pbVar1) {\n    __vbaGenerateBoundsError();\n  }\n  iVar9 = *piVar8;\n  __vbaStrCat();\n  __vbaStrMove();\n  __vbaStrCat();\n  __vbaStrMove();\n  iVar9 = (**(code **)(iVar9 + 0x54))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  __vbaFreeStrList();\n  __vbaFreeObj();\n  (**(code **)(*piVar17 + 0x304))();\n  piVar8 = (int *)__vbaObjSet();\n  bVar5 = *pbVar1;\n  if (0x29 < bVar5) {\n    __vbaGenerateBoundsError();\n  }\n  if (5 < *(byte *)(DAT_00491034 + 0x65 + (uint)bVar5 * 0x74) - 1) {\n    __vbaGenerateBoundsError();\n  }\n  iVar9 = (**(code **)(*piVar8 + 0x54))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  __vbaFreeObj();\n  (**(code **)(*piVar17 + 0x304))();\n  piVar8 = (int *)__vbaObjSet();\n  if (DAT_00491010 == (int *)0x0) {\n    __vbaNew2();\n  }\n  (**(code **)(*DAT_00491010 + 0x318))();\n  piVar10 = (int *)__vbaObjSet();\n  if (0x29 < *pbVar1) {\n    __vbaGenerateBoundsError();\n  }\n  iVar9 = (**(code **)(*piVar10 + 0x40))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  iVar9 = (**(code **)(iRam00000000 + 0x60))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  iVar9 = (**(code **)(*piVar8 + 100))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  __vbaFreeObjList();\n  if (0x29 < *pbVar1) {\n    __vbaGenerateBoundsError();\n  }\n  __vbaStrCopy();\n  pcVar18 = __vbaStrCmp_exref;\n  iVar9 = __vbaStrCmp();\n  if (iVar9 == 0) {\n    if (0x29 < *pbVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar9 = (**(code **)(*piVar17 + 0x6f8))();\n    if (iVar9 < 0) {\n      __vbaHresultCheckObj();\n    }\n    __vbaVarMove();\n    if (0x29 < *pbVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar9 = (**(code **)(*piVar17 + 0x6f8))();\n    if (iVar9 < 0) {\n      puStack_134 = &LAB_004713f8;\n      puStack_140 = (undefined1 *)0x48d713;\n      puStack_13c = (undefined *)iVar9;\n      piStack_138 = piVar17;\n      __vbaHresultCheckObj();\n    }\n    bVar5 = *pbVar1;\n    if (0x29 < bVar5) {\n      __vbaGenerateBoundsError();\n    }\n    bVar2 = *pbVar1;\n    if (0x29 < bVar2) {\n      __vbaGenerateBoundsError();\n    }\n    uVar11 = (uint)*(byte *)(DAT_00491034 + 0x66 + (uint)bVar2 * 0x74);\n    if (5 < uVar11) {\n      __vbaGenerateBoundsError();\n    }\n    piVar17[0xe] = *(int *)(DAT_00491034 + 0x14 + uVar11 * 4 + (uint)bVar5 * 0x74);\n  }\n  else {\n    iVar9 = __vbaStrCmp();\n    if (iVar9 == 0) {\n      bVar5 = *pbVar1;\n      if (0x29 < bVar5) {\n        __vbaGenerateBoundsError();\n      }\n      uVar11 = *(byte *)(DAT_00491034 + 0x65 + (uint)bVar5 * 0x74) - 1;\n      if (5 < uVar11) {\n        __vbaGenerateBoundsError();\n      }\n      iVar9 = (short)(ushort)*(byte *)(DAT_0049106c + 0x1c + uVar11 * 0x2c) * 500;\n      sVar7 = (short)iVar9;\n      if (sVar7 != iVar9) {\nLAB_0048db79:\n        __vbaErrorOverflow();\n        puStack_140 = &LAB_00401656;\n        pvStack_144 = ExceptionList;\n        puStack_13c = (undefined *)&pcStack_1f0;\n        pcStack_1f0 = pcVar18;\n        piStack_138 = (int *)&DAT_00401590;\n        puStack_134 = (undefined *)0x0;\n        uStack_1f8 = 0x48dbba;\n        ExceptionList = &pvStack_144;\n        piStack_1ec = piVar17;\n        uStack_1e8 = uVar11;\n        (**(code **)(*piStack_128 + 4))();\n        piStack_15c = (int *)0x0;\n        piStack_160 = (int *)((uint)piStack_160 & 0xffffff00);\n        piStack_164 = (int *)((uint)piStack_164 & 0xffffff00);\n        uStack_178 = 0;\n        uStack_188 = 0;\n        auStack_1a8[0] = 0;\n        auStack_1b8[0] = 0;\n        ppiStack_190 = (int **)&DAT_00473370;\n        uStack_198 = 8;\n        uStack_1f8 = 0x48dbf4;\n        __vbaVarDup();\n        bVar5 = *pbStack_124;\n        if (0x29 < bVar5) {\n          uStack_1f8 = 0x48dc08;\n          __vbaGenerateBoundsError();\n        }\n        uStack_1f8 = 0;\n        puStack_200 = &uStack_178;\n        uStack_1fc = 0xffffffff;\n        uStack_204 = *(undefined4 *)(DAT_00491034 + 0x70 + (uint)bVar5 * 0x74);\n        puStack_208 = &uStack_188;\n        puStack_20c = (undefined1 *)0x48dc30;\n        Ordinal_711();\n        puStack_20c = (undefined1 *)0x48dc3c;\n        __vbaVarMove();\n        puStack_20c = (undefined1 *)0x48dc45;\n        __vbaFreeVar();\n        pcVar18 = __vbaRefVarAry_exref;\n        puStack_20c = &stack0xfffffeac;\n        piStack_210 = (int *)0x48dc51;\n        puVar12 = (uint *)__vbaRefVarAry();\n        pcVar19 = __vbaUbound_exref;\n        piStack_210 = (int *)*puVar12;\n        uStack_214 = 1;\n        puStack_218 = (undefined4 *)0x48dc5e;\n        iVar9 = __vbaUbound();\n        pcVar16 = __vbaUI1I4_exref;\n        if (!SCARRY4(iVar9,1)) {\n          puStack_218 = (undefined4 *)0x48dc71;\n          bVar5 = __vbaUI1I4();\n          pcVar19 = __vbaGenerateBoundsError_exref;\n          puStack_168 = (undefined *)CONCAT31(puStack_168._1_3_,bVar5);\n          pcVar16 = pcStack_120;\n          if (1 < bVar5) {\n            puStack_218 = (undefined4 *)&stack0xfffffeac;\n            uStack_21c = 0x48dc82;\n            puVar13 = (undefined4 *)__vbaRefVarAry();\n            uStack_21c = *puVar13;\n            ppiStack_220 = (int **)0x1;\n            puStack_224 = (undefined1 *)0x48dc89;\n            __vbaUbound();\n            puStack_224 = (undefined1 *)0x48dc8d;\n            bStack_1cc = __vbaUI1I4();\n            puStack_224 = (undefined1 *)0x48dc9b;\n            bVar5 = __vbaUI1I2();\n            piStack_164 = (int *)CONCAT31(piStack_164._1_3_,bVar5);\n            do {\n              pcVar19 = __vbaGenerateBoundsError_exref;\n              if (bStack_1cc < bVar5) {\n                if ((byte)piStack_160 == (char)puStack_168) {\nLAB_0048de6f:\n                  piStack_15c = (int *)0xffffffff;\n                }\nLAB_0048de76:\n                puStack_218 = (undefined4 *)&LAB_0048e02c;\n                uStack_21c = 0x48e02b;\n                __vbaFreeVar();\n                return;\n              }\n              pcVar18 = (code *)((byte)*pcStack_120 - 1);\n              if ((code *)0x5 < pcVar18) {\n                puStack_218 = (undefined4 *)0x48dcc1;\n                __vbaGenerateBoundsError();\n              }\n              bStack_1d4 = *(byte *)(DAT_0049106c + 0x12 + (int)pcVar18 * 0x2c);\n              puStack_218 = (undefined4 *)0x48dce2;\n              bVar5 = __vbaUI1I2();\n              while( true ) {\n                piStack_158 = (int *)CONCAT31(piStack_158._1_3_,bVar5);\n                if (bStack_1d4 < bVar5) break;\n                if (5 < (byte)*pcStack_120 - 1) {\n                  puStack_218 = (undefined4 *)0x48dcff;\n                  (*pcVar19)();\n                }\n                cVar3 = *pcStack_120;\n                if (5 < (byte)cVar3 - 1) {\n                  puStack_218 = (undefined4 *)0x48dd0d;\n                  (*pcVar19)();\n                }\n                iVar9 = ((byte)cVar3 - 1) * 0x2c;\n                if (*(int *)(iVar9 + 0xc + DAT_0049106c) == 0) {\nLAB_0048ddb6:\n                  puStack_218 = (undefined4 *)0x48ddb8;\n                  iVar14 = (*pcVar19)();\n                }\n                else {\n                  cVar3 = *pcStack_120;\n                  if (5 < (byte)cVar3 - 1) {\n                    puStack_218 = (undefined4 *)0x48dd36;\n                    (*pcVar19)();\n                  }\n                  iVar9 = ((byte)cVar3 - 1) * 0x2c;\n                  if (**(short **)(iVar9 + 0xc + DAT_0049106c) != 1) goto LAB_0048ddb6;\n                  cVar3 = *pcStack_120;\n                  if (5 < (byte)cVar3 - 1) {\n                    puStack_218 = (undefined4 *)0x48dd5d;\n                    (*pcVar19)();\n                  }\n                  cVar4 = *pcStack_120;\n                  uVar11 = ((uint)piStack_158 & 0xff) -\n                           *(int *)(*(int *)(DAT_0049106c + 0xc + ((byte)cVar3 - 1) * 0x2c) + 0x14);\n                  if (5 < (byte)cVar4 - 1) {\n                    puStack_218 = (undefined4 *)0x48dd8d;\n                    __vbaGenerateBoundsError();\n                  }\n                  iVar9 = ((byte)cVar4 - 1) * 0x2c;\n                  if (*(uint *)(*(int *)(iVar9 + 0xc + DAT_0049106c) + 0x10) <= uVar11) {\n                    puStack_218 = (undefined4 *)0x48ddab;\n                    __vbaGenerateBoundsError();\n                  }\n                  iVar14 = uVar11 * 2;\n                  pcVar19 = __vbaGenerateBoundsError_exref;\n                }\n                uStack_1a0 = *(undefined2 *)\n                              (*(int *)(*(int *)(iVar9 + 0xc + DAT_0049106c) + 0xc) + iVar14);\n                puStack_218 = auStack_1a8;\n                uStack_198 = 0x4011;\n                ppiStack_220 = &piStack_164;\n                pvStack_22c = (void *)0x1;\n                auStack_1a8[0] = 0x8002;\n                puStack_228 = (undefined1 *)0x4011;\n                puStack_224 = (undefined1 *)uStack_194;\n                puStack_230 = &stack0xfffffeac;\n                uStack_21c = uStack_18c;\n                puStack_234 = &uStack_178;\n                uStack_238 = 0x48de0c;\n                ppiStack_190 = ppiStack_220;\n                uStack_21c = __vbaVarIndexLoad();\n                ppiStack_220 = (int **)0x48de16;\n                pcVar18 = (code *)__vbaVarTstEq();\n                ppiStack_220 = (int **)0x48de21;\n                __vbaFreeVar();\n                if ((short)pcVar18 != 0) {\n                  if (SCARRY2((ushort)(byte)piStack_160,1)) goto LAB_0048e055;\n                  puStack_218 = (undefined4 *)0x48de3b;\n                  uVar6 = __vbaUI1I2();\n                  piStack_160 = (int *)CONCAT31(piStack_160._1_3_,uVar6);\n                }\n                bVar5 = (byte)piStack_158 + 1;\n                if (0xfe < (byte)piStack_158) goto LAB_0048e055;\n              }\n              bVar5 = (byte)piStack_164 + 1;\n              if (0xfe < (byte)piStack_164) goto LAB_0048e055;\n              piStack_164 = (int *)CONCAT31(piStack_164._1_3_,bVar5);\n            } while( true );\n          }\n          cVar3 = *pcStack_120;\n          if (5 < (byte)cVar3 - 1) {\n            puStack_218 = (undefined4 *)0x48de97;\n            __vbaGenerateBoundsError();\n          }\n          bStack_1dc = *(byte *)(DAT_0049106c + 0x12 + ((byte)cVar3 - 1) * 0x2c);\n          puStack_218 = (undefined4 *)0x48deb8;\n          bVar5 = __vbaUI1I2();\n          do {\n            piStack_158 = (int *)CONCAT31(piStack_158._1_3_,bVar5);\n            if (bStack_1dc < bVar5) goto LAB_0048de76;\n            if (5 < (byte)*pcStack_120 - 1) {\n              puStack_218 = (undefined4 *)0x48ded1;\n              (*pcVar19)();\n            }\n            cVar3 = *pcStack_120;\n            if (5 < (byte)cVar3 - 1) {\n              puStack_218 = (undefined4 *)0x48dedf;\n              (*pcVar19)();\n            }\n            iVar9 = ((byte)cVar3 - 1) * 0x2c;\n            if (*(int *)(iVar9 + 0xc + DAT_0049106c) == 0) {\nLAB_0048df87:\n              puStack_218 = (undefined4 *)0x48df89;\n              iVar14 = (*pcVar19)();\n            }\n            else {\n              cVar3 = *pcStack_120;\n              if (5 < (byte)cVar3 - 1) {\n                puStack_218 = (undefined4 *)0x48df08;\n                (*pcVar19)();\n              }\n              iVar9 = ((byte)cVar3 - 1) * 0x2c;\n              if (**(short **)(iVar9 + 0xc + DAT_0049106c) != 1) goto LAB_0048df87;\n              cVar3 = *pcStack_120;\n              if (5 < (byte)cVar3 - 1) {\n                puStack_218 = (undefined4 *)0x48df2f;\n                (*pcVar19)();\n              }\n              uVar11 = ((uint)piStack_158 & 0xff) -\n                       *(int *)(*(int *)(DAT_0049106c + 0xc + ((byte)cVar3 - 1) * 0x2c) + 0x14);\n              cVar3 = *pcStack_120;\n              if (5 < (byte)cVar3 - 1) {\n                puStack_218 = (undefined4 *)0x48df5e;\n                __vbaGenerateBoundsError();\n              }\n              iVar9 = ((byte)cVar3 - 1) * 0x2c;\n              if (*(uint *)(*(int *)(iVar9 + 0xc + DAT_0049106c) + 0x10) <= uVar11) {\n                puStack_218 = (undefined4 *)0x48df7c;\n                __vbaGenerateBoundsError();\n              }\n              iVar14 = uVar11 * 2;\n              pcVar19 = __vbaGenerateBoundsError_exref;\n            }\n            uStack_1b0 = *(undefined2 *)\n                          (*(int *)(*(int *)(iVar9 + 0xc + DAT_0049106c) + 0xc) + iVar14);\n            puStack_218 = auStack_1b8;\n            uStack_198 = 2;\n            ppiStack_190 = (int **)0x0;\n            pvStack_22c = (void *)0x1;\n            auStack_1b8[0] = 0x8002;\n            puStack_228 = (undefined1 *)0x2;\n            puStack_224 = (undefined1 *)uStack_194;\n            puStack_230 = &stack0xfffffeac;\n            ppiStack_220 = (int **)0x0;\n            uStack_21c = uStack_18c;\n            puStack_234 = &uStack_178;\n            uStack_238 = 0x48dfe2;\n            uStack_21c = __vbaVarIndexLoad();\n            ppiStack_220 = (int **)0x48dfec;\n            pcVar18 = (code *)__vbaVarTstEq();\n            ppiStack_220 = (int **)0x48dff7;\n            __vbaFreeVar();\n            if ((short)pcVar18 != 0) goto LAB_0048de6f;\n            bVar5 = (byte)piStack_158 + 1;\n          } while ((byte)piStack_158 != -1);\n        }\nLAB_0048e055:\n        puStack_218 = (undefined4 *)0x48e05b;\n        __vbaErrorOverflow();\n        puStack_228 = &LAB_00401656;\n        pvStack_22c = ExceptionList;\n        puStack_224 = (undefined1 *)&pcStack_250;\n        ppiStack_220 = (int **)&DAT_004015a0;\n        uStack_21c = (uint)piStack_210 & 1;\n        piVar17 = (int *)((uint)piStack_210 & 0xfffffffe);\n        ExceptionList = &pvStack_22c;\n        pcStack_250 = pcVar19;\n        pcStack_24c = pcVar18;\n        pcStack_248 = pcVar16;\n        puStack_218 = (undefined4 *)&stack0xfffffed0;\n        piStack_210 = piVar17;\n        (**(code **)(*piVar17 + 4))(piVar17);\n        puStack_230 = (undefined1 *)0x0;\n        if (DAT_00491714 == (int *)0x0) {\n          __vbaNew2(&LAB_00470d04,&DAT_00491714);\n        }\n        piVar8 = DAT_00491714;\n        iStack_244 = *DAT_00491714;\n        uVar15 = __vbaObjSetAddref(&puStack_230,piVar17);\n        iVar9 = (**(code **)(iStack_244 + 0x10))(piVar8,uVar15);\n        if (iVar9 < 0) {\n          __vbaHresultCheckObj(iVar9,piVar8,&DAT_00470cf4,0x10);\n        }\n        __vbaFreeObj();\n        return;\n      }\n    }\n    else {\n      puStack_134 = &DAT_004713b8;\n      piStack_138 = (int *)0x48d88b;\n      iVar9 = __vbaStrCmp();\n      if (iVar9 != 0) goto LAB_0048d900;\n      bVar5 = *pbVar1;\n      if (0x29 < bVar5) {\n        __vbaGenerateBoundsError();\n      }\n      uVar11 = *(byte *)(DAT_00491034 + 0x65 + (uint)bVar5 * 0x74) - 1;\n      if (5 < uVar11) {\n        __vbaGenerateBoundsError();\n      }\n      iVar9 = (int)(short)((ushort)*(byte *)(DAT_0049106c + 0x1d + uVar11 * 0x2c) * 100) *\n              (int)(short)(ushort)DAT_0049108c;\n      sVar7 = (short)iVar9;\n      if (sVar7 != iVar9) goto LAB_0048db79;\n    }\n    piVar17[0xe] = (int)(float)(int)sVar7;\n  }\nLAB_0048d900:\n  puStack_134 = (undefined *)0x48d909;\n  puStack_134 = (undefined *)(**(code **)(*piVar17 + 0x314))();\n  piStack_138 = local_34;\n  puStack_13c = (undefined *)0x48d914;\n  piVar8 = (int *)__vbaObjSet();\n  puStack_140 = (undefined1 *)piVar17[0xe];\n  puStack_13c = &DAT_0047399c;\n  iVar9 = *piVar8;\n  pvStack_144 = (void *)0x48d927;\n  __vbaStrR4();\n  pvStack_144 = (void *)0x48d932;\n  pvStack_144 = (void *)__vbaStrMove();\n  __vbaStrCat();\n  __vbaStrMove();\n  piStack_15c = (int *)(**(code **)(iVar9 + 0x54))();\n  if ((int)piStack_15c < 0) {\n    piStack_160 = (int *)0x48d95e;\n    piStack_158 = piVar8;\n    __vbaHresultCheckObj();\n  }\n  piStack_158 = (int *)0x2;\n  piStack_15c = (int *)0x48d96e;\n  __vbaFreeStrList();\n  __vbaFreeObj();\n  pbVar1 = (byte *)((int)piVar17 + 0x35);\n  bVar5 = *pbVar1;\n  if (5 < bVar5 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  if ((float)piVar17[0xe] <= *(float *)(DAT_0049106c + 8 + (bVar5 - 1) * 0x2c)) {\n    DAT_00491084 = 0;\n    bVar5 = *pbVar1;\n    if (5 < bVar5 - 1) {\n      __vbaGenerateBoundsError();\n    }\n    *(undefined4 *)(DAT_0049106c + 0x20 + (bVar5 - 1) * 0x2c) = 0;\n  }\n  else {\n    piStack_158 = (int *)0x48d9b4;\n    uVar11 = FUN_004878c0(pbVar1,(float *)(piVar17 + 0xe));\n    if ((short)uVar11 != 0) {\n      FUN_00487930(pbVar1);\n      goto LAB_0048db0b;\n    }\n    DAT_00491084 = 0xffff;\n    (**(code **)(*piVar17 + 0x300))();\n    piStack_158 = local_34;\n    piStack_15c = (int *)0x48d9e1;\n    piVar8 = (int *)__vbaObjSet();\n    piStack_15c = (int *)0x0;\n    piStack_164 = (int *)0x48d9ee;\n    piStack_160 = piVar8;\n    iVar9 = (**(code **)(*piVar8 + 0x8c))();\n    if (iVar9 < 0) {\n      piStack_164 = (int *)0x8c;\n      puStack_168 = &DAT_004717a8;\n      piStack_174 = (int *)0x48da06;\n      iStack_170 = iVar9;\n      piStack_16c = piVar8;\n      __vbaHresultCheckObj();\n    }\n    piStack_164 = (int *)0x48da11;\n    __vbaFreeObj();\n    puStack_168 = (undefined *)0x48da1a;\n    piStack_164 = piVar17;\n    puStack_168 = (undefined *)(**(code **)(*piVar17 + 0x2fc))();\n    piStack_16c = local_34;\n    iStack_170 = 0x48da25;\n    piStack_174 = (int *)__vbaObjSet();\n    iStack_170 = -1;\n    uStack_178 = 0x48da32;\n    iVar9 = (**(code **)(*piStack_174 + 0x8c))();\n    if (iVar9 < 0) {\n      uStack_178 = 0x8c;\n      uStack_188 = 0x48da4a;\n      iStack_184 = iVar9;\n      __vbaHresultCheckObj();\n    }\n    uStack_178 = 0x48da4f;\n    __vbaFreeObj();\n    bVar5 = *pbVar1;\n    if (5 < bVar5 - 1) {\n      uStack_178 = 0x48da61;\n      __vbaGenerateBoundsError();\n    }\n    uStack_178 = *(undefined4 *)(DAT_0049106c + 4 + (bVar5 - 1) * 0x2c);\n    __vbaStrCat();\n    __vbaStrMove();\n    iStack_184 = 0x48da91;\n    FUN_00487700(local_34 + 2);\n    iStack_184 = 0x48da9a;\n    __vbaFreeStr();\n  }\n  if (DAT_00491010 == (int *)0x0) {\n    piStack_158 = (int *)0x48dae4;\n    __vbaNew2();\n  }\n  piVar17 = DAT_00491010;\n  piVar8 = (int *)(**(code **)(*DAT_00491010 + 0x718))();\n  if ((int)piVar8 < 0) {\n    piStack_158 = (int *)&DAT_00470614;\n    piStack_15c = piVar17;\n    piStack_164 = (int *)0x48db0b;\n    piStack_160 = piVar8;\n    __vbaHresultCheckObj();\n  }\nLAB_0048db0b:\n  local_8 = 0;\n  piStack_158 = (int *)0x48db4b;\n  __vbaFreeStr();\n  piStack_158 = (int *)0x48db54;\n  __vbaFreeVar();\n  return;\n}\n\n",
+      "limitations": [
+        "Ghidra Listing reports a terminal call at 0x48db74 to 0x40165c MSVBVM60.DLL::__vbaFPException (external=false, thunk=true, hasNoReturn=false); fallthrough is excluded by Ghidra's flow model. The reason for the terminal flow is not established by this observation."
+      ]
+    },
+    "normalized_result": "\n/* WARNING: Removing unreachable block (ram,0x0048d71e) */\n/* WARNING: Removing unreachable block (ram,0x0048d729) */\n/* WARNING: Removing unreachable block (ram,0x0048d72f) */\n/* WARNING: Removing unreachable block (ram,0x0048d73a) */\n/* WARNING: Removing unreachable block (ram,0x0048d740) */\n/* WARNING: Removing unreachable block (ram,0x0048d75d) */\n/* WARNING: Removing unreachable block (ram,0x0048d763) */\n/* WARNING: Removing unreachable block (ram,0x0048db74) */\n/* WARNING: Removing unreachable block (ram,0x0048d792) */\n\nvoid __cdecl FUN_0048d330(uint param_1)\n\n{\n  byte *pbVar1;\n  byte bVar2;\n  code cVar3;\n  code cVar4;\n  byte bVar5;\n  undefined1 uVar6;\n  short sVar7;\n  int *piVar8;\n  int iVar9;\n  int *piVar10;\n  uint uVar11;\n  uint *puVar12;\n  undefined4 *puVar13;\n  int iVar14;\n  undefined4 uVar15;\n  code *pcVar16;\n  int *piVar17;\n  code *pcVar18;\n  code *pcVar19;\n  code *pcStack_250;\n  code *pcStack_24c;\n  code *pcStack_248;\n  int iStack_244;\n  undefined4 uStack_238;\n  undefined4 *puStack_234;\n  undefined1 *puStack_230;\n  void *pvStack_22c;\n  undefined1 *puStack_228;\n  undefined1 *puStack_224;\n  int **ppiStack_220;\n  uint uStack_21c;\n  undefined4 *puStack_218;\n  undefined4 uStack_214;\n  int *piStack_210;\n  undefined1 *puStack_20c;\n  undefined4 *puStack_208;\n  undefined4 uStack_204;\n  undefined4 *puStack_200;\n  undefined4 uStack_1fc;\n  undefined4 uStack_1f8;\n  code *pcStack_1f0;\n  int *piStack_1ec;\n  uint uStack_1e8;\n  byte bStack_1dc;\n  byte bStack_1d4;\n  byte bStack_1cc;\n  undefined4 auStack_1b8 [2];\n  undefined2 uStack_1b0;\n  undefined4 auStack_1a8 [2];\n  undefined2 uStack_1a0;\n  undefined4 uStack_198;\n  undefined4 uStack_194;\n  int **ppiStack_190;\n  undefined4 uStack_18c;\n  undefined4 uStack_188;\n  int iStack_184;\n  undefined4 uStack_178;\n  int *piStack_174;\n  int iStack_170;\n  int *piStack_16c;\n  undefined *puStack_168;\n  int *piStack_164;\n  int *piStack_160;\n  int *piStack_15c;\n  int *piStack_158;\n  void *pvStack_144;\n  undefined1 *puStack_140;\n  undefined *puStack_13c;\n  int *piStack_138;\n  undefined *puStack_134;\n  int *piStack_128;\n  byte *pbStack_124;\n  code *pcStack_120;\n  int local_34 [7];\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined *local_c;\n  uint local_8;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xffffff6c;\n  local_c = &DAT_00401580;\n  local_8 = param_1 & 1;\n  piVar17 = (int *)(param_1 & 0xfffffffe);\n  ExceptionList = &pvStack_18;\n  (**(code **)(*piVar17 + 4))();\n  uVar11 = (uint)DAT_0049107a;\n  local_34[3] = 0;\n  local_34[2] = 0;\n  local_34[1] = 0;\n  local_34[0] = 0;\n  if (5 < uVar11 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  pbVar1 = (byte *)(piVar17 + 0xd);\n  *pbVar1 = *(byte *)(DAT_0049106c + 0x10 + (uVar11 - 1) * 0x2c);\n  *(byte *)((int)piVar17 + 0x35) = DAT_0049107a;\n  (**(code **)(*piVar17 + 0x30c))();\n  piVar8 = (int *)__vbaObjSet();\n  if (0x29 < *pbVar1) {\n    __vbaGenerateBoundsError();\n  }\n  if (0x29 < *pbVar1) {\n    __vbaGenerateBoundsError();\n  }\n  iVar9 = *piVar8;\n  __vbaStrCat();\n  __vbaStrMove();\n  __vbaStrCat();\n  __vbaStrMove();\n  iVar9 = (**(code **)(iVar9 + 0x54))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  __vbaFreeStrList();\n  __vbaFreeObj();\n  (**(code **)(*piVar17 + 0x304))();\n  piVar8 = (int *)__vbaObjSet();\n  bVar5 = *pbVar1;\n  if (0x29 < bVar5) {\n    __vbaGenerateBoundsError();\n  }\n  if (5 < *(byte *)(DAT_00491034 + 0x65 + (uint)bVar5 * 0x74) - 1) {\n    __vbaGenerateBoundsError();\n  }\n  iVar9 = (**(code **)(*piVar8 + 0x54))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  __vbaFreeObj();\n  (**(code **)(*piVar17 + 0x304))();\n  piVar8 = (int *)__vbaObjSet();\n  if (DAT_00491010 == (int *)0x0) {\n    __vbaNew2();\n  }\n  (**(code **)(*DAT_00491010 + 0x318))();\n  piVar10 = (int *)__vbaObjSet();\n  if (0x29 < *pbVar1) {\n    __vbaGenerateBoundsError();\n  }\n  iVar9 = (**(code **)(*piVar10 + 0x40))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  iVar9 = (**(code **)(iRam00000000 + 0x60))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  iVar9 = (**(code **)(*piVar8 + 100))();\n  if (iVar9 < 0) {\n    __vbaHresultCheckObj();\n  }\n  __vbaFreeObjList();\n  if (0x29 < *pbVar1) {\n    __vbaGenerateBoundsError();\n  }\n  __vbaStrCopy();\n  pcVar18 = __vbaStrCmp_exref;\n  iVar9 = __vbaStrCmp();\n  if (iVar9 == 0) {\n    if (0x29 < *pbVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar9 = (**(code **)(*piVar17 + 0x6f8))();\n    if (iVar9 < 0) {\n      __vbaHresultCheckObj();\n    }\n    __vbaVarMove();\n    if (0x29 < *pbVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar9 = (**(code **)(*piVar17 + 0x6f8))();\n    if (iVar9 < 0) {\n      puStack_134 = &LAB_004713f8;\n      puStack_140 = (undefined1 *)0x48d713;\n      puStack_13c = (undefined *)iVar9;\n      piStack_138 = piVar17;\n      __vbaHresultCheckObj();\n    }\n    bVar5 = *pbVar1;\n    if (0x29 < bVar5) {\n      __vbaGenerateBoundsError();\n    }\n    bVar2 = *pbVar1;\n    if (0x29 < bVar2) {\n      __vbaGenerateBoundsError();\n    }\n    uVar11 = (uint)*(byte *)(DAT_00491034 + 0x66 + (uint)bVar2 * 0x74);\n    if (5 < uVar11) {\n      __vbaGenerateBoundsError();\n    }\n    piVar17[0xe] = *(int *)(DAT_00491034 + 0x14 + uVar11 * 4 + (uint)bVar5 * 0x74);\n  }\n  else {\n    iVar9 = __vbaStrCmp();\n    if (iVar9 == 0) {\n      bVar5 = *pbVar1;\n      if (0x29 < bVar5) {\n        __vbaGenerateBoundsError();\n      }\n      uVar11 = *(byte *)(DAT_00491034 + 0x65 + (uint)bVar5 * 0x74) - 1;\n      if (5 < uVar11) {\n        __vbaGenerateBoundsError();\n      }\n      iVar9 = (short)(ushort)*(byte *)(DAT_0049106c + 0x1c + uVar11 * 0x2c) * 500;\n      sVar7 = (short)iVar9;\n      if (sVar7 != iVar9) {\nLAB_0048db79:\n        __vbaErrorOverflow();\n        puStack_140 = &LAB_00401656;\n        pvStack_144 = ExceptionList;\n        puStack_13c = (undefined *)&pcStack_1f0;\n        pcStack_1f0 = pcVar18;\n        piStack_138 = (int *)&DAT_00401590;\n        puStack_134 = (undefined *)0x0;\n        uStack_1f8 = 0x48dbba;\n        ExceptionList = &pvStack_144;\n        piStack_1ec = piVar17;\n        uStack_1e8 = uVar11;\n        (**(code **)(*piStack_128 + 4))();\n        piStack_15c = (int *)0x0;\n        piStack_160 = (int *)((uint)piStack_160 & 0xffffff00);\n        piStack_164 = (int *)((uint)piStack_164 & 0xffffff00);\n        uStack_178 = 0;\n        uStack_188 = 0;\n        auStack_1a8[0] = 0;\n        auStack_1b8[0] = 0;\n        ppiStack_190 = (int **)&DAT_00473370;\n        uStack_198 = 8;\n        uStack_1f8 = 0x48dbf4;\n        __vbaVarDup();\n        bVar5 = *pbStack_124;\n        if (0x29 < bVar5) {\n          uStack_1f8 = 0x48dc08;\n          __vbaGenerateBoundsError();\n        }\n        uStack_1f8 = 0;\n        puStack_200 = &uStack_178;\n        uStack_1fc = 0xffffffff;\n        uStack_204 = *(undefined4 *)(DAT_00491034 + 0x70 + (uint)bVar5 * 0x74);\n        puStack_208 = &uStack_188;\n        puStack_20c = (undefined1 *)0x48dc30;\n        Ordinal_711();\n        puStack_20c = (undefined1 *)0x48dc3c;\n        __vbaVarMove();\n        puStack_20c = (undefined1 *)0x48dc45;\n        __vbaFreeVar();\n        pcVar18 = __vbaRefVarAry_exref;\n        puStack_20c = &stack0xfffffeac;\n        piStack_210 = (int *)0x48dc51;\n        puVar12 = (uint *)__vbaRefVarAry();\n        pcVar19 = __vbaUbound_exref;\n        piStack_210 = (int *)*puVar12;\n        uStack_214 = 1;\n        puStack_218 = (undefined4 *)0x48dc5e;\n        iVar9 = __vbaUbound();\n        pcVar16 = __vbaUI1I4_exref;\n        if (!SCARRY4(iVar9,1)) {\n          puStack_218 = (undefined4 *)0x48dc71;\n          bVar5 = __vbaUI1I4();\n          pcVar19 = __vbaGenerateBoundsError_exref;\n          puStack_168 = (undefined *)CONCAT31(puStack_168._1_3_,bVar5);\n          pcVar16 = pcStack_120;\n          if (1 < bVar5) {\n            puStack_218 = (undefined4 *)&stack0xfffffeac;\n            uStack_21c = 0x48dc82;\n            puVar13 = (undefined4 *)__vbaRefVarAry();\n            uStack_21c = *puVar13;\n            ppiStack_220 = (int **)0x1;\n            puStack_224 = (undefined1 *)0x48dc89;\n            __vbaUbound();\n            puStack_224 = (undefined1 *)0x48dc8d;\n            bStack_1cc = __vbaUI1I4();\n            puStack_224 = (undefined1 *)0x48dc9b;\n            bVar5 = __vbaUI1I2();\n            piStack_164 = (int *)CONCAT31(piStack_164._1_3_,bVar5);\n            do {\n              pcVar19 = __vbaGenerateBoundsError_exref;\n              if (bStack_1cc < bVar5) {\n                if ((byte)piStack_160 == (char)puStack_168) {\nLAB_0048de6f:\n                  piStack_15c = (int *)0xffffffff;\n                }\nLAB_0048de76:\n                puStack_218 = (undefined4 *)&LAB_0048e02c;\n                uStack_21c = 0x48e02b;\n                __vbaFreeVar();\n                return;\n              }\n              pcVar18 = (code *)((byte)*pcStack_120 - 1);\n              if ((code *)0x5 < pcVar18) {\n                puStack_218 = (undefined4 *)0x48dcc1;\n                __vbaGenerateBoundsError();\n              }\n              bStack_1d4 = *(byte *)(DAT_0049106c + 0x12 + (int)pcVar18 * 0x2c);\n              puStack_218 = (undefined4 *)0x48dce2;\n              bVar5 = __vbaUI1I2();\n              while( true ) {\n                piStack_158 = (int *)CONCAT31(piStack_158._1_3_,bVar5);\n                if (bStack_1d4 < bVar5) break;\n                if (5 < (byte)*pcStack_120 - 1) {\n                  puStack_218 = (undefined4 *)0x48dcff;\n                  (*pcVar19)();\n                }\n                cVar3 = *pcStack_120;\n                if (5 < (byte)cVar3 - 1) {\n                  puStack_218 = (undefined4 *)0x48dd0d;\n                  (*pcVar19)();\n                }\n                iVar9 = ((byte)cVar3 - 1) * 0x2c;\n                if (*(int *)(iVar9 + 0xc + DAT_0049106c) == 0) {\nLAB_0048ddb6:\n                  puStack_218 = (undefined4 *)0x48ddb8;\n                  iVar14 = (*pcVar19)();\n                }\n                else {\n                  cVar3 = *pcStack_120;\n                  if (5 < (byte)cVar3 - 1) {\n                    puStack_218 = (undefined4 *)0x48dd36;\n                    (*pcVar19)();\n                  }\n                  iVar9 = ((byte)cVar3 - 1) * 0x2c;\n                  if (**(short **)(iVar9 + 0xc + DAT_0049106c) != 1) goto LAB_0048ddb6;\n                  cVar3 = *pcStack_120;\n                  if (5 < (byte)cVar3 - 1) {\n                    puStack_218 = (undefined4 *)0x48dd5d;\n                    (*pcVar19)();\n                  }\n                  cVar4 = *pcStack_120;\n                  uVar11 = ((uint)piStack_158 & 0xff) -\n                           *(int *)(*(int *)(DAT_0049106c + 0xc + ((byte)cVar3 - 1) * 0x2c) + 0x14);\n                  if (5 < (byte)cVar4 - 1) {\n                    puStack_218 = (undefined4 *)0x48dd8d;\n                    __vbaGenerateBoundsError();\n                  }\n                  iVar9 = ((byte)cVar4 - 1) * 0x2c;\n                  if (*(uint *)(*(int *)(iVar9 + 0xc + DAT_0049106c) + 0x10) <= uVar11) {\n                    puStack_218 = (undefined4 *)0x48ddab;\n                    __vbaGenerateBoundsError();\n                  }\n                  iVar14 = uVar11 * 2;\n                  pcVar19 = __vbaGenerateBoundsError_exref;\n                }\n                uStack_1a0 = *(undefined2 *)\n                              (*(int *)(*(int *)(iVar9 + 0xc + DAT_0049106c) + 0xc) + iVar14);\n                puStack_218 = auStack_1a8;\n                uStack_198 = 0x4011;\n                ppiStack_220 = &piStack_164;\n                pvStack_22c = (void *)0x1;\n                auStack_1a8[0] = 0x8002;\n                puStack_228 = (undefined1 *)0x4011;\n                puStack_224 = (undefined1 *)uStack_194;\n                puStack_230 = &stack0xfffffeac;\n                uStack_21c = uStack_18c;\n                puStack_234 = &uStack_178;\n                uStack_238 = 0x48de0c;\n                ppiStack_190 = ppiStack_220;\n                uStack_21c = __vbaVarIndexLoad();\n                ppiStack_220 = (int **)0x48de16;\n                pcVar18 = (code *)__vbaVarTstEq();\n                ppiStack_220 = (int **)0x48de21;\n                __vbaFreeVar();\n                if ((short)pcVar18 != 0) {\n                  if (SCARRY2((ushort)(byte)piStack_160,1)) goto LAB_0048e055;\n                  puStack_218 = (undefined4 *)0x48de3b;\n                  uVar6 = __vbaUI1I2();\n                  piStack_160 = (int *)CONCAT31(piStack_160._1_3_,uVar6);\n                }\n                bVar5 = (byte)piStack_158 + 1;\n                if (0xfe < (byte)piStack_158) goto LAB_0048e055;\n              }\n              bVar5 = (byte)piStack_164 + 1;\n              if (0xfe < (byte)piStack_164) goto LAB_0048e055;\n              piStack_164 = (int *)CONCAT31(piStack_164._1_3_,bVar5);\n            } while( true );\n          }\n          cVar3 = *pcStack_120;\n          if (5 < (byte)cVar3 - 1) {\n            puStack_218 = (undefined4 *)0x48de97;\n            __vbaGenerateBoundsError();\n          }\n          bStack_1dc = *(byte *)(DAT_0049106c + 0x12 + ((byte)cVar3 - 1) * 0x2c);\n          puStack_218 = (undefined4 *)0x48deb8;\n          bVar5 = __vbaUI1I2();\n          do {\n            piStack_158 = (int *)CONCAT31(piStack_158._1_3_,bVar5);\n            if (bStack_1dc < bVar5) goto LAB_0048de76;\n            if (5 < (byte)*pcStack_120 - 1) {\n              puStack_218 = (undefined4 *)0x48ded1;\n              (*pcVar19)();\n            }\n            cVar3 = *pcStack_120;\n            if (5 < (byte)cVar3 - 1) {\n              puStack_218 = (undefined4 *)0x48dedf;\n              (*pcVar19)();\n            }\n            iVar9 = ((byte)cVar3 - 1) * 0x2c;\n            if (*(int *)(iVar9 + 0xc + DAT_0049106c) == 0) {\nLAB_0048df87:\n              puStack_218 = (undefined4 *)0x48df89;\n              iVar14 = (*pcVar19)();\n            }\n            else {\n              cVar3 = *pcStack_120;\n              if (5 < (byte)cVar3 - 1) {\n                puStack_218 = (undefined4 *)0x48df08;\n                (*pcVar19)();\n              }\n              iVar9 = ((byte)cVar3 - 1) * 0x2c;\n              if (**(short **)(iVar9 + 0xc + DAT_0049106c) != 1) goto LAB_0048df87;\n              cVar3 = *pcStack_120;\n              if (5 < (byte)cVar3 - 1) {\n                puStack_218 = (undefined4 *)0x48df2f;\n                (*pcVar19)();\n              }\n              uVar11 = ((uint)piStack_158 & 0xff) -\n                       *(int *)(*(int *)(DAT_0049106c + 0xc + ((byte)cVar3 - 1) * 0x2c) + 0x14);\n              cVar3 = *pcStack_120;\n              if (5 < (byte)cVar3 - 1) {\n                puStack_218 = (undefined4 *)0x48df5e;\n                __vbaGenerateBoundsError();\n              }\n              iVar9 = ((byte)cVar3 - 1) * 0x2c;\n              if (*(uint *)(*(int *)(iVar9 + 0xc + DAT_0049106c) + 0x10) <= uVar11) {\n                puStack_218 = (undefined4 *)0x48df7c;\n                __vbaGenerateBoundsError();\n              }\n              iVar14 = uVar11 * 2;\n              pcVar19 = __vbaGenerateBoundsError_exref;\n            }\n            uStack_1b0 = *(undefined2 *)\n                          (*(int *)(*(int *)(iVar9 + 0xc + DAT_0049106c) + 0xc) + iVar14);\n            puStack_218 = auStack_1b8;\n            uStack_198 = 2;\n            ppiStack_190 = (int **)0x0;\n            pvStack_22c = (void *)0x1;\n            auStack_1b8[0] = 0x8002;\n            puStack_228 = (undefined1 *)0x2;\n            puStack_224 = (undefined1 *)uStack_194;\n            puStack_230 = &stack0xfffffeac;\n            ppiStack_220 = (int **)0x0;\n            uStack_21c = uStack_18c;\n            puStack_234 = &uStack_178;\n            uStack_238 = 0x48dfe2;\n            uStack_21c = __vbaVarIndexLoad();\n            ppiStack_220 = (int **)0x48dfec;\n            pcVar18 = (code *)__vbaVarTstEq();\n            ppiStack_220 = (int **)0x48dff7;\n            __vbaFreeVar();\n            if ((short)pcVar18 != 0) goto LAB_0048de6f;\n            bVar5 = (byte)piStack_158 + 1;\n          } while ((byte)piStack_158 != -1);\n        }\nLAB_0048e055:\n        puStack_218 = (undefined4 *)0x48e05b;\n        __vbaErrorOverflow();\n        puStack_228 = &LAB_00401656;\n        pvStack_22c = ExceptionList;\n        puStack_224 = (undefined1 *)&pcStack_250;\n        ppiStack_220 = (int **)&DAT_004015a0;\n        uStack_21c = (uint)piStack_210 & 1;\n        piVar17 = (int *)((uint)piStack_210 & 0xfffffffe);\n        ExceptionList = &pvStack_22c;\n        pcStack_250 = pcVar19;\n        pcStack_24c = pcVar18;\n        pcStack_248 = pcVar16;\n        puStack_218 = (undefined4 *)&stack0xfffffed0;\n        piStack_210 = piVar17;\n        (**(code **)(*piVar17 + 4))(piVar17);\n        puStack_230 = (undefined1 *)0x0;\n        if (DAT_00491714 == (int *)0x0) {\n          __vbaNew2(&LAB_00470d04,&DAT_00491714);\n        }\n        piVar8 = DAT_00491714;\n        iStack_244 = *DAT_00491714;\n        uVar15 = __vbaObjSetAddref(&puStack_230,piVar17);\n        iVar9 = (**(code **)(iStack_244 + 0x10))(piVar8,uVar15);\n        if (iVar9 < 0) {\n          __vbaHresultCheckObj(iVar9,piVar8,&DAT_00470cf4,0x10);\n        }\n        __vbaFreeObj();\n        return;\n      }\n    }\n    else {\n      puStack_134 = &DAT_004713b8;\n      piStack_138 = (int *)0x48d88b;\n      iVar9 = __vbaStrCmp();\n      if (iVar9 != 0) goto LAB_0048d900;\n      bVar5 = *pbVar1;\n      if (0x29 < bVar5) {\n        __vbaGenerateBoundsError();\n      }\n      uVar11 = *(byte *)(DAT_00491034 + 0x65 + (uint)bVar5 * 0x74) - 1;\n      if (5 < uVar11) {\n        __vbaGenerateBoundsError();\n      }\n      iVar9 = (int)(short)((ushort)*(byte *)(DAT_0049106c + 0x1d + uVar11 * 0x2c) * 100) *\n              (int)(short)(ushort)DAT_0049108c;\n      sVar7 = (short)iVar9;\n      if (sVar7 != iVar9) goto LAB_0048db79;\n    }\n    piVar17[0xe] = (int)(float)(int)sVar7;\n  }\nLAB_0048d900:\n  puStack_134 = (undefined *)0x48d909;\n  puStack_134 = (undefined *)(**(code **)(*piVar17 + 0x314))();\n  piStack_138 = local_34;\n  puStack_13c = (undefined *)0x48d914;\n  piVar8 = (int *)__vbaObjSet();\n  puStack_140 = (undefined1 *)piVar17[0xe];\n  puStack_13c = &DAT_0047399c;\n  iVar9 = *piVar8;\n  pvStack_144 = (void *)0x48d927;\n  __vbaStrR4();\n  pvStack_144 = (void *)0x48d932;\n  pvStack_144 = (void *)__vbaStrMove();\n  __vbaStrCat();\n  __vbaStrMove();\n  piStack_15c = (int *)(**(code **)(iVar9 + 0x54))();\n  if ((int)piStack_15c < 0) {\n    piStack_160 = (int *)0x48d95e;\n    piStack_158 = piVar8;\n    __vbaHresultCheckObj();\n  }\n  piStack_158 = (int *)0x2;\n  piStack_15c = (int *)0x48d96e;\n  __vbaFreeStrList();\n  __vbaFreeObj();\n  pbVar1 = (byte *)((int)piVar17 + 0x35);\n  bVar5 = *pbVar1;\n  if (5 < bVar5 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  if ((float)piVar17[0xe] <= *(float *)(DAT_0049106c + 8 + (bVar5 - 1) * 0x2c)) {\n    DAT_00491084 = 0;\n    bVar5 = *pbVar1;\n    if (5 < bVar5 - 1) {\n      __vbaGenerateBoundsError();\n    }\n    *(undefined4 *)(DAT_0049106c + 0x20 + (bVar5 - 1) * 0x2c) = 0;\n  }\n  else {\n    piStack_158 = (int *)0x48d9b4;\n    uVar11 = FUN_004878c0(pbVar1,(float *)(piVar17 + 0xe));\n    if ((short)uVar11 != 0) {\n      FUN_00487930(pbVar1);\n      goto LAB_0048db0b;\n    }\n    DAT_00491084 = 0xffff;\n    (**(code **)(*piVar17 + 0x300))();\n    piStack_158 = local_34;\n    piStack_15c = (int *)0x48d9e1;\n    piVar8 = (int *)__vbaObjSet();\n    piStack_15c = (int *)0x0;\n    piStack_164 = (int *)0x48d9ee;\n    piStack_160 = piVar8;\n    iVar9 = (**(code **)(*piVar8 + 0x8c))();\n    if (iVar9 < 0) {\n      piStack_164 = (int *)0x8c;\n      puStack_168 = &DAT_004717a8;\n      piStack_174 = (int *)0x48da06;\n      iStack_170 = iVar9;\n      piStack_16c = piVar8;\n      __vbaHresultCheckObj();\n    }\n    piStack_164 = (int *)0x48da11;\n    __vbaFreeObj();\n    puStack_168 = (undefined *)0x48da1a;\n    piStack_164 = piVar17;\n    puStack_168 = (undefined *)(**(code **)(*piVar17 + 0x2fc))();\n    piStack_16c = local_34;\n    iStack_170 = 0x48da25;\n    piStack_174 = (int *)__vbaObjSet();\n    iStack_170 = -1;\n    uStack_178 = 0x48da32;\n    iVar9 = (**(code **)(*piStack_174 + 0x8c))();\n    if (iVar9 < 0) {\n      uStack_178 = 0x8c;\n      uStack_188 = 0x48da4a;\n      iStack_184 = iVar9;\n      __vbaHresultCheckObj();\n    }\n    uStack_178 = 0x48da4f;\n    __vbaFreeObj();\n    bVar5 = *pbVar1;\n    if (5 < bVar5 - 1) {\n      uStack_178 = 0x48da61;\n      __vbaGenerateBoundsError();\n    }\n    uStack_178 = *(undefined4 *)(DAT_0049106c + 4 + (bVar5 - 1) * 0x2c);\n    __vbaStrCat();\n    __vbaStrMove();\n    iStack_184 = 0x48da91;\n    FUN_00487700(local_34 + 2);\n    iStack_184 = 0x48da9a;\n    __vbaFreeStr();\n  }\n  if (DAT_00491010 == (int *)0x0) {\n    piStack_158 = (int *)0x48dae4;\n    __vbaNew2();\n  }\n  piVar17 = DAT_00491010;\n  piVar8 = (int *)(**(code **)(*DAT_00491010 + 0x718))();\n  if ((int)piVar8 < 0) {\n    piStack_158 = (int *)&DAT_00470614;\n    piStack_15c = piVar17;\n    piStack_164 = (int *)0x48db0b;\n    piStack_160 = piVar8;\n    __vbaHresultCheckObj();\n  }\nLAB_0048db0b:\n  local_8 = 0;\n  piStack_158 = (int *)0x48db4b;\n  __vbaFreeStr();\n  piStack_158 = (int *)0x48db54;\n  __vbaFreeVar();\n  return;\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit.",
+      "Ghidra Listing reports a terminal call at 0x48db74 to 0x40165c MSVBVM60.DLL::__vbaFPException (external=false, thunk=true, hasNoReturn=false); fallthrough is excluded by Ghidra's flow model. The reason for the terminal flow is not established by this observation."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

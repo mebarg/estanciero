@@ -1,0 +1,238 @@
+{
+  "info": {
+    "evidence_id": "ev_01d7bd02cbe5dbd8044e24c242cd1983ef8fa16c45a991bf3848004a03b063e8",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_info",
+    "parameters": {
+      "procedure": "0x4018c8"
+    },
+    "raw_result": {
+      "value": {
+        "name": "entry",
+        "entrypoint": "0x4018c8",
+        "basicblock_count": 3,
+        "length": 61,
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x4018a4",
+              "end": "0x4018b3"
+            },
+            {
+              "start": "0x4018c8",
+              "end": "0x4018f4"
+            }
+          ],
+          "total_bytes": 61,
+          "span_bytes": 81,
+          "non_contiguous": true,
+          "contains_entry": true
+        },
+        "signature": "int __stdcall entry(void)",
+        "locals": [],
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        }
+      },
+      "limitations": []
+    },
+    "normalized_result": {
+      "name": "entry",
+      "entrypoint": "0x4018c8",
+      "basicblock_count": 3,
+      "length": 61,
+      "signature": "int __stdcall entry(void)",
+      "locals": [],
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x4018a4",
+            "end": "0x4018b3"
+          },
+          {
+            "start": "0x4018c8",
+            "end": "0x4018f4"
+          }
+        ],
+        "total_bytes": 61,
+        "span_bytes": 81,
+        "non_contiguous": true,
+        "contains_entry": true
+      }
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  },
+  "pseudocode": {
+    "evidence_id": "ev_8aeca84e81c654cca45785fc53fff746c724d32a0fb145ea0763d1744c5d419f",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x4018c8"
+    },
+    "raw_result": {
+      "value": "\nint entry(void)\n\n{\n  byte *pbVar1;\n  bool bVar2;\n  byte bVar3;\n  int iVar4;\n  byte *pbVar5;\n  uint uVar6;\n  byte extraout_CL;\n  byte bVar7;\n  int unaff_EBX;\n  int unaff_EDI;\n  \n  pbVar5 = (byte *)Ordinal_100(\"VB5!6&*\");\n  bVar3 = (byte)pbVar5;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 ^ bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  pbVar5 = pbVar5 + 1;\n  bVar3 = (byte)pbVar5;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  bVar7 = (byte)((uint)unaff_EBX >> 8);\n  if (CARRY1(bVar3,bVar7)) {\n    bVar3 = bVar3 + bVar7 & *(byte *)(unaff_EDI + -100);\n    pbVar1 = (byte *)(unaff_EBX + -0x42);\n    *pbVar1 = *pbVar1 >> (extraout_CL & 7) | *pbVar1 << 8 - (extraout_CL & 7);\n    bVar2 = 9 < (bVar3 & 0xf) || ((uint)pbVar5 & 0x1000) != 0;\n    uVar6 = CONCAT31((int3)((uint)pbVar5 >> 8),bVar3 + bVar2 * -6) & 0xffffff0f;\n    return CONCAT22((short)(uVar6 >> 0x10),CONCAT11((char)((uint)pbVar5 >> 8) - bVar2,(char)uVar6))\n           + 1;\n  }\n                    /* WARNING: Could not recover jumptable at 0x004018ae. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  iVar4 = EVENT_SINK_QueryInterface();\n  return iVar4;\n}\n\n",
+      "limitations": []
+    },
+    "normalized_result": "\nint entry(void)\n\n{\n  byte *pbVar1;\n  bool bVar2;\n  byte bVar3;\n  int iVar4;\n  byte *pbVar5;\n  uint uVar6;\n  byte extraout_CL;\n  byte bVar7;\n  int unaff_EBX;\n  int unaff_EDI;\n  \n  pbVar5 = (byte *)Ordinal_100(\"VB5!6&*\");\n  bVar3 = (byte)pbVar5;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 ^ bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  pbVar5 = pbVar5 + 1;\n  bVar3 = (byte)pbVar5;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  *pbVar5 = *pbVar5 + bVar3;\n  bVar7 = (byte)((uint)unaff_EBX >> 8);\n  if (CARRY1(bVar3,bVar7)) {\n    bVar3 = bVar3 + bVar7 & *(byte *)(unaff_EDI + -100);\n    pbVar1 = (byte *)(unaff_EBX + -0x42);\n    *pbVar1 = *pbVar1 >> (extraout_CL & 7) | *pbVar1 << 8 - (extraout_CL & 7);\n    bVar2 = 9 < (bVar3 & 0xf) || ((uint)pbVar5 & 0x1000) != 0;\n    uVar6 = CONCAT31((int3)((uint)pbVar5 >> 8),bVar3 + bVar2 * -6) & 0xffffff0f;\n    return CONCAT22((short)(uVar6 >> 0x10),CONCAT11((char)((uint)pbVar5 >> 8) - bVar2,(char)uVar6))\n           + 1;\n  }\n                    /* WARNING: Could not recover jumptable at 0x004018ae. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  iVar4 = EVENT_SINK_QueryInterface();\n  return iVar4;\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

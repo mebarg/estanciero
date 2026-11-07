@@ -1,0 +1,81 @@
+{
+  "source": "recovered/0.45/estanciero.exe",
+  "source_bytes": 602112,
+  "source_sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf",
+  "scanned_file_range": [
+    0,
+    602112
+  ],
+  "minimum_run_characters": 4,
+  "unicode_alignments": [
+    0,
+    1
+  ],
+  "encodings": [
+    "ascii",
+    "cp1252",
+    "utf-16le"
+  ],
+  "length_prefixed_minimum_characters": 1,
+  "records": 60212,
+  "counts_by_encoding": {
+    "utf-16le": 30768,
+    "cp1252": 25570,
+    "ascii": 3874
+  },
+  "counts_by_method": {
+    "maximal-printable-run": 59999,
+    "length-prefixed-utf16le-null-terminated": 213
+  },
+  "counts_by_category": {
+    "printable-binary-candidate": 17216,
+    "text-candidate": 919,
+    "identifier-candidate": 745,
+    "runtime-api-or-component": 338,
+    "embedded-image-payload-or-metadata": 40597,
+    "game-or-ui-text-candidate": 261,
+    "path-or-address": 12,
+    "numeric-text": 52,
+    "pe-resource-text-candidate": 72
+  },
+  "counts_by_section": {
+    "PE headers": 27,
+    ".text": 60113,
+    ".rsrc": 72
+  },
+  "records_overlapping_images": 40597,
+  "distinct_observed_ranges": 58678,
+  "image_base": "0x400000",
+  "sections": [
+    {
+      "name": ".text",
+      "rva": 4096,
+      "virtual_size": 587456,
+      "raw_offset": 4096,
+      "raw_size": 589824
+    },
+    {
+      "name": ".data",
+      "rva": 593920,
+      "virtual_size": 18308,
+      "raw_offset": 593920,
+      "raw_size": 4096
+    },
+    {
+      "name": ".rsrc",
+      "rva": 614400,
+      "virtual_size": 2296,
+      "raw_offset": 598016,
+      "raw_size": 4096
+    }
+  ],
+  "limitations": [
+    "All file bytes were scanned under the stated character and minimum-length rules; this is not proof that every semantic text is recovered.",
+    "Arbitrary Unicode and cp1252 runs can be printable interpretations of machine code, image data or numerical constants.",
+    "Compressed, encrypted, encoded, custom-serialized and dynamically assembled text is not recovered merely by a printable-run scan.",
+    "ASCII/cp1252/UTF-16LE views overlap and structural BSTR candidates can duplicate the same underlying text.",
+    "No unprefixed run shorter than the selected minimum is listed; length-prefixed candidates accept one character.",
+    "Raw pointer occurrences are byte matches, including unaligned locations; they are not disassembler-verified cross-references.",
+    "Only the supplied PE file was read; no target execution, network request or inference that a candidate appeared in the UI was performed."
+  ]
+}

@@ -1,0 +1,400 @@
+{
+  "info": {
+    "evidence_id": "ev_066403c1c35e5b04e104aac9d10a4b89fb74c89550404971df89e1080e107891",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_info",
+    "parameters": {
+      "procedure": "0x486d20"
+    },
+    "raw_result": {
+      "value": {
+        "name": "FUN_00486d20",
+        "entrypoint": "0x486d20",
+        "basicblock_count": 95,
+        "length": 1747,
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x486d20",
+              "end": "0x487394"
+            },
+            {
+              "start": "0x48739f",
+              "end": "0x4873e7"
+            },
+            {
+              "start": "0x4873fb",
+              "end": "0x48740f"
+            }
+          ],
+          "total_bytes": 1747,
+          "span_bytes": 1776,
+          "non_contiguous": true,
+          "contains_entry": true
+        },
+        "signature": "uint __cdecl FUN_00486d20(byte * param_1, byte * param_2)",
+        "locals": [
+          {
+            "description": "undefined4 local_24 @ Stack[-0x24]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_34 @ Stack[-0x34]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_44 @ Stack[-0x44]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_48 @ Stack[-0x48]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_58 @ Stack[-0x58]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_60 @ Stack[-0x60]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_68 @ Stack[-0x68]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined1 local_70 @ Stack[-0x70]:1",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_78 @ Stack[-0x78]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_8 @ Stack[-0x8]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_80 @ Stack[-0x80]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_88 @ Stack[-0x88]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_a4 @ Stack[-0xa4]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_b4 @ Stack[-0xb4]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_c @ Stack[-0xc]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_c4 @ Stack[-0xc4]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_d4 @ Stack[-0xd4]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_e4 @ Stack[-0xe4]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_e8 @ Stack[-0xe8]:4",
+            "provenance": "ghidra-function-database"
+          }
+        ],
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        }
+      },
+      "limitations": []
+    },
+    "normalized_result": {
+      "name": "FUN_00486d20",
+      "entrypoint": "0x486d20",
+      "basicblock_count": 95,
+      "length": 1747,
+      "signature": "uint __cdecl FUN_00486d20(byte * param_1, byte * param_2)",
+      "locals": [
+        {
+          "description": "undefined4 local_24 @ Stack[-0x24]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_34 @ Stack[-0x34]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_44 @ Stack[-0x44]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_48 @ Stack[-0x48]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_58 @ Stack[-0x58]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_60 @ Stack[-0x60]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_68 @ Stack[-0x68]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined1 local_70 @ Stack[-0x70]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_78 @ Stack[-0x78]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_8 @ Stack[-0x8]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_80 @ Stack[-0x80]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_88 @ Stack[-0x88]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_a4 @ Stack[-0xa4]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_b4 @ Stack[-0xb4]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_c @ Stack[-0xc]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_c4 @ Stack[-0xc4]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_d4 @ Stack[-0xd4]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_e4 @ Stack[-0xe4]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_e8 @ Stack[-0xe8]:4",
+          "provenance": "ghidra-function-database"
+        }
+      ],
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x486d20",
+            "end": "0x487394"
+          },
+          {
+            "start": "0x48739f",
+            "end": "0x4873e7"
+          },
+          {
+            "start": "0x4873fb",
+            "end": "0x48740f"
+          }
+        ],
+        "total_bytes": 1747,
+        "span_bytes": 1776,
+        "non_contiguous": true,
+        "contains_entry": true
+      }
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  },
+  "pseudocode": {
+    "evidence_id": "ev_8f15a73843363bd5b05c1d3227d14a0b82d130d1eaca97a2080f9a2bc743002c",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x486d20"
+    },
+    "raw_result": {
+      "value": "\n/* WARNING: Removing unreachable block (ram,0x004878ad) */\n/* WARNING: Removing unreachable block (ram,0x004878dc) */\n/* WARNING: Removing unreachable block (ram,0x004878de) */\n/* WARNING: Removing unreachable block (ram,0x004878f1) */\n/* WARNING: Removing unreachable block (ram,0x004878fd) */\n/* WARNING: Removing unreachable block (ram,0x004878ff) */\n/* WARNING: Removing unreachable block (ram,0x0048791c) */\n/* WARNING: Removing unreachable block (ram,0x00487926) */\n/* WARNING: Restarted to delay deadcode elimination for space: stack */\n\nuint __cdecl FUN_00486d20(byte *param_1,byte *param_2)\n\n{\n  byte bVar1;\n  byte bVar2;\n  byte bVar3;\n  code cVar4;\n  uint *puVar5;\n  undefined1 *puVar6;\n  undefined1 uVar7;\n  int iVar8;\n  int iVar9;\n  int iVar10;\n  int iVar11;\n  undefined4 uVar12;\n  int *piVar13;\n  int *piVar14;\n  ushort uVar15;\n  code *pcVar16;\n  code *unaff_ESI;\n  undefined4 *puVar17;\n  uint uVar18;\n  byte *unaff_EDI;\n  uint uVar19;\n  uint uStack_158;\n  uint uStack_154;\n  undefined4 uStack_130;\n  undefined4 uStack_128;\n  undefined4 *puStack_124;\n  undefined4 *puStack_120;\n  undefined4 *puStack_11c;\n  short **ppsStack_118;\n  undefined4 *puStack_114;\n  undefined4 *puStack_110;\n  code *pcStack_10c;\n  short **ppsStack_108;\n  undefined4 *puStack_104;\n  undefined4 *puStack_100;\n  byte *pbStack_fc;\n  undefined4 *puStack_f8;\n  int local_e8;\n  undefined4 local_d4 [4];\n  undefined4 local_c4 [4];\n  undefined4 local_b4 [4];\n  undefined4 local_a4 [7];\n  undefined4 local_88 [2];\n  undefined4 local_80;\n  undefined4 local_78 [2];\n  undefined1 local_70;\n  undefined4 local_68 [2];\n  undefined4 local_60;\n  undefined4 local_58 [4];\n  short *local_48;\n  undefined4 local_44 [4];\n  undefined4 local_34 [4];\n  undefined4 local_24 [4];\n  void *pvStack_14;\n  undefined1 *puStack_10;\n  undefined1 *local_c;\n  undefined *local_8;\n  \n  puStack_10 = &LAB_00401656;\n  pvStack_14 = ExceptionList;\n  local_c = &stack0xffffff0c;\n  local_8 = &DAT_00401410;\n  bVar1 = *param_1;\n  local_24[0] = 0;\n  local_34[0] = 0;\n  local_44[0] = 0;\n  local_48 = (short *)0x0;\n  local_58[0] = 0;\n  local_68[0] = 0;\n  local_78[0] = 0;\n  local_88[0] = 0;\n  local_a4[0] = 0;\n  local_b4[0] = 0;\n  local_c4[0] = 0;\n  local_d4[0] = 0;\n  ExceptionList = &pvStack_14;\n  puVar6 = &stack0xffffff0c;\n  if (5 < bVar1 - 1) {\n    puStack_f8 = (undefined4 *)0x486d96;\n    ExceptionList = &pvStack_14;\n    __vbaGenerateBoundsError();\n    puVar6 = local_c;\n  }\n  local_c = puVar6;\n  if (*(byte *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c) < 2) {\n    bVar1 = *param_1;\n    if (5 < bVar1 - 1) {\n      puStack_f8 = (undefined4 *)0x48733d;\n      __vbaGenerateBoundsError();\n    }\n    puStack_f8 = (undefined4 *)0x487345;\n    uVar7 = __vbaUI1I2();\n    *(undefined1 *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c) = uVar7;\n    bVar1 = *param_1;\n    if (5 < bVar1 - 1) {\n      puStack_f8 = (undefined4 *)0x487367;\n      __vbaGenerateBoundsError();\n    }\n    puStack_f8 = (undefined4 *)0x0;\n    pbStack_fc = (byte *)0x0;\n    puStack_100 = (undefined4 *)0x1;\n    puStack_104 = (undefined4 *)0x2;\n    ppsStack_108 = (short **)(DAT_0049106c + 0xc + (bVar1 - 1) * 0x2c);\n    pcStack_10c = (code *)0x2;\n    puStack_110 = (undefined4 *)0x80;\n    puStack_114 = (undefined4 *)0x48738b;\n    __vbaRedim();\nLAB_0048738e:\n    puStack_114 = (undefined4 *)&LAB_004873e8;\n    ppsStack_118 = (short **)local_d4;\n    puStack_11c = local_c4;\n    puStack_120 = local_b4;\n    puStack_124 = local_a4;\n    __vbaFreeVarList();\n    ppsStack_118 = (short **)0x4873d1;\n    __vbaFreeVar();\n    ppsStack_118 = (short **)0x4873d6;\n    __vbaFreeVar();\n    ppsStack_118 = (short **)0x4873db;\n    __vbaFreeVar();\n    ppsStack_118 = &local_48;\n    puStack_11c = (undefined4 *)0x0;\n    puStack_120 = (undefined4 *)0x4873e7;\n    uVar19 = __vbaAryDestruct();\n    return uVar19;\n  }\n  puVar17 = (undefined4 *)(*param_1 - 1);\n  if ((undefined4 *)0x5 < puVar17) {\n    puStack_f8 = (undefined4 *)0x486dbe;\n    __vbaGenerateBoundsError();\n  }\n  puStack_f8 = (undefined4 *)0x0;\n  uVar19 = 2;\n  uVar15 = (ushort)*(byte *)(DAT_0049106c + 0x12 + (int)puVar17 * 0x2c);\n  if (!SBORROW2(uVar15,1)) {\n    pbStack_fc = (byte *)(int)(short)(uVar15 - 1);\n    puStack_100 = (undefined4 *)0x1;\n    puStack_104 = (undefined4 *)0x2;\n    pcStack_10c = (code *)0x2;\n    puStack_110 = (undefined4 *)0x80;\n    puStack_114 = (undefined4 *)0x486df8;\n    ppsStack_108 = &local_48;\n    __vbaRedim();\n    bVar1 = *param_1;\n    local_60 = 1;\n    local_68[0] = 2;\n    if (5 < bVar1 - 1) {\n      puStack_f8 = (undefined4 *)0x486e17;\n      __vbaGenerateBoundsError();\n    }\n    local_70 = *(undefined1 *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c);\n    puStack_f8 = local_68;\n    pbStack_fc = (byte *)local_78;\n    puStack_100 = local_88;\n    puStack_104 = local_b4;\n    ppsStack_108 = (short **)local_a4;\n    pcStack_10c = (code *)local_34;\n    local_78[0] = 0x11;\n    local_80 = 1;\n    local_88[0] = 2;\n    puStack_110 = (undefined4 *)0x486e65;\n    iVar8 = __vbaVarForInit();\n    while (iVar8 != 0) {\n      if (5 < *param_1 - 1) {\n        pbStack_fc = (byte *)0x486e7f;\n        __vbaGenerateBoundsError();\n      }\n      bVar1 = *param_1;\n      if (5 < bVar1 - 1) {\n        pbStack_fc = (byte *)0x486e8d;\n        __vbaGenerateBoundsError();\n      }\n      iVar8 = (bVar1 - 1) * 0x2c;\n      if (*(int *)(iVar8 + 0xc + DAT_0049106c) == 0) {\nLAB_00486f33:\n        pbStack_fc = (byte *)0x486f35;\n        iVar9 = __vbaGenerateBoundsError();\n      }\n      else {\n        bVar1 = *param_1;\n        if (5 < bVar1 - 1) {\n          pbStack_fc = (byte *)0x486eb6;\n          __vbaGenerateBoundsError();\n        }\n        iVar8 = (bVar1 - 1) * 0x2c;\n        if (**(short **)(iVar8 + 0xc + DAT_0049106c) != 1) goto LAB_00486f33;\n        bVar1 = *param_1;\n        if (5 < bVar1 - 1) {\n          pbStack_fc = (byte *)0x486edd;\n          __vbaGenerateBoundsError();\n        }\n        pbStack_fc = (byte *)local_34;\n        puStack_100 = (undefined4 *)0x486ee7;\n        iVar8 = __vbaI4Var();\n        bVar2 = *param_1;\n        uVar19 = iVar8 - *(int *)(*(int *)(DAT_0049106c + 0xc + (bVar1 - 1) * 0x2c) + 0x14);\n        if (5 < bVar2 - 1) {\n          puStack_100 = (undefined4 *)0x486f10;\n          __vbaGenerateBoundsError();\n        }\n        iVar8 = (bVar2 - 1) * 0x2c;\n        if (*(uint *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0x10) <= uVar19) {\n          puStack_100 = (undefined4 *)0x486f2e;\n          __vbaGenerateBoundsError();\n        }\n        iVar9 = uVar19 * 2;\n      }\n      if (*(ushort *)(*(int *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0xc) + iVar9) !=\n          (ushort)*param_2) {\n        puStack_100 = local_24;\n        puStack_104 = local_68;\n        ppsStack_108 = (short **)local_58;\n        local_60 = 1;\n        local_68[0] = 2;\n        pcStack_10c = (code *)0x486f73;\n        __vbaVarAdd();\n        pcStack_10c = (code *)0x486f7e;\n        __vbaVarMove();\n        if (5 < *param_1 - 1) {\n          pcStack_10c = (code *)0x486f90;\n          __vbaGenerateBoundsError();\n        }\n        bVar1 = *param_1;\n        if (5 < bVar1 - 1) {\n          pcStack_10c = (code *)0x486f9e;\n          __vbaGenerateBoundsError();\n        }\n        iVar8 = (bVar1 - 1) * 0x2c;\n        if (*(int *)(iVar8 + 0xc + DAT_0049106c) == 0) {\nLAB_00487041:\n          pcStack_10c = (code *)0x487043;\n          iVar9 = __vbaGenerateBoundsError();\n        }\n        else {\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            pcStack_10c = (code *)0x486fc6;\n            __vbaGenerateBoundsError();\n          }\n          iVar8 = (bVar1 - 1) * 0x2c;\n          if (**(short **)(iVar8 + 0xc + DAT_0049106c) != 1) goto LAB_00487041;\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            pcStack_10c = (code *)0x486fec;\n            __vbaGenerateBoundsError();\n          }\n          pcStack_10c = (code *)local_34;\n          puStack_110 = (undefined4 *)0x486ff6;\n          iVar8 = __vbaI4Var();\n          uVar19 = iVar8 - *(int *)(*(int *)(DAT_0049106c + 0xc + (bVar1 - 1) * 0x2c) + 0x14);\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            puStack_110 = (undefined4 *)0x48701e;\n            __vbaGenerateBoundsError();\n          }\n          iVar8 = (bVar1 - 1) * 0x2c;\n          if (*(uint *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0x10) <= uVar19) {\n            puStack_110 = (undefined4 *)0x48703c;\n            __vbaGenerateBoundsError();\n          }\n          iVar9 = uVar19 * 2;\n        }\n        if ((local_48 == (short *)0x0) || (*local_48 != 1)) {\n          puStack_110 = (undefined4 *)0x487082;\n          iVar11 = __vbaGenerateBoundsError();\n        }\n        else {\n          puStack_110 = local_24;\n          puStack_114 = (undefined4 *)0x487060;\n          iVar10 = __vbaI4Var();\n          iVar11 = *(int *)(local_48 + 10);\n          if (*(uint *)(local_48 + 8) <= (uint)(iVar10 - iVar11)) {\n            puStack_100 = (undefined4 *)0x487077;\n            __vbaGenerateBoundsError();\n          }\n          iVar11 = (iVar10 - iVar11) * 2;\n        }\n        *(undefined2 *)(*(int *)(local_48 + 6) + iVar11) =\n             *(undefined2 *)(*(int *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0xc) + iVar9);\n      }\n      puStack_100 = local_b4;\n      puStack_104 = local_a4;\n      ppsStack_108 = (short **)local_34;\n      pcStack_10c = (code *)0x4870bb;\n      iVar8 = __vbaVarForNext();\n    }\n    uVar19 = *param_1 - 1;\n    if (5 < uVar19) {\n      pbStack_fc = (byte *)0x4870d2;\n      __vbaGenerateBoundsError();\n    }\n    puVar17 = (undefined4 *)(*param_1 - 1);\n    if ((undefined4 *)0x5 < puVar17) {\n      pbStack_fc = (byte *)0x4870e4;\n      __vbaGenerateBoundsError();\n    }\n    if (!SBORROW2((ushort)*(byte *)(DAT_0049106c + 0x12 + uVar19 * 0x2c),1)) {\n      pbStack_fc = (byte *)0x487106;\n      uVar7 = __vbaUI1I2();\n      *(undefined1 *)(DAT_0049106c + 0x12 + (int)puVar17 * 0x2c) = uVar7;\n      bVar1 = *param_1;\n      if (5 < bVar1 - 1) {\n        pbStack_fc = (byte *)0x487128;\n        __vbaGenerateBoundsError();\n      }\n      bVar2 = *param_1;\n      if (5 < bVar2 - 1) {\n        pbStack_fc = (byte *)0x48713a;\n        __vbaGenerateBoundsError();\n      }\n      pbStack_fc = (byte *)0x0;\n      puStack_100 = (undefined4 *)(uint)*(byte *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c);\n      puStack_104 = (undefined4 *)0x1;\n      ppsStack_108 = (short **)0x2;\n      pcStack_10c = (code *)(DAT_0049106c + 0xc + (bVar2 - 1) * 0x2c);\n      puStack_110 = (undefined4 *)0x2;\n      puStack_114 = (undefined4 *)0x80;\n      ppsStack_118 = (short **)0x48716a;\n      __vbaRedim();\n      pcVar16 = __vbaGenerateBoundsError_exref;\n      bVar1 = *param_1;\n      local_60 = 1;\n      local_68[0] = 2;\n      if (5 < bVar1 - 1) {\n        pbStack_fc = (byte *)0x48718f;\n        __vbaGenerateBoundsError();\n      }\n      local_70 = *(undefined1 *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c);\n      pbStack_fc = (byte *)local_68;\n      puStack_100 = local_78;\n      puStack_104 = local_88;\n      ppsStack_108 = (short **)local_d4;\n      pcStack_10c = (code *)local_c4;\n      puStack_110 = local_44;\n      local_78[0] = 0x11;\n      local_80 = 1;\n      local_88[0] = 2;\n      puStack_114 = (undefined4 *)0x4871e1;\n      iVar8 = __vbaVarForInit();\n      while (iVar8 != 0) {\n        if ((local_48 == (short *)0x0) || (*local_48 != 1)) {\n          puStack_114 = (undefined4 *)0x487220;\n          local_e8 = (*pcVar16)();\n        }\n        else {\n          puStack_114 = local_44;\n          ppsStack_118 = (short **)0x487200;\n          iVar9 = __vbaI4Var();\n          iVar8 = *(int *)(local_48 + 10);\n          if (*(uint *)(local_48 + 8) <= (uint)(iVar9 - iVar8)) {\n            ppsStack_118 = (short **)0x487213;\n            (*pcVar16)();\n          }\n          local_e8 = (iVar9 - iVar8) * 2;\n        }\n        if (5 < *param_1 - 1) {\n          ppsStack_118 = (short **)0x487232;\n          (*pcVar16)();\n        }\n        bVar1 = *param_1;\n        if (5 < bVar1 - 1) {\n          ppsStack_118 = (short **)0x487240;\n          (*pcVar16)();\n        }\n        iVar8 = (bVar1 - 1) * 0x2c;\n        if (*(int *)(iVar8 + 0xc + DAT_0049106c) == 0) {\nLAB_004872eb:\n          ppsStack_118 = (short **)0x4872ed;\n          iVar9 = (*pcVar16)();\n        }\n        else {\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            ppsStack_118 = (short **)0x487269;\n            (*pcVar16)();\n          }\n          iVar8 = (bVar1 - 1) * 0x2c;\n          if (**(short **)(iVar8 + 0xc + DAT_0049106c) != 1) goto LAB_004872eb;\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            ppsStack_118 = (short **)0x487290;\n            (*pcVar16)();\n          }\n          ppsStack_118 = (short **)local_44;\n          puStack_11c = (undefined4 *)0x48729a;\n          iVar8 = __vbaI4Var();\n          bVar2 = *param_1;\n          uVar19 = iVar8 - *(int *)(*(int *)(DAT_0049106c + 0xc + (bVar1 - 1) * 0x2c) + 0x14);\n          if (5 < bVar2 - 1) {\n            puStack_11c = (undefined4 *)0x4872c3;\n            __vbaGenerateBoundsError();\n          }\n          iVar8 = (bVar2 - 1) * 0x2c;\n          if (*(uint *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0x10) <= uVar19) {\n            puStack_11c = (undefined4 *)0x4872e0;\n            __vbaGenerateBoundsError();\n          }\n          iVar9 = uVar19 * 2;\n          pcVar16 = __vbaGenerateBoundsError_exref;\n        }\n        *(undefined2 *)(*(int *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0xc) + iVar9) =\n             *(undefined2 *)(*(int *)(local_48 + 6) + local_e8);\n        puStack_11c = local_d4;\n        puStack_120 = local_c4;\n        puStack_124 = local_44;\n        iVar8 = __vbaVarForNext();\n      }\n      goto LAB_0048738e;\n    }\n  }\n  pbStack_fc = (byte *)0x487401;\n  __vbaErrorOverflow();\n  pcVar16 = __vbaGenerateBoundsError_exref;\n  pbStack_fc = param_1;\n  uVar18 = *unaff_EDI - 1;\n  ppsStack_108 = (short **)uVar19;\n  puStack_104 = puVar17;\n  puStack_100 = (undefined4 *)&stack0xfffffffc;\n  if (5 < uVar18) {\n    pcStack_10c = (code *)0x48742c;\n    puStack_100 = (undefined4 *)&stack0xfffffffc;\n    __vbaGenerateBoundsError();\n  }\n  uVar19 = *unaff_EDI - 1;\n  if (5 < uVar19) {\n    pcStack_10c = (code *)0x48743a;\n    __vbaGenerateBoundsError();\n  }\n  if (SCARRY2((ushort)*(byte *)(DAT_0049106c + 0x12 + uVar18 * 0x2c),1)) goto LAB_004876ef;\n  pcStack_10c = (code *)0x48745c;\n  uVar7 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x12 + uVar19 * 0x2c) = uVar7;\n  bVar1 = *unaff_EDI;\n  if (5 < bVar1 - 1) {\n    pcStack_10c = (code *)0x48747a;\n    __vbaGenerateBoundsError();\n  }\n  bVar2 = *unaff_EDI;\n  if (5 < bVar2 - 1) {\n    pcStack_10c = (code *)0x487488;\n    __vbaGenerateBoundsError();\n  }\n  pcStack_10c = (code *)0x0;\n  puStack_110 = (undefined4 *)(uint)*(byte *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c);\n  puStack_114 = (undefined4 *)0x1;\n  ppsStack_118 = (short **)0x2;\n  puStack_11c = (undefined4 *)(DAT_0049106c + 0xc + (bVar2 - 1) * 0x2c);\n  puStack_120 = (undefined4 *)0x2;\n  puStack_124 = (undefined4 *)0x80;\n  uStack_128 = 0x4874b8;\n  __vbaRedimPreserve();\n  if (5 < *unaff_EDI - 1) {\n    pcStack_10c = (code *)0x4874c7;\n    __vbaGenerateBoundsError();\n  }\n  bVar1 = *unaff_EDI;\n  if (5 < bVar1 - 1) {\n    pcStack_10c = (code *)0x4874d5;\n    __vbaGenerateBoundsError();\n  }\n  iVar8 = (bVar1 - 1) * 0x2c;\n  if (*(int *)(iVar8 + 0xc + DAT_0049106c) == 0) {\nLAB_00487581:\n    pcStack_10c = (code *)0x487583;\n    iVar9 = __vbaGenerateBoundsError();\n  }\n  else {\n    bVar1 = *unaff_EDI;\n    if (5 < bVar1 - 1) {\n      pcStack_10c = (code *)0x4874fe;\n      __vbaGenerateBoundsError();\n    }\n    iVar8 = (bVar1 - 1) * 0x2c;\n    if (**(short **)(iVar8 + 0xc + DAT_0049106c) != 1) goto LAB_00487581;\n    bVar1 = *unaff_EDI;\n    if (5 < bVar1 - 1) {\n      pcStack_10c = (code *)0x487525;\n      __vbaGenerateBoundsError();\n    }\n    bVar2 = *unaff_EDI;\n    if (5 < bVar2 - 1) {\n      pcStack_10c = (code *)0x487533;\n      __vbaGenerateBoundsError();\n    }\n    bVar3 = *unaff_EDI;\n    uVar19 = (uint)*(byte *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c) -\n             *(int *)(*(int *)(DAT_0049106c + 0xc + (bVar2 - 1) * 0x2c) + 0x14);\n    if (5 < bVar3 - 1) {\n      pcStack_10c = (code *)0x487563;\n      __vbaGenerateBoundsError();\n    }\n    iVar8 = (bVar3 - 1) * 0x2c;\n    if (*(uint *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0x10) <= uVar19) {\n      pcStack_10c = (code *)0x48757c;\n      __vbaGenerateBoundsError();\n    }\n    iVar9 = uVar19 * 2;\n  }\n  *(ushort *)(*(int *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0xc) + iVar9) =\n       (ushort)(byte)*unaff_ESI;\n  cVar4 = *unaff_ESI;\n  uVar19 = CONCAT31((int3)((uint)iVar9 >> 8),cVar4);\n  if ((byte)cVar4 < 0x2a) {\n    if (0x29 < (byte)cVar4) {\n      pcStack_10c = (code *)0x4875ba;\n      __vbaGenerateBoundsError();\n    }\n    *(byte *)(DAT_00491034 + 0x65 + (uint)(byte)cVar4 * 0x74) = *unaff_EDI;\n    cVar4 = *unaff_ESI;\n    if (0x29 < (byte)cVar4) {\n      pcStack_10c = (code *)0x4875e4;\n      __vbaGenerateBoundsError();\n    }\n    pcStack_10c = *(code **)(DAT_00491034 + 4 + (uint)(byte)cVar4 * 0x74);\n    puStack_110 = (undefined4 *)&DAT_004713b0;\n    puStack_114 = (undefined4 *)0x487605;\n    iVar8 = __vbaStrCmp();\n    pcVar16 = unaff_ESI;\n    if (iVar8 == 0) {\n      uVar19 = *unaff_EDI - 1;\n      if (5 < uVar19) {\n        pcStack_10c = (code *)0x48761b;\n        __vbaGenerateBoundsError();\n      }\n      uVar18 = *unaff_EDI - 1;\n      if (5 < uVar18) {\n        pcStack_10c = (code *)0x48762d;\n        __vbaGenerateBoundsError();\n      }\n      if (SCARRY2((ushort)*(byte *)(DAT_0049106c + 0x1c + uVar19 * 0x2c),1)) goto LAB_004876ef;\n      pcStack_10c = (code *)0x48764e;\n      uVar7 = __vbaUI1I2();\n      *(undefined1 *)(DAT_0049106c + 0x1c + uVar18 * 0x2c) = uVar7;\n    }\n    cVar4 = *unaff_ESI;\n    if (0x29 < (byte)cVar4) {\n      pcStack_10c = (code *)0x487670;\n      __vbaGenerateBoundsError();\n    }\n    pcStack_10c = *(code **)(DAT_00491034 + 4 + (uint)(byte)cVar4 * 0x74);\n    puStack_110 = (undefined4 *)&DAT_004713b8;\n    puStack_114 = (undefined4 *)0x487692;\n    uVar19 = __vbaStrCmp();\n    if (uVar19 == 0) {\n      uVar19 = *unaff_EDI - 1;\n      if (5 < uVar19) {\n        pcStack_10c = (code *)0x4876a8;\n        __vbaGenerateBoundsError();\n      }\n      uVar18 = *unaff_EDI - 1;\n      if (5 < uVar18) {\n        pcStack_10c = (code *)0x4876ba;\n        __vbaGenerateBoundsError();\n      }\n      if (SCARRY2((ushort)*(byte *)(DAT_0049106c + 0x1d + uVar19 * 0x2c),1)) {\nLAB_004876ef:\n        pcStack_10c = (code *)0x4876f5;\n        __vbaErrorOverflow();\n        ppsStack_118 = (short **)&LAB_00401656;\n        puStack_11c = ExceptionList;\n        puStack_114 = &uStack_158;\n        puStack_110 = (undefined4 *)&DAT_00401420;\n        puStack_120 = (undefined4 *)0x0;\n        puStack_124 = (undefined4 *)0x0;\n        ExceptionList = &puStack_11c;\n        uStack_158 = uVar19;\n        uStack_154 = uVar18;\n        puVar5 = &uStack_158;\n        pcStack_10c = pcVar16;\n        if (DAT_00491010 == (int *)0x0) {\n          ExceptionList = &puStack_11c;\n          __vbaNew2(&DAT_0046f194,&DAT_00491010);\n          puVar5 = puStack_114;\n        }\n        puStack_114 = puVar5;\n        uVar12 = (**(code **)(*DAT_00491010 + 0x2fc))(DAT_00491010);\n        piVar13 = (int *)__vbaObjSet(&puStack_120,uVar12);\n        iVar8 = (**(code **)(*piVar13 + 0x1ec))\n                          (piVar13,*puStack_104,10,uStack_130,0x80020004,uStack_128);\n        if (iVar8 < 0) {\n          __vbaHresultCheckObj(iVar8,piVar13,&DAT_00471af8,0x1ec);\n        }\n        __vbaFreeObj();\n        if (DAT_00491010 == (int *)0x0) {\n          __vbaNew2(&DAT_0046f194,&DAT_00491010);\n        }\n        uVar12 = (**(code **)(*DAT_00491010 + 0x2fc))(DAT_00491010);\n        piVar13 = (int *)__vbaObjSet(&puStack_124,uVar12);\n        if (DAT_00491010 == (int *)0x0) {\n          __vbaNew2(&DAT_0046f194,&DAT_00491010);\n        }\n        uVar12 = (**(code **)(*DAT_00491010 + 0x2fc))(DAT_00491010);\n        piVar14 = (int *)__vbaObjSet(&puStack_120,uVar12);\n        iVar8 = (**(code **)(*piVar14 + 0xd8))(piVar14);\n        if (iVar8 < 0) {\n          __vbaHresultCheckObj(iVar8,piVar14,&DAT_00471af8,0xd8);\n        }\n        iVar8 = (**(code **)(*piVar13 + 0xe4))(piVar13,0xffff);\n        if (iVar8 < 0) {\n          __vbaHresultCheckObj(iVar8,piVar13,&DAT_00471af8,0xe4);\n        }\n        uVar19 = __vbaFreeObjList(2,&puStack_120,&puStack_124);\n        return uVar19;\n      }\n      pcStack_10c = (code *)0x4876d8;\n      uVar19 = __vbaUI1I2();\n      *(char *)(DAT_0049106c + 0x1d + uVar18 * 0x2c) = (char)uVar19;\n    }\n  }\n  return uVar19;\n}\n\n",
+      "limitations": []
+    },
+    "normalized_result": "\n/* WARNING: Removing unreachable block (ram,0x004878ad) */\n/* WARNING: Removing unreachable block (ram,0x004878dc) */\n/* WARNING: Removing unreachable block (ram,0x004878de) */\n/* WARNING: Removing unreachable block (ram,0x004878f1) */\n/* WARNING: Removing unreachable block (ram,0x004878fd) */\n/* WARNING: Removing unreachable block (ram,0x004878ff) */\n/* WARNING: Removing unreachable block (ram,0x0048791c) */\n/* WARNING: Removing unreachable block (ram,0x00487926) */\n/* WARNING: Restarted to delay deadcode elimination for space: stack */\n\nuint __cdecl FUN_00486d20(byte *param_1,byte *param_2)\n\n{\n  byte bVar1;\n  byte bVar2;\n  byte bVar3;\n  code cVar4;\n  uint *puVar5;\n  undefined1 *puVar6;\n  undefined1 uVar7;\n  int iVar8;\n  int iVar9;\n  int iVar10;\n  int iVar11;\n  undefined4 uVar12;\n  int *piVar13;\n  int *piVar14;\n  ushort uVar15;\n  code *pcVar16;\n  code *unaff_ESI;\n  undefined4 *puVar17;\n  uint uVar18;\n  byte *unaff_EDI;\n  uint uVar19;\n  uint uStack_158;\n  uint uStack_154;\n  undefined4 uStack_130;\n  undefined4 uStack_128;\n  undefined4 *puStack_124;\n  undefined4 *puStack_120;\n  undefined4 *puStack_11c;\n  short **ppsStack_118;\n  undefined4 *puStack_114;\n  undefined4 *puStack_110;\n  code *pcStack_10c;\n  short **ppsStack_108;\n  undefined4 *puStack_104;\n  undefined4 *puStack_100;\n  byte *pbStack_fc;\n  undefined4 *puStack_f8;\n  int local_e8;\n  undefined4 local_d4 [4];\n  undefined4 local_c4 [4];\n  undefined4 local_b4 [4];\n  undefined4 local_a4 [7];\n  undefined4 local_88 [2];\n  undefined4 local_80;\n  undefined4 local_78 [2];\n  undefined1 local_70;\n  undefined4 local_68 [2];\n  undefined4 local_60;\n  undefined4 local_58 [4];\n  short *local_48;\n  undefined4 local_44 [4];\n  undefined4 local_34 [4];\n  undefined4 local_24 [4];\n  void *pvStack_14;\n  undefined1 *puStack_10;\n  undefined1 *local_c;\n  undefined *local_8;\n  \n  puStack_10 = &LAB_00401656;\n  pvStack_14 = ExceptionList;\n  local_c = &stack0xffffff0c;\n  local_8 = &DAT_00401410;\n  bVar1 = *param_1;\n  local_24[0] = 0;\n  local_34[0] = 0;\n  local_44[0] = 0;\n  local_48 = (short *)0x0;\n  local_58[0] = 0;\n  local_68[0] = 0;\n  local_78[0] = 0;\n  local_88[0] = 0;\n  local_a4[0] = 0;\n  local_b4[0] = 0;\n  local_c4[0] = 0;\n  local_d4[0] = 0;\n  ExceptionList = &pvStack_14;\n  puVar6 = &stack0xffffff0c;\n  if (5 < bVar1 - 1) {\n    puStack_f8 = (undefined4 *)0x486d96;\n    ExceptionList = &pvStack_14;\n    __vbaGenerateBoundsError();\n    puVar6 = local_c;\n  }\n  local_c = puVar6;\n  if (*(byte *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c) < 2) {\n    bVar1 = *param_1;\n    if (5 < bVar1 - 1) {\n      puStack_f8 = (undefined4 *)0x48733d;\n      __vbaGenerateBoundsError();\n    }\n    puStack_f8 = (undefined4 *)0x487345;\n    uVar7 = __vbaUI1I2();\n    *(undefined1 *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c) = uVar7;\n    bVar1 = *param_1;\n    if (5 < bVar1 - 1) {\n      puStack_f8 = (undefined4 *)0x487367;\n      __vbaGenerateBoundsError();\n    }\n    puStack_f8 = (undefined4 *)0x0;\n    pbStack_fc = (byte *)0x0;\n    puStack_100 = (undefined4 *)0x1;\n    puStack_104 = (undefined4 *)0x2;\n    ppsStack_108 = (short **)(DAT_0049106c + 0xc + (bVar1 - 1) * 0x2c);\n    pcStack_10c = (code *)0x2;\n    puStack_110 = (undefined4 *)0x80;\n    puStack_114 = (undefined4 *)0x48738b;\n    __vbaRedim();\nLAB_0048738e:\n    puStack_114 = (undefined4 *)&LAB_004873e8;\n    ppsStack_118 = (short **)local_d4;\n    puStack_11c = local_c4;\n    puStack_120 = local_b4;\n    puStack_124 = local_a4;\n    __vbaFreeVarList();\n    ppsStack_118 = (short **)0x4873d1;\n    __vbaFreeVar();\n    ppsStack_118 = (short **)0x4873d6;\n    __vbaFreeVar();\n    ppsStack_118 = (short **)0x4873db;\n    __vbaFreeVar();\n    ppsStack_118 = &local_48;\n    puStack_11c = (undefined4 *)0x0;\n    puStack_120 = (undefined4 *)0x4873e7;\n    uVar19 = __vbaAryDestruct();\n    return uVar19;\n  }\n  puVar17 = (undefined4 *)(*param_1 - 1);\n  if ((undefined4 *)0x5 < puVar17) {\n    puStack_f8 = (undefined4 *)0x486dbe;\n    __vbaGenerateBoundsError();\n  }\n  puStack_f8 = (undefined4 *)0x0;\n  uVar19 = 2;\n  uVar15 = (ushort)*(byte *)(DAT_0049106c + 0x12 + (int)puVar17 * 0x2c);\n  if (!SBORROW2(uVar15,1)) {\n    pbStack_fc = (byte *)(int)(short)(uVar15 - 1);\n    puStack_100 = (undefined4 *)0x1;\n    puStack_104 = (undefined4 *)0x2;\n    pcStack_10c = (code *)0x2;\n    puStack_110 = (undefined4 *)0x80;\n    puStack_114 = (undefined4 *)0x486df8;\n    ppsStack_108 = &local_48;\n    __vbaRedim();\n    bVar1 = *param_1;\n    local_60 = 1;\n    local_68[0] = 2;\n    if (5 < bVar1 - 1) {\n      puStack_f8 = (undefined4 *)0x486e17;\n      __vbaGenerateBoundsError();\n    }\n    local_70 = *(undefined1 *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c);\n    puStack_f8 = local_68;\n    pbStack_fc = (byte *)local_78;\n    puStack_100 = local_88;\n    puStack_104 = local_b4;\n    ppsStack_108 = (short **)local_a4;\n    pcStack_10c = (code *)local_34;\n    local_78[0] = 0x11;\n    local_80 = 1;\n    local_88[0] = 2;\n    puStack_110 = (undefined4 *)0x486e65;\n    iVar8 = __vbaVarForInit();\n    while (iVar8 != 0) {\n      if (5 < *param_1 - 1) {\n        pbStack_fc = (byte *)0x486e7f;\n        __vbaGenerateBoundsError();\n      }\n      bVar1 = *param_1;\n      if (5 < bVar1 - 1) {\n        pbStack_fc = (byte *)0x486e8d;\n        __vbaGenerateBoundsError();\n      }\n      iVar8 = (bVar1 - 1) * 0x2c;\n      if (*(int *)(iVar8 + 0xc + DAT_0049106c) == 0) {\nLAB_00486f33:\n        pbStack_fc = (byte *)0x486f35;\n        iVar9 = __vbaGenerateBoundsError();\n      }\n      else {\n        bVar1 = *param_1;\n        if (5 < bVar1 - 1) {\n          pbStack_fc = (byte *)0x486eb6;\n          __vbaGenerateBoundsError();\n        }\n        iVar8 = (bVar1 - 1) * 0x2c;\n        if (**(short **)(iVar8 + 0xc + DAT_0049106c) != 1) goto LAB_00486f33;\n        bVar1 = *param_1;\n        if (5 < bVar1 - 1) {\n          pbStack_fc = (byte *)0x486edd;\n          __vbaGenerateBoundsError();\n        }\n        pbStack_fc = (byte *)local_34;\n        puStack_100 = (undefined4 *)0x486ee7;\n        iVar8 = __vbaI4Var();\n        bVar2 = *param_1;\n        uVar19 = iVar8 - *(int *)(*(int *)(DAT_0049106c + 0xc + (bVar1 - 1) * 0x2c) + 0x14);\n        if (5 < bVar2 - 1) {\n          puStack_100 = (undefined4 *)0x486f10;\n          __vbaGenerateBoundsError();\n        }\n        iVar8 = (bVar2 - 1) * 0x2c;\n        if (*(uint *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0x10) <= uVar19) {\n          puStack_100 = (undefined4 *)0x486f2e;\n          __vbaGenerateBoundsError();\n        }\n        iVar9 = uVar19 * 2;\n      }\n      if (*(ushort *)(*(int *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0xc) + iVar9) !=\n          (ushort)*param_2) {\n        puStack_100 = local_24;\n        puStack_104 = local_68;\n        ppsStack_108 = (short **)local_58;\n        local_60 = 1;\n        local_68[0] = 2;\n        pcStack_10c = (code *)0x486f73;\n        __vbaVarAdd();\n        pcStack_10c = (code *)0x486f7e;\n        __vbaVarMove();\n        if (5 < *param_1 - 1) {\n          pcStack_10c = (code *)0x486f90;\n          __vbaGenerateBoundsError();\n        }\n        bVar1 = *param_1;\n        if (5 < bVar1 - 1) {\n          pcStack_10c = (code *)0x486f9e;\n          __vbaGenerateBoundsError();\n        }\n        iVar8 = (bVar1 - 1) * 0x2c;\n        if (*(int *)(iVar8 + 0xc + DAT_0049106c) == 0) {\nLAB_00487041:\n          pcStack_10c = (code *)0x487043;\n          iVar9 = __vbaGenerateBoundsError();\n        }\n        else {\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            pcStack_10c = (code *)0x486fc6;\n            __vbaGenerateBoundsError();\n          }\n          iVar8 = (bVar1 - 1) * 0x2c;\n          if (**(short **)(iVar8 + 0xc + DAT_0049106c) != 1) goto LAB_00487041;\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            pcStack_10c = (code *)0x486fec;\n            __vbaGenerateBoundsError();\n          }\n          pcStack_10c = (code *)local_34;\n          puStack_110 = (undefined4 *)0x486ff6;\n          iVar8 = __vbaI4Var();\n          uVar19 = iVar8 - *(int *)(*(int *)(DAT_0049106c + 0xc + (bVar1 - 1) * 0x2c) + 0x14);\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            puStack_110 = (undefined4 *)0x48701e;\n            __vbaGenerateBoundsError();\n          }\n          iVar8 = (bVar1 - 1) * 0x2c;\n          if (*(uint *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0x10) <= uVar19) {\n            puStack_110 = (undefined4 *)0x48703c;\n            __vbaGenerateBoundsError();\n          }\n          iVar9 = uVar19 * 2;\n        }\n        if ((local_48 == (short *)0x0) || (*local_48 != 1)) {\n          puStack_110 = (undefined4 *)0x487082;\n          iVar11 = __vbaGenerateBoundsError();\n        }\n        else {\n          puStack_110 = local_24;\n          puStack_114 = (undefined4 *)0x487060;\n          iVar10 = __vbaI4Var();\n          iVar11 = *(int *)(local_48 + 10);\n          if (*(uint *)(local_48 + 8) <= (uint)(iVar10 - iVar11)) {\n            puStack_100 = (undefined4 *)0x487077;\n            __vbaGenerateBoundsError();\n          }\n          iVar11 = (iVar10 - iVar11) * 2;\n        }\n        *(undefined2 *)(*(int *)(local_48 + 6) + iVar11) =\n             *(undefined2 *)(*(int *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0xc) + iVar9);\n      }\n      puStack_100 = local_b4;\n      puStack_104 = local_a4;\n      ppsStack_108 = (short **)local_34;\n      pcStack_10c = (code *)0x4870bb;\n      iVar8 = __vbaVarForNext();\n    }\n    uVar19 = *param_1 - 1;\n    if (5 < uVar19) {\n      pbStack_fc = (byte *)0x4870d2;\n      __vbaGenerateBoundsError();\n    }\n    puVar17 = (undefined4 *)(*param_1 - 1);\n    if ((undefined4 *)0x5 < puVar17) {\n      pbStack_fc = (byte *)0x4870e4;\n      __vbaGenerateBoundsError();\n    }\n    if (!SBORROW2((ushort)*(byte *)(DAT_0049106c + 0x12 + uVar19 * 0x2c),1)) {\n      pbStack_fc = (byte *)0x487106;\n      uVar7 = __vbaUI1I2();\n      *(undefined1 *)(DAT_0049106c + 0x12 + (int)puVar17 * 0x2c) = uVar7;\n      bVar1 = *param_1;\n      if (5 < bVar1 - 1) {\n        pbStack_fc = (byte *)0x487128;\n        __vbaGenerateBoundsError();\n      }\n      bVar2 = *param_1;\n      if (5 < bVar2 - 1) {\n        pbStack_fc = (byte *)0x48713a;\n        __vbaGenerateBoundsError();\n      }\n      pbStack_fc = (byte *)0x0;\n      puStack_100 = (undefined4 *)(uint)*(byte *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c);\n      puStack_104 = (undefined4 *)0x1;\n      ppsStack_108 = (short **)0x2;\n      pcStack_10c = (code *)(DAT_0049106c + 0xc + (bVar2 - 1) * 0x2c);\n      puStack_110 = (undefined4 *)0x2;\n      puStack_114 = (undefined4 *)0x80;\n      ppsStack_118 = (short **)0x48716a;\n      __vbaRedim();\n      pcVar16 = __vbaGenerateBoundsError_exref;\n      bVar1 = *param_1;\n      local_60 = 1;\n      local_68[0] = 2;\n      if (5 < bVar1 - 1) {\n        pbStack_fc = (byte *)0x48718f;\n        __vbaGenerateBoundsError();\n      }\n      local_70 = *(undefined1 *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c);\n      pbStack_fc = (byte *)local_68;\n      puStack_100 = local_78;\n      puStack_104 = local_88;\n      ppsStack_108 = (short **)local_d4;\n      pcStack_10c = (code *)local_c4;\n      puStack_110 = local_44;\n      local_78[0] = 0x11;\n      local_80 = 1;\n      local_88[0] = 2;\n      puStack_114 = (undefined4 *)0x4871e1;\n      iVar8 = __vbaVarForInit();\n      while (iVar8 != 0) {\n        if ((local_48 == (short *)0x0) || (*local_48 != 1)) {\n          puStack_114 = (undefined4 *)0x487220;\n          local_e8 = (*pcVar16)();\n        }\n        else {\n          puStack_114 = local_44;\n          ppsStack_118 = (short **)0x487200;\n          iVar9 = __vbaI4Var();\n          iVar8 = *(int *)(local_48 + 10);\n          if (*(uint *)(local_48 + 8) <= (uint)(iVar9 - iVar8)) {\n            ppsStack_118 = (short **)0x487213;\n            (*pcVar16)();\n          }\n          local_e8 = (iVar9 - iVar8) * 2;\n        }\n        if (5 < *param_1 - 1) {\n          ppsStack_118 = (short **)0x487232;\n          (*pcVar16)();\n        }\n        bVar1 = *param_1;\n        if (5 < bVar1 - 1) {\n          ppsStack_118 = (short **)0x487240;\n          (*pcVar16)();\n        }\n        iVar8 = (bVar1 - 1) * 0x2c;\n        if (*(int *)(iVar8 + 0xc + DAT_0049106c) == 0) {\nLAB_004872eb:\n          ppsStack_118 = (short **)0x4872ed;\n          iVar9 = (*pcVar16)();\n        }\n        else {\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            ppsStack_118 = (short **)0x487269;\n            (*pcVar16)();\n          }\n          iVar8 = (bVar1 - 1) * 0x2c;\n          if (**(short **)(iVar8 + 0xc + DAT_0049106c) != 1) goto LAB_004872eb;\n          bVar1 = *param_1;\n          if (5 < bVar1 - 1) {\n            ppsStack_118 = (short **)0x487290;\n            (*pcVar16)();\n          }\n          ppsStack_118 = (short **)local_44;\n          puStack_11c = (undefined4 *)0x48729a;\n          iVar8 = __vbaI4Var();\n          bVar2 = *param_1;\n          uVar19 = iVar8 - *(int *)(*(int *)(DAT_0049106c + 0xc + (bVar1 - 1) * 0x2c) + 0x14);\n          if (5 < bVar2 - 1) {\n            puStack_11c = (undefined4 *)0x4872c3;\n            __vbaGenerateBoundsError();\n          }\n          iVar8 = (bVar2 - 1) * 0x2c;\n          if (*(uint *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0x10) <= uVar19) {\n            puStack_11c = (undefined4 *)0x4872e0;\n            __vbaGenerateBoundsError();\n          }\n          iVar9 = uVar19 * 2;\n          pcVar16 = __vbaGenerateBoundsError_exref;\n        }\n        *(undefined2 *)(*(int *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0xc) + iVar9) =\n             *(undefined2 *)(*(int *)(local_48 + 6) + local_e8);\n        puStack_11c = local_d4;\n        puStack_120 = local_c4;\n        puStack_124 = local_44;\n        iVar8 = __vbaVarForNext();\n      }\n      goto LAB_0048738e;\n    }\n  }\n  pbStack_fc = (byte *)0x487401;\n  __vbaErrorOverflow();\n  pcVar16 = __vbaGenerateBoundsError_exref;\n  pbStack_fc = param_1;\n  uVar18 = *unaff_EDI - 1;\n  ppsStack_108 = (short **)uVar19;\n  puStack_104 = puVar17;\n  puStack_100 = (undefined4 *)&stack0xfffffffc;\n  if (5 < uVar18) {\n    pcStack_10c = (code *)0x48742c;\n    puStack_100 = (undefined4 *)&stack0xfffffffc;\n    __vbaGenerateBoundsError();\n  }\n  uVar19 = *unaff_EDI - 1;\n  if (5 < uVar19) {\n    pcStack_10c = (code *)0x48743a;\n    __vbaGenerateBoundsError();\n  }\n  if (SCARRY2((ushort)*(byte *)(DAT_0049106c + 0x12 + uVar18 * 0x2c),1)) goto LAB_004876ef;\n  pcStack_10c = (code *)0x48745c;\n  uVar7 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x12 + uVar19 * 0x2c) = uVar7;\n  bVar1 = *unaff_EDI;\n  if (5 < bVar1 - 1) {\n    pcStack_10c = (code *)0x48747a;\n    __vbaGenerateBoundsError();\n  }\n  bVar2 = *unaff_EDI;\n  if (5 < bVar2 - 1) {\n    pcStack_10c = (code *)0x487488;\n    __vbaGenerateBoundsError();\n  }\n  pcStack_10c = (code *)0x0;\n  puStack_110 = (undefined4 *)(uint)*(byte *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c);\n  puStack_114 = (undefined4 *)0x1;\n  ppsStack_118 = (short **)0x2;\n  puStack_11c = (undefined4 *)(DAT_0049106c + 0xc + (bVar2 - 1) * 0x2c);\n  puStack_120 = (undefined4 *)0x2;\n  puStack_124 = (undefined4 *)0x80;\n  uStack_128 = 0x4874b8;\n  __vbaRedimPreserve();\n  if (5 < *unaff_EDI - 1) {\n    pcStack_10c = (code *)0x4874c7;\n    __vbaGenerateBoundsError();\n  }\n  bVar1 = *unaff_EDI;\n  if (5 < bVar1 - 1) {\n    pcStack_10c = (code *)0x4874d5;\n    __vbaGenerateBoundsError();\n  }\n  iVar8 = (bVar1 - 1) * 0x2c;\n  if (*(int *)(iVar8 + 0xc + DAT_0049106c) == 0) {\nLAB_00487581:\n    pcStack_10c = (code *)0x487583;\n    iVar9 = __vbaGenerateBoundsError();\n  }\n  else {\n    bVar1 = *unaff_EDI;\n    if (5 < bVar1 - 1) {\n      pcStack_10c = (code *)0x4874fe;\n      __vbaGenerateBoundsError();\n    }\n    iVar8 = (bVar1 - 1) * 0x2c;\n    if (**(short **)(iVar8 + 0xc + DAT_0049106c) != 1) goto LAB_00487581;\n    bVar1 = *unaff_EDI;\n    if (5 < bVar1 - 1) {\n      pcStack_10c = (code *)0x487525;\n      __vbaGenerateBoundsError();\n    }\n    bVar2 = *unaff_EDI;\n    if (5 < bVar2 - 1) {\n      pcStack_10c = (code *)0x487533;\n      __vbaGenerateBoundsError();\n    }\n    bVar3 = *unaff_EDI;\n    uVar19 = (uint)*(byte *)(DAT_0049106c + 0x12 + (bVar1 - 1) * 0x2c) -\n             *(int *)(*(int *)(DAT_0049106c + 0xc + (bVar2 - 1) * 0x2c) + 0x14);\n    if (5 < bVar3 - 1) {\n      pcStack_10c = (code *)0x487563;\n      __vbaGenerateBoundsError();\n    }\n    iVar8 = (bVar3 - 1) * 0x2c;\n    if (*(uint *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0x10) <= uVar19) {\n      pcStack_10c = (code *)0x48757c;\n      __vbaGenerateBoundsError();\n    }\n    iVar9 = uVar19 * 2;\n  }\n  *(ushort *)(*(int *)(*(int *)(iVar8 + 0xc + DAT_0049106c) + 0xc) + iVar9) =\n       (ushort)(byte)*unaff_ESI;\n  cVar4 = *unaff_ESI;\n  uVar19 = CONCAT31((int3)((uint)iVar9 >> 8),cVar4);\n  if ((byte)cVar4 < 0x2a) {\n    if (0x29 < (byte)cVar4) {\n      pcStack_10c = (code *)0x4875ba;\n      __vbaGenerateBoundsError();\n    }\n    *(byte *)(DAT_00491034 + 0x65 + (uint)(byte)cVar4 * 0x74) = *unaff_EDI;\n    cVar4 = *unaff_ESI;\n    if (0x29 < (byte)cVar4) {\n      pcStack_10c = (code *)0x4875e4;\n      __vbaGenerateBoundsError();\n    }\n    pcStack_10c = *(code **)(DAT_00491034 + 4 + (uint)(byte)cVar4 * 0x74);\n    puStack_110 = (undefined4 *)&DAT_004713b0;\n    puStack_114 = (undefined4 *)0x487605;\n    iVar8 = __vbaStrCmp();\n    pcVar16 = unaff_ESI;\n    if (iVar8 == 0) {\n      uVar19 = *unaff_EDI - 1;\n      if (5 < uVar19) {\n        pcStack_10c = (code *)0x48761b;\n        __vbaGenerateBoundsError();\n      }\n      uVar18 = *unaff_EDI - 1;\n      if (5 < uVar18) {\n        pcStack_10c = (code *)0x48762d;\n        __vbaGenerateBoundsError();\n      }\n      if (SCARRY2((ushort)*(byte *)(DAT_0049106c + 0x1c + uVar19 * 0x2c),1)) goto LAB_004876ef;\n      pcStack_10c = (code *)0x48764e;\n      uVar7 = __vbaUI1I2();\n      *(undefined1 *)(DAT_0049106c + 0x1c + uVar18 * 0x2c) = uVar7;\n    }\n    cVar4 = *unaff_ESI;\n    if (0x29 < (byte)cVar4) {\n      pcStack_10c = (code *)0x487670;\n      __vbaGenerateBoundsError();\n    }\n    pcStack_10c = *(code **)(DAT_00491034 + 4 + (uint)(byte)cVar4 * 0x74);\n    puStack_110 = (undefined4 *)&DAT_004713b8;\n    puStack_114 = (undefined4 *)0x487692;\n    uVar19 = __vbaStrCmp();\n    if (uVar19 == 0) {\n      uVar19 = *unaff_EDI - 1;\n      if (5 < uVar19) {\n        pcStack_10c = (code *)0x4876a8;\n        __vbaGenerateBoundsError();\n      }\n      uVar18 = *unaff_EDI - 1;\n      if (5 < uVar18) {\n        pcStack_10c = (code *)0x4876ba;\n        __vbaGenerateBoundsError();\n      }\n      if (SCARRY2((ushort)*(byte *)(DAT_0049106c + 0x1d + uVar19 * 0x2c),1)) {\nLAB_004876ef:\n        pcStack_10c = (code *)0x4876f5;\n        __vbaErrorOverflow();\n        ppsStack_118 = (short **)&LAB_00401656;\n        puStack_11c = ExceptionList;\n        puStack_114 = &uStack_158;\n        puStack_110 = (undefined4 *)&DAT_00401420;\n        puStack_120 = (undefined4 *)0x0;\n        puStack_124 = (undefined4 *)0x0;\n        ExceptionList = &puStack_11c;\n        uStack_158 = uVar19;\n        uStack_154 = uVar18;\n        puVar5 = &uStack_158;\n        pcStack_10c = pcVar16;\n        if (DAT_00491010 == (int *)0x0) {\n          ExceptionList = &puStack_11c;\n          __vbaNew2(&DAT_0046f194,&DAT_00491010);\n          puVar5 = puStack_114;\n        }\n        puStack_114 = puVar5;\n        uVar12 = (**(code **)(*DAT_00491010 + 0x2fc))(DAT_00491010);\n        piVar13 = (int *)__vbaObjSet(&puStack_120,uVar12);\n        iVar8 = (**(code **)(*piVar13 + 0x1ec))\n                          (piVar13,*puStack_104,10,uStack_130,0x80020004,uStack_128);\n        if (iVar8 < 0) {\n          __vbaHresultCheckObj(iVar8,piVar13,&DAT_00471af8,0x1ec);\n        }\n        __vbaFreeObj();\n        if (DAT_00491010 == (int *)0x0) {\n          __vbaNew2(&DAT_0046f194,&DAT_00491010);\n        }\n        uVar12 = (**(code **)(*DAT_00491010 + 0x2fc))(DAT_00491010);\n        piVar13 = (int *)__vbaObjSet(&puStack_124,uVar12);\n        if (DAT_00491010 == (int *)0x0) {\n          __vbaNew2(&DAT_0046f194,&DAT_00491010);\n        }\n        uVar12 = (**(code **)(*DAT_00491010 + 0x2fc))(DAT_00491010);\n        piVar14 = (int *)__vbaObjSet(&puStack_120,uVar12);\n        iVar8 = (**(code **)(*piVar14 + 0xd8))(piVar14);\n        if (iVar8 < 0) {\n          __vbaHresultCheckObj(iVar8,piVar14,&DAT_00471af8,0xd8);\n        }\n        iVar8 = (**(code **)(*piVar13 + 0xe4))(piVar13,0xffff);\n        if (iVar8 < 0) {\n          __vbaHresultCheckObj(iVar8,piVar13,&DAT_00471af8,0xe4);\n        }\n        uVar19 = __vbaFreeObjList(2,&puStack_120,&puStack_124);\n        return uVar19;\n      }\n      pcStack_10c = (code *)0x4876d8;\n      uVar19 = __vbaUI1I2();\n      *(char *)(DAT_0049106c + 0x1d + uVar18 * 0x2c) = (char)uVar19;\n    }\n  }\n  return uVar19;\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

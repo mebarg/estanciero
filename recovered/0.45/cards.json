@@ -1,0 +1,263 @@
+{
+  "source": "recovered/0.45/estanciero.exe",
+  "sourceSha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf",
+  "method": "32 consecutive native string assignments; two 16-slot decks inferred from card families",
+  "cards": [
+    {
+      "index": 0,
+      "deck": "luck",
+      "stringOffset": 468816,
+      "assignmentOffset": 551430,
+      "text": "Siga hasta la salida",
+      "sha256": "14d4c023badd7097d1bae64bb4b200e82159fa7ac5221fcf26c9c8b86270e14d"
+    },
+    {
+      "index": 1,
+      "deck": "luck",
+      "stringOffset": 468880,
+      "assignmentOffset": 551470,
+      "text": "Siga hasta Salta, Zona Norte. Si pasa por la salida cobre $5000",
+      "sha256": "3e10ee7a8aca6f1797f8d9b42c5893452718f7a8847b970e81ff154e118d2dc6"
+    },
+    {
+      "index": 2,
+      "deck": "luck",
+      "stringOffset": 469012,
+      "assignmentOffset": 551486,
+      "text": "Pague $3000 por gastos colegiales",
+      "sha256": "6568ce5a506cd59806bbb8d917a9787350eed49b6e37cd55f49649736927e394"
+    },
+    {
+      "index": 3,
+      "deck": "luck",
+      "stringOffset": 469084,
+      "assignmentOffset": 551501,
+      "text": "Siga hasta Buenos Aires Zona Norte",
+      "sha256": "a16c026d12cb15a54323884df3fbc311964d5f364885d9f7c36f39714f98afbf"
+    },
+    {
+      "index": 4,
+      "deck": "luck",
+      "stringOffset": 469160,
+      "assignmentOffset": 551517,
+      "text": "Vuelva 3 pasos atras",
+      "sha256": "566b9e6876f3a13e0c8ed0f52820223c4aeb12173c30a0d11618810d57d21eb6"
+    },
+    {
+      "index": 5,
+      "deck": "luck",
+      "stringOffset": 469364,
+      "assignmentOffset": 551532,
+      "text": "Habeas corpus concedido, con esta tarjeta sale usted gratuitamente de la comisaria. Conservela o vendala",
+      "sha256": "8e9180a641066caea18b692e7c5009bedf816ae7b43dcf1076bf2500aff59f23"
+    },
+    {
+      "index": 6,
+      "deck": "luck",
+      "stringOffset": 469580,
+      "assignmentOffset": 551548,
+      "text": "Cobre $1000 por intereses bancarios",
+      "sha256": "2026d9cda8dc27fe7667c1d0f651305e7cd0d1b6a91f988510093e4d960c7736"
+    },
+    {
+      "index": 7,
+      "deck": "luck",
+      "stringOffset": 469656,
+      "assignmentOffset": 551563,
+      "text": "Gano en las carreras. Cobre $3000",
+      "sha256": "f3c3b6ef9ca5b89d90637ddfb4c4aa3de83935881594e3aedd44a760816c9baa"
+    },
+    {
+      "index": 8,
+      "deck": "luck",
+      "stringOffset": 469728,
+      "assignmentOffset": 551579,
+      "text": "Multa por exceso de velocidad. Pague $300",
+      "sha256": "39329324956f19c559a32e9e00ac00e4c4d32864572900fe678e9dc7874849f2"
+    },
+    {
+      "index": 9,
+      "deck": "luck",
+      "stringOffset": 469844,
+      "assignmentOffset": 551594,
+      "text": "Sus propiedades tiene que ser reparadas, pague al banco $500 por cada chacra y $2500 por cada estancia",
+      "sha256": "4ed2306cd214f0b87c1091a85d4b04cdab6da6b90f3897415491437eac2b64bc"
+    },
+    {
+      "index": 10,
+      "deck": "luck",
+      "stringOffset": 470056,
+      "assignmentOffset": 551610,
+      "text": "Siga hasta Santa Fe Zona Norte. Si pasa por la salida cobre $5000",
+      "sha256": "aa9b426fdd8230e9c8503dab74705eccd4300bac51eb72afaf12304a290c69c0"
+    },
+    {
+      "index": 11,
+      "deck": "luck",
+      "stringOffset": 470192,
+      "assignmentOffset": 551625,
+      "text": "Marche preso directamente",
+      "sha256": "a5138446e182c6456d637baafb233dbd0f1216f340a933a672b118b123316e17"
+    },
+    {
+      "index": 12,
+      "deck": "luck",
+      "stringOffset": 470248,
+      "assignmentOffset": 551641,
+      "text": "Multa caminera. Pague $400",
+      "sha256": "bdc222fcd2d00b9a79da656119a460705930266d55f159036ff3fad17c540dea"
+    },
+    {
+      "index": 13,
+      "deck": "luck",
+      "stringOffset": 469208,
+      "assignmentOffset": 551656,
+      "text": "Ha ganado la grande. Cobre $10.000",
+      "sha256": "e8a4cc90d01501b701b35dcec3b63a6a7f6b262f24b83569d5975acb45e14f0f"
+    },
+    {
+      "index": 14,
+      "deck": "luck",
+      "stringOffset": 470332,
+      "assignmentOffset": 551672,
+      "text": "Haga un paseo hasta la Bodega. Si pasa por la salida cobre $5000",
+      "sha256": "18eb9ed9fe26d86aa0ba2143d359d0d1e70f4dc58c9a0405e094dc71a00663f3"
+    },
+    {
+      "index": 15,
+      "deck": "luck",
+      "stringOffset": 470468,
+      "assignmentOffset": 551687,
+      "text": "Por compra de semilla pague al banco $800 por cada chacra, $4000 por cada estancia",
+      "sha256": "78e20ff194a779f474dde4f625faa8ce727baab8ec316f716be3c75da6bf3661"
+    },
+    {
+      "index": 16,
+      "deck": "fate",
+      "stringOffset": 470640,
+      "assignmentOffset": 551703,
+      "text": "Ha ganado un concurso agricola. Cobre $2000",
+      "sha256": "ddcd7dcc5eda5e442648c303d4417669bd451a9113a65810c6116b791677be39"
+    },
+    {
+      "index": 17,
+      "deck": "fate",
+      "stringOffset": 470640,
+      "assignmentOffset": 551713,
+      "text": "Ha ganado un concurso agricola. Cobre $2000",
+      "sha256": "ddcd7dcc5eda5e442648c303d4417669bd451a9113a65810c6116b791677be39"
+    },
+    {
+      "index": 18,
+      "deck": "fate",
+      "stringOffset": 470732,
+      "assignmentOffset": 551734,
+      "text": "Pague su poliza de seguro con $1000",
+      "sha256": "0146e0404035e3bb2a2fc5895c0032a2c1baffd933db3b24065576c56dff57e2"
+    },
+    {
+      "index": 19,
+      "deck": "fate",
+      "stringOffset": 470824,
+      "assignmentOffset": 551749,
+      "text": "Es su cumpleaños, cobre $200 de cada uno de los jugadores",
+      "sha256": "a82e20c963799bd63a96ac759d03d89a51a9f521fbdea58eac1dd34e05f09434"
+    },
+    {
+      "index": 20,
+      "deck": "fate",
+      "stringOffset": 470944,
+      "assignmentOffset": 551765,
+      "text": "Gastos de farmacia. Pague $1000",
+      "sha256": "97464b43b4a372c20e52d86bc4ca839001d275d37ee8700349d2723821ba0a63"
+    },
+    {
+      "index": 21,
+      "deck": "fate",
+      "stringOffset": 471012,
+      "assignmentOffset": 551780,
+      "text": "Vuelve atras hasta Formosa Zona Sur",
+      "sha256": "dbbad84743afb7cfea51956835a0ed4de6cb21cfffb8be941148d52380c7542f"
+    },
+    {
+      "index": 22,
+      "deck": "fate",
+      "stringOffset": 471088,
+      "assignmentOffset": 551796,
+      "text": "Ha obtenido un segundo premio de belleza. Cobre $200",
+      "sha256": "e9ad2e11c8c986c38bd8b5954964ec1cd13b5c0e9379828282358bdd774fc19a"
+    },
+    {
+      "index": 23,
+      "deck": "fate",
+      "stringOffset": 471200,
+      "assignmentOffset": 551811,
+      "text": "Pague $200 de multa o levante una tarjeta de SUERTE",
+      "sha256": "230b5bdaed91dea99d8511c91222a519a5cb9774fbece4cfc7408751dbe4acb6"
+    },
+    {
+      "index": 24,
+      "deck": "fate",
+      "stringOffset": 471308,
+      "assignmentOffset": 551827,
+      "text": "5% de interes sobre cedulas hipotecarias. Cobre $500",
+      "sha256": "64f2d708f2ac32d463d333126b12ed8ebe74df96939c6a2088b96bbc3b35b347"
+    },
+    {
+      "index": 25,
+      "deck": "fate",
+      "stringOffset": 470192,
+      "assignmentOffset": 551842,
+      "text": "Marche preso directamente",
+      "sha256": "a5138446e182c6456d637baafb233dbd0f1216f340a933a672b118b123316e17"
+    },
+    {
+      "index": 26,
+      "deck": "fate",
+      "stringOffset": 471420,
+      "assignmentOffset": 551858,
+      "text": "Con esta tarjeta sale usted de la comisaria, conservela hasta utilizarla o venderla",
+      "sha256": "e63e70afd3f1b63e1dc84789c870008e5eddf6346ba96f4fd8dfb9518fa3869d"
+    },
+    {
+      "index": 27,
+      "deck": "fate",
+      "stringOffset": 468816,
+      "assignmentOffset": 551873,
+      "text": "Siga hasta la salida",
+      "sha256": "14d4c023badd7097d1bae64bb4b200e82159fa7ac5221fcf26c9c8b86270e14d"
+    },
+    {
+      "index": 28,
+      "deck": "fate",
+      "stringOffset": 471592,
+      "assignmentOffset": 551889,
+      "text": "Devolucion de impuesto, cobre $400",
+      "sha256": "bf9cf92f576ee55fbc194a4a225678bc83e6b8ee204fa9f16bf6b15acdee70dc"
+    },
+    {
+      "index": 29,
+      "deck": "fate",
+      "stringOffset": 471668,
+      "assignmentOffset": 551904,
+      "text": "Por venta de acciones cobre $1000",
+      "sha256": "fb67e94756ebba03781de09af6543643bb451a5b65e458657d7749a9c8f7c8c0"
+    },
+    {
+      "index": 30,
+      "deck": "fate",
+      "stringOffset": 471740,
+      "assignmentOffset": 551920,
+      "text": "Hereda $2000",
+      "sha256": "f46cb6d08ed4c7f657d5365bd3bf984f84cec12df69fc623fd9a7e84f046dd96"
+    },
+    {
+      "index": 31,
+      "deck": "fate",
+      "stringOffset": 471792,
+      "assignmentOffset": 551935,
+      "text": "Error en los calculos del banco. Cobre $4000",
+      "sha256": "bec2f091c4ba6fc417bfa4a4b0ce2b5844ed875e1e65fdacf2125be0bdb87bd0"
+    }
+  ]
+}

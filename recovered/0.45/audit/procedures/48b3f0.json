@@ -1,0 +1,440 @@
+{
+  "info": {
+    "evidence_id": "ev_5719fb1cc6d6f9c503f4d9abea8cc807cc5fc2bcd6f299847e008122bb31b713",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_info",
+    "parameters": {
+      "procedure": "0x48b3f0"
+    },
+    "raw_result": {
+      "value": {
+        "name": "FUN_0048b3f0",
+        "entrypoint": "0x48b3f0",
+        "basicblock_count": 159,
+        "length": 6862,
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x48b3f0",
+              "end": "0x48ceb3"
+            },
+            {
+              "start": "0x48cee8",
+              "end": "0x48cef1"
+            }
+          ],
+          "total_bytes": 6862,
+          "span_bytes": 6914,
+          "non_contiguous": true,
+          "contains_entry": true
+        },
+        "signature": "undefined __stdcall FUN_0048b3f0(uint param_1)",
+        "locals": [
+          {
+            "description": "undefined4 local_10 @ Stack[-0x10]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_1c @ Stack[-0x1c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_20 @ Stack[-0x20]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_24 @ Stack[-0x24]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_28 @ Stack[-0x28]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_2c @ Stack[-0x2c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_30 @ Stack[-0x30]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_34 @ Stack[-0x34]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_38 @ Stack[-0x38]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_3c @ Stack[-0x3c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_40 @ Stack[-0x40]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_44 @ Stack[-0x44]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_48 @ Stack[-0x48]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_4c @ Stack[-0x4c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_54 @ Stack[-0x54]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_64 @ Stack[-0x64]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_68 @ Stack[-0x68]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_8 @ Stack[-0x8]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_90 @ Stack[-0x90]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_98 @ Stack[-0x98]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_a0 @ Stack[-0xa0]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_ac @ Stack[-0xac]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_b4 @ Stack[-0xb4]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_c @ Stack[-0xc]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_cc @ Stack[-0xcc]:4",
+            "provenance": "ghidra-function-database"
+          }
+        ],
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        }
+      },
+      "limitations": []
+    },
+    "normalized_result": {
+      "name": "FUN_0048b3f0",
+      "entrypoint": "0x48b3f0",
+      "basicblock_count": 159,
+      "length": 6862,
+      "signature": "undefined __stdcall FUN_0048b3f0(uint param_1)",
+      "locals": [
+        {
+          "description": "undefined4 local_10 @ Stack[-0x10]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_1c @ Stack[-0x1c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_20 @ Stack[-0x20]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_24 @ Stack[-0x24]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_28 @ Stack[-0x28]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_2c @ Stack[-0x2c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_30 @ Stack[-0x30]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_34 @ Stack[-0x34]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_38 @ Stack[-0x38]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_3c @ Stack[-0x3c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_40 @ Stack[-0x40]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_44 @ Stack[-0x44]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_48 @ Stack[-0x48]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_4c @ Stack[-0x4c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_54 @ Stack[-0x54]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_64 @ Stack[-0x64]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_68 @ Stack[-0x68]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_8 @ Stack[-0x8]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_90 @ Stack[-0x90]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_98 @ Stack[-0x98]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_a0 @ Stack[-0xa0]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_ac @ Stack[-0xac]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_b4 @ Stack[-0xb4]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_c @ Stack[-0xc]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_cc @ Stack[-0xcc]:4",
+          "provenance": "ghidra-function-database"
+        }
+      ],
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48b3f0",
+            "end": "0x48ceb3"
+          },
+          {
+            "start": "0x48cee8",
+            "end": "0x48cef1"
+          }
+        ],
+        "total_bytes": 6862,
+        "span_bytes": 6914,
+        "non_contiguous": true,
+        "contains_entry": true
+      }
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  },
+  "pseudocode": {
+    "evidence_id": "ev_4e39571fcab1877abcb7f2a4a00cc45212fa09820da93812ccc1552be29cb50d",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x48b3f0"
+    },
+    "raw_result": {
+      "value": "\nvoid FUN_0048b3f0(uint param_1)\n\n{\n  byte bVar1;\n  byte bVar2;\n  uint uVar3;\n  int iVar4;\n  undefined4 uVar5;\n  int *piVar6;\n  int *piVar7;\n  int *piVar8;\n  code *pcVar9;\n  undefined4 local_38;\n  undefined4 local_34;\n  undefined4 local_30;\n  undefined4 local_2c;\n  undefined4 local_28;\n  undefined4 local_24;\n  undefined4 local_20;\n  undefined4 local_1c;\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined *local_c;\n  uint local_8;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xffffff28;\n  local_c = &DAT_00401550;\n  local_8 = param_1 & 1;\n  piVar8 = (int *)(param_1 & 0xfffffffe);\n  ExceptionList = &pvStack_18;\n  (**(code **)(*piVar8 + 4))(piVar8);\n  local_1c = 0;\n  local_20 = 0;\n  local_24 = 0;\n  local_28 = 0;\n  local_2c = 0;\n  local_30 = 0;\n  local_34 = 0;\n  local_38 = 0;\n  uVar3 = (uint)DAT_0049107a;\n  *(byte *)(piVar8 + 0xd) = DAT_0049107a;\n  if (5 < uVar3 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  bVar1 = *(byte *)(DAT_0049106c + 0x10 + (uVar3 - 1) * 0x2c);\n  *(byte *)((int)piVar8 + 0x35) = bVar1;\n  if (0x29 < bVar1) {\n    __vbaGenerateBoundsError();\n  }\n  __vbaStrCopy();\n  iVar4 = __vbaStrCmp(&DAT_004713a8,0);\n  if (iVar4 == 0) {\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = *piVar6;\n    __vbaStrCat(&DAT_0047375c,L\"ESCRITURA\");\n    pcVar9 = __vbaStrMove_exref;\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStr();\n    __vbaFreeObj();\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(&DAT_0047375c,*(undefined4 *)(DAT_00491034 + 8 + (uint)bVar1 * 0x74));\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(2,&local_1c,&local_20);\n    __vbaFreeObj();\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(*(undefined4 *)(DAT_00491034 + 0xc + (uint)bVar1 * 0x74),local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(4,&local_1c,&local_20,&local_24,&local_28);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Alquiler por el campo: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x14 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 1 chacra: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x18 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 2 chacras: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x1c + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 3 chacras: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x20 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 4 chacras: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x24 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 1 estancia: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x28 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(6,&local_1c,&local_20,&local_24,&local_28,&local_2c,&local_30);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Teniendo una provincia completa el alquiler de los campos se duplica\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"1 chacra vale: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x2c + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"1 estancia vale: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x30 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(L\" mas 4 chacras\",uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(6,&local_1c,&local_20,&local_24,&local_28,&local_2c,&local_30);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x310))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x10 + (uint)bVar1 * 0x74),&DAT_0047399c);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0x54))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00471330,0x54);\n    }\n  }\n  else {\n    iVar4 = __vbaStrCmp(&DAT_004713b8,0);\n    if (iVar4 == 0) {\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = *piVar6;\n      __vbaStrCat(&DAT_0047375c,L\"ESCRITURA\");\n      pcVar9 = __vbaStrMove_exref;\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStr();\n      __vbaFreeObj();\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(&DAT_0047375c,*(undefined4 *)(DAT_00491034 + 8 + (uint)bVar1 * 0x74));\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(2,&local_1c,&local_20);\n      __vbaFreeObj();\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Alquileres\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 1 compania cobrese 100 veces lo que indican los dados\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 2 compania cobrese 200 veces lo que indican los dados\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 3 compania cobrese 300 veces lo que indican los dados\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x310))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x10 + (uint)bVar1 * 0x74),&DAT_0047399c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0x54))(piVar6,uVar5);\n    }\n    else {\n      iVar4 = __vbaStrCmp(&DAT_004713b0,0);\n      pcVar9 = __vbaStrMove_exref;\n      if (iVar4 != 0) goto LAB_0048cd42;\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = *piVar6;\n      __vbaStrCat(&DAT_0047375c,L\"ESCRITURA\");\n      pcVar9 = __vbaStrMove_exref;\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStr();\n      __vbaFreeObj();\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(&DAT_0047375c,*(undefined4 *)(DAT_00491034 + 8 + (uint)bVar1 * 0x74));\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(2,&local_1c,&local_20);\n      __vbaFreeObj();\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Alquileres\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 1 ferrocarril: $\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x18 + (uint)bVar1 * 0x74),uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 2 ferrocarril: $\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x1c + (uint)bVar1 * 0x74),uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 3 ferrocarril: $\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x20 + (uint)bVar1 * 0x74),uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 4 ferrocarril: $\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x24 + (uint)bVar1 * 0x74),uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x310))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x10 + (uint)bVar1 * 0x74),&DAT_0047399c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0x54))(piVar6,uVar5);\n    }\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00471330,0x54);\n    }\n  }\n  __vbaFreeStrList(2,&local_1c,&local_20);\n  __vbaFreeObj();\nLAB_0048cd42:\n  bVar1 = *(byte *)((int)piVar8 + 0x35);\n  if (0x29 < bVar1) {\n    __vbaGenerateBoundsError();\n  }\n  bVar2 = *(byte *)(piVar8 + 0xd);\n  if (5 < bVar2 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  if (*(float *)(DAT_0049106c + 8 + (bVar2 - 1) * 0x2c) <\n      *(float *)(DAT_00491034 + 0x10 + (uint)bVar1 * 0x74)) {\n    bVar1 = *(byte *)(piVar8 + 0xd);\n    if (5 < bVar1 - 1) {\n      __vbaGenerateBoundsError();\n    }\n    bVar2 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar2) {\n      __vbaGenerateBoundsError();\n    }\n    __vbaStrCat(L\" no tiene dinero para la compra de \",\n                *(undefined4 *)(DAT_0049106c + 4 + (bVar1 - 1) * 0x2c));\n    uVar5 = (*pcVar9)();\n    __vbaStrCat(*(undefined4 *)(DAT_00491034 + 8 + (uint)bVar2 * 0x74),uVar5);\n    (*pcVar9)();\n    FUN_00487700(&local_20);\n    __vbaFreeStrList(2,&local_1c,&local_20);\n    uVar5 = (**(code **)(*piVar8 + 0x304))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar6 + 0x8c))(piVar6,0);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_004717a8,0x8c);\n    }\n    __vbaFreeObj();\n    uVar5 = (**(code **)(*piVar8 + 0x308))(piVar8);\n    piVar8 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar8 + 0x9c))(piVar8,0xffffffff);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar8,&DAT_00471330,0x9c);\n    }\n    __vbaFreeObj();\n  }\n  local_8 = 0;\n  __vbaFreeStr(&LAB_0048cef2);\n  return;\n}\n\n",
+      "limitations": []
+    },
+    "normalized_result": "\nvoid FUN_0048b3f0(uint param_1)\n\n{\n  byte bVar1;\n  byte bVar2;\n  uint uVar3;\n  int iVar4;\n  undefined4 uVar5;\n  int *piVar6;\n  int *piVar7;\n  int *piVar8;\n  code *pcVar9;\n  undefined4 local_38;\n  undefined4 local_34;\n  undefined4 local_30;\n  undefined4 local_2c;\n  undefined4 local_28;\n  undefined4 local_24;\n  undefined4 local_20;\n  undefined4 local_1c;\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined *local_c;\n  uint local_8;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xffffff28;\n  local_c = &DAT_00401550;\n  local_8 = param_1 & 1;\n  piVar8 = (int *)(param_1 & 0xfffffffe);\n  ExceptionList = &pvStack_18;\n  (**(code **)(*piVar8 + 4))(piVar8);\n  local_1c = 0;\n  local_20 = 0;\n  local_24 = 0;\n  local_28 = 0;\n  local_2c = 0;\n  local_30 = 0;\n  local_34 = 0;\n  local_38 = 0;\n  uVar3 = (uint)DAT_0049107a;\n  *(byte *)(piVar8 + 0xd) = DAT_0049107a;\n  if (5 < uVar3 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  bVar1 = *(byte *)(DAT_0049106c + 0x10 + (uVar3 - 1) * 0x2c);\n  *(byte *)((int)piVar8 + 0x35) = bVar1;\n  if (0x29 < bVar1) {\n    __vbaGenerateBoundsError();\n  }\n  __vbaStrCopy();\n  iVar4 = __vbaStrCmp(&DAT_004713a8,0);\n  if (iVar4 == 0) {\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = *piVar6;\n    __vbaStrCat(&DAT_0047375c,L\"ESCRITURA\");\n    pcVar9 = __vbaStrMove_exref;\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStr();\n    __vbaFreeObj();\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(&DAT_0047375c,*(undefined4 *)(DAT_00491034 + 8 + (uint)bVar1 * 0x74));\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(2,&local_1c,&local_20);\n    __vbaFreeObj();\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(*(undefined4 *)(DAT_00491034 + 0xc + (uint)bVar1 * 0x74),local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(4,&local_1c,&local_20,&local_24,&local_28);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Alquiler por el campo: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x14 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 1 chacra: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x18 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 2 chacras: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x1c + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 3 chacras: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x20 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 4 chacras: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x24 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Idem con 1 estancia: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x28 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(6,&local_1c,&local_20,&local_24,&local_28,&local_2c,&local_30);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"Teniendo una provincia completa el alquiler de los campos se duplica\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"1 chacra vale: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x2c + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n    uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n    piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n    }\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrCat(L\"1 estancia vale: $\",local_1c);\n    uVar5 = __vbaStrMove();\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x30 + (uint)bVar1 * 0x74),uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(L\" mas 4 chacras\",uVar5);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(&DAT_0047375c,uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n    }\n    __vbaFreeStrList(6,&local_1c,&local_20,&local_24,&local_28,&local_2c,&local_30);\n    __vbaFreeObjList(2,&local_34,&local_38);\n    uVar5 = (**(code **)(*piVar8 + 0x310))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n    bVar1 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar1) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = *piVar6;\n    __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x10 + (uint)bVar1 * 0x74),&DAT_0047399c);\n    uVar5 = __vbaStrMove();\n    __vbaStrCat(uVar5);\n    uVar5 = __vbaStrMove();\n    iVar4 = (**(code **)(iVar4 + 0x54))(piVar6,uVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00471330,0x54);\n    }\n  }\n  else {\n    iVar4 = __vbaStrCmp(&DAT_004713b8,0);\n    if (iVar4 == 0) {\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = *piVar6;\n      __vbaStrCat(&DAT_0047375c,L\"ESCRITURA\");\n      pcVar9 = __vbaStrMove_exref;\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStr();\n      __vbaFreeObj();\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(&DAT_0047375c,*(undefined4 *)(DAT_00491034 + 8 + (uint)bVar1 * 0x74));\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(2,&local_1c,&local_20);\n      __vbaFreeObj();\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Alquileres\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 1 compania cobrese 100 veces lo que indican los dados\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 2 compania cobrese 200 veces lo que indican los dados\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 3 compania cobrese 300 veces lo que indican los dados\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x310))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x10 + (uint)bVar1 * 0x74),&DAT_0047399c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0x54))(piVar6,uVar5);\n    }\n    else {\n      iVar4 = __vbaStrCmp(&DAT_004713b0,0);\n      pcVar9 = __vbaStrMove_exref;\n      if (iVar4 != 0) goto LAB_0048cd42;\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = *piVar6;\n      __vbaStrCat(&DAT_0047375c,L\"ESCRITURA\");\n      pcVar9 = __vbaStrMove_exref;\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStr();\n      __vbaFreeObj();\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(&DAT_0047375c,*(undefined4 *)(DAT_00491034 + 8 + (uint)bVar1 * 0x74));\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(2,&local_1c,&local_20);\n      __vbaFreeObj();\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Alquileres\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(3,&local_1c,&local_20,&local_24);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 1 ferrocarril: $\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x18 + (uint)bVar1 * 0x74),uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 2 ferrocarril: $\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x1c + (uint)bVar1 * 0x74),uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 3 ferrocarril: $\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x20 + (uint)bVar1 * 0x74),uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_38,uVar5);\n      uVar5 = (**(code **)(*piVar8 + 0x2fc))(piVar8);\n      piVar7 = (int *)__vbaObjSet(&local_34,uVar5);\n      iVar4 = (**(code **)(*piVar7 + 0xa0))(piVar7,&local_1c);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar7,&DAT_00472250,0xa0);\n      }\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrCat(L\"Teniendo 4 ferrocarril: $\",local_1c);\n      uVar5 = __vbaStrMove();\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x24 + (uint)bVar1 * 0x74),uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(&DAT_0047375c,uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0xa4))(piVar6,uVar5);\n      if (iVar4 < 0) {\n        __vbaHresultCheckObj(iVar4,piVar6,&DAT_00472250,0xa4);\n      }\n      __vbaFreeStrList(5,&local_1c,&local_20,&local_24,&local_28,&local_2c);\n      __vbaFreeObjList(2,&local_34,&local_38);\n      uVar5 = (**(code **)(*piVar8 + 0x310))(piVar8);\n      piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n      bVar1 = *(byte *)((int)piVar8 + 0x35);\n      if (0x29 < bVar1) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = *piVar6;\n      __vbaStrR4(*(undefined4 *)(DAT_00491034 + 0x10 + (uint)bVar1 * 0x74),&DAT_0047399c);\n      uVar5 = __vbaStrMove();\n      __vbaStrCat(uVar5);\n      uVar5 = __vbaStrMove();\n      iVar4 = (**(code **)(iVar4 + 0x54))(piVar6,uVar5);\n    }\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_00471330,0x54);\n    }\n  }\n  __vbaFreeStrList(2,&local_1c,&local_20);\n  __vbaFreeObj();\nLAB_0048cd42:\n  bVar1 = *(byte *)((int)piVar8 + 0x35);\n  if (0x29 < bVar1) {\n    __vbaGenerateBoundsError();\n  }\n  bVar2 = *(byte *)(piVar8 + 0xd);\n  if (5 < bVar2 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  if (*(float *)(DAT_0049106c + 8 + (bVar2 - 1) * 0x2c) <\n      *(float *)(DAT_00491034 + 0x10 + (uint)bVar1 * 0x74)) {\n    bVar1 = *(byte *)(piVar8 + 0xd);\n    if (5 < bVar1 - 1) {\n      __vbaGenerateBoundsError();\n    }\n    bVar2 = *(byte *)((int)piVar8 + 0x35);\n    if (0x29 < bVar2) {\n      __vbaGenerateBoundsError();\n    }\n    __vbaStrCat(L\" no tiene dinero para la compra de \",\n                *(undefined4 *)(DAT_0049106c + 4 + (bVar1 - 1) * 0x2c));\n    uVar5 = (*pcVar9)();\n    __vbaStrCat(*(undefined4 *)(DAT_00491034 + 8 + (uint)bVar2 * 0x74),uVar5);\n    (*pcVar9)();\n    FUN_00487700(&local_20);\n    __vbaFreeStrList(2,&local_1c,&local_20);\n    uVar5 = (**(code **)(*piVar8 + 0x304))(piVar8);\n    piVar6 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar6 + 0x8c))(piVar6,0);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar6,&DAT_004717a8,0x8c);\n    }\n    __vbaFreeObj();\n    uVar5 = (**(code **)(*piVar8 + 0x308))(piVar8);\n    piVar8 = (int *)__vbaObjSet(&local_34,uVar5);\n    iVar4 = (**(code **)(*piVar8 + 0x9c))(piVar8,0xffffffff);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar8,&DAT_00471330,0x9c);\n    }\n    __vbaFreeObj();\n  }\n  local_8 = 0;\n  __vbaFreeStr(&LAB_0048cef2);\n  return;\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

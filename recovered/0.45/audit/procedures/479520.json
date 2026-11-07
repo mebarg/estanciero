@@ -1,0 +1,576 @@
+{
+  "info": {
+    "evidence_id": "ev_6c37ee61c570c7dca7921725612160f3c103483eec46ba31a145a33335d0f22f",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_info",
+    "parameters": {
+      "procedure": "0x479520"
+    },
+    "raw_result": {
+      "value": {
+        "name": "FUN_00479520",
+        "entrypoint": "0x479520",
+        "basicblock_count": 149,
+        "length": 4552,
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x479520",
+              "end": "0x47a6d1"
+            },
+            {
+              "start": "0x47a71b",
+              "end": "0x47a71b"
+            },
+            {
+              "start": "0x47a73b",
+              "end": "0x47a74f"
+            }
+          ],
+          "total_bytes": 4552,
+          "span_bytes": 4656,
+          "non_contiguous": true,
+          "contains_entry": true
+        },
+        "signature": "undefined __cdecl FUN_00479520(uint param_1)",
+        "locals": [
+          {
+            "description": "undefined4 local_10 @ Stack[-0x10]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_114 @ Stack[-0x114]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_118 @ Stack[-0x118]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_11c @ Stack[-0x11c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_120 @ Stack[-0x120]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_124 @ Stack[-0x124]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_1c @ Stack[-0x1c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_20 @ Stack[-0x20]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_24 @ Stack[-0x24]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_28 @ Stack[-0x28]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_2c @ Stack[-0x2c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_30 @ Stack[-0x30]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_34 @ Stack[-0x34]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_38 @ Stack[-0x38]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_3c @ Stack[-0x3c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_4c @ Stack[-0x4c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_54 @ Stack[-0x54]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_5c @ Stack[-0x5c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_64 @ Stack[-0x64]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_6c @ Stack[-0x6c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_74 @ Stack[-0x74]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_7c @ Stack[-0x7c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_8 @ Stack[-0x8]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_80 @ Stack[-0x80]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_84 @ Stack[-0x84]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_88 @ Stack[-0x88]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_8c @ Stack[-0x8c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_90 @ Stack[-0x90]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_98 @ Stack[-0x98]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_9c @ Stack[-0x9c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_a0 @ Stack[-0xa0]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_a8 @ Stack[-0xa8]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_ac @ Stack[-0xac]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_c @ Stack[-0xc]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined1 local_c0 @ Stack[-0xc0]:1",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_cc @ Stack[-0xcc]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_d0 @ Stack[-0xd0]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_dc @ Stack[-0xdc]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined1 local_e8 @ Stack[-0xe8]:1",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined1 local_f0 @ Stack[-0xf0]:1",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined1 local_f8 @ Stack[-0xf8]:1",
+            "provenance": "ghidra-function-database"
+          }
+        ],
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        }
+      },
+      "limitations": []
+    },
+    "normalized_result": {
+      "name": "FUN_00479520",
+      "entrypoint": "0x479520",
+      "basicblock_count": 149,
+      "length": 4552,
+      "signature": "undefined __cdecl FUN_00479520(uint param_1)",
+      "locals": [
+        {
+          "description": "undefined4 local_10 @ Stack[-0x10]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_114 @ Stack[-0x114]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_118 @ Stack[-0x118]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_11c @ Stack[-0x11c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_120 @ Stack[-0x120]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_124 @ Stack[-0x124]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_1c @ Stack[-0x1c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_20 @ Stack[-0x20]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_24 @ Stack[-0x24]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_28 @ Stack[-0x28]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_2c @ Stack[-0x2c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_30 @ Stack[-0x30]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_34 @ Stack[-0x34]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_38 @ Stack[-0x38]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_3c @ Stack[-0x3c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_4c @ Stack[-0x4c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_54 @ Stack[-0x54]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_5c @ Stack[-0x5c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_64 @ Stack[-0x64]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_6c @ Stack[-0x6c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_74 @ Stack[-0x74]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_7c @ Stack[-0x7c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_8 @ Stack[-0x8]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_80 @ Stack[-0x80]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_84 @ Stack[-0x84]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_88 @ Stack[-0x88]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_8c @ Stack[-0x8c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_90 @ Stack[-0x90]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_98 @ Stack[-0x98]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_9c @ Stack[-0x9c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_a0 @ Stack[-0xa0]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_a8 @ Stack[-0xa8]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_ac @ Stack[-0xac]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_c @ Stack[-0xc]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined1 local_c0 @ Stack[-0xc0]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_cc @ Stack[-0xcc]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_d0 @ Stack[-0xd0]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_dc @ Stack[-0xdc]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined1 local_e8 @ Stack[-0xe8]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined1 local_f0 @ Stack[-0xf0]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined1 local_f8 @ Stack[-0xf8]:1",
+          "provenance": "ghidra-function-database"
+        }
+      ],
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x479520",
+            "end": "0x47a6d1"
+          },
+          {
+            "start": "0x47a71b",
+            "end": "0x47a71b"
+          },
+          {
+            "start": "0x47a73b",
+            "end": "0x47a74f"
+          }
+        ],
+        "total_bytes": 4552,
+        "span_bytes": 4656,
+        "non_contiguous": true,
+        "contains_entry": true
+      }
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  },
+  "pseudocode": {
+    "evidence_id": "ev_0f4a1d1ec986117412163fde658d55b95c5f2ce6cd2f5f4fd0b202d125a12d98",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x479520"
+    },
+    "raw_result": {
+      "value": "\n/* WARNING: Type propagation algorithm not settling */\n\nvoid __cdecl FUN_00479520(uint param_1)\n\n{\n  byte bVar1;\n  byte bVar2;\n  undefined1 uVar3;\n  int iVar4;\n  int ****ppppiVar5;\n  int *****pppppiVar6;\n  int *piVar7;\n  int ***pppiVar8;\n  int ****ppppiVar9;\n  uint uVar10;\n  undefined4 uVar11;\n  undefined2 extraout_var;\n  undefined2 extraout_var_00;\n  undefined2 extraout_var_01;\n  undefined2 extraout_var_02;\n  code *pcVar12;\n  int *****pppppiVar13;\n  int *unaff_EDI;\n  uint uVar14;\n  int *****pppppiVar15;\n  undefined4 uVar16;\n  undefined4 uVar17;\n  int *****pppppiStack_224;\n  int *****pppppiStack_220;\n  int *****pppppiStack_21c;\n  int *****pppppiStack_218;\n  int *****pppppiStack_214;\n  int *****pppppiStack_210;\n  int *****pppppiStack_20c;\n  int *****pppppiStack_208;\n  int *****pppppiStack_204;\n  int *****pppppiStack_200;\n  int *****pppppiStack_1fc;\n  int *****pppppiStack_1f8;\n  int *****pppppiStack_1f4;\n  int ****ppppiStack_1f0;\n  int ****ppppiStack_1ec;\n  int *****pppppiStack_1e8;\n  int ****ppppiStack_1e4;\n  int *****pppppiStack_1e0;\n  int *****pppppiStack_1dc;\n  int *****pppppiStack_1d8;\n  int *****pppppiStack_1d4;\n  int *****pppppiStack_1d0;\n  undefined4 uStack_1cc;\n  int *****pppppiStack_1c8;\n  int *****pppppiStack_1c4;\n  int *****pppppiStack_1c0;\n  int *****pppppiStack_1bc;\n  int *****pppppiStack_1b8;\n  int *****pppppiStack_1b4;\n  int *****pppppiStack_1a4;\n  int *****pppppiStack_1a0;\n  int *****pppppiStack_19c;\n  int *****pppppiStack_198;\n  int ****ppppiStack_194;\n  int *****pppppiStack_190;\n  int *****pppppiStack_18c;\n  int *****pppppiStack_188;\n  int *****pppppiStack_184;\n  int *****pppppiStack_180;\n  int *****pppppiStack_17c;\n  int *****pppppiStack_178;\n  int *****pppppiStack_174;\n  int *****pppppiStack_170;\n  int *****pppppiStack_16c;\n  int *****pppppiStack_168;\n  int *****pppppiStack_164;\n  int *****pppppiStack_160;\n  int *****pppppiStack_15c;\n  int *****pppppiStack_158;\n  int *****pppppiStack_154;\n  int *****pppppiStack_150;\n  int *****pppppiStack_14c;\n  int *****pppppiStack_148;\n  int *****pppppiStack_144;\n  int *****pppppiStack_140;\n  int *****pppppiStack_13c;\n  int *****pppppiStack_138;\n  int *****pppppiStack_134;\n  undefined1 local_c0 [20];\n  undefined4 local_ac;\n  undefined4 local_a8;\n  undefined4 local_a0;\n  undefined4 local_9c;\n  int *****local_98;\n  undefined4 local_90;\n  undefined4 local_8c;\n  int *****local_88;\n  uint *local_84;\n  int *****local_80;\n  int ***local_7c [2];\n  undefined4 local_74;\n  int ****local_6c [2];\n  undefined4 local_64;\n  int ****local_5c [2];\n  undefined4 local_54;\n  int ***local_4c [4];\n  int ****local_3c;\n  int ****local_38;\n  int ****local_34;\n  int ****local_30;\n  int *****local_2c;\n  int *****local_28;\n  int ****local_24;\n  undefined4 local_20;\n  uint local_1c;\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined *local_c;\n  uint local_8;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xfffffed0;\n  local_c = &DAT_00401280;\n  local_8 = param_1 & 1;\n  pppppiVar13 = (int *****)(param_1 & 0xfffffffe);\n  pppppiStack_138 = (int *****)0x479563;\n  ExceptionList = &pvStack_18;\n  pppppiStack_134 = pppppiVar13;\n  (*(code *)(*pppppiVar13)[1])();\n  local_1c = local_1c & 0xffffff00;\n  local_20 = 0;\n  local_24 = (int ****)0x0;\n  local_28 = (int *****)0x0;\n  local_2c = (int *****)0x0;\n  local_30 = (int ****)0x0;\n  local_34 = (int ****)0x0;\n  local_38 = (int ****)0x0;\n  local_3c = (int ****)0x0;\n  local_4c[0] = (int ***)0x0;\n  local_5c[0] = (int ****)0x0;\n  local_6c[0] = (int ****)0x0;\n  local_7c[0] = (int ***)0x0;\n  local_8c = 0;\n  local_9c = 0;\n  local_ac = 0;\n  local_c0[0] = 0;\n  if (DAT_00491078 != 0) {\n    local_74 = 0x80020004;\n    local_64 = 0x80020004;\n    local_54 = 0x80020004;\n    local_7c[0] = (int ***)0xa;\n    local_6c[0] = (int ****)0xa;\n    local_5c[0] = (int ****)0xa;\n    local_84 = (uint *)&DAT_004711e8;\n    local_8c = 8;\n    pppppiStack_138 = (int *****)0x4795ed;\n    __vbaVarDup();\n    pppppiStack_138 = (int *****)local_7c;\n    pppppiStack_13c = local_6c;\n    pppppiStack_140 = local_5c;\n    pppppiStack_148 = (int *****)local_4c;\n    pppppiStack_144 = (int *****)0x4;\n    pppppiStack_14c = (int *****)0x479605;\n    iVar4 = Ordinal_595();\n    pppppiStack_14c = (int *****)local_7c;\n    pppppiStack_150 = local_6c;\n    pppppiStack_154 = local_5c;\n    pppppiStack_158 = (int *****)local_4c;\n    pppppiStack_15c = (int *****)0x4;\n    pppppiStack_160 = (int *****)0x47962a;\n    __vbaFreeVarList();\n    if (iVar4 == 7) {\n      return;\n    }\n  }\n  if (DAT_00491714 == (int *****)0x0) {\n    pppppiStack_138 = (int *****)&DAT_00491714;\n    pppppiStack_13c = (int *****)&LAB_00470d04;\n    pppppiStack_140 = (int *****)0x47964e;\n    __vbaNew2();\n  }\n  pppppiVar15 = DAT_00491714;\n  if (DAT_004910b0 == (int *****)0x0) {\n    pppppiStack_138 = (int *****)&DAT_004910b0;\n    pppppiStack_13c = (int *****)&DAT_0046cd2c;\n    pppppiStack_140 = (int *****)0x47966d;\n    __vbaNew2();\n  }\n  ppppiVar5 = *pppppiVar15;\n  pppppiStack_13c = &local_24;\n  pppppiStack_138 = DAT_004910b0;\n  pppppiStack_140 = (int *****)0x47967f;\n  pppppiStack_140 = (int *****)__vbaObjSetAddref();\n  pppppiStack_144 = pppppiVar15;\n  pppppiStack_148 = (int *****)0x479684;\n  ppppiVar5 = (int ****)(*(code *)ppppiVar5[3])();\n  if ((int)ppppiVar5 < 0) {\n    pppppiStack_148 = (int *****)0xc;\n    pppppiStack_14c = (int *****)&DAT_00470cf4;\n    pppppiStack_150 = pppppiVar15;\n    pppppiStack_158 = (int *****)0x479699;\n    pppppiStack_154 = (int *****)ppppiVar5;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_148 = (int *****)0x4796a2;\n  __vbaFreeObj();\n  if (DAT_004910b0 == (int *****)0x0) {\n    pppppiStack_148 = (int *****)&DAT_004910b0;\n    pppppiStack_14c = (int *****)&DAT_0046cd2c;\n    pppppiStack_150 = (int *****)0x4796bb;\n    __vbaNew2();\n  }\n  pppppiVar15 = DAT_004910b0;\n  pppppiStack_154 = (int *****)0xa;\n  local_8c = 2;\n  local_84 = (uint *)0x1;\n  pppppiStack_150 = local_98;\n  pppppiStack_168 = DAT_004910b0;\n  pppppiStack_14c = (int *****)0x80020004;\n  pppppiStack_148 = (int *****)local_90;\n  pppppiStack_164 = (int *****)0x2;\n  pppppiStack_160 = local_88;\n  pppppiStack_15c = (int *****)0x1;\n  pppppiStack_158 = local_80;\n  pppppiStack_16c = (int *****)0x479723;\n  pppppiVar6 = (int *****)(*(code *)(*DAT_004910b0)[0xac])();\n  if ((int)pppppiVar6 < 0) {\n    pppppiStack_138 = (int *****)0x2b0;\n    pppppiStack_13c = (int *****)&DAT_0047123c;\n    pppppiStack_140 = pppppiVar15;\n    pppppiStack_148 = (int *****)0x47973d;\n    pppppiStack_144 = pppppiVar6;\n    __vbaHresultCheckObj();\n  }\n  pcVar12 = __vbaUI1I2_exref;\n  if (DAT_00491078 != -1) {\n    return;\n  }\n  pppppiStack_138 = (int *****)0x479758;\n  bVar1 = __vbaUI1I2();\n  pppppiStack_138 = (int *****)0x479765;\n  bVar2 = __vbaUI1I2();\n  do {\n    local_1c = CONCAT31(local_1c._1_3_,bVar2);\n    if (bVar1 < bVar2) {\n      pppppiStack_138 = (int *****)0x479818;\n      bVar1 = __vbaUI1I2();\n      pppppiStack_138 = (int *****)0x479825;\n      bVar2 = __vbaUI1I2();\n      pcVar12 = __vbaObjSet_exref;\n      local_1c = CONCAT31(local_1c._1_3_,bVar2);\n      goto LAB_0047982e;\n    }\n    if (0x29 < bVar2) {\n      pppppiStack_138 = (int *****)0x47978a;\n      __vbaGenerateBoundsError();\n    }\n    pppppiStack_138 = (int *****)0x47978e;\n    uVar3 = __vbaUI1I2();\n    *(undefined1 *)(DAT_00491034 + 0x65 + (uint)bVar2 * 0x74) = uVar3;\n    uVar14 = local_1c & 0xff;\n    if (0x29 < uVar14) {\n      pppppiStack_138 = (int *****)0x4797b8;\n      __vbaGenerateBoundsError();\n    }\n    *(undefined2 *)(DAT_00491034 + 0x6c + uVar14 * 0x74) = 0;\n    pppppiVar15 = (int *****)(local_1c & 0xff);\n    if ((int *****)0x29 < pppppiVar15) {\n      pppppiStack_138 = (int *****)0x4797e5;\n      __vbaGenerateBoundsError();\n    }\n    pppppiStack_138 = (int *****)0x4797e9;\n    uVar3 = __vbaUI1I2();\n    *(undefined1 *)(DAT_00491034 + 0x66 + (int)pppppiVar15 * 0x74) = uVar3;\n    bVar2 = (byte)local_1c + 1;\n  } while ((byte)local_1c != -1);\nLAB_0047a73b:\n  pppppiStack_138 = (int *****)0x47a741;\n  __vbaErrorOverflow();\n  pppppiStack_148 = (int *****)&LAB_00401656;\n  pppppiStack_14c = ExceptionList;\n  pppppiStack_144 = (int *****)&pppppiStack_224;\n  pppppiStack_140 = (int *****)&DAT_00401290;\n  pppppiStack_13c = (int *****)0x0;\n  ExceptionList = &pppppiStack_14c;\n  pppppiStack_224 = pppppiVar15;\n  pppppiStack_220 = pppppiVar13;\n  pppppiStack_21c = (int *****)pcVar12;\n  pppppiStack_138 = (int *****)&stack0xfffffffc;\n  (**(code **)(*unaff_EDI + 4))(unaff_EDI);\n  pppppiStack_150 = (int *****)0x0;\n  pppppiStack_160 = (int *****)0x0;\n  pppppiStack_170 = (int *****)0x0;\n  pppppiStack_174 = (int *****)0x0;\n  pppppiStack_178 = (int *****)0x0;\n  pppppiStack_17c = (int *****)0x0;\n  pppppiStack_180 = (int *****)0x0;\n  pppppiStack_184 = (int *****)0x0;\n  ppppiStack_194 = (int ****)0x0;\n  pppppiStack_1a4 = (int *****)0x0;\n  pppppiStack_1b4 = (int *****)0x0;\n  pppppiStack_1d8 = (int *****)0x0;\n  pppppiStack_1e8 = (int *****)0x0;\n  pppppiStack_1f8 = (int *****)0x0;\n  pppppiStack_208 = (int *****)0x0;\n  __vbaRedim(0,8,&pppppiStack_174,0,1,3,0);\n  if (DAT_00491714 == (int *****)0x0) {\n    __vbaNew2(&LAB_00470d04,&DAT_00491714);\n  }\n  pppppiVar13 = DAT_00491714;\n  iVar4 = (*(code *)(*DAT_00491714)[5])(DAT_00491714,&pppppiStack_184);\n  if (iVar4 < 0) {\n    __vbaHresultCheckObj(iVar4,pppppiVar13,&DAT_00470cf4,0x14);\n  }\n  pppppiVar13 = pppppiStack_184;\n  iVar4 = (*(code *)(*pppppiStack_184)[0x14])(pppppiStack_184,&pppppiStack_17c);\n  if (iVar4 < 0) {\n    __vbaHresultCheckObj(iVar4,pppppiVar13,&DAT_00470f14,0x50);\n  }\n  __vbaStrCat(L\"\\\\puntos.txt\",pppppiStack_17c);\n  uVar11 = __vbaStrMove();\n  __vbaFileOpen(1,0xffffffff,1,uVar11);\n  __vbaFreeStrList(2,&pppppiStack_17c,&pppppiStack_180);\n  __vbaFreeObj();\n  pppppiStack_18c = (int *****)0x1;\n  ppppiStack_194 = (int ****)0x2;\n  pppppiStack_19c = (int *****)0x29;\n  pppppiStack_1a4 = (int *****)0x2;\n  pppppiStack_1b4 = (int *****)0x2;\n  iVar4 = __vbaVarForInit(&pppppiStack_170,&pppppiStack_1d8,&pppppiStack_1e8,&pppppiStack_1b4,\n                          &pppppiStack_1a4,&ppppiStack_194);\n  while (iVar4 != 0) {\n    pppppiStack_18c = (int *****)0x1;\n    ppppiStack_194 = (int ****)0x2;\n    pppppiStack_19c = (int *****)0x3;\n    pppppiStack_1a4 = (int *****)0x2;\n    pppppiStack_1b4 = (int *****)0x2;\n    iVar4 = __vbaVarForInit(&pppppiStack_160,&pppppiStack_1f8,&pppppiStack_208,&pppppiStack_1b4,\n                            &pppppiStack_1a4,&ppppiStack_194);\n    while (iVar4 != 0) {\n      __vbaLineInputStr(&pppppiStack_150,1);\n      if ((pppppiStack_174 == (int *****)0x0) || (*(short *)pppppiStack_174 != 1)) {\n        iVar4 = __vbaGenerateBoundsError();\n      }\n      else {\n        iVar4 = __vbaI4Var(&pppppiStack_160);\n        pppiVar8 = (int ***)pppppiStack_174[5];\n        if (pppppiStack_174[4] <= (int ***)(iVar4 - (int)pppiVar8)) {\n          __vbaGenerateBoundsError();\n        }\n        iVar4 = (iVar4 - (int)pppiVar8) * 8;\n      }\n      Ordinal_581(pppppiStack_150);\n      uVar11 = __vbaFpI4();\n      *(undefined4 *)((int)pppppiStack_174[3] + iVar4) = uVar11;\n      __vbaLineInputStr(&pppppiStack_150,1);\n      if ((pppppiStack_174 == (int *****)0x0) || (*(short *)pppppiStack_174 != 1)) {\n        iVar4 = __vbaGenerateBoundsError();\n      }\n      else {\n        iVar4 = __vbaI4Var(&pppppiStack_160);\n        pppiVar8 = (int ***)pppppiStack_174[5];\n        if (pppppiStack_174[4] <= (int ***)(iVar4 - (int)pppiVar8)) {\n          __vbaGenerateBoundsError();\n        }\n        iVar4 = (iVar4 - (int)pppiVar8) * 8;\n      }\n      Ordinal_581(pppppiStack_150);\n      uVar11 = __vbaFpI4();\n      *(undefined4 *)((int)pppppiStack_174[3] + iVar4 + 4) = uVar11;\n      iVar4 = __vbaVarForNext(&pppppiStack_160,&pppppiStack_1f8,&pppppiStack_208);\n    }\n    __vbaAryLock(&pppppiStack_178,pppppiStack_174);\n    if ((pppppiStack_178 == (int *****)0x0) || (*(short *)pppppiStack_178 != 1)) {\n      iVar4 = __vbaGenerateBoundsError();\n    }\n    else {\n      ppppiVar5 = pppppiStack_178[5];\n      if (pppppiStack_178[4] <= (int ****)-(int)ppppiVar5) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = (int)ppppiVar5 * -8;\n    }\n    uVar17 = 1;\n    iVar4 = (int)pppppiStack_178[3] + iVar4;\n    uVar16 = 4;\n    uVar11 = FUN_00470bc8();\n    __vbaSetSystemError(iVar4,uVar16,uVar17);\n    __vbaAryUnlock(&pppppiStack_178);\n    uVar14 = __vbaI4Var(&pppppiStack_170);\n    if (0x29 < uVar14) {\n      __vbaGenerateBoundsError();\n    }\n    *(undefined4 *)(unaff_EDI[0x11] + uVar14 * 4) = uVar11;\n    iVar4 = __vbaVarForNext(&pppppiStack_170,&pppppiStack_1d8,&pppppiStack_1e8);\n  }\n  __vbaFileClose(1);\n  __vbaFreeVarList(4,&pppppiStack_1d8,&pppppiStack_1e8,&pppppiStack_1f8,&pppppiStack_208,\n                   &LAB_0047ab13);\n  __vbaFreeStr();\n  __vbaFreeVar();\n  __vbaFreeVar();\n  __vbaAryDestruct(0,&pppppiStack_174);\n  return;\nLAB_0047982e:\n  if (bVar1 < bVar2) goto LAB_00479c9d;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x47984f;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x479857;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x10 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x47987c;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x14 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4798a4;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x4798ac;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x12 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4798d1;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x16 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4798f9;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x18 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479921;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined4 *)(DAT_0049106c + 0x20 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x47994a;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x479952;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x11 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479977;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x47997f;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x25 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4799a4;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x4799ac;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x1d + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4799d1;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x4799d9;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x1c + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4799fe;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x26 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479a26;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x28 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479a4e;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x479a56;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x24 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479a7b;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined4 *)(DAT_0049106c + 8 + uVar14 * 0x2c) = 0x4708b800;\n  pppppiStack_13c = (int *****)0x479a98;\n  pppppiStack_138 = pppppiVar13;\n  pppppiStack_13c = (int *****)(*(code *)(*pppppiVar13)[0xc6])();\n  pppppiStack_140 = &local_24;\n  pppppiStack_144 = (int *****)0x479a9f;\n  ppppiVar5 = (int ****)__vbaObjSet();\n  pppppiStack_144 = (int *****)&local_28;\n  pppppiStack_148 = (int *****)CONCAT22((short)((uint)ppppiVar5 >> 0x10),(ushort)(byte)local_1c);\n  pppppiStack_150 = (int *****)0x479ab1;\n  pppppiStack_14c = (int *****)ppppiVar5;\n  iVar4 = (*(code *)(*ppppiVar5)[0x10])();\n  if (iVar4 < 0) {\n    pppppiStack_150 = (int *****)0x40;\n    pppppiStack_154 = (int *****)&DAT_00470e74;\n    pppppiStack_160 = (int *****)0x479ac6;\n    pppppiStack_15c = (int *****)iVar4;\n    pppppiStack_158 = (int *****)ppppiVar5;\n    __vbaHresultCheckObj();\n  }\n  pppppiVar15 = local_28;\n  pppppiStack_150 = (int *****)0x0;\n  pppppiStack_154 = local_28;\n  pppppiStack_158 = (int *****)0x479ad6;\n  pppppiStack_164 = (int *****)(*(code *)(*local_28)[0x27])();\n  if ((int)pppppiStack_164 < 0) {\n    pppppiStack_158 = (int *****)0x9c;\n    pppppiStack_15c = (int *****)&DAT_00471330;\n    pppppiStack_160 = pppppiVar15;\n    pppppiStack_168 = (int *****)0x479aee;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_158 = (int *****)&local_28;\n  pppppiStack_15c = &local_24;\n  pppppiStack_160 = (int *****)0x2;\n  pppppiStack_164 = (int *****)0x479afe;\n  __vbaFreeObjList();\n  pppppiStack_15c = (int *****)0x479b0a;\n  pppppiStack_158 = pppppiVar13;\n  pppppiStack_15c = (int *****)(*(code *)(*pppppiVar13)[0xc5])();\n  pppppiStack_160 = &local_24;\n  pppppiStack_164 = (int *****)0x479b11;\n  pppppiVar15 = (int *****)__vbaObjSet();\n  pppppiStack_168 = (int *****)CONCAT22(extraout_var,(ushort)(byte)local_1c);\n  pppppiStack_164 = (int *****)&local_28;\n  pppppiStack_170 = (int *****)0x479b23;\n  pppppiStack_16c = pppppiVar15;\n  pppppiVar6 = (int *****)(*(code *)(*pppppiVar15)[0x10])();\n  if ((int)pppppiVar6 < 0) {\n    pppppiStack_170 = (int *****)0x40;\n    pppppiStack_174 = (int *****)&DAT_00470e74;\n    pppppiStack_180 = (int *****)0x479b38;\n    pppppiStack_17c = pppppiVar6;\n    pppppiStack_178 = pppppiVar15;\n    __vbaHresultCheckObj();\n  }\n  pppppiVar15 = local_28;\n  pppppiStack_170 = (int *****)0x0;\n  pppppiStack_174 = local_28;\n  pppppiStack_178 = (int *****)0x479b48;\n  pppppiStack_184 = (int *****)(*(code *)(*local_28)[0x23])();\n  if ((int)pppppiStack_184 < 0) {\n    pppppiStack_178 = (int *****)0x8c;\n    pppppiStack_17c = (int *****)&DAT_00470e84;\n    pppppiStack_180 = pppppiVar15;\n    pppppiStack_188 = (int *****)0x479b60;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_178 = (int *****)&local_28;\n  pppppiStack_17c = &local_24;\n  pppppiStack_180 = (int *****)0x2;\n  pppppiStack_184 = (int *****)0x479b70;\n  __vbaFreeObjList();\n  pppppiStack_17c = (int *****)0x479b7c;\n  pppppiStack_178 = pppppiVar13;\n  pppppiStack_17c = (int *****)(*(code *)(*pppppiVar13)[0xc5])();\n  pppppiStack_180 = &local_24;\n  pppppiStack_184 = (int *****)0x479b83;\n  pppppiVar15 = (int *****)__vbaObjSet();\n  pppppiStack_188 = (int *****)CONCAT22(extraout_var_00,(ushort)(byte)local_1c);\n  pppppiStack_184 = (int *****)&local_28;\n  pppppiStack_190 = (int *****)0x479b95;\n  pppppiStack_18c = pppppiVar15;\n  pppppiVar6 = (int *****)(*(code *)(*pppppiVar15)[0x10])();\n  if ((int)pppppiVar6 < 0) {\n    pppppiStack_190 = (int *****)0x40;\n    ppppiStack_194 = (int ****)&DAT_00470e74;\n    pppppiStack_1a0 = (int *****)0x479baa;\n    pppppiStack_19c = pppppiVar6;\n    pppppiStack_198 = pppppiVar15;\n    __vbaHresultCheckObj();\n  }\n  pppppiVar15 = local_28;\n  pppppiStack_190 = (int *****)0x0;\n  ppppiVar5 = *local_28;\n  ppppiStack_194 = (int ****)0x479bbd;\n  __vbaStrI2();\n  ppppiStack_194 = (int ****)0x479bc8;\n  ppppiStack_194 = (int ****)__vbaStrMove();\n  pppppiStack_198 = pppppiVar15;\n  pppppiStack_19c = (int *****)0x479be2;\n  iVar4 = (*(code *)ppppiVar5[0x2f])();\n  if (iVar4 < 0) {\n    pppppiStack_19c = (int *****)0xbc;\n    pppppiStack_1a0 = (int *****)&DAT_00470e84;\n    pppppiStack_1a4 = pppppiVar15;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_19c = (int *****)0x479c03;\n  __vbaFreeStr();\n  pppppiStack_19c = (int *****)&local_28;\n  pppppiStack_1a0 = &local_24;\n  pppppiStack_1a4 = (int *****)0x2;\n  __vbaFreeObjList();\n  pppppiStack_1a0 = (int *****)0x479c1f;\n  pppppiStack_19c = pppppiVar13;\n  pppppiStack_1a0 = (int *****)(*(code *)(*pppppiVar13)[0xc4])();\n  pppppiStack_1a4 = &local_24;\n  piVar7 = (int *)__vbaObjSet();\n  pppppiStack_1b4 = (int *****)0x479c38;\n  pppppiVar15 = (int *****)(**(code **)(*piVar7 + 0x40))();\n  if ((int)pppppiVar15 < 0) {\n    pppppiStack_1b4 = (int *****)0x40;\n    pppppiStack_1b8 = (int *****)&DAT_00470e74;\n    pppppiStack_1c4 = (int *****)0x479c4d;\n    pppppiStack_1c0 = pppppiVar15;\n    pppppiStack_1bc = (int *****)piVar7;\n    __vbaHresultCheckObj();\n  }\n  pppppiVar15 = local_28;\n  pppppiStack_1b4 = (int *****)0x0;\n  pppppiStack_1b8 = local_28;\n  pppppiStack_1bc = (int *****)0x479c5d;\n  pppppiStack_1c8 = (int *****)(*(code *)(*local_28)[0x23])();\n  if ((int)pppppiStack_1c8 < 0) {\n    pppppiStack_1bc = (int *****)0x8c;\n    pppppiStack_1c0 = (int *****)&DAT_00470e84;\n    pppppiStack_1c4 = pppppiVar15;\n    uStack_1cc = 0x479c75;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_1bc = (int *****)&local_28;\n  pppppiStack_1c0 = &local_24;\n  pppppiStack_1c4 = (int *****)0x2;\n  pppppiStack_1c8 = (int *****)0x479c85;\n  __vbaFreeObjList();\n  bVar2 = (byte)local_1c + 1;\n  if (0xfe < (byte)local_1c) goto LAB_0047a73b;\n  local_1c = CONCAT31(local_1c._1_3_,bVar2);\n  goto LAB_0047982e;\nLAB_00479c9d:\n  pppppiStack_138 = (int *****)0x479cac;\n  bVar1 = __vbaUI1I2();\n  pppppiStack_138 = (int *****)0x479cb9;\n  bVar2 = __vbaUI1I2();\n  local_1c = CONCAT31(local_1c._1_3_,bVar2);\n  while( true ) {\n    if (bVar1 < bVar2) {\n      pppppiStack_13c = (int *****)0x47a308;\n      pppppiStack_138 = pppppiVar13;\n      pppppiStack_13c = (int *****)(*(code *)(*pppppiVar13)[0xc1])();\n      pppppiStack_140 = &local_24;\n      pppppiStack_144 = (int *****)0x47a30f;\n      pppppiVar15 = (int *****)(*pcVar12)();\n      pppppiStack_144 = (int *****)0xffffffff;\n      pppppiStack_14c = (int *****)0x47a31c;\n      pppppiStack_148 = pppppiVar15;\n      pppppiVar6 = (int *****)(*(code *)(*pppppiVar15)[0x25])();\n      if ((int)pppppiVar6 < 0) {\n        pppppiStack_14c = (int *****)0x94;\n        pppppiStack_150 = (int *****)&DAT_00471368;\n        pppppiStack_15c = (int *****)0x47a334;\n        pppppiStack_158 = pppppiVar6;\n        pppppiStack_154 = pppppiVar15;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_14c = (int *****)0x47a33d;\n      __vbaFreeObj();\n      pppppiStack_150 = (int *****)0x47a346;\n      pppppiStack_14c = pppppiVar13;\n      pppppiStack_150 = (int *****)(*(code *)(*pppppiVar13)[0xc2])();\n      pppppiStack_154 = &local_34;\n      pppppiStack_158 = (int *****)0x47a34d;\n      ppppiVar5 = (int ****)(*pcVar12)();\n      pppppiStack_158 = &local_38;\n      pppppiStack_15c = (int *****)0x1;\n      pppppiStack_164 = (int *****)0x47a35b;\n      pppppiStack_160 = (int *****)ppppiVar5;\n      pppppiStack_170 = (int *****)(*(code *)(*ppppiVar5)[0x10])();\n      if ((int)pppppiStack_170 < 0) {\n        pppppiStack_164 = (int *****)0x40;\n        pppppiStack_168 = (int *****)&DAT_00470e74;\n        pppppiStack_174 = (int *****)0x47a370;\n        pppppiStack_16c = (int *****)ppppiVar5;\n        __vbaHresultCheckObj();\n      }\n      ppppiVar5 = local_38;\n      pppppiStack_164 = (int *****)&DAT_00470e54;\n      pppppiStack_168 = (int *****)0x0;\n      pppppiStack_16c = (int *****)0x4;\n      pppppiStack_174 = (int *****)0x47a38b;\n      pppppiStack_170 = pppppiVar13;\n      pppppiStack_174 = (int *****)(*(code *)(*pppppiVar13)[0xe3])();\n      pppppiStack_178 = &local_24;\n      pppppiStack_17c = (int *****)0x47a392;\n      pppppiStack_17c = (int *****)(*pcVar12)();\n      pppppiStack_180 = (int *****)local_4c;\n      pppppiStack_184 = (int *****)0x47a39d;\n      pppppiStack_174 = (int *****)__vbaLateIdCallLd();\n      pppppiStack_178 = (int *****)0x47a3a7;\n      pppppiStack_178 = (int *****)__vbaCastObjVar();\n      pppppiStack_17c = (int *****)&local_28;\n      pppppiStack_180 = (int *****)0x47a3ae;\n      pppiVar8 = (int ***)(*pcVar12)();\n      pppppiStack_180 = (int *****)&local_2c;\n      pppppiStack_184 = local_5c;\n      local_54 = 1;\n      local_5c[0] = (int ****)0x2;\n      pppppiStack_18c = (int *****)0x47a3cc;\n      pppppiStack_188 = (int *****)pppiVar8;\n      pppppiVar15 = (int *****)(*(code *)(*pppiVar8)[9])();\n      if ((int)pppppiVar15 < 0) {\n        pppppiStack_18c = (int *****)0x24;\n        pppppiStack_190 = (int *****)&DAT_00470e54;\n        pppppiStack_19c = (int *****)0x47a3e1;\n        pppppiStack_198 = pppppiVar15;\n        ppppiStack_194 = (int ****)pppiVar8;\n        __vbaHresultCheckObj();\n      }\n      pppppiVar15 = local_2c;\n      pppppiStack_18c = &local_30;\n      pppppiStack_190 = local_2c;\n      ppppiStack_194 = (int ****)0x47a3f0;\n      ppppiVar9 = (int ****)(*(code *)(*local_2c)[0xd])();\n      if ((int)ppppiVar9 < 0) {\n        ppppiStack_194 = (int ****)0x34;\n        pppppiStack_198 = (int *****)&DAT_00470e64;\n        pppppiStack_19c = pppppiVar15;\n        pppppiStack_1a4 = (int *****)0x47a405;\n        pppppiStack_1a0 = (int *****)ppppiVar9;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_198 = &local_3c;\n      ppppiStack_194 = local_30;\n      local_30 = (int ****)0x0;\n      pppiVar8 = *ppppiVar5;\n      pppppiStack_19c = (int *****)0x47a41e;\n      pppppiStack_19c = (int *****)(*pcVar12)();\n      pppppiStack_1a0 = (int *****)ppppiVar5;\n      pppppiStack_1a4 = (int *****)0x47a435;\n      iVar4 = (*(code *)pppiVar8[0x17])();\n      if (iVar4 < 0) {\n        pppppiStack_1a4 = (int *****)0x5c;\n        pppppiStack_1b4 = (int *****)0x47a44a;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_1a4 = &local_38;\n      pppppiStack_1b4 = (int *****)&local_28;\n      pppppiStack_1b8 = &local_24;\n      pppppiStack_1bc = (int *****)0x6;\n      pppppiStack_1c0 = (int *****)0x47a46a;\n      __vbaFreeObjList();\n      pppppiStack_1c0 = local_5c;\n      pppppiStack_1c4 = (int *****)local_4c;\n      pppppiStack_1c8 = (int *****)0x2;\n      uStack_1cc = 0x47a47a;\n      __vbaFreeVarList();\n      pppppiStack_1a4 = pppppiVar13;\n      (*(code *)(*pppppiVar13)[0xc2])();\n      piVar7 = (int *)(*pcVar12)();\n      pppppiStack_1b4 = (int *****)0x2;\n      pppppiStack_1bc = (int *****)0x47a49b;\n      pppppiStack_1b8 = (int *****)piVar7;\n      pppppiStack_1c8 = (int *****)(**(code **)(*piVar7 + 0x40))();\n      if ((int)pppppiStack_1c8 < 0) {\n        pppppiStack_1bc = (int *****)0x40;\n        pppppiStack_1c0 = (int *****)&DAT_00470e74;\n        uStack_1cc = 0x47a4b0;\n        pppppiStack_1c4 = (int *****)piVar7;\n        __vbaHresultCheckObj();\n      }\n      ppppiVar5 = local_38;\n      pppppiStack_1bc = (int *****)&DAT_00470e54;\n      pppppiStack_1c0 = (int *****)0x0;\n      pppppiStack_1c4 = (int *****)0x4;\n      uStack_1cc = 0x47a4cb;\n      pppppiStack_1c8 = pppppiVar13;\n      uStack_1cc = (*(code *)(*pppppiVar13)[0xe3])();\n      pppppiStack_1d0 = &local_24;\n      pppppiStack_1d4 = (int *****)0x47a4d2;\n      pppppiStack_1d4 = (int *****)(*pcVar12)();\n      pppppiStack_1d8 = (int *****)local_4c;\n      pppppiStack_1dc = (int *****)0x47a4dd;\n      uStack_1cc = __vbaLateIdCallLd();\n      pppppiStack_1d0 = (int *****)0x47a4e7;\n      pppppiStack_1d0 = (int *****)__vbaCastObjVar();\n      pppppiStack_1d4 = (int *****)&local_28;\n      pppppiStack_1d8 = (int *****)0x47a4ee;\n      piVar7 = (int *)(*pcVar12)();\n      pppppiStack_1d8 = (int *****)&local_2c;\n      pppppiStack_1dc = local_5c;\n      local_54 = 1;\n      local_5c[0] = (int ****)0x2;\n      ppppiStack_1e4 = (int ****)0x47a50c;\n      pppppiStack_1e0 = (int *****)piVar7;\n      iVar4 = (**(code **)(*piVar7 + 0x24))();\n      if (iVar4 < 0) {\n        ppppiStack_1e4 = (int ****)0x24;\n        pppppiStack_1e8 = (int *****)&DAT_00470e54;\n        pppppiStack_1f4 = (int *****)0x47a521;\n        ppppiStack_1f0 = (int ****)iVar4;\n        ppppiStack_1ec = (int ****)piVar7;\n        __vbaHresultCheckObj();\n      }\n      pppppiVar15 = local_2c;\n      ppppiStack_1e4 = (int ****)&local_30;\n      pppppiStack_1e8 = local_2c;\n      ppppiStack_1ec = (int ****)0x47a530;\n      pppppiVar6 = (int *****)(*(code *)(*local_2c)[0xd])();\n      if ((int)pppppiVar6 < 0) {\n        ppppiStack_1ec = (int ****)0x34;\n        ppppiStack_1f0 = (int ****)&DAT_00470e64;\n        pppppiStack_1f4 = pppppiVar15;\n        pppppiStack_1fc = (int *****)0x47a545;\n        pppppiStack_1f8 = pppppiVar6;\n        __vbaHresultCheckObj();\n      }\n      ppppiStack_1f0 = (int ****)&local_3c;\n      ppppiStack_1ec = local_30;\n      local_30 = (int ****)0x0;\n      pppiVar8 = *ppppiVar5;\n      pppppiStack_1f4 = (int *****)0x47a55e;\n      pppppiStack_1f4 = (int *****)(*pcVar12)();\n      pppppiStack_1f8 = (int *****)ppppiVar5;\n      pppppiStack_1fc = (int *****)0x47a575;\n      pppppiStack_208 = (int *****)(*(code *)pppiVar8[0x17])();\n      if ((int)pppppiStack_208 < 0) {\n        pppppiStack_1fc = (int *****)0x5c;\n        pppppiStack_200 = (int *****)&DAT_00470e84;\n        pppppiStack_204 = (int *****)ppppiVar5;\n        pppppiStack_20c = (int *****)0x47a58a;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_1fc = &local_38;\n      pppppiStack_200 = &local_3c;\n      pppppiStack_204 = &local_34;\n      pppppiStack_208 = (int *****)&local_2c;\n      pppppiStack_20c = (int *****)&local_28;\n      pppppiStack_210 = &local_24;\n      pppppiStack_214 = (int *****)0x6;\n      pppppiStack_218 = (int *****)0x47a5aa;\n      __vbaFreeObjList();\n      pppppiStack_218 = local_5c;\n      pppppiStack_21c = (int *****)local_4c;\n      pppppiStack_220 = (int *****)0x2;\n      pppppiStack_224 = (int *****)0x47a5ba;\n      __vbaFreeVarList();\n      pppppiStack_1fc = (int *****)0x47a5c8;\n      DAT_0049107a = __vbaUI1I2();\n      pppppiStack_200 = (int *****)0x47a5d6;\n      pppppiStack_1fc = pppppiVar13;\n      pppppiStack_200 = (int *****)(*(code *)(*pppppiVar13)[199])();\n      pppppiStack_204 = &local_24;\n      pppppiStack_208 = (int *****)0x47a5dd;\n      ppppiVar5 = (int ****)(*pcVar12)();\n      pppppiStack_208 = (int *****)0xffffffff;\n      pppppiStack_210 = (int *****)0x47a5ea;\n      pppppiStack_20c = (int *****)ppppiVar5;\n      ppppiVar9 = (int ****)(*(code *)(*ppppiVar5)[0x23])();\n      if ((int)ppppiVar9 < 0) {\n        pppppiStack_210 = (int *****)0x8c;\n        pppppiStack_214 = (int *****)&DAT_00471378;\n        pppppiStack_220 = (int *****)0x47a602;\n        pppppiStack_21c = (int *****)ppppiVar9;\n        pppppiStack_218 = (int *****)ppppiVar5;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_210 = (int *****)0x47a60b;\n      __vbaFreeObj();\n      pppppiStack_210 = (int *****)0x47a618;\n      local_c0[0] = __vbaUI1I2();\n      pppppiStack_210 = (int *****)local_c0;\n      pppppiStack_218 = (int *****)0x47a62e;\n      pppppiStack_214 = pppppiVar13;\n      ppppiVar5 = (int ****)(*(code *)(*pppppiVar13)[0x1c0])();\n      if ((int)ppppiVar5 < 0) {\n        pppppiStack_218 = (int *****)0x700;\n        pppppiStack_21c = (int *****)&DAT_00470614;\n        pppppiStack_224 = (int *****)ppppiVar5;\n        pppppiStack_220 = pppppiVar13;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_218 = (int *****)0x47a64b;\n      local_c0[0] = __vbaUI1I2();\n      pppppiStack_218 = (int *****)local_c0;\n      pppppiStack_220 = (int *****)0x47a661;\n      pppppiStack_21c = pppppiVar13;\n      iVar4 = (*(code *)(*pppppiVar13)[0x1c2])();\n      if (iVar4 < 0) {\n        pppppiStack_220 = (int *****)0x708;\n        pppppiStack_224 = (int *****)&DAT_00470614;\n        __vbaHresultCheckObj(iVar4,pppppiVar13);\n      }\n      local_8c = 0xb;\n      local_84 = (uint *)0x0;\n      pppppiStack_224 = (int *****)0x0;\n      pppppiStack_220 = local_80;\n      uVar11 = (*(code *)(*pppppiVar13)[0xdd])(pppppiVar13,0x80010007,0xb,local_88);\n      uVar11 = (*pcVar12)(&local_24,uVar11);\n      __vbaLateIdSt(uVar11);\n      __vbaFreeObj();\n      return;\n    }\n    pppppiStack_13c = (int *****)0x479cd1;\n    pppppiStack_138 = pppppiVar13;\n    pppppiStack_13c = (int *****)(*(code *)(*pppppiVar13)[0xc6])();\n    pppppiStack_140 = &local_24;\n    pppppiStack_144 = (int *****)0x479cd8;\n    ppppiVar5 = (int ****)(*pcVar12)();\n    pppppiStack_144 = (int *****)&local_28;\n    pppppiStack_148 = (int *****)CONCAT22((short)((uint)ppppiVar5 >> 0x10),(ushort)(byte)local_1c);\n    pppppiStack_150 = (int *****)0x479cea;\n    pppppiStack_14c = (int *****)ppppiVar5;\n    iVar4 = (*(code *)(*ppppiVar5)[0x10])();\n    if (iVar4 < 0) {\n      pppppiStack_150 = (int *****)0x40;\n      pppppiStack_154 = (int *****)&DAT_00470e74;\n      pppppiStack_160 = (int *****)0x479cff;\n      pppppiStack_15c = (int *****)iVar4;\n      pppppiStack_158 = (int *****)ppppiVar5;\n      __vbaHresultCheckObj();\n    }\n    pppppiVar15 = local_28;\n    pppppiStack_150 = (int *****)0xffffffff;\n    pppppiStack_154 = local_28;\n    pppppiStack_158 = (int *****)0x479d0f;\n    pppppiStack_164 = (int *****)(*(code *)(*local_28)[0x27])();\n    if ((int)pppppiStack_164 < 0) {\n      pppppiStack_158 = (int *****)0x9c;\n      pppppiStack_15c = (int *****)&DAT_00471330;\n      pppppiStack_160 = pppppiVar15;\n      pppppiStack_168 = (int *****)0x479d27;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_158 = (int *****)&local_28;\n    pppppiStack_15c = &local_24;\n    pppppiStack_160 = (int *****)0x2;\n    pppppiStack_164 = (int *****)0x479d37;\n    __vbaFreeObjList();\n    pppppiStack_15c = (int *****)0x479d43;\n    pppppiStack_158 = pppppiVar13;\n    pppppiStack_15c = (int *****)(*(code *)(*pppppiVar13)[0xc4])();\n    pppppiStack_160 = &local_34;\n    pppppiStack_164 = (int *****)0x479d4a;\n    pppppiVar15 = (int *****)(*pcVar12)();\n    pppppiStack_168 = (int *****)CONCAT22(extraout_var_01,(ushort)(byte)local_1c);\n    pppppiStack_164 = &local_38;\n    pppppiStack_170 = (int *****)0x479d5c;\n    pppppiStack_16c = pppppiVar15;\n    pppppiStack_17c = (int *****)(*(code *)(*pppppiVar15)[0x10])();\n    if ((int)pppppiStack_17c < 0) {\n      pppppiStack_170 = (int *****)0x40;\n      pppppiStack_174 = (int *****)&DAT_00470e74;\n      pppppiStack_180 = (int *****)0x479d71;\n      pppppiStack_178 = pppppiVar15;\n      __vbaHresultCheckObj();\n    }\n    ppppiVar5 = local_38;\n    pppppiStack_170 = (int *****)&DAT_00470e54;\n    pppppiStack_174 = (int *****)0x0;\n    pppppiStack_178 = (int *****)0x4;\n    pppppiStack_180 = (int *****)0x479d8c;\n    pppppiStack_17c = pppppiVar13;\n    pppppiStack_180 = (int *****)(*(code *)(*pppppiVar13)[0xde])();\n    pppppiStack_184 = &local_24;\n    pppppiStack_188 = (int *****)0x479d93;\n    pppppiStack_188 = (int *****)(*pcVar12)();\n    pppppiStack_18c = (int *****)local_4c;\n    pppppiStack_190 = (int *****)0x479d9e;\n    pppppiStack_180 = (int *****)__vbaLateIdCallLd();\n    pppppiStack_184 = (int *****)0x479da8;\n    pppppiStack_184 = (int *****)__vbaCastObjVar();\n    pppppiStack_188 = (int *****)&local_28;\n    pppppiStack_18c = (int *****)0x479daf;\n    pppiVar8 = (int ***)(*pcVar12)();\n    local_84 = &local_1c;\n    pppppiStack_18c = (int *****)&local_2c;\n    pppppiStack_190 = (int *****)&local_8c;\n    local_8c = 0x4011;\n    pppppiStack_198 = (int *****)0x479dd2;\n    ppppiStack_194 = (int ****)pppiVar8;\n    pppppiVar15 = (int *****)(*(code *)(*pppiVar8)[9])();\n    if ((int)pppppiVar15 < 0) {\n      pppppiStack_198 = (int *****)0x24;\n      pppppiStack_19c = (int *****)&DAT_00470e54;\n      pppppiStack_1a4 = pppppiVar15;\n      pppppiStack_1a0 = (int *****)pppiVar8;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_198 = &local_30;\n    pppppiStack_19c = local_2c;\n    pppppiStack_1a0 = (int *****)0x479df6;\n    iVar4 = (*(code *)(*local_2c)[0xd])();\n    if (iVar4 < 0) {\n      pppppiStack_1a0 = (int *****)0x34;\n      pppppiStack_1a4 = (int *****)&DAT_00470e64;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_1a4 = &local_3c;\n    pppppiStack_1a0 = (int *****)local_30;\n    local_30 = (int ****)0x0;\n    pppiVar8 = *ppppiVar5;\n    (*pcVar12)();\n    pppppiStack_1bc = (int *****)(*(code *)pppiVar8[0x17])();\n    if ((int)pppppiStack_1bc < 0) {\n      pppppiStack_1b4 = (int *****)&DAT_00470e84;\n      pppppiStack_1b8 = (int *****)ppppiVar5;\n      pppppiStack_1c0 = (int *****)0x479e50;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_1b4 = &local_3c;\n    pppppiStack_1b8 = &local_34;\n    pppppiStack_1bc = (int *****)&local_2c;\n    pppppiStack_1c0 = (int *****)&local_28;\n    pppppiStack_1c4 = &local_24;\n    pppppiStack_1c8 = (int *****)0x6;\n    uStack_1cc = 0x479e70;\n    __vbaFreeObjList();\n    __vbaFreeVar();\n    pppppiStack_1b4 = (int *****)0x479e85;\n    FUN_00489260((byte *)&local_1c);\n    pppppiStack_1b8 = (int *****)0x479e8e;\n    pppppiStack_1b4 = pppppiVar13;\n    pppppiStack_1b8 = (int *****)(*(code *)(*pppppiVar13)[0xc4])();\n    pppppiStack_1bc = &local_24;\n    pppppiStack_1c0 = (int *****)0x479e95;\n    piVar7 = (int *)(*pcVar12)();\n    pppppiStack_1c0 = (int *****)&local_28;\n    pppppiStack_1c4 = (int *****)CONCAT22((short)((uint)piVar7 >> 0x10),(ushort)(byte)local_1c);\n    uStack_1cc = 0x479ea7;\n    pppppiStack_1c8 = (int *****)piVar7;\n    ppppiVar5 = (int ****)(**(code **)(*piVar7 + 0x40))();\n    if ((int)ppppiVar5 < 0) {\n      uStack_1cc = 0x40;\n      pppppiStack_1d0 = (int *****)&DAT_00470e74;\n      pppppiStack_1dc = (int *****)0x479ebc;\n      pppppiStack_1d8 = (int *****)ppppiVar5;\n      pppppiStack_1d4 = (int *****)piVar7;\n      __vbaHresultCheckObj();\n    }\n    pppppiVar15 = local_28;\n    uStack_1cc = 0xffffffff;\n    pppppiStack_1d0 = local_28;\n    pppppiStack_1d4 = (int *****)0x479ecc;\n    pppppiStack_1e0 = (int *****)(*(code *)(*local_28)[0x23])();\n    if ((int)pppppiStack_1e0 < 0) {\n      pppppiStack_1d4 = (int *****)0x8c;\n      pppppiStack_1d8 = (int *****)&DAT_00470e84;\n      pppppiStack_1dc = pppppiVar15;\n      ppppiStack_1e4 = (int ****)0x479ee4;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_1d4 = (int *****)&local_28;\n    pppppiStack_1d8 = &local_24;\n    pppppiStack_1dc = (int *****)0x2;\n    pppppiStack_1e0 = (int *****)0x479ef4;\n    __vbaFreeObjList();\n    pppppiStack_1d8 = (int *****)0x479f00;\n    pppppiStack_1d4 = pppppiVar13;\n    pppppiStack_1d8 = (int *****)(*(code *)(*pppppiVar13)[0xc5])();\n    pppppiStack_1dc = &local_34;\n    pppppiStack_1e0 = (int *****)0x479f07;\n    ppppiVar5 = (int ****)(*pcVar12)();\n    ppppiStack_1e4 = (int ****)CONCAT22(extraout_var_02,(ushort)(byte)local_1c);\n    pppppiStack_1e0 = &local_38;\n    ppppiStack_1ec = (int ****)0x479f19;\n    pppppiStack_1e8 = (int *****)ppppiVar5;\n    pppppiStack_1f8 = (int *****)(*(code *)(*ppppiVar5)[0x10])();\n    if ((int)pppppiStack_1f8 < 0) {\n      ppppiStack_1ec = (int ****)0x40;\n      ppppiStack_1f0 = (int ****)&DAT_00470e74;\n      pppppiStack_1fc = (int *****)0x479f2e;\n      pppppiStack_1f4 = (int *****)ppppiVar5;\n      __vbaHresultCheckObj();\n    }\n    ppppiVar5 = local_38;\n    ppppiStack_1ec = (int ****)&DAT_00470e54;\n    ppppiStack_1f0 = (int ****)0x0;\n    pppppiStack_1f4 = (int *****)0x4;\n    pppppiStack_1fc = (int *****)0x479f49;\n    pppppiStack_1f8 = pppppiVar13;\n    pppppiStack_1fc = (int *****)(*(code *)(*pppppiVar13)[0xde])();\n    pppppiStack_200 = &local_24;\n    pppppiStack_204 = (int *****)0x479f50;\n    pppppiStack_204 = (int *****)(*pcVar12)();\n    pppppiStack_208 = (int *****)local_4c;\n    pppppiStack_20c = (int *****)0x479f5b;\n    pppppiStack_1fc = (int *****)__vbaLateIdCallLd();\n    pppppiStack_200 = (int *****)0x479f65;\n    pppppiStack_200 = (int *****)__vbaCastObjVar();\n    pppppiStack_204 = (int *****)&local_28;\n    pppppiStack_208 = (int *****)0x479f6c;\n    piVar7 = (int *)(*pcVar12)();\n    local_84 = &local_1c;\n    pppppiStack_208 = (int *****)&local_2c;\n    pppppiStack_20c = (int *****)&local_8c;\n    local_8c = 0x4011;\n    pppppiStack_214 = (int *****)0x479f8f;\n    pppppiStack_210 = (int *****)piVar7;\n    ppppiVar9 = (int ****)(**(code **)(*piVar7 + 0x24))();\n    if ((int)ppppiVar9 < 0) {\n      pppppiStack_214 = (int *****)0x24;\n      pppppiStack_218 = (int *****)&DAT_00470e54;\n      pppppiStack_224 = (int *****)0x479fa4;\n      pppppiStack_220 = (int *****)ppppiVar9;\n      pppppiStack_21c = (int *****)piVar7;\n      __vbaHresultCheckObj();\n    }\n    pppppiVar15 = local_2c;\n    pppppiStack_214 = &local_30;\n    pppppiStack_218 = local_2c;\n    pppppiStack_21c = (int *****)0x479fb3;\n    iVar4 = (*(code *)(*local_2c)[0xd])();\n    if (iVar4 < 0) {\n      pppppiStack_21c = (int *****)0x34;\n      pppppiStack_220 = (int *****)&DAT_00470e64;\n      pppppiStack_224 = pppppiVar15;\n      __vbaHresultCheckObj(iVar4);\n    }\n    pppppiStack_220 = &local_3c;\n    pppppiStack_21c = (int *****)local_30;\n    local_30 = (int ****)0x0;\n    pppiVar8 = *ppppiVar5;\n    pppppiStack_224 = (int *****)0x479fe1;\n    pppppiStack_224 = (int *****)(*pcVar12)();\n    iVar4 = (*(code *)pppiVar8[0x17])(ppppiVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,ppppiVar5,&DAT_00470e84,0x5c);\n    }\n    __vbaFreeObjList(6,&local_24,&local_28,&local_2c,&local_34,&local_3c,&local_38);\n    __vbaFreeVar();\n    uVar11 = (*(code *)(*pppppiVar13)[0xc5])(pppppiVar13);\n    piVar7 = (int *)(*pcVar12)(&local_24,uVar11);\n    iVar4 = (**(code **)(*piVar7 + 0x40))(piVar7,local_1c & 0xff,&local_28);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00470e74,0x40);\n    }\n    pppppiVar15 = local_28;\n    iVar4 = (*(code *)(*local_28)[0x23])(local_28,0xffffffff);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,pppppiVar15,&DAT_00470e84,0x8c);\n    }\n    __vbaFreeObjList(2,&local_24,&local_28);\n    uVar11 = (*(code *)(*pppppiVar13)[0xc5])(pppppiVar13);\n    piVar7 = (int *)(*pcVar12)(&local_24,uVar11);\n    iVar4 = (**(code **)(*piVar7 + 0x40))(piVar7,local_1c & 0xff,&local_28);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00470e74,0x40);\n    }\n    pppppiVar15 = local_28;\n    uVar14 = (local_1c & 0xff) - 1;\n    if (5 < uVar14) {\n      __vbaGenerateBoundsError();\n    }\n    uVar10 = (local_1c & 0xff) - 1;\n    local_84 = *(uint **)(DAT_00491034 + 0x4c + uVar14 * 4);\n    local_8c = 4;\n    if (5 < uVar10) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = (*(code *)(*pppppiVar15)[0x4c])\n                      (pppppiVar15,*(undefined4 *)(DAT_00491034 + 0x34 + uVar10 * 4),local_8c,\n                       local_88,local_84,local_80,10,local_98,0x80020004,local_90,10,local_a8,\n                       0x80020004,local_a0);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,pppppiVar15,&DAT_00470e84,0x130);\n    }\n    __vbaFreeObjList(2,&local_24,&local_28);\n    uVar11 = (*(code *)(*pppppiVar13)[0xd6])(pppppiVar13);\n    piVar7 = (int *)__vbaObjSet(&local_24,uVar11);\n    iVar4 = (**(code **)(*piVar7 + 0x40))(piVar7,local_1c & 0xff,&local_28);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00470e74,0x40);\n    }\n    pppppiVar15 = local_28;\n    uVar14 = (local_1c & 0xff) - 1;\n    if (5 < uVar14) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = (*(code *)(*pppppiVar15)[0x19])\n                      (pppppiVar15,*(undefined4 *)(DAT_0049106c + 4 + uVar14 * 0x2c));\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,pppppiVar15,&DAT_00471358,100);\n    }\n    __vbaFreeObjList(2,&local_24,&local_28);\n    uVar11 = (*(code *)(*pppppiVar13)[0xd6])(pppppiVar13);\n    piVar7 = (int *)__vbaObjSet(&local_24,uVar11);\n    iVar4 = (**(code **)(*piVar7 + 0x40))(piVar7,local_1c & 0xff,&local_28);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00470e74,0x40);\n    }\n    pppppiVar15 = local_28;\n    iVar4 = (*(code *)(*local_28)[0x17])(local_28,0xffffffff);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,pppppiVar15,&DAT_00471358,0x5c);\n    }\n    __vbaFreeObjList(2,&local_24,&local_28);\n    bVar2 = (byte)local_1c + 1;\n    pcVar12 = __vbaObjSet_exref;\n    if (0xfe < (byte)local_1c) break;\n    local_1c = CONCAT31(local_1c._1_3_,bVar2);\n  }\n  goto LAB_0047a73b;\n}\n\n",
+      "limitations": []
+    },
+    "normalized_result": "\n/* WARNING: Type propagation algorithm not settling */\n\nvoid __cdecl FUN_00479520(uint param_1)\n\n{\n  byte bVar1;\n  byte bVar2;\n  undefined1 uVar3;\n  int iVar4;\n  int ****ppppiVar5;\n  int *****pppppiVar6;\n  int *piVar7;\n  int ***pppiVar8;\n  int ****ppppiVar9;\n  uint uVar10;\n  undefined4 uVar11;\n  undefined2 extraout_var;\n  undefined2 extraout_var_00;\n  undefined2 extraout_var_01;\n  undefined2 extraout_var_02;\n  code *pcVar12;\n  int *****pppppiVar13;\n  int *unaff_EDI;\n  uint uVar14;\n  int *****pppppiVar15;\n  undefined4 uVar16;\n  undefined4 uVar17;\n  int *****pppppiStack_224;\n  int *****pppppiStack_220;\n  int *****pppppiStack_21c;\n  int *****pppppiStack_218;\n  int *****pppppiStack_214;\n  int *****pppppiStack_210;\n  int *****pppppiStack_20c;\n  int *****pppppiStack_208;\n  int *****pppppiStack_204;\n  int *****pppppiStack_200;\n  int *****pppppiStack_1fc;\n  int *****pppppiStack_1f8;\n  int *****pppppiStack_1f4;\n  int ****ppppiStack_1f0;\n  int ****ppppiStack_1ec;\n  int *****pppppiStack_1e8;\n  int ****ppppiStack_1e4;\n  int *****pppppiStack_1e0;\n  int *****pppppiStack_1dc;\n  int *****pppppiStack_1d8;\n  int *****pppppiStack_1d4;\n  int *****pppppiStack_1d0;\n  undefined4 uStack_1cc;\n  int *****pppppiStack_1c8;\n  int *****pppppiStack_1c4;\n  int *****pppppiStack_1c0;\n  int *****pppppiStack_1bc;\n  int *****pppppiStack_1b8;\n  int *****pppppiStack_1b4;\n  int *****pppppiStack_1a4;\n  int *****pppppiStack_1a0;\n  int *****pppppiStack_19c;\n  int *****pppppiStack_198;\n  int ****ppppiStack_194;\n  int *****pppppiStack_190;\n  int *****pppppiStack_18c;\n  int *****pppppiStack_188;\n  int *****pppppiStack_184;\n  int *****pppppiStack_180;\n  int *****pppppiStack_17c;\n  int *****pppppiStack_178;\n  int *****pppppiStack_174;\n  int *****pppppiStack_170;\n  int *****pppppiStack_16c;\n  int *****pppppiStack_168;\n  int *****pppppiStack_164;\n  int *****pppppiStack_160;\n  int *****pppppiStack_15c;\n  int *****pppppiStack_158;\n  int *****pppppiStack_154;\n  int *****pppppiStack_150;\n  int *****pppppiStack_14c;\n  int *****pppppiStack_148;\n  int *****pppppiStack_144;\n  int *****pppppiStack_140;\n  int *****pppppiStack_13c;\n  int *****pppppiStack_138;\n  int *****pppppiStack_134;\n  undefined1 local_c0 [20];\n  undefined4 local_ac;\n  undefined4 local_a8;\n  undefined4 local_a0;\n  undefined4 local_9c;\n  int *****local_98;\n  undefined4 local_90;\n  undefined4 local_8c;\n  int *****local_88;\n  uint *local_84;\n  int *****local_80;\n  int ***local_7c [2];\n  undefined4 local_74;\n  int ****local_6c [2];\n  undefined4 local_64;\n  int ****local_5c [2];\n  undefined4 local_54;\n  int ***local_4c [4];\n  int ****local_3c;\n  int ****local_38;\n  int ****local_34;\n  int ****local_30;\n  int *****local_2c;\n  int *****local_28;\n  int ****local_24;\n  undefined4 local_20;\n  uint local_1c;\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined *local_c;\n  uint local_8;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xfffffed0;\n  local_c = &DAT_00401280;\n  local_8 = param_1 & 1;\n  pppppiVar13 = (int *****)(param_1 & 0xfffffffe);\n  pppppiStack_138 = (int *****)0x479563;\n  ExceptionList = &pvStack_18;\n  pppppiStack_134 = pppppiVar13;\n  (*(code *)(*pppppiVar13)[1])();\n  local_1c = local_1c & 0xffffff00;\n  local_20 = 0;\n  local_24 = (int ****)0x0;\n  local_28 = (int *****)0x0;\n  local_2c = (int *****)0x0;\n  local_30 = (int ****)0x0;\n  local_34 = (int ****)0x0;\n  local_38 = (int ****)0x0;\n  local_3c = (int ****)0x0;\n  local_4c[0] = (int ***)0x0;\n  local_5c[0] = (int ****)0x0;\n  local_6c[0] = (int ****)0x0;\n  local_7c[0] = (int ***)0x0;\n  local_8c = 0;\n  local_9c = 0;\n  local_ac = 0;\n  local_c0[0] = 0;\n  if (DAT_00491078 != 0) {\n    local_74 = 0x80020004;\n    local_64 = 0x80020004;\n    local_54 = 0x80020004;\n    local_7c[0] = (int ***)0xa;\n    local_6c[0] = (int ****)0xa;\n    local_5c[0] = (int ****)0xa;\n    local_84 = (uint *)&DAT_004711e8;\n    local_8c = 8;\n    pppppiStack_138 = (int *****)0x4795ed;\n    __vbaVarDup();\n    pppppiStack_138 = (int *****)local_7c;\n    pppppiStack_13c = local_6c;\n    pppppiStack_140 = local_5c;\n    pppppiStack_148 = (int *****)local_4c;\n    pppppiStack_144 = (int *****)0x4;\n    pppppiStack_14c = (int *****)0x479605;\n    iVar4 = Ordinal_595();\n    pppppiStack_14c = (int *****)local_7c;\n    pppppiStack_150 = local_6c;\n    pppppiStack_154 = local_5c;\n    pppppiStack_158 = (int *****)local_4c;\n    pppppiStack_15c = (int *****)0x4;\n    pppppiStack_160 = (int *****)0x47962a;\n    __vbaFreeVarList();\n    if (iVar4 == 7) {\n      return;\n    }\n  }\n  if (DAT_00491714 == (int *****)0x0) {\n    pppppiStack_138 = (int *****)&DAT_00491714;\n    pppppiStack_13c = (int *****)&LAB_00470d04;\n    pppppiStack_140 = (int *****)0x47964e;\n    __vbaNew2();\n  }\n  pppppiVar15 = DAT_00491714;\n  if (DAT_004910b0 == (int *****)0x0) {\n    pppppiStack_138 = (int *****)&DAT_004910b0;\n    pppppiStack_13c = (int *****)&DAT_0046cd2c;\n    pppppiStack_140 = (int *****)0x47966d;\n    __vbaNew2();\n  }\n  ppppiVar5 = *pppppiVar15;\n  pppppiStack_13c = &local_24;\n  pppppiStack_138 = DAT_004910b0;\n  pppppiStack_140 = (int *****)0x47967f;\n  pppppiStack_140 = (int *****)__vbaObjSetAddref();\n  pppppiStack_144 = pppppiVar15;\n  pppppiStack_148 = (int *****)0x479684;\n  ppppiVar5 = (int ****)(*(code *)ppppiVar5[3])();\n  if ((int)ppppiVar5 < 0) {\n    pppppiStack_148 = (int *****)0xc;\n    pppppiStack_14c = (int *****)&DAT_00470cf4;\n    pppppiStack_150 = pppppiVar15;\n    pppppiStack_158 = (int *****)0x479699;\n    pppppiStack_154 = (int *****)ppppiVar5;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_148 = (int *****)0x4796a2;\n  __vbaFreeObj();\n  if (DAT_004910b0 == (int *****)0x0) {\n    pppppiStack_148 = (int *****)&DAT_004910b0;\n    pppppiStack_14c = (int *****)&DAT_0046cd2c;\n    pppppiStack_150 = (int *****)0x4796bb;\n    __vbaNew2();\n  }\n  pppppiVar15 = DAT_004910b0;\n  pppppiStack_154 = (int *****)0xa;\n  local_8c = 2;\n  local_84 = (uint *)0x1;\n  pppppiStack_150 = local_98;\n  pppppiStack_168 = DAT_004910b0;\n  pppppiStack_14c = (int *****)0x80020004;\n  pppppiStack_148 = (int *****)local_90;\n  pppppiStack_164 = (int *****)0x2;\n  pppppiStack_160 = local_88;\n  pppppiStack_15c = (int *****)0x1;\n  pppppiStack_158 = local_80;\n  pppppiStack_16c = (int *****)0x479723;\n  pppppiVar6 = (int *****)(*(code *)(*DAT_004910b0)[0xac])();\n  if ((int)pppppiVar6 < 0) {\n    pppppiStack_138 = (int *****)0x2b0;\n    pppppiStack_13c = (int *****)&DAT_0047123c;\n    pppppiStack_140 = pppppiVar15;\n    pppppiStack_148 = (int *****)0x47973d;\n    pppppiStack_144 = pppppiVar6;\n    __vbaHresultCheckObj();\n  }\n  pcVar12 = __vbaUI1I2_exref;\n  if (DAT_00491078 != -1) {\n    return;\n  }\n  pppppiStack_138 = (int *****)0x479758;\n  bVar1 = __vbaUI1I2();\n  pppppiStack_138 = (int *****)0x479765;\n  bVar2 = __vbaUI1I2();\n  do {\n    local_1c = CONCAT31(local_1c._1_3_,bVar2);\n    if (bVar1 < bVar2) {\n      pppppiStack_138 = (int *****)0x479818;\n      bVar1 = __vbaUI1I2();\n      pppppiStack_138 = (int *****)0x479825;\n      bVar2 = __vbaUI1I2();\n      pcVar12 = __vbaObjSet_exref;\n      local_1c = CONCAT31(local_1c._1_3_,bVar2);\n      goto LAB_0047982e;\n    }\n    if (0x29 < bVar2) {\n      pppppiStack_138 = (int *****)0x47978a;\n      __vbaGenerateBoundsError();\n    }\n    pppppiStack_138 = (int *****)0x47978e;\n    uVar3 = __vbaUI1I2();\n    *(undefined1 *)(DAT_00491034 + 0x65 + (uint)bVar2 * 0x74) = uVar3;\n    uVar14 = local_1c & 0xff;\n    if (0x29 < uVar14) {\n      pppppiStack_138 = (int *****)0x4797b8;\n      __vbaGenerateBoundsError();\n    }\n    *(undefined2 *)(DAT_00491034 + 0x6c + uVar14 * 0x74) = 0;\n    pppppiVar15 = (int *****)(local_1c & 0xff);\n    if ((int *****)0x29 < pppppiVar15) {\n      pppppiStack_138 = (int *****)0x4797e5;\n      __vbaGenerateBoundsError();\n    }\n    pppppiStack_138 = (int *****)0x4797e9;\n    uVar3 = __vbaUI1I2();\n    *(undefined1 *)(DAT_00491034 + 0x66 + (int)pppppiVar15 * 0x74) = uVar3;\n    bVar2 = (byte)local_1c + 1;\n  } while ((byte)local_1c != -1);\nLAB_0047a73b:\n  pppppiStack_138 = (int *****)0x47a741;\n  __vbaErrorOverflow();\n  pppppiStack_148 = (int *****)&LAB_00401656;\n  pppppiStack_14c = ExceptionList;\n  pppppiStack_144 = (int *****)&pppppiStack_224;\n  pppppiStack_140 = (int *****)&DAT_00401290;\n  pppppiStack_13c = (int *****)0x0;\n  ExceptionList = &pppppiStack_14c;\n  pppppiStack_224 = pppppiVar15;\n  pppppiStack_220 = pppppiVar13;\n  pppppiStack_21c = (int *****)pcVar12;\n  pppppiStack_138 = (int *****)&stack0xfffffffc;\n  (**(code **)(*unaff_EDI + 4))(unaff_EDI);\n  pppppiStack_150 = (int *****)0x0;\n  pppppiStack_160 = (int *****)0x0;\n  pppppiStack_170 = (int *****)0x0;\n  pppppiStack_174 = (int *****)0x0;\n  pppppiStack_178 = (int *****)0x0;\n  pppppiStack_17c = (int *****)0x0;\n  pppppiStack_180 = (int *****)0x0;\n  pppppiStack_184 = (int *****)0x0;\n  ppppiStack_194 = (int ****)0x0;\n  pppppiStack_1a4 = (int *****)0x0;\n  pppppiStack_1b4 = (int *****)0x0;\n  pppppiStack_1d8 = (int *****)0x0;\n  pppppiStack_1e8 = (int *****)0x0;\n  pppppiStack_1f8 = (int *****)0x0;\n  pppppiStack_208 = (int *****)0x0;\n  __vbaRedim(0,8,&pppppiStack_174,0,1,3,0);\n  if (DAT_00491714 == (int *****)0x0) {\n    __vbaNew2(&LAB_00470d04,&DAT_00491714);\n  }\n  pppppiVar13 = DAT_00491714;\n  iVar4 = (*(code *)(*DAT_00491714)[5])(DAT_00491714,&pppppiStack_184);\n  if (iVar4 < 0) {\n    __vbaHresultCheckObj(iVar4,pppppiVar13,&DAT_00470cf4,0x14);\n  }\n  pppppiVar13 = pppppiStack_184;\n  iVar4 = (*(code *)(*pppppiStack_184)[0x14])(pppppiStack_184,&pppppiStack_17c);\n  if (iVar4 < 0) {\n    __vbaHresultCheckObj(iVar4,pppppiVar13,&DAT_00470f14,0x50);\n  }\n  __vbaStrCat(L\"\\\\puntos.txt\",pppppiStack_17c);\n  uVar11 = __vbaStrMove();\n  __vbaFileOpen(1,0xffffffff,1,uVar11);\n  __vbaFreeStrList(2,&pppppiStack_17c,&pppppiStack_180);\n  __vbaFreeObj();\n  pppppiStack_18c = (int *****)0x1;\n  ppppiStack_194 = (int ****)0x2;\n  pppppiStack_19c = (int *****)0x29;\n  pppppiStack_1a4 = (int *****)0x2;\n  pppppiStack_1b4 = (int *****)0x2;\n  iVar4 = __vbaVarForInit(&pppppiStack_170,&pppppiStack_1d8,&pppppiStack_1e8,&pppppiStack_1b4,\n                          &pppppiStack_1a4,&ppppiStack_194);\n  while (iVar4 != 0) {\n    pppppiStack_18c = (int *****)0x1;\n    ppppiStack_194 = (int ****)0x2;\n    pppppiStack_19c = (int *****)0x3;\n    pppppiStack_1a4 = (int *****)0x2;\n    pppppiStack_1b4 = (int *****)0x2;\n    iVar4 = __vbaVarForInit(&pppppiStack_160,&pppppiStack_1f8,&pppppiStack_208,&pppppiStack_1b4,\n                            &pppppiStack_1a4,&ppppiStack_194);\n    while (iVar4 != 0) {\n      __vbaLineInputStr(&pppppiStack_150,1);\n      if ((pppppiStack_174 == (int *****)0x0) || (*(short *)pppppiStack_174 != 1)) {\n        iVar4 = __vbaGenerateBoundsError();\n      }\n      else {\n        iVar4 = __vbaI4Var(&pppppiStack_160);\n        pppiVar8 = (int ***)pppppiStack_174[5];\n        if (pppppiStack_174[4] <= (int ***)(iVar4 - (int)pppiVar8)) {\n          __vbaGenerateBoundsError();\n        }\n        iVar4 = (iVar4 - (int)pppiVar8) * 8;\n      }\n      Ordinal_581(pppppiStack_150);\n      uVar11 = __vbaFpI4();\n      *(undefined4 *)((int)pppppiStack_174[3] + iVar4) = uVar11;\n      __vbaLineInputStr(&pppppiStack_150,1);\n      if ((pppppiStack_174 == (int *****)0x0) || (*(short *)pppppiStack_174 != 1)) {\n        iVar4 = __vbaGenerateBoundsError();\n      }\n      else {\n        iVar4 = __vbaI4Var(&pppppiStack_160);\n        pppiVar8 = (int ***)pppppiStack_174[5];\n        if (pppppiStack_174[4] <= (int ***)(iVar4 - (int)pppiVar8)) {\n          __vbaGenerateBoundsError();\n        }\n        iVar4 = (iVar4 - (int)pppiVar8) * 8;\n      }\n      Ordinal_581(pppppiStack_150);\n      uVar11 = __vbaFpI4();\n      *(undefined4 *)((int)pppppiStack_174[3] + iVar4 + 4) = uVar11;\n      iVar4 = __vbaVarForNext(&pppppiStack_160,&pppppiStack_1f8,&pppppiStack_208);\n    }\n    __vbaAryLock(&pppppiStack_178,pppppiStack_174);\n    if ((pppppiStack_178 == (int *****)0x0) || (*(short *)pppppiStack_178 != 1)) {\n      iVar4 = __vbaGenerateBoundsError();\n    }\n    else {\n      ppppiVar5 = pppppiStack_178[5];\n      if (pppppiStack_178[4] <= (int ****)-(int)ppppiVar5) {\n        __vbaGenerateBoundsError();\n      }\n      iVar4 = (int)ppppiVar5 * -8;\n    }\n    uVar17 = 1;\n    iVar4 = (int)pppppiStack_178[3] + iVar4;\n    uVar16 = 4;\n    uVar11 = FUN_00470bc8();\n    __vbaSetSystemError(iVar4,uVar16,uVar17);\n    __vbaAryUnlock(&pppppiStack_178);\n    uVar14 = __vbaI4Var(&pppppiStack_170);\n    if (0x29 < uVar14) {\n      __vbaGenerateBoundsError();\n    }\n    *(undefined4 *)(unaff_EDI[0x11] + uVar14 * 4) = uVar11;\n    iVar4 = __vbaVarForNext(&pppppiStack_170,&pppppiStack_1d8,&pppppiStack_1e8);\n  }\n  __vbaFileClose(1);\n  __vbaFreeVarList(4,&pppppiStack_1d8,&pppppiStack_1e8,&pppppiStack_1f8,&pppppiStack_208,\n                   &LAB_0047ab13);\n  __vbaFreeStr();\n  __vbaFreeVar();\n  __vbaFreeVar();\n  __vbaAryDestruct(0,&pppppiStack_174);\n  return;\nLAB_0047982e:\n  if (bVar1 < bVar2) goto LAB_00479c9d;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x47984f;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x479857;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x10 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x47987c;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x14 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4798a4;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x4798ac;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x12 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4798d1;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x16 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4798f9;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x18 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479921;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined4 *)(DAT_0049106c + 0x20 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x47994a;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x479952;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x11 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479977;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x47997f;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x25 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4799a4;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x4799ac;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x1d + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4799d1;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x4799d9;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x1c + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x4799fe;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x26 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479a26;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined2 *)(DAT_0049106c + 0x28 + uVar14 * 0x2c) = 0;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479a4e;\n    __vbaGenerateBoundsError();\n  }\n  pppppiStack_138 = (int *****)0x479a56;\n  uVar3 = __vbaUI1I2();\n  *(undefined1 *)(DAT_0049106c + 0x24 + uVar14 * 0x2c) = uVar3;\n  uVar14 = (local_1c & 0xff) - 1;\n  if (5 < uVar14) {\n    pppppiStack_138 = (int *****)0x479a7b;\n    __vbaGenerateBoundsError();\n  }\n  *(undefined4 *)(DAT_0049106c + 8 + uVar14 * 0x2c) = 0x4708b800;\n  pppppiStack_13c = (int *****)0x479a98;\n  pppppiStack_138 = pppppiVar13;\n  pppppiStack_13c = (int *****)(*(code *)(*pppppiVar13)[0xc6])();\n  pppppiStack_140 = &local_24;\n  pppppiStack_144 = (int *****)0x479a9f;\n  ppppiVar5 = (int ****)__vbaObjSet();\n  pppppiStack_144 = (int *****)&local_28;\n  pppppiStack_148 = (int *****)CONCAT22((short)((uint)ppppiVar5 >> 0x10),(ushort)(byte)local_1c);\n  pppppiStack_150 = (int *****)0x479ab1;\n  pppppiStack_14c = (int *****)ppppiVar5;\n  iVar4 = (*(code *)(*ppppiVar5)[0x10])();\n  if (iVar4 < 0) {\n    pppppiStack_150 = (int *****)0x40;\n    pppppiStack_154 = (int *****)&DAT_00470e74;\n    pppppiStack_160 = (int *****)0x479ac6;\n    pppppiStack_15c = (int *****)iVar4;\n    pppppiStack_158 = (int *****)ppppiVar5;\n    __vbaHresultCheckObj();\n  }\n  pppppiVar15 = local_28;\n  pppppiStack_150 = (int *****)0x0;\n  pppppiStack_154 = local_28;\n  pppppiStack_158 = (int *****)0x479ad6;\n  pppppiStack_164 = (int *****)(*(code *)(*local_28)[0x27])();\n  if ((int)pppppiStack_164 < 0) {\n    pppppiStack_158 = (int *****)0x9c;\n    pppppiStack_15c = (int *****)&DAT_00471330;\n    pppppiStack_160 = pppppiVar15;\n    pppppiStack_168 = (int *****)0x479aee;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_158 = (int *****)&local_28;\n  pppppiStack_15c = &local_24;\n  pppppiStack_160 = (int *****)0x2;\n  pppppiStack_164 = (int *****)0x479afe;\n  __vbaFreeObjList();\n  pppppiStack_15c = (int *****)0x479b0a;\n  pppppiStack_158 = pppppiVar13;\n  pppppiStack_15c = (int *****)(*(code *)(*pppppiVar13)[0xc5])();\n  pppppiStack_160 = &local_24;\n  pppppiStack_164 = (int *****)0x479b11;\n  pppppiVar15 = (int *****)__vbaObjSet();\n  pppppiStack_168 = (int *****)CONCAT22(extraout_var,(ushort)(byte)local_1c);\n  pppppiStack_164 = (int *****)&local_28;\n  pppppiStack_170 = (int *****)0x479b23;\n  pppppiStack_16c = pppppiVar15;\n  pppppiVar6 = (int *****)(*(code *)(*pppppiVar15)[0x10])();\n  if ((int)pppppiVar6 < 0) {\n    pppppiStack_170 = (int *****)0x40;\n    pppppiStack_174 = (int *****)&DAT_00470e74;\n    pppppiStack_180 = (int *****)0x479b38;\n    pppppiStack_17c = pppppiVar6;\n    pppppiStack_178 = pppppiVar15;\n    __vbaHresultCheckObj();\n  }\n  pppppiVar15 = local_28;\n  pppppiStack_170 = (int *****)0x0;\n  pppppiStack_174 = local_28;\n  pppppiStack_178 = (int *****)0x479b48;\n  pppppiStack_184 = (int *****)(*(code *)(*local_28)[0x23])();\n  if ((int)pppppiStack_184 < 0) {\n    pppppiStack_178 = (int *****)0x8c;\n    pppppiStack_17c = (int *****)&DAT_00470e84;\n    pppppiStack_180 = pppppiVar15;\n    pppppiStack_188 = (int *****)0x479b60;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_178 = (int *****)&local_28;\n  pppppiStack_17c = &local_24;\n  pppppiStack_180 = (int *****)0x2;\n  pppppiStack_184 = (int *****)0x479b70;\n  __vbaFreeObjList();\n  pppppiStack_17c = (int *****)0x479b7c;\n  pppppiStack_178 = pppppiVar13;\n  pppppiStack_17c = (int *****)(*(code *)(*pppppiVar13)[0xc5])();\n  pppppiStack_180 = &local_24;\n  pppppiStack_184 = (int *****)0x479b83;\n  pppppiVar15 = (int *****)__vbaObjSet();\n  pppppiStack_188 = (int *****)CONCAT22(extraout_var_00,(ushort)(byte)local_1c);\n  pppppiStack_184 = (int *****)&local_28;\n  pppppiStack_190 = (int *****)0x479b95;\n  pppppiStack_18c = pppppiVar15;\n  pppppiVar6 = (int *****)(*(code *)(*pppppiVar15)[0x10])();\n  if ((int)pppppiVar6 < 0) {\n    pppppiStack_190 = (int *****)0x40;\n    ppppiStack_194 = (int ****)&DAT_00470e74;\n    pppppiStack_1a0 = (int *****)0x479baa;\n    pppppiStack_19c = pppppiVar6;\n    pppppiStack_198 = pppppiVar15;\n    __vbaHresultCheckObj();\n  }\n  pppppiVar15 = local_28;\n  pppppiStack_190 = (int *****)0x0;\n  ppppiVar5 = *local_28;\n  ppppiStack_194 = (int ****)0x479bbd;\n  __vbaStrI2();\n  ppppiStack_194 = (int ****)0x479bc8;\n  ppppiStack_194 = (int ****)__vbaStrMove();\n  pppppiStack_198 = pppppiVar15;\n  pppppiStack_19c = (int *****)0x479be2;\n  iVar4 = (*(code *)ppppiVar5[0x2f])();\n  if (iVar4 < 0) {\n    pppppiStack_19c = (int *****)0xbc;\n    pppppiStack_1a0 = (int *****)&DAT_00470e84;\n    pppppiStack_1a4 = pppppiVar15;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_19c = (int *****)0x479c03;\n  __vbaFreeStr();\n  pppppiStack_19c = (int *****)&local_28;\n  pppppiStack_1a0 = &local_24;\n  pppppiStack_1a4 = (int *****)0x2;\n  __vbaFreeObjList();\n  pppppiStack_1a0 = (int *****)0x479c1f;\n  pppppiStack_19c = pppppiVar13;\n  pppppiStack_1a0 = (int *****)(*(code *)(*pppppiVar13)[0xc4])();\n  pppppiStack_1a4 = &local_24;\n  piVar7 = (int *)__vbaObjSet();\n  pppppiStack_1b4 = (int *****)0x479c38;\n  pppppiVar15 = (int *****)(**(code **)(*piVar7 + 0x40))();\n  if ((int)pppppiVar15 < 0) {\n    pppppiStack_1b4 = (int *****)0x40;\n    pppppiStack_1b8 = (int *****)&DAT_00470e74;\n    pppppiStack_1c4 = (int *****)0x479c4d;\n    pppppiStack_1c0 = pppppiVar15;\n    pppppiStack_1bc = (int *****)piVar7;\n    __vbaHresultCheckObj();\n  }\n  pppppiVar15 = local_28;\n  pppppiStack_1b4 = (int *****)0x0;\n  pppppiStack_1b8 = local_28;\n  pppppiStack_1bc = (int *****)0x479c5d;\n  pppppiStack_1c8 = (int *****)(*(code *)(*local_28)[0x23])();\n  if ((int)pppppiStack_1c8 < 0) {\n    pppppiStack_1bc = (int *****)0x8c;\n    pppppiStack_1c0 = (int *****)&DAT_00470e84;\n    pppppiStack_1c4 = pppppiVar15;\n    uStack_1cc = 0x479c75;\n    __vbaHresultCheckObj();\n  }\n  pppppiStack_1bc = (int *****)&local_28;\n  pppppiStack_1c0 = &local_24;\n  pppppiStack_1c4 = (int *****)0x2;\n  pppppiStack_1c8 = (int *****)0x479c85;\n  __vbaFreeObjList();\n  bVar2 = (byte)local_1c + 1;\n  if (0xfe < (byte)local_1c) goto LAB_0047a73b;\n  local_1c = CONCAT31(local_1c._1_3_,bVar2);\n  goto LAB_0047982e;\nLAB_00479c9d:\n  pppppiStack_138 = (int *****)0x479cac;\n  bVar1 = __vbaUI1I2();\n  pppppiStack_138 = (int *****)0x479cb9;\n  bVar2 = __vbaUI1I2();\n  local_1c = CONCAT31(local_1c._1_3_,bVar2);\n  while( true ) {\n    if (bVar1 < bVar2) {\n      pppppiStack_13c = (int *****)0x47a308;\n      pppppiStack_138 = pppppiVar13;\n      pppppiStack_13c = (int *****)(*(code *)(*pppppiVar13)[0xc1])();\n      pppppiStack_140 = &local_24;\n      pppppiStack_144 = (int *****)0x47a30f;\n      pppppiVar15 = (int *****)(*pcVar12)();\n      pppppiStack_144 = (int *****)0xffffffff;\n      pppppiStack_14c = (int *****)0x47a31c;\n      pppppiStack_148 = pppppiVar15;\n      pppppiVar6 = (int *****)(*(code *)(*pppppiVar15)[0x25])();\n      if ((int)pppppiVar6 < 0) {\n        pppppiStack_14c = (int *****)0x94;\n        pppppiStack_150 = (int *****)&DAT_00471368;\n        pppppiStack_15c = (int *****)0x47a334;\n        pppppiStack_158 = pppppiVar6;\n        pppppiStack_154 = pppppiVar15;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_14c = (int *****)0x47a33d;\n      __vbaFreeObj();\n      pppppiStack_150 = (int *****)0x47a346;\n      pppppiStack_14c = pppppiVar13;\n      pppppiStack_150 = (int *****)(*(code *)(*pppppiVar13)[0xc2])();\n      pppppiStack_154 = &local_34;\n      pppppiStack_158 = (int *****)0x47a34d;\n      ppppiVar5 = (int ****)(*pcVar12)();\n      pppppiStack_158 = &local_38;\n      pppppiStack_15c = (int *****)0x1;\n      pppppiStack_164 = (int *****)0x47a35b;\n      pppppiStack_160 = (int *****)ppppiVar5;\n      pppppiStack_170 = (int *****)(*(code *)(*ppppiVar5)[0x10])();\n      if ((int)pppppiStack_170 < 0) {\n        pppppiStack_164 = (int *****)0x40;\n        pppppiStack_168 = (int *****)&DAT_00470e74;\n        pppppiStack_174 = (int *****)0x47a370;\n        pppppiStack_16c = (int *****)ppppiVar5;\n        __vbaHresultCheckObj();\n      }\n      ppppiVar5 = local_38;\n      pppppiStack_164 = (int *****)&DAT_00470e54;\n      pppppiStack_168 = (int *****)0x0;\n      pppppiStack_16c = (int *****)0x4;\n      pppppiStack_174 = (int *****)0x47a38b;\n      pppppiStack_170 = pppppiVar13;\n      pppppiStack_174 = (int *****)(*(code *)(*pppppiVar13)[0xe3])();\n      pppppiStack_178 = &local_24;\n      pppppiStack_17c = (int *****)0x47a392;\n      pppppiStack_17c = (int *****)(*pcVar12)();\n      pppppiStack_180 = (int *****)local_4c;\n      pppppiStack_184 = (int *****)0x47a39d;\n      pppppiStack_174 = (int *****)__vbaLateIdCallLd();\n      pppppiStack_178 = (int *****)0x47a3a7;\n      pppppiStack_178 = (int *****)__vbaCastObjVar();\n      pppppiStack_17c = (int *****)&local_28;\n      pppppiStack_180 = (int *****)0x47a3ae;\n      pppiVar8 = (int ***)(*pcVar12)();\n      pppppiStack_180 = (int *****)&local_2c;\n      pppppiStack_184 = local_5c;\n      local_54 = 1;\n      local_5c[0] = (int ****)0x2;\n      pppppiStack_18c = (int *****)0x47a3cc;\n      pppppiStack_188 = (int *****)pppiVar8;\n      pppppiVar15 = (int *****)(*(code *)(*pppiVar8)[9])();\n      if ((int)pppppiVar15 < 0) {\n        pppppiStack_18c = (int *****)0x24;\n        pppppiStack_190 = (int *****)&DAT_00470e54;\n        pppppiStack_19c = (int *****)0x47a3e1;\n        pppppiStack_198 = pppppiVar15;\n        ppppiStack_194 = (int ****)pppiVar8;\n        __vbaHresultCheckObj();\n      }\n      pppppiVar15 = local_2c;\n      pppppiStack_18c = &local_30;\n      pppppiStack_190 = local_2c;\n      ppppiStack_194 = (int ****)0x47a3f0;\n      ppppiVar9 = (int ****)(*(code *)(*local_2c)[0xd])();\n      if ((int)ppppiVar9 < 0) {\n        ppppiStack_194 = (int ****)0x34;\n        pppppiStack_198 = (int *****)&DAT_00470e64;\n        pppppiStack_19c = pppppiVar15;\n        pppppiStack_1a4 = (int *****)0x47a405;\n        pppppiStack_1a0 = (int *****)ppppiVar9;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_198 = &local_3c;\n      ppppiStack_194 = local_30;\n      local_30 = (int ****)0x0;\n      pppiVar8 = *ppppiVar5;\n      pppppiStack_19c = (int *****)0x47a41e;\n      pppppiStack_19c = (int *****)(*pcVar12)();\n      pppppiStack_1a0 = (int *****)ppppiVar5;\n      pppppiStack_1a4 = (int *****)0x47a435;\n      iVar4 = (*(code *)pppiVar8[0x17])();\n      if (iVar4 < 0) {\n        pppppiStack_1a4 = (int *****)0x5c;\n        pppppiStack_1b4 = (int *****)0x47a44a;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_1a4 = &local_38;\n      pppppiStack_1b4 = (int *****)&local_28;\n      pppppiStack_1b8 = &local_24;\n      pppppiStack_1bc = (int *****)0x6;\n      pppppiStack_1c0 = (int *****)0x47a46a;\n      __vbaFreeObjList();\n      pppppiStack_1c0 = local_5c;\n      pppppiStack_1c4 = (int *****)local_4c;\n      pppppiStack_1c8 = (int *****)0x2;\n      uStack_1cc = 0x47a47a;\n      __vbaFreeVarList();\n      pppppiStack_1a4 = pppppiVar13;\n      (*(code *)(*pppppiVar13)[0xc2])();\n      piVar7 = (int *)(*pcVar12)();\n      pppppiStack_1b4 = (int *****)0x2;\n      pppppiStack_1bc = (int *****)0x47a49b;\n      pppppiStack_1b8 = (int *****)piVar7;\n      pppppiStack_1c8 = (int *****)(**(code **)(*piVar7 + 0x40))();\n      if ((int)pppppiStack_1c8 < 0) {\n        pppppiStack_1bc = (int *****)0x40;\n        pppppiStack_1c0 = (int *****)&DAT_00470e74;\n        uStack_1cc = 0x47a4b0;\n        pppppiStack_1c4 = (int *****)piVar7;\n        __vbaHresultCheckObj();\n      }\n      ppppiVar5 = local_38;\n      pppppiStack_1bc = (int *****)&DAT_00470e54;\n      pppppiStack_1c0 = (int *****)0x0;\n      pppppiStack_1c4 = (int *****)0x4;\n      uStack_1cc = 0x47a4cb;\n      pppppiStack_1c8 = pppppiVar13;\n      uStack_1cc = (*(code *)(*pppppiVar13)[0xe3])();\n      pppppiStack_1d0 = &local_24;\n      pppppiStack_1d4 = (int *****)0x47a4d2;\n      pppppiStack_1d4 = (int *****)(*pcVar12)();\n      pppppiStack_1d8 = (int *****)local_4c;\n      pppppiStack_1dc = (int *****)0x47a4dd;\n      uStack_1cc = __vbaLateIdCallLd();\n      pppppiStack_1d0 = (int *****)0x47a4e7;\n      pppppiStack_1d0 = (int *****)__vbaCastObjVar();\n      pppppiStack_1d4 = (int *****)&local_28;\n      pppppiStack_1d8 = (int *****)0x47a4ee;\n      piVar7 = (int *)(*pcVar12)();\n      pppppiStack_1d8 = (int *****)&local_2c;\n      pppppiStack_1dc = local_5c;\n      local_54 = 1;\n      local_5c[0] = (int ****)0x2;\n      ppppiStack_1e4 = (int ****)0x47a50c;\n      pppppiStack_1e0 = (int *****)piVar7;\n      iVar4 = (**(code **)(*piVar7 + 0x24))();\n      if (iVar4 < 0) {\n        ppppiStack_1e4 = (int ****)0x24;\n        pppppiStack_1e8 = (int *****)&DAT_00470e54;\n        pppppiStack_1f4 = (int *****)0x47a521;\n        ppppiStack_1f0 = (int ****)iVar4;\n        ppppiStack_1ec = (int ****)piVar7;\n        __vbaHresultCheckObj();\n      }\n      pppppiVar15 = local_2c;\n      ppppiStack_1e4 = (int ****)&local_30;\n      pppppiStack_1e8 = local_2c;\n      ppppiStack_1ec = (int ****)0x47a530;\n      pppppiVar6 = (int *****)(*(code *)(*local_2c)[0xd])();\n      if ((int)pppppiVar6 < 0) {\n        ppppiStack_1ec = (int ****)0x34;\n        ppppiStack_1f0 = (int ****)&DAT_00470e64;\n        pppppiStack_1f4 = pppppiVar15;\n        pppppiStack_1fc = (int *****)0x47a545;\n        pppppiStack_1f8 = pppppiVar6;\n        __vbaHresultCheckObj();\n      }\n      ppppiStack_1f0 = (int ****)&local_3c;\n      ppppiStack_1ec = local_30;\n      local_30 = (int ****)0x0;\n      pppiVar8 = *ppppiVar5;\n      pppppiStack_1f4 = (int *****)0x47a55e;\n      pppppiStack_1f4 = (int *****)(*pcVar12)();\n      pppppiStack_1f8 = (int *****)ppppiVar5;\n      pppppiStack_1fc = (int *****)0x47a575;\n      pppppiStack_208 = (int *****)(*(code *)pppiVar8[0x17])();\n      if ((int)pppppiStack_208 < 0) {\n        pppppiStack_1fc = (int *****)0x5c;\n        pppppiStack_200 = (int *****)&DAT_00470e84;\n        pppppiStack_204 = (int *****)ppppiVar5;\n        pppppiStack_20c = (int *****)0x47a58a;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_1fc = &local_38;\n      pppppiStack_200 = &local_3c;\n      pppppiStack_204 = &local_34;\n      pppppiStack_208 = (int *****)&local_2c;\n      pppppiStack_20c = (int *****)&local_28;\n      pppppiStack_210 = &local_24;\n      pppppiStack_214 = (int *****)0x6;\n      pppppiStack_218 = (int *****)0x47a5aa;\n      __vbaFreeObjList();\n      pppppiStack_218 = local_5c;\n      pppppiStack_21c = (int *****)local_4c;\n      pppppiStack_220 = (int *****)0x2;\n      pppppiStack_224 = (int *****)0x47a5ba;\n      __vbaFreeVarList();\n      pppppiStack_1fc = (int *****)0x47a5c8;\n      DAT_0049107a = __vbaUI1I2();\n      pppppiStack_200 = (int *****)0x47a5d6;\n      pppppiStack_1fc = pppppiVar13;\n      pppppiStack_200 = (int *****)(*(code *)(*pppppiVar13)[199])();\n      pppppiStack_204 = &local_24;\n      pppppiStack_208 = (int *****)0x47a5dd;\n      ppppiVar5 = (int ****)(*pcVar12)();\n      pppppiStack_208 = (int *****)0xffffffff;\n      pppppiStack_210 = (int *****)0x47a5ea;\n      pppppiStack_20c = (int *****)ppppiVar5;\n      ppppiVar9 = (int ****)(*(code *)(*ppppiVar5)[0x23])();\n      if ((int)ppppiVar9 < 0) {\n        pppppiStack_210 = (int *****)0x8c;\n        pppppiStack_214 = (int *****)&DAT_00471378;\n        pppppiStack_220 = (int *****)0x47a602;\n        pppppiStack_21c = (int *****)ppppiVar9;\n        pppppiStack_218 = (int *****)ppppiVar5;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_210 = (int *****)0x47a60b;\n      __vbaFreeObj();\n      pppppiStack_210 = (int *****)0x47a618;\n      local_c0[0] = __vbaUI1I2();\n      pppppiStack_210 = (int *****)local_c0;\n      pppppiStack_218 = (int *****)0x47a62e;\n      pppppiStack_214 = pppppiVar13;\n      ppppiVar5 = (int ****)(*(code *)(*pppppiVar13)[0x1c0])();\n      if ((int)ppppiVar5 < 0) {\n        pppppiStack_218 = (int *****)0x700;\n        pppppiStack_21c = (int *****)&DAT_00470614;\n        pppppiStack_224 = (int *****)ppppiVar5;\n        pppppiStack_220 = pppppiVar13;\n        __vbaHresultCheckObj();\n      }\n      pppppiStack_218 = (int *****)0x47a64b;\n      local_c0[0] = __vbaUI1I2();\n      pppppiStack_218 = (int *****)local_c0;\n      pppppiStack_220 = (int *****)0x47a661;\n      pppppiStack_21c = pppppiVar13;\n      iVar4 = (*(code *)(*pppppiVar13)[0x1c2])();\n      if (iVar4 < 0) {\n        pppppiStack_220 = (int *****)0x708;\n        pppppiStack_224 = (int *****)&DAT_00470614;\n        __vbaHresultCheckObj(iVar4,pppppiVar13);\n      }\n      local_8c = 0xb;\n      local_84 = (uint *)0x0;\n      pppppiStack_224 = (int *****)0x0;\n      pppppiStack_220 = local_80;\n      uVar11 = (*(code *)(*pppppiVar13)[0xdd])(pppppiVar13,0x80010007,0xb,local_88);\n      uVar11 = (*pcVar12)(&local_24,uVar11);\n      __vbaLateIdSt(uVar11);\n      __vbaFreeObj();\n      return;\n    }\n    pppppiStack_13c = (int *****)0x479cd1;\n    pppppiStack_138 = pppppiVar13;\n    pppppiStack_13c = (int *****)(*(code *)(*pppppiVar13)[0xc6])();\n    pppppiStack_140 = &local_24;\n    pppppiStack_144 = (int *****)0x479cd8;\n    ppppiVar5 = (int ****)(*pcVar12)();\n    pppppiStack_144 = (int *****)&local_28;\n    pppppiStack_148 = (int *****)CONCAT22((short)((uint)ppppiVar5 >> 0x10),(ushort)(byte)local_1c);\n    pppppiStack_150 = (int *****)0x479cea;\n    pppppiStack_14c = (int *****)ppppiVar5;\n    iVar4 = (*(code *)(*ppppiVar5)[0x10])();\n    if (iVar4 < 0) {\n      pppppiStack_150 = (int *****)0x40;\n      pppppiStack_154 = (int *****)&DAT_00470e74;\n      pppppiStack_160 = (int *****)0x479cff;\n      pppppiStack_15c = (int *****)iVar4;\n      pppppiStack_158 = (int *****)ppppiVar5;\n      __vbaHresultCheckObj();\n    }\n    pppppiVar15 = local_28;\n    pppppiStack_150 = (int *****)0xffffffff;\n    pppppiStack_154 = local_28;\n    pppppiStack_158 = (int *****)0x479d0f;\n    pppppiStack_164 = (int *****)(*(code *)(*local_28)[0x27])();\n    if ((int)pppppiStack_164 < 0) {\n      pppppiStack_158 = (int *****)0x9c;\n      pppppiStack_15c = (int *****)&DAT_00471330;\n      pppppiStack_160 = pppppiVar15;\n      pppppiStack_168 = (int *****)0x479d27;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_158 = (int *****)&local_28;\n    pppppiStack_15c = &local_24;\n    pppppiStack_160 = (int *****)0x2;\n    pppppiStack_164 = (int *****)0x479d37;\n    __vbaFreeObjList();\n    pppppiStack_15c = (int *****)0x479d43;\n    pppppiStack_158 = pppppiVar13;\n    pppppiStack_15c = (int *****)(*(code *)(*pppppiVar13)[0xc4])();\n    pppppiStack_160 = &local_34;\n    pppppiStack_164 = (int *****)0x479d4a;\n    pppppiVar15 = (int *****)(*pcVar12)();\n    pppppiStack_168 = (int *****)CONCAT22(extraout_var_01,(ushort)(byte)local_1c);\n    pppppiStack_164 = &local_38;\n    pppppiStack_170 = (int *****)0x479d5c;\n    pppppiStack_16c = pppppiVar15;\n    pppppiStack_17c = (int *****)(*(code *)(*pppppiVar15)[0x10])();\n    if ((int)pppppiStack_17c < 0) {\n      pppppiStack_170 = (int *****)0x40;\n      pppppiStack_174 = (int *****)&DAT_00470e74;\n      pppppiStack_180 = (int *****)0x479d71;\n      pppppiStack_178 = pppppiVar15;\n      __vbaHresultCheckObj();\n    }\n    ppppiVar5 = local_38;\n    pppppiStack_170 = (int *****)&DAT_00470e54;\n    pppppiStack_174 = (int *****)0x0;\n    pppppiStack_178 = (int *****)0x4;\n    pppppiStack_180 = (int *****)0x479d8c;\n    pppppiStack_17c = pppppiVar13;\n    pppppiStack_180 = (int *****)(*(code *)(*pppppiVar13)[0xde])();\n    pppppiStack_184 = &local_24;\n    pppppiStack_188 = (int *****)0x479d93;\n    pppppiStack_188 = (int *****)(*pcVar12)();\n    pppppiStack_18c = (int *****)local_4c;\n    pppppiStack_190 = (int *****)0x479d9e;\n    pppppiStack_180 = (int *****)__vbaLateIdCallLd();\n    pppppiStack_184 = (int *****)0x479da8;\n    pppppiStack_184 = (int *****)__vbaCastObjVar();\n    pppppiStack_188 = (int *****)&local_28;\n    pppppiStack_18c = (int *****)0x479daf;\n    pppiVar8 = (int ***)(*pcVar12)();\n    local_84 = &local_1c;\n    pppppiStack_18c = (int *****)&local_2c;\n    pppppiStack_190 = (int *****)&local_8c;\n    local_8c = 0x4011;\n    pppppiStack_198 = (int *****)0x479dd2;\n    ppppiStack_194 = (int ****)pppiVar8;\n    pppppiVar15 = (int *****)(*(code *)(*pppiVar8)[9])();\n    if ((int)pppppiVar15 < 0) {\n      pppppiStack_198 = (int *****)0x24;\n      pppppiStack_19c = (int *****)&DAT_00470e54;\n      pppppiStack_1a4 = pppppiVar15;\n      pppppiStack_1a0 = (int *****)pppiVar8;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_198 = &local_30;\n    pppppiStack_19c = local_2c;\n    pppppiStack_1a0 = (int *****)0x479df6;\n    iVar4 = (*(code *)(*local_2c)[0xd])();\n    if (iVar4 < 0) {\n      pppppiStack_1a0 = (int *****)0x34;\n      pppppiStack_1a4 = (int *****)&DAT_00470e64;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_1a4 = &local_3c;\n    pppppiStack_1a0 = (int *****)local_30;\n    local_30 = (int ****)0x0;\n    pppiVar8 = *ppppiVar5;\n    (*pcVar12)();\n    pppppiStack_1bc = (int *****)(*(code *)pppiVar8[0x17])();\n    if ((int)pppppiStack_1bc < 0) {\n      pppppiStack_1b4 = (int *****)&DAT_00470e84;\n      pppppiStack_1b8 = (int *****)ppppiVar5;\n      pppppiStack_1c0 = (int *****)0x479e50;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_1b4 = &local_3c;\n    pppppiStack_1b8 = &local_34;\n    pppppiStack_1bc = (int *****)&local_2c;\n    pppppiStack_1c0 = (int *****)&local_28;\n    pppppiStack_1c4 = &local_24;\n    pppppiStack_1c8 = (int *****)0x6;\n    uStack_1cc = 0x479e70;\n    __vbaFreeObjList();\n    __vbaFreeVar();\n    pppppiStack_1b4 = (int *****)0x479e85;\n    FUN_00489260((byte *)&local_1c);\n    pppppiStack_1b8 = (int *****)0x479e8e;\n    pppppiStack_1b4 = pppppiVar13;\n    pppppiStack_1b8 = (int *****)(*(code *)(*pppppiVar13)[0xc4])();\n    pppppiStack_1bc = &local_24;\n    pppppiStack_1c0 = (int *****)0x479e95;\n    piVar7 = (int *)(*pcVar12)();\n    pppppiStack_1c0 = (int *****)&local_28;\n    pppppiStack_1c4 = (int *****)CONCAT22((short)((uint)piVar7 >> 0x10),(ushort)(byte)local_1c);\n    uStack_1cc = 0x479ea7;\n    pppppiStack_1c8 = (int *****)piVar7;\n    ppppiVar5 = (int ****)(**(code **)(*piVar7 + 0x40))();\n    if ((int)ppppiVar5 < 0) {\n      uStack_1cc = 0x40;\n      pppppiStack_1d0 = (int *****)&DAT_00470e74;\n      pppppiStack_1dc = (int *****)0x479ebc;\n      pppppiStack_1d8 = (int *****)ppppiVar5;\n      pppppiStack_1d4 = (int *****)piVar7;\n      __vbaHresultCheckObj();\n    }\n    pppppiVar15 = local_28;\n    uStack_1cc = 0xffffffff;\n    pppppiStack_1d0 = local_28;\n    pppppiStack_1d4 = (int *****)0x479ecc;\n    pppppiStack_1e0 = (int *****)(*(code *)(*local_28)[0x23])();\n    if ((int)pppppiStack_1e0 < 0) {\n      pppppiStack_1d4 = (int *****)0x8c;\n      pppppiStack_1d8 = (int *****)&DAT_00470e84;\n      pppppiStack_1dc = pppppiVar15;\n      ppppiStack_1e4 = (int ****)0x479ee4;\n      __vbaHresultCheckObj();\n    }\n    pppppiStack_1d4 = (int *****)&local_28;\n    pppppiStack_1d8 = &local_24;\n    pppppiStack_1dc = (int *****)0x2;\n    pppppiStack_1e0 = (int *****)0x479ef4;\n    __vbaFreeObjList();\n    pppppiStack_1d8 = (int *****)0x479f00;\n    pppppiStack_1d4 = pppppiVar13;\n    pppppiStack_1d8 = (int *****)(*(code *)(*pppppiVar13)[0xc5])();\n    pppppiStack_1dc = &local_34;\n    pppppiStack_1e0 = (int *****)0x479f07;\n    ppppiVar5 = (int ****)(*pcVar12)();\n    ppppiStack_1e4 = (int ****)CONCAT22(extraout_var_02,(ushort)(byte)local_1c);\n    pppppiStack_1e0 = &local_38;\n    ppppiStack_1ec = (int ****)0x479f19;\n    pppppiStack_1e8 = (int *****)ppppiVar5;\n    pppppiStack_1f8 = (int *****)(*(code *)(*ppppiVar5)[0x10])();\n    if ((int)pppppiStack_1f8 < 0) {\n      ppppiStack_1ec = (int ****)0x40;\n      ppppiStack_1f0 = (int ****)&DAT_00470e74;\n      pppppiStack_1fc = (int *****)0x479f2e;\n      pppppiStack_1f4 = (int *****)ppppiVar5;\n      __vbaHresultCheckObj();\n    }\n    ppppiVar5 = local_38;\n    ppppiStack_1ec = (int ****)&DAT_00470e54;\n    ppppiStack_1f0 = (int ****)0x0;\n    pppppiStack_1f4 = (int *****)0x4;\n    pppppiStack_1fc = (int *****)0x479f49;\n    pppppiStack_1f8 = pppppiVar13;\n    pppppiStack_1fc = (int *****)(*(code *)(*pppppiVar13)[0xde])();\n    pppppiStack_200 = &local_24;\n    pppppiStack_204 = (int *****)0x479f50;\n    pppppiStack_204 = (int *****)(*pcVar12)();\n    pppppiStack_208 = (int *****)local_4c;\n    pppppiStack_20c = (int *****)0x479f5b;\n    pppppiStack_1fc = (int *****)__vbaLateIdCallLd();\n    pppppiStack_200 = (int *****)0x479f65;\n    pppppiStack_200 = (int *****)__vbaCastObjVar();\n    pppppiStack_204 = (int *****)&local_28;\n    pppppiStack_208 = (int *****)0x479f6c;\n    piVar7 = (int *)(*pcVar12)();\n    local_84 = &local_1c;\n    pppppiStack_208 = (int *****)&local_2c;\n    pppppiStack_20c = (int *****)&local_8c;\n    local_8c = 0x4011;\n    pppppiStack_214 = (int *****)0x479f8f;\n    pppppiStack_210 = (int *****)piVar7;\n    ppppiVar9 = (int ****)(**(code **)(*piVar7 + 0x24))();\n    if ((int)ppppiVar9 < 0) {\n      pppppiStack_214 = (int *****)0x24;\n      pppppiStack_218 = (int *****)&DAT_00470e54;\n      pppppiStack_224 = (int *****)0x479fa4;\n      pppppiStack_220 = (int *****)ppppiVar9;\n      pppppiStack_21c = (int *****)piVar7;\n      __vbaHresultCheckObj();\n    }\n    pppppiVar15 = local_2c;\n    pppppiStack_214 = &local_30;\n    pppppiStack_218 = local_2c;\n    pppppiStack_21c = (int *****)0x479fb3;\n    iVar4 = (*(code *)(*local_2c)[0xd])();\n    if (iVar4 < 0) {\n      pppppiStack_21c = (int *****)0x34;\n      pppppiStack_220 = (int *****)&DAT_00470e64;\n      pppppiStack_224 = pppppiVar15;\n      __vbaHresultCheckObj(iVar4);\n    }\n    pppppiStack_220 = &local_3c;\n    pppppiStack_21c = (int *****)local_30;\n    local_30 = (int ****)0x0;\n    pppiVar8 = *ppppiVar5;\n    pppppiStack_224 = (int *****)0x479fe1;\n    pppppiStack_224 = (int *****)(*pcVar12)();\n    iVar4 = (*(code *)pppiVar8[0x17])(ppppiVar5);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,ppppiVar5,&DAT_00470e84,0x5c);\n    }\n    __vbaFreeObjList(6,&local_24,&local_28,&local_2c,&local_34,&local_3c,&local_38);\n    __vbaFreeVar();\n    uVar11 = (*(code *)(*pppppiVar13)[0xc5])(pppppiVar13);\n    piVar7 = (int *)(*pcVar12)(&local_24,uVar11);\n    iVar4 = (**(code **)(*piVar7 + 0x40))(piVar7,local_1c & 0xff,&local_28);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00470e74,0x40);\n    }\n    pppppiVar15 = local_28;\n    iVar4 = (*(code *)(*local_28)[0x23])(local_28,0xffffffff);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,pppppiVar15,&DAT_00470e84,0x8c);\n    }\n    __vbaFreeObjList(2,&local_24,&local_28);\n    uVar11 = (*(code *)(*pppppiVar13)[0xc5])(pppppiVar13);\n    piVar7 = (int *)(*pcVar12)(&local_24,uVar11);\n    iVar4 = (**(code **)(*piVar7 + 0x40))(piVar7,local_1c & 0xff,&local_28);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00470e74,0x40);\n    }\n    pppppiVar15 = local_28;\n    uVar14 = (local_1c & 0xff) - 1;\n    if (5 < uVar14) {\n      __vbaGenerateBoundsError();\n    }\n    uVar10 = (local_1c & 0xff) - 1;\n    local_84 = *(uint **)(DAT_00491034 + 0x4c + uVar14 * 4);\n    local_8c = 4;\n    if (5 < uVar10) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = (*(code *)(*pppppiVar15)[0x4c])\n                      (pppppiVar15,*(undefined4 *)(DAT_00491034 + 0x34 + uVar10 * 4),local_8c,\n                       local_88,local_84,local_80,10,local_98,0x80020004,local_90,10,local_a8,\n                       0x80020004,local_a0);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,pppppiVar15,&DAT_00470e84,0x130);\n    }\n    __vbaFreeObjList(2,&local_24,&local_28);\n    uVar11 = (*(code *)(*pppppiVar13)[0xd6])(pppppiVar13);\n    piVar7 = (int *)__vbaObjSet(&local_24,uVar11);\n    iVar4 = (**(code **)(*piVar7 + 0x40))(piVar7,local_1c & 0xff,&local_28);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00470e74,0x40);\n    }\n    pppppiVar15 = local_28;\n    uVar14 = (local_1c & 0xff) - 1;\n    if (5 < uVar14) {\n      __vbaGenerateBoundsError();\n    }\n    iVar4 = (*(code *)(*pppppiVar15)[0x19])\n                      (pppppiVar15,*(undefined4 *)(DAT_0049106c + 4 + uVar14 * 0x2c));\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,pppppiVar15,&DAT_00471358,100);\n    }\n    __vbaFreeObjList(2,&local_24,&local_28);\n    uVar11 = (*(code *)(*pppppiVar13)[0xd6])(pppppiVar13);\n    piVar7 = (int *)__vbaObjSet(&local_24,uVar11);\n    iVar4 = (**(code **)(*piVar7 + 0x40))(piVar7,local_1c & 0xff,&local_28);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,piVar7,&DAT_00470e74,0x40);\n    }\n    pppppiVar15 = local_28;\n    iVar4 = (*(code *)(*local_28)[0x17])(local_28,0xffffffff);\n    if (iVar4 < 0) {\n      __vbaHresultCheckObj(iVar4,pppppiVar15,&DAT_00471358,0x5c);\n    }\n    __vbaFreeObjList(2,&local_24,&local_28);\n    bVar2 = (byte)local_1c + 1;\n    pcVar12 = __vbaObjSet_exref;\n    if (0xfe < (byte)local_1c) break;\n    local_1c = CONCAT31(local_1c._1_3_,bVar2);\n  }\n  goto LAB_0047a73b;\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

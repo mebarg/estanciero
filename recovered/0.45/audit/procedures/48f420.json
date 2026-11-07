@@ -1,0 +1,352 @@
+{
+  "info": {
+    "evidence_id": "ev_be877c6281fcc9186192f823671b2ef9658ccb06747958b63339e5d4ed370b82",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_info",
+    "parameters": {
+      "procedure": "0x48f420"
+    },
+    "raw_result": {
+      "value": {
+        "name": "FUN_0048f420",
+        "entrypoint": "0x48f420",
+        "basicblock_count": 31,
+        "length": 931,
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x48f420",
+              "end": "0x48f7c1"
+            },
+            {
+              "start": "0x48f7fa",
+              "end": "0x48f7fa"
+            }
+          ],
+          "total_bytes": 931,
+          "span_bytes": 987,
+          "non_contiguous": true,
+          "contains_entry": true
+        },
+        "signature": "undefined __cdecl FUN_0048f420(uint param_1)",
+        "locals": [
+          {
+            "description": "undefined4 local_10 @ Stack[-0x10]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_1c @ Stack[-0x1c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_20 @ Stack[-0x20]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_24 @ Stack[-0x24]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_28 @ Stack[-0x28]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_2c @ Stack[-0x2c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_30 @ Stack[-0x30]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_34 @ Stack[-0x34]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_44 @ Stack[-0x44]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_4c @ Stack[-0x4c]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_54 @ Stack[-0x54]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_8 @ Stack[-0x8]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_80 @ Stack[-0x80]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_c @ Stack[-0xc]:4",
+            "provenance": "ghidra-function-database"
+          }
+        ],
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        }
+      },
+      "limitations": []
+    },
+    "normalized_result": {
+      "name": "FUN_0048f420",
+      "entrypoint": "0x48f420",
+      "basicblock_count": 31,
+      "length": 931,
+      "signature": "undefined __cdecl FUN_0048f420(uint param_1)",
+      "locals": [
+        {
+          "description": "undefined4 local_10 @ Stack[-0x10]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_1c @ Stack[-0x1c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_20 @ Stack[-0x20]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_24 @ Stack[-0x24]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_28 @ Stack[-0x28]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_2c @ Stack[-0x2c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_30 @ Stack[-0x30]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_34 @ Stack[-0x34]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_44 @ Stack[-0x44]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_4c @ Stack[-0x4c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_54 @ Stack[-0x54]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_8 @ Stack[-0x8]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_80 @ Stack[-0x80]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_c @ Stack[-0xc]:4",
+          "provenance": "ghidra-function-database"
+        }
+      ],
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x48f420",
+            "end": "0x48f7c1"
+          },
+          {
+            "start": "0x48f7fa",
+            "end": "0x48f7fa"
+          }
+        ],
+        "total_bytes": 931,
+        "span_bytes": 987,
+        "non_contiguous": true,
+        "contains_entry": true
+      }
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  },
+  "pseudocode": {
+    "evidence_id": "ev_a423a25c3cf5c03bb5d76555582b17f0ec88fe7d1488ad49c429f53a682f24eb",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x48f420"
+    },
+    "raw_result": {
+      "value": "\nvoid __cdecl FUN_0048f420(uint param_1)\n\n{\n  undefined4 uVar1;\n  int *piVar2;\n  int iVar3;\n  int *piVar4;\n  uint uVar5;\n  int *piVar6;\n  undefined4 local_54 [2];\n  undefined4 local_4c;\n  undefined4 local_44 [4];\n  undefined4 local_34;\n  int *local_30;\n  undefined4 local_2c;\n  undefined4 local_28;\n  int *local_24;\n  undefined4 local_20;\n  undefined4 local_1c;\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined1 *local_c;\n  uint local_8;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xffffff58;\n  local_c = &LAB_00401628;\n  local_8 = param_1 & 1;\n  piVar6 = (int *)(param_1 & 0xfffffffe);\n  ExceptionList = &pvStack_18;\n  (**(code **)(*piVar6 + 4))(piVar6);\n  local_1c = 0;\n  local_20 = 0;\n  local_24 = (int *)0x0;\n  local_28 = 0;\n  local_2c = 0;\n  local_30 = (int *)0x0;\n  local_34 = 0;\n  local_44[0] = 0;\n  local_54[0] = 0;\n  uVar1 = (**(code **)(*piVar6 + 0x300))(piVar6);\n  piVar2 = (int *)__vbaObjSet(&local_2c,uVar1);\n  iVar3 = (**(code **)(*piVar2 + 0x40))(piVar2,1,&local_30);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00470e74,0x40);\n  }\n  piVar2 = local_30;\n  if (DAT_00491010 == (int *)0x0) {\n    __vbaNew2(&DAT_0046f194,&DAT_00491010);\n  }\n  uVar1 = (**(code **)(*DAT_00491010 + 0x38c))(DAT_00491010,4,0,&DAT_00470e54);\n  uVar1 = __vbaObjSet(&local_1c,uVar1);\n  uVar1 = __vbaLateIdCallLd(local_44,uVar1);\n  uVar1 = __vbaCastObjVar(uVar1);\n  piVar4 = (int *)__vbaObjSet(&local_20,uVar1);\n  local_4c = 1;\n  local_54[0] = 2;\n  iVar3 = (**(code **)(*piVar4 + 0x24))(piVar4,local_54,&local_24);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar4,&DAT_00470e54,0x24);\n  }\n  piVar4 = local_24;\n  iVar3 = (**(code **)(*local_24 + 0x34))(local_24,&local_28);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar4,&DAT_00470e64,0x34);\n  }\n  uVar1 = local_28;\n  local_28 = 0;\n  iVar3 = *piVar2;\n  uVar1 = __vbaObjSet(&local_34,uVar1);\n  iVar3 = (**(code **)(iVar3 + 0x5c))(piVar2,uVar1);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00470e84,0x5c);\n  }\n  __vbaFreeObjList(6,&local_1c,&local_20,&local_24,&local_2c,&local_34,&local_30);\n  __vbaFreeVarList(2,local_44,local_54);\n  uVar1 = (**(code **)(*piVar6 + 0x300))(piVar6);\n  piVar2 = (int *)__vbaObjSet(&local_2c,uVar1);\n  iVar3 = (**(code **)(*piVar2 + 0x40))(piVar2,2,&local_30);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00470e74,0x40);\n  }\n  piVar2 = local_30;\n  if (DAT_00491010 == (int *)0x0) {\n    __vbaNew2(&DAT_0046f194,&DAT_00491010);\n  }\n  uVar1 = (**(code **)(*DAT_00491010 + 0x38c))(DAT_00491010,4,0,&DAT_00470e54);\n  uVar1 = __vbaObjSet(&local_1c,uVar1);\n  uVar1 = __vbaLateIdCallLd(local_44,uVar1);\n  uVar1 = __vbaCastObjVar(uVar1);\n  piVar4 = (int *)__vbaObjSet(&local_20,uVar1);\n  local_4c = 1;\n  local_54[0] = 2;\n  iVar3 = (**(code **)(*piVar4 + 0x24))(piVar4,local_54,&local_24);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar4,&DAT_00470e54,0x24);\n  }\n  piVar4 = local_24;\n  iVar3 = (**(code **)(*local_24 + 0x34))(local_24,&local_28);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar4,&DAT_00470e64,0x34);\n  }\n  uVar1 = local_28;\n  local_28 = 0;\n  iVar3 = *piVar2;\n  uVar1 = __vbaObjSet(&local_34,uVar1);\n  iVar3 = (**(code **)(iVar3 + 0x5c))(piVar2,uVar1);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00470e84,0x5c);\n  }\n  __vbaFreeObjList(6,&local_1c,&local_20,&local_24,&local_2c,&local_34,&local_30);\n  __vbaFreeVarList(2,local_44,local_54);\n  *(undefined2 *)(piVar6 + 0xd) = 0;\n  uVar5 = (uint)DAT_0049107a;\n  if (5 < uVar5 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  if (*(short *)(DAT_0049106c + 0x26 + (uVar5 - 1) * 0x2c) == 0) {\n    uVar5 = (uint)DAT_0049107a;\n    if (5 < uVar5 - 1) {\n      __vbaGenerateBoundsError();\n    }\n    if (*(short *)(DAT_0049106c + 0x28 + (uVar5 - 1) * 0x2c) == 0) {\n      return;\n    }\n  }\n  uVar1 = (**(code **)(*piVar6 + 0x2fc))(piVar6);\n  piVar2 = (int *)__vbaObjSet(&local_1c,uVar1);\n  iVar3 = (**(code **)(*piVar2 + 0x94))(piVar2,0);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00471368,0x94);\n  }\n  __vbaFreeObj();\n  return;\n}\n\n",
+      "limitations": []
+    },
+    "normalized_result": "\nvoid __cdecl FUN_0048f420(uint param_1)\n\n{\n  undefined4 uVar1;\n  int *piVar2;\n  int iVar3;\n  int *piVar4;\n  uint uVar5;\n  int *piVar6;\n  undefined4 local_54 [2];\n  undefined4 local_4c;\n  undefined4 local_44 [4];\n  undefined4 local_34;\n  int *local_30;\n  undefined4 local_2c;\n  undefined4 local_28;\n  int *local_24;\n  undefined4 local_20;\n  undefined4 local_1c;\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined1 *local_c;\n  uint local_8;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xffffff58;\n  local_c = &LAB_00401628;\n  local_8 = param_1 & 1;\n  piVar6 = (int *)(param_1 & 0xfffffffe);\n  ExceptionList = &pvStack_18;\n  (**(code **)(*piVar6 + 4))(piVar6);\n  local_1c = 0;\n  local_20 = 0;\n  local_24 = (int *)0x0;\n  local_28 = 0;\n  local_2c = 0;\n  local_30 = (int *)0x0;\n  local_34 = 0;\n  local_44[0] = 0;\n  local_54[0] = 0;\n  uVar1 = (**(code **)(*piVar6 + 0x300))(piVar6);\n  piVar2 = (int *)__vbaObjSet(&local_2c,uVar1);\n  iVar3 = (**(code **)(*piVar2 + 0x40))(piVar2,1,&local_30);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00470e74,0x40);\n  }\n  piVar2 = local_30;\n  if (DAT_00491010 == (int *)0x0) {\n    __vbaNew2(&DAT_0046f194,&DAT_00491010);\n  }\n  uVar1 = (**(code **)(*DAT_00491010 + 0x38c))(DAT_00491010,4,0,&DAT_00470e54);\n  uVar1 = __vbaObjSet(&local_1c,uVar1);\n  uVar1 = __vbaLateIdCallLd(local_44,uVar1);\n  uVar1 = __vbaCastObjVar(uVar1);\n  piVar4 = (int *)__vbaObjSet(&local_20,uVar1);\n  local_4c = 1;\n  local_54[0] = 2;\n  iVar3 = (**(code **)(*piVar4 + 0x24))(piVar4,local_54,&local_24);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar4,&DAT_00470e54,0x24);\n  }\n  piVar4 = local_24;\n  iVar3 = (**(code **)(*local_24 + 0x34))(local_24,&local_28);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar4,&DAT_00470e64,0x34);\n  }\n  uVar1 = local_28;\n  local_28 = 0;\n  iVar3 = *piVar2;\n  uVar1 = __vbaObjSet(&local_34,uVar1);\n  iVar3 = (**(code **)(iVar3 + 0x5c))(piVar2,uVar1);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00470e84,0x5c);\n  }\n  __vbaFreeObjList(6,&local_1c,&local_20,&local_24,&local_2c,&local_34,&local_30);\n  __vbaFreeVarList(2,local_44,local_54);\n  uVar1 = (**(code **)(*piVar6 + 0x300))(piVar6);\n  piVar2 = (int *)__vbaObjSet(&local_2c,uVar1);\n  iVar3 = (**(code **)(*piVar2 + 0x40))(piVar2,2,&local_30);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00470e74,0x40);\n  }\n  piVar2 = local_30;\n  if (DAT_00491010 == (int *)0x0) {\n    __vbaNew2(&DAT_0046f194,&DAT_00491010);\n  }\n  uVar1 = (**(code **)(*DAT_00491010 + 0x38c))(DAT_00491010,4,0,&DAT_00470e54);\n  uVar1 = __vbaObjSet(&local_1c,uVar1);\n  uVar1 = __vbaLateIdCallLd(local_44,uVar1);\n  uVar1 = __vbaCastObjVar(uVar1);\n  piVar4 = (int *)__vbaObjSet(&local_20,uVar1);\n  local_4c = 1;\n  local_54[0] = 2;\n  iVar3 = (**(code **)(*piVar4 + 0x24))(piVar4,local_54,&local_24);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar4,&DAT_00470e54,0x24);\n  }\n  piVar4 = local_24;\n  iVar3 = (**(code **)(*local_24 + 0x34))(local_24,&local_28);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar4,&DAT_00470e64,0x34);\n  }\n  uVar1 = local_28;\n  local_28 = 0;\n  iVar3 = *piVar2;\n  uVar1 = __vbaObjSet(&local_34,uVar1);\n  iVar3 = (**(code **)(iVar3 + 0x5c))(piVar2,uVar1);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00470e84,0x5c);\n  }\n  __vbaFreeObjList(6,&local_1c,&local_20,&local_24,&local_2c,&local_34,&local_30);\n  __vbaFreeVarList(2,local_44,local_54);\n  *(undefined2 *)(piVar6 + 0xd) = 0;\n  uVar5 = (uint)DAT_0049107a;\n  if (5 < uVar5 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  if (*(short *)(DAT_0049106c + 0x26 + (uVar5 - 1) * 0x2c) == 0) {\n    uVar5 = (uint)DAT_0049107a;\n    if (5 < uVar5 - 1) {\n      __vbaGenerateBoundsError();\n    }\n    if (*(short *)(DAT_0049106c + 0x28 + (uVar5 - 1) * 0x2c) == 0) {\n      return;\n    }\n  }\n  uVar1 = (**(code **)(*piVar6 + 0x2fc))(piVar6);\n  piVar2 = (int *)__vbaObjSet(&local_1c,uVar1);\n  iVar3 = (**(code **)(*piVar2 + 0x94))(piVar2,0);\n  if (iVar3 < 0) {\n    __vbaHresultCheckObj(iVar3,piVar2,&DAT_00471368,0x94);\n  }\n  __vbaFreeObj();\n  return;\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

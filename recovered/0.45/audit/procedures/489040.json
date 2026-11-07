@@ -1,0 +1,304 @@
+{
+  "info": {
+    "evidence_id": "ev_7c0f613f5b24b4210877516dd39a24b001918cafa0e1877d33a7d66ac5d8cd36",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_info",
+    "parameters": {
+      "procedure": "0x489040"
+    },
+    "raw_result": {
+      "value": {
+        "name": "FUN_00489040",
+        "entrypoint": "0x489040",
+        "basicblock_count": 6,
+        "length": 216,
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x489040",
+              "end": "0x489102"
+            },
+            {
+              "start": "0x48911c",
+              "end": "0x489125"
+            },
+            {
+              "start": "0x489155",
+              "end": "0x48915f"
+            }
+          ],
+          "total_bytes": 216,
+          "span_bytes": 288,
+          "non_contiguous": true,
+          "contains_entry": true
+        },
+        "signature": "undefined __cdecl FUN_00489040(undefined4 param_1, byte * param_2, byte * param_3)",
+        "locals": [
+          {
+            "description": "undefined4 local_10 @ Stack[-0x10]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_28 @ Stack[-0x28]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_38 @ Stack[-0x38]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_48 @ Stack[-0x48]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_50 @ Stack[-0x50]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_58 @ Stack[-0x58]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_c @ Stack[-0xc]:4",
+            "provenance": "ghidra-function-database"
+          }
+        ],
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        }
+      },
+      "limitations": []
+    },
+    "normalized_result": {
+      "name": "FUN_00489040",
+      "entrypoint": "0x489040",
+      "basicblock_count": 6,
+      "length": 216,
+      "signature": "undefined __cdecl FUN_00489040(undefined4 param_1, byte * param_2, byte * param_3)",
+      "locals": [
+        {
+          "description": "undefined4 local_10 @ Stack[-0x10]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_28 @ Stack[-0x28]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_38 @ Stack[-0x38]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_48 @ Stack[-0x48]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_50 @ Stack[-0x50]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_58 @ Stack[-0x58]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_c @ Stack[-0xc]:4",
+          "provenance": "ghidra-function-database"
+        }
+      ],
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x489040",
+            "end": "0x489102"
+          },
+          {
+            "start": "0x48911c",
+            "end": "0x489125"
+          },
+          {
+            "start": "0x489155",
+            "end": "0x48915f"
+          }
+        ],
+        "total_bytes": 216,
+        "span_bytes": 288,
+        "non_contiguous": true,
+        "contains_entry": true
+      }
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  },
+  "pseudocode": {
+    "evidence_id": "ev_beb249ab29f3e587b7ea739cb96b8b347d6733e30dd5b1a38fb11ce2b47b82d9",
+    "subject": {
+      "name": "estanciero.exe",
+      "digest": {
+        "sha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf"
+      },
+      "local_path": "/home/mebarg/github/estanciero/recovered/0.45/estanciero.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "analysis_profile": {
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "parameters": {
+        "target_kind": "executable",
+        "target_format": "pe",
+        "executable_role": "application",
+        "managed": false,
+        "native_aot_metadata": {
+          "contract_revision": "rtr-9.1-x64-pe-read-only-v3",
+          "source_bytes": 134217728,
+          "work_units": 67108864,
+          "working_memory_bytes": 67108864,
+          "report_bytes": 4194304
+        },
+        "architecture": "x86",
+        "available_architectures": [
+          "x86"
+        ],
+        "import_mode": "ephemeral-source-immutable",
+        "pdb_observations": "program-info-v1",
+        "annotation_policy": "atomic-function-entry-metadata-v1",
+        "load_image_observations": "source-mappings-entry-context-v2",
+        "function_body_evidence": "complete-inclusive-ranges-v1",
+        "function_references": "complete-body-and-entry-reference-manager-v2",
+        "call_relationship_coverage": "function-body-call-coverage-v5",
+        "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+        "string_inventory_evidence": "defined-data-coverage-v1",
+        "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+        "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+        "instruction_flow_evidence": "decoded-return-pcode-v1",
+        "instruction_references": "exact-address-incoming-v1",
+        "function_boundary_observations": "ghidra-function-boundary-limitations-v3",
+        "no_return_repair": "returning-imports-decoded-return-v2",
+        "process_launch": "inspected-jvm-launch-support-v1",
+        "jump_table_evidence": "typed-case-default-blocks-v1",
+        "decompiler_jump_loads": true,
+        "loader": "auto-from-header",
+        "language_id": "auto-from-header",
+        "compiler_spec_id": "auto-default",
+        "analyzer_preset": "ghidra-default"
+      },
+      "digest": "483a3c23d7b0c6333d61d7e050154873e5f8d7ea53a284362e069d8e793666a4"
+    },
+    "predicate_type": "rea.analysis",
+    "operation": "procedure_pseudo_code",
+    "parameters": {
+      "procedure": "0x489040"
+    },
+    "raw_result": {
+      "value": "\nvoid __cdecl FUN_00489040(undefined4 param_1,byte *param_2,byte *param_3)\n\n{\n  byte bVar1;\n  byte bVar2;\n  undefined4 *puVar3;\n  short sVar4;\n  uint uVar5;\n  byte *unaff_ESI;\n  ushort in_FPUStatusWord;\n  undefined4 uStack_84;\n  undefined4 *puStack_80;\n  undefined4 *puStack_7c;\n  undefined4 *puStack_78;\n  undefined4 local_58 [2];\n  undefined4 local_50;\n  undefined4 local_48 [4];\n  undefined4 local_38;\n  undefined4 local_28 [4];\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined *local_c;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xffffff94;\n  local_c = &DAT_00401488;\n  local_28[0] = 0;\n  local_38 = 0;\n  local_48[0] = 0;\n  local_58[0] = 0x11;\n  if (!CARRY1(*param_2,*param_3)) {\n    local_50 = CONCAT31(local_50._1_3_,*param_2 + *param_3);\n    ExceptionList = &pvStack_18;\n    local_10 = &stack0xffffff94;\n    __vbaVarMove();\n    local_50 = 0x29;\n    local_58[0] = 0x8002;\n    puStack_78 = (undefined4 *)0x4890ba;\n    sVar4 = __vbaVarTstGt();\n    if (sVar4 != 0) {\n      puStack_78 = local_28;\n      puStack_7c = local_58;\n      puStack_80 = local_48;\n      local_50 = 0x2a;\n      local_58[0] = 2;\n      uStack_84 = 0x4890df;\n      __vbaVarSub();\n      uStack_84 = 0x4890e6;\n      __vbaVarMove();\n      puStack_78 = (undefined4 *)0x4890f0;\n      FUN_00489160(&DAT_0049107a);\n    }\n    puStack_78 = (undefined4 *)0x4890fc;\n    __vbaVarCopy();\n    puStack_78 = (undefined4 *)&LAB_00489126;\n    puStack_7c = (undefined4 *)0x489125;\n    __vbaFreeVar();\n    return;\n  }\n  ExceptionList = &pvStack_18;\n  __vbaErrorOverflow();\n  puStack_7c = (undefined4 *)&LAB_00401656;\n  puStack_80 = ExceptionList;\n  puStack_78 = (undefined4 *)&stack0xffffff64;\n  uStack_84 = 0;\n  bVar1 = *unaff_ESI;\n  ExceptionList = &puStack_80;\n  puVar3 = (undefined4 *)&stack0xffffff64;\n  if (5 < bVar1 - 1) {\n    ExceptionList = &puStack_80;\n    __vbaGenerateBoundsError();\n    puVar3 = puStack_78;\n  }\n  puStack_78 = puVar3;\n  bVar2 = *unaff_ESI;\n  if (5 < bVar2 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  *(float *)(DAT_0049106c + 8 + (bVar2 - 1) * 0x2c) =\n       *(float *)(DAT_0049106c + 8 + (bVar1 - 1) * 0x2c) + 5000.0;\n  if ((in_FPUStatusWord & 0xd) == 0) {\n    FUN_00489260(unaff_ESI);\n    uVar5 = (uint)DAT_0049107a;\n    if (5 < uVar5 - 1) {\n      __vbaGenerateBoundsError();\n    }\n    __vbaStrCat(L\" pasa por la salida y cobra $5000\",\n                *(undefined4 *)(DAT_0049106c + 4 + (uVar5 - 1) * 0x2c));\n    __vbaStrMove();\n    FUN_00487700(&uStack_84);\n    __vbaFreeStr();\n    return;\n  }\n  __vbaFPException();\n  return;\n}\n\n",
+      "limitations": []
+    },
+    "normalized_result": "\nvoid __cdecl FUN_00489040(undefined4 param_1,byte *param_2,byte *param_3)\n\n{\n  byte bVar1;\n  byte bVar2;\n  undefined4 *puVar3;\n  short sVar4;\n  uint uVar5;\n  byte *unaff_ESI;\n  ushort in_FPUStatusWord;\n  undefined4 uStack_84;\n  undefined4 *puStack_80;\n  undefined4 *puStack_7c;\n  undefined4 *puStack_78;\n  undefined4 local_58 [2];\n  undefined4 local_50;\n  undefined4 local_48 [4];\n  undefined4 local_38;\n  undefined4 local_28 [4];\n  void *pvStack_18;\n  undefined1 *puStack_14;\n  undefined1 *local_10;\n  undefined *local_c;\n  \n  puStack_14 = &LAB_00401656;\n  pvStack_18 = ExceptionList;\n  local_10 = &stack0xffffff94;\n  local_c = &DAT_00401488;\n  local_28[0] = 0;\n  local_38 = 0;\n  local_48[0] = 0;\n  local_58[0] = 0x11;\n  if (!CARRY1(*param_2,*param_3)) {\n    local_50 = CONCAT31(local_50._1_3_,*param_2 + *param_3);\n    ExceptionList = &pvStack_18;\n    local_10 = &stack0xffffff94;\n    __vbaVarMove();\n    local_50 = 0x29;\n    local_58[0] = 0x8002;\n    puStack_78 = (undefined4 *)0x4890ba;\n    sVar4 = __vbaVarTstGt();\n    if (sVar4 != 0) {\n      puStack_78 = local_28;\n      puStack_7c = local_58;\n      puStack_80 = local_48;\n      local_50 = 0x2a;\n      local_58[0] = 2;\n      uStack_84 = 0x4890df;\n      __vbaVarSub();\n      uStack_84 = 0x4890e6;\n      __vbaVarMove();\n      puStack_78 = (undefined4 *)0x4890f0;\n      FUN_00489160(&DAT_0049107a);\n    }\n    puStack_78 = (undefined4 *)0x4890fc;\n    __vbaVarCopy();\n    puStack_78 = (undefined4 *)&LAB_00489126;\n    puStack_7c = (undefined4 *)0x489125;\n    __vbaFreeVar();\n    return;\n  }\n  ExceptionList = &pvStack_18;\n  __vbaErrorOverflow();\n  puStack_7c = (undefined4 *)&LAB_00401656;\n  puStack_80 = ExceptionList;\n  puStack_78 = (undefined4 *)&stack0xffffff64;\n  uStack_84 = 0;\n  bVar1 = *unaff_ESI;\n  ExceptionList = &puStack_80;\n  puVar3 = (undefined4 *)&stack0xffffff64;\n  if (5 < bVar1 - 1) {\n    ExceptionList = &puStack_80;\n    __vbaGenerateBoundsError();\n    puVar3 = puStack_78;\n  }\n  puStack_78 = puVar3;\n  bVar2 = *unaff_ESI;\n  if (5 < bVar2 - 1) {\n    __vbaGenerateBoundsError();\n  }\n  *(float *)(DAT_0049106c + 8 + (bVar2 - 1) * 0x2c) =\n       *(float *)(DAT_0049106c + 8 + (bVar1 - 1) * 0x2c) + 5000.0;\n  if ((in_FPUStatusWord & 0xd) == 0) {\n    FUN_00489260(unaff_ESI);\n    uVar5 = (uint)DAT_0049107a;\n    if (5 < uVar5 - 1) {\n      __vbaGenerateBoundsError();\n    }\n    __vbaStrCat(L\" pasa por la salida y cobra $5000\",\n                *(undefined4 *)(DAT_0049106c + 4 + (uVar5 - 1) * 0x2c));\n    __vbaStrMove();\n    FUN_00487700(&uStack_84);\n    __vbaFreeStr();\n    return;\n  }\n  __vbaFPException();\n  return;\n}\n\n",
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+      "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+      "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+      "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+      "Pseudocode is Ghidra decompiler output, not original source and not text-equivalent to Hopper output.",
+      "External functions and functions without an analyzable body return null; other decompiler failures remain explicit."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

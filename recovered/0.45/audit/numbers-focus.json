@@ -1,0 +1,1989 @@
+{
+  "sourceSha256": "db15b971d8d6dc9411ebf48fc3943bdc2f575929c9a67ce143b3a949ec2c0daf",
+  "records": [
+    {
+      "name": "initial_player_cash",
+      "address": "0x479a88",
+      "file_offset": 498312,
+      "observation": "float32 35000 written to player record +0x8",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x479520",
+          "name": "FUN_00479520",
+          "info_evidence_id": "ev_6c37ee61c570c7dca7921725612160f3c103483eec46ba31a145a33335d0f22f"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x00479a6f",
+          "file_offset": 498287,
+          "bytes": "4f",
+          "assembly": "dec    edi"
+        },
+        {
+          "va": "0x00479a70",
+          "file_offset": 498288,
+          "bytes": "83ff06",
+          "assembly": "cmp    edi,0x6"
+        },
+        {
+          "va": "0x00479a73",
+          "file_offset": 498291,
+          "bytes": "7206",
+          "assembly": "jb     0x479a7b"
+        },
+        {
+          "va": "0x00479a75",
+          "file_offset": 498293,
+          "bytes": "ff1598104000",
+          "assembly": "call   DWORD PTR ds:0x401098"
+        },
+        {
+          "va": "0x00479a7b",
+          "file_offset": 498299,
+          "bytes": "8b0d6c104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x49106c"
+        },
+        {
+          "va": "0x00479a81",
+          "file_offset": 498305,
+          "bytes": "8d14bf",
+          "assembly": "lea    edx,[edi+edi*4]"
+        },
+        {
+          "va": "0x00479a84",
+          "file_offset": 498308,
+          "bytes": "56",
+          "assembly": "push   esi"
+        },
+        {
+          "va": "0x00479a85",
+          "file_offset": 498309,
+          "bytes": "8d0457",
+          "assembly": "lea    eax,[edi+edx*2]"
+        },
+        {
+          "va": "0x00479a88",
+          "file_offset": 498312,
+          "bytes": "c744810800b80847",
+          "assembly": "mov    DWORD PTR [ecx+eax*4+0x8],0x4708b800"
+        },
+        {
+          "va": "0x00479a90",
+          "file_offset": 498320,
+          "bytes": "8b16",
+          "assembly": "mov    edx,DWORD PTR [esi]"
+        },
+        {
+          "va": "0x00479a92",
+          "file_offset": 498322,
+          "bytes": "ff9218030000",
+          "assembly": "call   DWORD PTR [edx+0x318]"
+        },
+        {
+          "va": "0x00479a98",
+          "file_offset": 498328,
+          "bytes": "50",
+          "assembly": "push   eax"
+        },
+        {
+          "va": "0x00479a99",
+          "file_offset": 498329,
+          "bytes": "8d45e0",
+          "assembly": "lea    eax,[ebp-0x20]"
+        },
+        {
+          "va": "0x00479a9c",
+          "file_offset": 498332,
+          "bytes": "50",
+          "assembly": "push   eax"
+        },
+        {
+          "va": "0x00479a9d",
+          "file_offset": 498333,
+          "bytes": "ffd3",
+          "assembly": "call   ebx"
+        },
+        {
+          "va": "0x00479a9f",
+          "file_offset": 498335,
+          "bytes": "8bf8",
+          "assembly": "mov    edi,eax"
+        },
+        {
+          "va": "0x00479aa1",
+          "file_offset": 498337,
+          "bytes": "8d55dc",
+          "assembly": "lea    edx,[ebp-0x24]"
+        },
+        {
+          "va": "0x00479aa4",
+          "file_offset": 498340,
+          "bytes": "660fb645e8",
+          "assembly": "movzx  ax,BYTE PTR [ebp-0x18]"
+        }
+      ]
+    },
+    {
+      "name": "mortgage_redemption",
+      "address": "0x478f81",
+      "file_offset": 495489,
+      "observation": "property +0x68 / 10.0 then added to principal and compared to player cash",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x478ec0",
+          "name": "FUN_00478ec0",
+          "info_evidence_id": "ev_439507b3584a700fa62adefb0299a3a8edc17312fcd05969bb1e90db6da1d45d"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x00478f60",
+          "file_offset": 495456,
+          "bytes": "8d3456",
+          "assembly": "lea    esi,[esi+edx*2]"
+        },
+        {
+          "va": "0x00478f63",
+          "file_offset": 495459,
+          "bytes": "8d14dd00000000",
+          "assembly": "lea    edx,[ebx*8+0x0]"
+        },
+        {
+          "va": "0x00478f6a",
+          "file_offset": 495466,
+          "bytes": "8d0c87",
+          "assembly": "lea    ecx,[edi+eax*4]"
+        },
+        {
+          "va": "0x00478f6d",
+          "file_offset": 495469,
+          "bytes": "a134104900",
+          "assembly": "mov    eax,ds:0x491034"
+        },
+        {
+          "va": "0x00478f72",
+          "file_offset": 495474,
+          "bytes": "2bd3",
+          "assembly": "sub    edx,ebx"
+        },
+        {
+          "va": "0x00478f74",
+          "file_offset": 495476,
+          "bytes": "d9448868",
+          "assembly": "fld    DWORD PTR [eax+ecx*4+0x68]"
+        },
+        {
+          "va": "0x00478f78",
+          "file_offset": 495480,
+          "bytes": "833d0010490000",
+          "assembly": "cmp    DWORD PTR ds:0x491000,0x0"
+        },
+        {
+          "va": "0x00478f7f",
+          "file_offset": 495487,
+          "bytes": "7508",
+          "assembly": "jne    0x478f89"
+        },
+        {
+          "va": "0x00478f81",
+          "file_offset": 495489,
+          "bytes": "d83558124000",
+          "assembly": "fdiv   DWORD PTR ds:0x401258"
+        },
+        {
+          "va": "0x00478f87",
+          "file_offset": 495495,
+          "bytes": "eb0b",
+          "assembly": "jmp    0x478f94"
+        },
+        {
+          "va": "0x00478f89",
+          "file_offset": 495497,
+          "bytes": "ff3558124000",
+          "assembly": "push   DWORD PTR ds:0x401258"
+        },
+        {
+          "va": "0x00478f8f",
+          "file_offset": 495503,
+          "bytes": "e8d486f8ff",
+          "assembly": "call   0x401668"
+        },
+        {
+          "va": "0x00478f94",
+          "file_offset": 495508,
+          "bytes": "8d0c93",
+          "assembly": "lea    ecx,[ebx+edx*4]"
+        },
+        {
+          "va": "0x00478f97",
+          "file_offset": 495511,
+          "bytes": "d8448868",
+          "assembly": "fadd   DWORD PTR [eax+ecx*4+0x68]"
+        },
+        {
+          "va": "0x00478f9b",
+          "file_offset": 495515,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x00478f9d",
+          "file_offset": 495517,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x00478f9f",
+          "file_offset": 495519,
+          "bytes": "0f8501030000",
+          "assembly": "jne    0x4792a6"
+        },
+        {
+          "va": "0x00478fa5",
+          "file_offset": 495525,
+          "bytes": "ff157c104000",
+          "assembly": "call   DWORD PTR ds:0x40107c"
+        }
+      ]
+    },
+    {
+      "name": "mortgage_redemption_alternate",
+      "address": "0x47902f",
+      "file_offset": 495663,
+      "observation": "division by static 10.0 in the same procedure",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x478ec0",
+          "name": "FUN_00478ec0",
+          "info_evidence_id": "ev_439507b3584a700fa62adefb0299a3a8edc17312fcd05969bb1e90db6da1d45d"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x0047900f",
+          "file_offset": 495631,
+          "bytes": "2bd7",
+          "assembly": "sub    edx,edi"
+        },
+        {
+          "va": "0x00479011",
+          "file_offset": 495633,
+          "bytes": "6808114700",
+          "assembly": "push   0x471108"
+        },
+        {
+          "va": "0x00479016",
+          "file_offset": 495638,
+          "bytes": "8d0c97",
+          "assembly": "lea    ecx,[edi+edx*4]"
+        },
+        {
+          "va": "0x00479019",
+          "file_offset": 495641,
+          "bytes": "8d14f500000000",
+          "assembly": "lea    edx,[esi*8+0x0]"
+        },
+        {
+          "va": "0x00479020",
+          "file_offset": 495648,
+          "bytes": "2bd6",
+          "assembly": "sub    edx,esi"
+        },
+        {
+          "va": "0x00479022",
+          "file_offset": 495650,
+          "bytes": "d9448868",
+          "assembly": "fld    DWORD PTR [eax+ecx*4+0x68]"
+        },
+        {
+          "va": "0x00479026",
+          "file_offset": 495654,
+          "bytes": "833d0010490000",
+          "assembly": "cmp    DWORD PTR ds:0x491000,0x0"
+        },
+        {
+          "va": "0x0047902d",
+          "file_offset": 495661,
+          "bytes": "7508",
+          "assembly": "jne    0x479037"
+        },
+        {
+          "va": "0x0047902f",
+          "file_offset": 495663,
+          "bytes": "d83558124000",
+          "assembly": "fdiv   DWORD PTR ds:0x401258"
+        },
+        {
+          "va": "0x00479035",
+          "file_offset": 495669,
+          "bytes": "eb0b",
+          "assembly": "jmp    0x479042"
+        },
+        {
+          "va": "0x00479037",
+          "file_offset": 495671,
+          "bytes": "ff3558124000",
+          "assembly": "push   DWORD PTR ds:0x401258"
+        },
+        {
+          "va": "0x0047903d",
+          "file_offset": 495677,
+          "bytes": "e82686f8ff",
+          "assembly": "call   0x401668"
+        },
+        {
+          "va": "0x00479042",
+          "file_offset": 495682,
+          "bytes": "8d0c96",
+          "assembly": "lea    ecx,[esi+edx*4]"
+        },
+        {
+          "va": "0x00479045",
+          "file_offset": 495685,
+          "bytes": "51",
+          "assembly": "push   ecx"
+        },
+        {
+          "va": "0x00479046",
+          "file_offset": 495686,
+          "bytes": "d8448868",
+          "assembly": "fadd   DWORD PTR [eax+ecx*4+0x68]"
+        },
+        {
+          "va": "0x0047904a",
+          "file_offset": 495690,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x0047904c",
+          "file_offset": 495692,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x0047904e",
+          "file_offset": 495694,
+          "bytes": "0f8552020000",
+          "assembly": "jne    0x4792a6"
+        }
+      ]
+    },
+    {
+      "name": "mortgage_interest",
+      "address": "0x479158",
+      "file_offset": 495960,
+      "observation": "division by static 10.0 in the same procedure",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x478ec0",
+          "name": "FUN_00478ec0",
+          "info_evidence_id": "ev_439507b3584a700fa62adefb0299a3a8edc17312fcd05969bb1e90db6da1d45d"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x0047913a",
+          "file_offset": 495930,
+          "bytes": "8d0cbf",
+          "assembly": "lea    ecx,[edi+edi*4]"
+        },
+        {
+          "va": "0x0047913d",
+          "file_offset": 495933,
+          "bytes": "2bc3",
+          "assembly": "sub    eax,ebx"
+        },
+        {
+          "va": "0x0047913f",
+          "file_offset": 495935,
+          "bytes": "8d144f",
+          "assembly": "lea    edx,[edi+ecx*2]"
+        },
+        {
+          "va": "0x00479142",
+          "file_offset": 495938,
+          "bytes": "8b0d34104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x491034"
+        },
+        {
+          "va": "0x00479148",
+          "file_offset": 495944,
+          "bytes": "8d0483",
+          "assembly": "lea    eax,[ebx+eax*4]"
+        },
+        {
+          "va": "0x0047914b",
+          "file_offset": 495947,
+          "bytes": "d9448168",
+          "assembly": "fld    DWORD PTR [ecx+eax*4+0x68]"
+        },
+        {
+          "va": "0x0047914f",
+          "file_offset": 495951,
+          "bytes": "833d0010490000",
+          "assembly": "cmp    DWORD PTR ds:0x491000,0x0"
+        },
+        {
+          "va": "0x00479156",
+          "file_offset": 495958,
+          "bytes": "7508",
+          "assembly": "jne    0x479160"
+        },
+        {
+          "va": "0x00479158",
+          "file_offset": 495960,
+          "bytes": "d83558124000",
+          "assembly": "fdiv   DWORD PTR ds:0x401258"
+        },
+        {
+          "va": "0x0047915e",
+          "file_offset": 495966,
+          "bytes": "eb0b",
+          "assembly": "jmp    0x47916b"
+        },
+        {
+          "va": "0x00479160",
+          "file_offset": 495968,
+          "bytes": "ff3558124000",
+          "assembly": "push   DWORD PTR ds:0x401258"
+        },
+        {
+          "va": "0x00479166",
+          "file_offset": 495974,
+          "bytes": "e8fd84f8ff",
+          "assembly": "call   0x401668"
+        },
+        {
+          "va": "0x0047916b",
+          "file_offset": 495979,
+          "bytes": "8b8558ffffff",
+          "assembly": "mov    eax,DWORD PTR [ebp-0xa8]"
+        },
+        {
+          "va": "0x00479171",
+          "file_offset": 495985,
+          "bytes": "8d3cc500000000",
+          "assembly": "lea    edi,[eax*8+0x0]"
+        },
+        {
+          "va": "0x00479178",
+          "file_offset": 495992,
+          "bytes": "2bf8",
+          "assembly": "sub    edi,eax"
+        },
+        {
+          "va": "0x0047917a",
+          "file_offset": 495994,
+          "bytes": "8d04b8",
+          "assembly": "lea    eax,[eax+edi*4]"
+        },
+        {
+          "va": "0x0047917d",
+          "file_offset": 495997,
+          "bytes": "d8448168",
+          "assembly": "fadd   DWORD PTR [ecx+eax*4+0x68]"
+        },
+        {
+          "va": "0x00479181",
+          "file_offset": 496001,
+          "bytes": "8b0d6c104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x49106c"
+        }
+      ]
+    },
+    {
+      "name": "jail_affordability_check",
+      "address": "0x47b801",
+      "file_offset": 505857,
+      "observation": "float32 1000 passed to helper 0x4878c0; this helper tests affordability, not an observed debit",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x47b7b0",
+          "name": "FUN_0047b7b0",
+          "info_evidence_id": "ev_41579fd2535f3bec0f268b75e20618922db2f0695d96042d460b7983850b2497"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x0047b7ed",
+          "file_offset": 505837,
+          "bytes": "52",
+          "assembly": "push   edx"
+        },
+        {
+          "va": "0x0047b7ee",
+          "file_offset": 505838,
+          "bytes": "895db8",
+          "assembly": "mov    DWORD PTR [ebp-0x48],ebx"
+        },
+        {
+          "va": "0x0047b7f1",
+          "file_offset": 505841,
+          "bytes": "57",
+          "assembly": "push   edi"
+        },
+        {
+          "va": "0x0047b7f2",
+          "file_offset": 505842,
+          "bytes": "895de4",
+          "assembly": "mov    DWORD PTR [ebp-0x1c],ebx"
+        },
+        {
+          "va": "0x0047b7f5",
+          "file_offset": 505845,
+          "bytes": "895de0",
+          "assembly": "mov    DWORD PTR [ebp-0x20],ebx"
+        },
+        {
+          "va": "0x0047b7f8",
+          "file_offset": 505848,
+          "bytes": "895ddc",
+          "assembly": "mov    DWORD PTR [ebp-0x24],ebx"
+        },
+        {
+          "va": "0x0047b7fb",
+          "file_offset": 505851,
+          "bytes": "895dcc",
+          "assembly": "mov    DWORD PTR [ebp-0x34],ebx"
+        },
+        {
+          "va": "0x0047b7fe",
+          "file_offset": 505854,
+          "bytes": "895dbc",
+          "assembly": "mov    DWORD PTR [ebp-0x44],ebx"
+        },
+        {
+          "va": "0x0047b801",
+          "file_offset": 505857,
+          "bytes": "c745b800007a44",
+          "assembly": "mov    DWORD PTR [ebp-0x48],0x447a0000"
+        },
+        {
+          "va": "0x0047b808",
+          "file_offset": 505864,
+          "bytes": "e8b3c00000",
+          "assembly": "call   0x4878c0"
+        },
+        {
+          "va": "0x0047b80d",
+          "file_offset": 505869,
+          "bytes": "6685c0",
+          "assembly": "test   ax,ax"
+        },
+        {
+          "va": "0x0047b810",
+          "file_offset": 505872,
+          "bytes": "740f",
+          "assembly": "je     0x47b821"
+        },
+        {
+          "va": "0x0047b812",
+          "file_offset": 505874,
+          "bytes": "687a104900",
+          "assembly": "push   0x49107a"
+        },
+        {
+          "va": "0x0047b817",
+          "file_offset": 505879,
+          "bytes": "e814c10000",
+          "assembly": "call   0x487930"
+        },
+        {
+          "va": "0x0047b81c",
+          "file_offset": 505884,
+          "bytes": "e930040000",
+          "assembly": "jmp    0x47bc51"
+        },
+        {
+          "va": "0x0047b821",
+          "file_offset": 505889,
+          "bytes": "33c0",
+          "assembly": "xor    eax,eax"
+        },
+        {
+          "va": "0x0047b823",
+          "file_offset": 505891,
+          "bytes": "8a07",
+          "assembly": "mov    al,BYTE PTR [edi]"
+        },
+        {
+          "va": "0x0047b825",
+          "file_offset": 505893,
+          "bytes": "8bf0",
+          "assembly": "mov    esi,eax"
+        }
+      ]
+    },
+    {
+      "name": "cattle_prize",
+      "address": "0x47ad33",
+      "file_offset": 503091,
+      "observation": "fadd static float32 2500.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x47ab40",
+          "name": "FUN_0047ab40",
+          "info_evidence_id": "ev_f94c9c66de2659ea31903b82b1e9e1f62c7fe32ab66b6a2199437caee30f5e6a"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x0047ad17",
+          "file_offset": 503063,
+          "bytes": "7206",
+          "assembly": "jb     0x47ad1f"
+        },
+        {
+          "va": "0x0047ad19",
+          "file_offset": 503065,
+          "bytes": "ff1598104000",
+          "assembly": "call   DWORD PTR ds:0x401098"
+        },
+        {
+          "va": "0x0047ad1f",
+          "file_offset": 503071,
+          "bytes": "8b0d6c104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x49106c"
+        },
+        {
+          "va": "0x0047ad25",
+          "file_offset": 503077,
+          "bytes": "8d14bf",
+          "assembly": "lea    edx,[edi+edi*4]"
+        },
+        {
+          "va": "0x0047ad28",
+          "file_offset": 503080,
+          "bytes": "53",
+          "assembly": "push   ebx"
+        },
+        {
+          "va": "0x0047ad29",
+          "file_offset": 503081,
+          "bytes": "8d0457",
+          "assembly": "lea    eax,[edi+edx*2]"
+        },
+        {
+          "va": "0x0047ad2c",
+          "file_offset": 503084,
+          "bytes": "8d14b6",
+          "assembly": "lea    edx,[esi+esi*4]"
+        },
+        {
+          "va": "0x0047ad2f",
+          "file_offset": 503087,
+          "bytes": "d9448108",
+          "assembly": "fld    DWORD PTR [ecx+eax*4+0x8]"
+        },
+        {
+          "va": "0x0047ad33",
+          "file_offset": 503091,
+          "bytes": "d805a0124000",
+          "assembly": "fadd   DWORD PTR ds:0x4012a0"
+        },
+        {
+          "va": "0x0047ad39",
+          "file_offset": 503097,
+          "bytes": "8d1456",
+          "assembly": "lea    edx,[esi+edx*2]"
+        },
+        {
+          "va": "0x0047ad3c",
+          "file_offset": 503100,
+          "bytes": "d95c9108",
+          "assembly": "fstp   DWORD PTR [ecx+edx*4+0x8]"
+        },
+        {
+          "va": "0x0047ad40",
+          "file_offset": 503104,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x0047ad42",
+          "file_offset": 503106,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x0047ad44",
+          "file_offset": 503108,
+          "bytes": "0f85fc080000",
+          "assembly": "jne    0x47b646"
+        },
+        {
+          "va": "0x0047ad4a",
+          "file_offset": 503114,
+          "bytes": "e811e50000",
+          "assembly": "call   0x489260"
+        },
+        {
+          "va": "0x0047ad4f",
+          "file_offset": 503119,
+          "bytes": "33c0",
+          "assembly": "xor    eax,eax"
+        },
+        {
+          "va": "0x0047ad51",
+          "file_offset": 503121,
+          "bytes": "8a03",
+          "assembly": "mov    al,BYTE PTR [ebx]"
+        },
+        {
+          "va": "0x0047ad53",
+          "file_offset": 503123,
+          "bytes": "8bf0",
+          "assembly": "mov    esi,eax"
+        }
+      ]
+    },
+    {
+      "name": "salary",
+      "address": "0x4891cb",
+      "file_offset": 561611,
+      "observation": "fadd static float32 5000.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x489160",
+          "name": "FUN_00489160",
+          "info_evidence_id": "ev_1a5498410e77963167f6f9713d6c829c6809902fe5b69f17bd5c30a3fa51514c"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x004891af",
+          "file_offset": 561583,
+          "bytes": "7206",
+          "assembly": "jb     0x4891b7"
+        },
+        {
+          "va": "0x004891b1",
+          "file_offset": 561585,
+          "bytes": "ff1598104000",
+          "assembly": "call   DWORD PTR ds:0x401098"
+        },
+        {
+          "va": "0x004891b7",
+          "file_offset": 561591,
+          "bytes": "8b0d6c104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x49106c"
+        },
+        {
+          "va": "0x004891bd",
+          "file_offset": 561597,
+          "bytes": "8d14bf",
+          "assembly": "lea    edx,[edi+edi*4]"
+        },
+        {
+          "va": "0x004891c0",
+          "file_offset": 561600,
+          "bytes": "53",
+          "assembly": "push   ebx"
+        },
+        {
+          "va": "0x004891c1",
+          "file_offset": 561601,
+          "bytes": "8d0457",
+          "assembly": "lea    eax,[edi+edx*2]"
+        },
+        {
+          "va": "0x004891c4",
+          "file_offset": 561604,
+          "bytes": "8d14b6",
+          "assembly": "lea    edx,[esi+esi*4]"
+        },
+        {
+          "va": "0x004891c7",
+          "file_offset": 561607,
+          "bytes": "d9448108",
+          "assembly": "fld    DWORD PTR [ecx+eax*4+0x8]"
+        },
+        {
+          "va": "0x004891cb",
+          "file_offset": 561611,
+          "bytes": "d80598144000",
+          "assembly": "fadd   DWORD PTR ds:0x401498"
+        },
+        {
+          "va": "0x004891d1",
+          "file_offset": 561617,
+          "bytes": "8d1456",
+          "assembly": "lea    edx,[esi+edx*2]"
+        },
+        {
+          "va": "0x004891d4",
+          "file_offset": 561620,
+          "bytes": "d95c9108",
+          "assembly": "fstp   DWORD PTR [ecx+edx*4+0x8]"
+        },
+        {
+          "va": "0x004891d8",
+          "file_offset": 561624,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x004891da",
+          "file_offset": 561626,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x004891dc",
+          "file_offset": 561628,
+          "bytes": "7578",
+          "assembly": "jne    0x489256"
+        },
+        {
+          "va": "0x004891de",
+          "file_offset": 561630,
+          "bytes": "e87d000000",
+          "assembly": "call   0x489260"
+        },
+        {
+          "va": "0x004891e3",
+          "file_offset": 561635,
+          "bytes": "33c0",
+          "assembly": "xor    eax,eax"
+        },
+        {
+          "va": "0x004891e5",
+          "file_offset": 561637,
+          "bytes": "a07a104900",
+          "assembly": "mov    al,ds:0x49107a"
+        },
+        {
+          "va": "0x004891ea",
+          "file_offset": 561642,
+          "bytes": "8bf0",
+          "assembly": "mov    esi,eax"
+        }
+      ]
+    },
+    {
+      "name": "repair_seed_rates",
+      "address": "0x489452",
+      "file_offset": 562258,
+      "observation": "integer 4000 and 800 for card case 0x10",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x489400",
+          "name": "FUN_00489400",
+          "info_evidence_id": "ev_69e4913011f30746d9dd0257337b3973743d34ca367deec5f7ebea01c698839d"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x0048943a",
+          "file_offset": 562234,
+          "bytes": "8945b0",
+          "assembly": "mov    DWORD PTR [ebp-0x50],eax"
+        },
+        {
+          "va": "0x0048943d",
+          "file_offset": 562237,
+          "bytes": "8945a0",
+          "assembly": "mov    DWORD PTR [ebp-0x60],eax"
+        },
+        {
+          "va": "0x00489440",
+          "file_offset": 562240,
+          "bytes": "894584",
+          "assembly": "mov    DWORD PTR [ebp-0x7c],eax"
+        },
+        {
+          "va": "0x00489443",
+          "file_offset": 562243,
+          "bytes": "898574ffffff",
+          "assembly": "mov    DWORD PTR [ebp-0x8c],eax"
+        },
+        {
+          "va": "0x00489449",
+          "file_offset": 562249,
+          "bytes": "8b4508",
+          "assembly": "mov    eax,DWORD PTR [ebp+0x8]"
+        },
+        {
+          "va": "0x0048944c",
+          "file_offset": 562252,
+          "bytes": "8a00",
+          "assembly": "mov    al,BYTE PTR [eax]"
+        },
+        {
+          "va": "0x0048944e",
+          "file_offset": 562254,
+          "bytes": "3c10",
+          "assembly": "cmp    al,0x10"
+        },
+        {
+          "va": "0x00489450",
+          "file_offset": 562256,
+          "bytes": "7510",
+          "assembly": "jne    0x489462"
+        },
+        {
+          "va": "0x00489452",
+          "file_offset": 562258,
+          "bytes": "c745dca00f0000",
+          "assembly": "mov    DWORD PTR [ebp-0x24],0xfa0"
+        },
+        {
+          "va": "0x00489459",
+          "file_offset": 562265,
+          "bytes": "c745d020030000",
+          "assembly": "mov    DWORD PTR [ebp-0x30],0x320"
+        },
+        {
+          "va": "0x00489460",
+          "file_offset": 562272,
+          "bytes": "eb12",
+          "assembly": "jmp    0x489474"
+        },
+        {
+          "va": "0x00489462",
+          "file_offset": 562274,
+          "bytes": "3c0a",
+          "assembly": "cmp    al,0xa"
+        },
+        {
+          "va": "0x00489464",
+          "file_offset": 562276,
+          "bytes": "750e",
+          "assembly": "jne    0x489474"
+        },
+        {
+          "va": "0x00489466",
+          "file_offset": 562278,
+          "bytes": "c745dcc4090000",
+          "assembly": "mov    DWORD PTR [ebp-0x24],0x9c4"
+        },
+        {
+          "va": "0x0048946d",
+          "file_offset": 562285,
+          "bytes": "c745d0f4010000",
+          "assembly": "mov    DWORD PTR [ebp-0x30],0x1f4"
+        },
+        {
+          "va": "0x00489474",
+          "file_offset": 562292,
+          "bytes": "33c9",
+          "assembly": "xor    ecx,ecx"
+        },
+        {
+          "va": "0x00489476",
+          "file_offset": 562294,
+          "bytes": "8b1d98104000",
+          "assembly": "mov    ebx,DWORD PTR ds:0x401098"
+        },
+        {
+          "va": "0x0048947c",
+          "file_offset": 562300,
+          "bytes": "8a0d7a104900",
+          "assembly": "mov    cl,BYTE PTR ds:0x49107a"
+        }
+      ]
+    },
+    {
+      "name": "repair_property_rates",
+      "address": "0x489466",
+      "file_offset": 562278,
+      "observation": "integer 2500 and 500 for card case 0x0a",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x489400",
+          "name": "FUN_00489400",
+          "info_evidence_id": "ev_69e4913011f30746d9dd0257337b3973743d34ca367deec5f7ebea01c698839d"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x0048944c",
+          "file_offset": 562252,
+          "bytes": "8a00",
+          "assembly": "mov    al,BYTE PTR [eax]"
+        },
+        {
+          "va": "0x0048944e",
+          "file_offset": 562254,
+          "bytes": "3c10",
+          "assembly": "cmp    al,0x10"
+        },
+        {
+          "va": "0x00489450",
+          "file_offset": 562256,
+          "bytes": "7510",
+          "assembly": "jne    0x489462"
+        },
+        {
+          "va": "0x00489452",
+          "file_offset": 562258,
+          "bytes": "c745dca00f0000",
+          "assembly": "mov    DWORD PTR [ebp-0x24],0xfa0"
+        },
+        {
+          "va": "0x00489459",
+          "file_offset": 562265,
+          "bytes": "c745d020030000",
+          "assembly": "mov    DWORD PTR [ebp-0x30],0x320"
+        },
+        {
+          "va": "0x00489460",
+          "file_offset": 562272,
+          "bytes": "eb12",
+          "assembly": "jmp    0x489474"
+        },
+        {
+          "va": "0x00489462",
+          "file_offset": 562274,
+          "bytes": "3c0a",
+          "assembly": "cmp    al,0xa"
+        },
+        {
+          "va": "0x00489464",
+          "file_offset": 562276,
+          "bytes": "750e",
+          "assembly": "jne    0x489474"
+        },
+        {
+          "va": "0x00489466",
+          "file_offset": 562278,
+          "bytes": "c745dcc4090000",
+          "assembly": "mov    DWORD PTR [ebp-0x24],0x9c4"
+        },
+        {
+          "va": "0x0048946d",
+          "file_offset": 562285,
+          "bytes": "c745d0f4010000",
+          "assembly": "mov    DWORD PTR [ebp-0x30],0x1f4"
+        },
+        {
+          "va": "0x00489474",
+          "file_offset": 562292,
+          "bytes": "33c9",
+          "assembly": "xor    ecx,ecx"
+        },
+        {
+          "va": "0x00489476",
+          "file_offset": 562294,
+          "bytes": "8b1d98104000",
+          "assembly": "mov    ebx,DWORD PTR ds:0x401098"
+        },
+        {
+          "va": "0x0048947c",
+          "file_offset": 562300,
+          "bytes": "8a0d7a104900",
+          "assembly": "mov    cl,BYTE PTR ds:0x49107a"
+        },
+        {
+          "va": "0x00489482",
+          "file_offset": 562306,
+          "bytes": "bf02000000",
+          "assembly": "mov    edi,0x2"
+        },
+        {
+          "va": "0x00489487",
+          "file_offset": 562311,
+          "bytes": "8bf1",
+          "assembly": "mov    esi,ecx"
+        },
+        {
+          "va": "0x00489489",
+          "file_offset": 562313,
+          "bytes": "c745c801000000",
+          "assembly": "mov    DWORD PTR [ebp-0x38],0x1"
+        },
+        {
+          "va": "0x00489490",
+          "file_offset": 562320,
+          "bytes": "4e",
+          "assembly": "dec    esi"
+        },
+        {
+          "va": "0x00489491",
+          "file_offset": 562321,
+          "bytes": "897dc0",
+          "assembly": "mov    DWORD PTR [ebp-0x40],edi"
+        }
+      ]
+    },
+    {
+      "name": "birthday_credit",
+      "address": "0x482aef",
+      "file_offset": 535279,
+      "observation": "fadd static float32 200.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x4820d0",
+          "name": "FUN_004820d0",
+          "info_evidence_id": "ev_9a47705b643390a9b33134587bb05501bfc089bad18808203bcb58f0d8ff7491"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x00482ad1",
+          "file_offset": 535249,
+          "bytes": "ffd3",
+          "assembly": "call   ebx"
+        },
+        {
+          "va": "0x00482ad3",
+          "file_offset": 535251,
+          "bytes": "8a8d40ffffff",
+          "assembly": "mov    cl,BYTE PTR [ebp-0xc0]"
+        },
+        {
+          "va": "0x00482ad9",
+          "file_offset": 535257,
+          "bytes": "8845e8",
+          "assembly": "mov    BYTE PTR [ebp-0x18],al"
+        },
+        {
+          "va": "0x00482adc",
+          "file_offset": 535260,
+          "bytes": "3ac1",
+          "assembly": "cmp    al,cl"
+        },
+        {
+          "va": "0x00482ade",
+          "file_offset": 535262,
+          "bytes": "0f8706030000",
+          "assembly": "ja     0x482dea"
+        },
+        {
+          "va": "0x00482ae4",
+          "file_offset": 535268,
+          "bytes": "3a057a104900",
+          "assembly": "cmp    al,BYTE PTR ds:0x49107a"
+        },
+        {
+          "va": "0x00482aea",
+          "file_offset": 535274,
+          "bytes": "7472",
+          "assembly": "je     0x482b5e"
+        },
+        {
+          "va": "0x00482aec",
+          "file_offset": 535276,
+          "bytes": "d945e0",
+          "assembly": "fld    DWORD PTR [ebp-0x20]"
+        },
+        {
+          "va": "0x00482aef",
+          "file_offset": 535279,
+          "bytes": "d805e4134000",
+          "assembly": "fadd   DWORD PTR ds:0x4013e4"
+        },
+        {
+          "va": "0x00482af5",
+          "file_offset": 535285,
+          "bytes": "8b7de8",
+          "assembly": "mov    edi,DWORD PTR [ebp-0x18]"
+        },
+        {
+          "va": "0x00482af8",
+          "file_offset": 535288,
+          "bytes": "8bf7",
+          "assembly": "mov    esi,edi"
+        },
+        {
+          "va": "0x00482afa",
+          "file_offset": 535290,
+          "bytes": "d95de0",
+          "assembly": "fstp   DWORD PTR [ebp-0x20]"
+        },
+        {
+          "va": "0x00482afd",
+          "file_offset": 535293,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x00482aff",
+          "file_offset": 535295,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x00482b01",
+          "file_offset": 535297,
+          "bytes": "0f85c7070000",
+          "assembly": "jne    0x4832ce"
+        },
+        {
+          "va": "0x00482b07",
+          "file_offset": 535303,
+          "bytes": "81e6ff000000",
+          "assembly": "and    esi,0xff"
+        },
+        {
+          "va": "0x00482b0d",
+          "file_offset": 535309,
+          "bytes": "4e",
+          "assembly": "dec    esi"
+        },
+        {
+          "va": "0x00482b0e",
+          "file_offset": 535310,
+          "bytes": "83fe06",
+          "assembly": "cmp    esi,0x6"
+        }
+      ]
+    },
+    {
+      "name": "birthday_debit",
+      "address": "0x482b3e",
+      "file_offset": 535358,
+      "observation": "fsub the same static float32 200.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x4820d0",
+          "name": "FUN_004820d0",
+          "info_evidence_id": "ev_9a47705b643390a9b33134587bb05501bfc089bad18808203bcb58f0d8ff7491"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x00482b22",
+          "file_offset": 535330,
+          "bytes": "4f",
+          "assembly": "dec    edi"
+        },
+        {
+          "va": "0x00482b23",
+          "file_offset": 535331,
+          "bytes": "83ff06",
+          "assembly": "cmp    edi,0x6"
+        },
+        {
+          "va": "0x00482b26",
+          "file_offset": 535334,
+          "bytes": "7206",
+          "assembly": "jb     0x482b2e"
+        },
+        {
+          "va": "0x00482b28",
+          "file_offset": 535336,
+          "bytes": "ff1598104000",
+          "assembly": "call   DWORD PTR ds:0x401098"
+        },
+        {
+          "va": "0x00482b2e",
+          "file_offset": 535342,
+          "bytes": "8b0d6c104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x49106c"
+        },
+        {
+          "va": "0x00482b34",
+          "file_offset": 535348,
+          "bytes": "8d04b6",
+          "assembly": "lea    eax,[esi+esi*4]"
+        },
+        {
+          "va": "0x00482b37",
+          "file_offset": 535351,
+          "bytes": "8d1446",
+          "assembly": "lea    edx,[esi+eax*2]"
+        },
+        {
+          "va": "0x00482b3a",
+          "file_offset": 535354,
+          "bytes": "d9449108",
+          "assembly": "fld    DWORD PTR [ecx+edx*4+0x8]"
+        },
+        {
+          "va": "0x00482b3e",
+          "file_offset": 535358,
+          "bytes": "d825e4134000",
+          "assembly": "fsub   DWORD PTR ds:0x4013e4"
+        },
+        {
+          "va": "0x00482b44",
+          "file_offset": 535364,
+          "bytes": "8d14bf",
+          "assembly": "lea    edx,[edi+edi*4]"
+        },
+        {
+          "va": "0x00482b47",
+          "file_offset": 535367,
+          "bytes": "8d1457",
+          "assembly": "lea    edx,[edi+edx*2]"
+        },
+        {
+          "va": "0x00482b4a",
+          "file_offset": 535370,
+          "bytes": "8b7d08",
+          "assembly": "mov    edi,DWORD PTR [ebp+0x8]"
+        },
+        {
+          "va": "0x00482b4d",
+          "file_offset": 535373,
+          "bytes": "d95c9108",
+          "assembly": "fstp   DWORD PTR [ecx+edx*4+0x8]"
+        },
+        {
+          "va": "0x00482b51",
+          "file_offset": 535377,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x00482b53",
+          "file_offset": 535379,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x00482b55",
+          "file_offset": 535381,
+          "bytes": "0f8573070000",
+          "assembly": "jne    0x4832ce"
+        },
+        {
+          "va": "0x00482b5b",
+          "file_offset": 535387,
+          "bytes": "8a45e8",
+          "assembly": "mov    al,BYTE PTR [ebp-0x18]"
+        },
+        {
+          "va": "0x00482b5e",
+          "file_offset": 535390,
+          "bytes": "b101",
+          "assembly": "mov    cl,0x1"
+        }
+      ]
+    },
+    {
+      "name": "card_fixed_credit",
+      "address": "0x482c2f",
+      "file_offset": 535599,
+      "observation": "fadd static float32 500.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x4820d0",
+          "name": "FUN_004820d0",
+          "info_evidence_id": "ev_9a47705b643390a9b33134587bb05501bfc089bad18808203bcb58f0d8ff7491"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x00482c0e",
+          "file_offset": 535566,
+          "bytes": "83fe06",
+          "assembly": "cmp    esi,0x6"
+        },
+        {
+          "va": "0x00482c11",
+          "file_offset": 535569,
+          "bytes": "7206",
+          "assembly": "jb     0x482c19"
+        },
+        {
+          "va": "0x00482c13",
+          "file_offset": 535571,
+          "bytes": "ff1598104000",
+          "assembly": "call   DWORD PTR ds:0x401098"
+        },
+        {
+          "va": "0x00482c19",
+          "file_offset": 535577,
+          "bytes": "8b8564ffffff",
+          "assembly": "mov    eax,DWORD PTR [ebp-0x9c]"
+        },
+        {
+          "va": "0x00482c1f",
+          "file_offset": 535583,
+          "bytes": "8d0c80",
+          "assembly": "lea    ecx,[eax+eax*4]"
+        },
+        {
+          "va": "0x00482c22",
+          "file_offset": 535586,
+          "bytes": "8d1448",
+          "assembly": "lea    edx,[eax+ecx*2]"
+        },
+        {
+          "va": "0x00482c25",
+          "file_offset": 535589,
+          "bytes": "8b0d6c104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x49106c"
+        },
+        {
+          "va": "0x00482c2b",
+          "file_offset": 535595,
+          "bytes": "d9449108",
+          "assembly": "fld    DWORD PTR [ecx+edx*4+0x8]"
+        },
+        {
+          "va": "0x00482c2f",
+          "file_offset": 535599,
+          "bytes": "d805e0134000",
+          "assembly": "fadd   DWORD PTR ds:0x4013e0"
+        },
+        {
+          "va": "0x00482c35",
+          "file_offset": 535605,
+          "bytes": "8d14b6",
+          "assembly": "lea    edx,[esi+esi*4]"
+        },
+        {
+          "va": "0x00482c38",
+          "file_offset": 535608,
+          "bytes": "8d1456",
+          "assembly": "lea    edx,[esi+edx*2]"
+        },
+        {
+          "va": "0x00482c3b",
+          "file_offset": 535611,
+          "bytes": "d95c9108",
+          "assembly": "fstp   DWORD PTR [ecx+edx*4+0x8]"
+        },
+        {
+          "va": "0x00482c3f",
+          "file_offset": 535615,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x00482c41",
+          "file_offset": 535617,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x00482c43",
+          "file_offset": 535619,
+          "bytes": "0f8585060000",
+          "assembly": "jne    0x4832ce"
+        },
+        {
+          "va": "0x00482c49",
+          "file_offset": 535625,
+          "bytes": "e99c010000",
+          "assembly": "jmp    0x482dea"
+        },
+        {
+          "va": "0x00482c4e",
+          "file_offset": 535630,
+          "bytes": "b91a000000",
+          "assembly": "mov    ecx,0x1a"
+        },
+        {
+          "va": "0x00482c53",
+          "file_offset": 535635,
+          "bytes": "ffd3",
+          "assembly": "call   ebx"
+        }
+      ]
+    },
+    {
+      "name": "sale_half_value_1",
+      "address": "0x4803e9",
+      "file_offset": 525289,
+      "observation": "division by float32 2.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x480340",
+          "name": "FUN_00480340",
+          "info_evidence_id": "ev_7c04ef331c35de880ee2a057f56598c93c293209db20c69f7ba77e02ca92bd50"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x004803c6",
+          "file_offset": 525254,
+          "bytes": "a134104900",
+          "assembly": "mov    eax,ds:0x491034"
+        },
+        {
+          "va": "0x004803cb",
+          "file_offset": 525259,
+          "bytes": "8d0cf500000000",
+          "assembly": "lea    ecx,[esi*8+0x0]"
+        },
+        {
+          "va": "0x004803d2",
+          "file_offset": 525266,
+          "bytes": "2bce",
+          "assembly": "sub    ecx,esi"
+        },
+        {
+          "va": "0x004803d4",
+          "file_offset": 525268,
+          "bytes": "682c1c4700",
+          "assembly": "push   0x471c2c"
+        },
+        {
+          "va": "0x004803d9",
+          "file_offset": 525273,
+          "bytes": "8d148e",
+          "assembly": "lea    edx,[esi+ecx*4]"
+        },
+        {
+          "va": "0x004803dc",
+          "file_offset": 525276,
+          "bytes": "d9449010",
+          "assembly": "fld    DWORD PTR [eax+edx*4+0x10]"
+        },
+        {
+          "va": "0x004803e0",
+          "file_offset": 525280,
+          "bytes": "833d0010490000",
+          "assembly": "cmp    DWORD PTR ds:0x491000,0x0"
+        },
+        {
+          "va": "0x004803e7",
+          "file_offset": 525287,
+          "bytes": "7508",
+          "assembly": "jne    0x4803f1"
+        },
+        {
+          "va": "0x004803e9",
+          "file_offset": 525289,
+          "bytes": "d83570134000",
+          "assembly": "fdiv   DWORD PTR ds:0x401370"
+        },
+        {
+          "va": "0x004803ef",
+          "file_offset": 525295,
+          "bytes": "eb0b",
+          "assembly": "jmp    0x4803fc"
+        },
+        {
+          "va": "0x004803f1",
+          "file_offset": 525297,
+          "bytes": "ff3570134000",
+          "assembly": "push   DWORD PTR ds:0x401370"
+        },
+        {
+          "va": "0x004803f7",
+          "file_offset": 525303,
+          "bytes": "e86c12f8ff",
+          "assembly": "call   0x401668"
+        },
+        {
+          "va": "0x004803fc",
+          "file_offset": 525308,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x004803fe",
+          "file_offset": 525310,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x00480400",
+          "file_offset": 525312,
+          "bytes": "0f85d5010000",
+          "assembly": "jne    0x4805db"
+        },
+        {
+          "va": "0x00480406",
+          "file_offset": 525318,
+          "bytes": "ff158c114000",
+          "assembly": "call   DWORD PTR ds:0x40118c"
+        },
+        {
+          "va": "0x0048040c",
+          "file_offset": 525324,
+          "bytes": "51",
+          "assembly": "push   ecx"
+        },
+        {
+          "va": "0x0048040d",
+          "file_offset": 525325,
+          "bytes": "d91c24",
+          "assembly": "fstp   DWORD PTR [esp]"
+        }
+      ]
+    },
+    {
+      "name": "sale_half_value_2",
+      "address": "0x4804fb",
+      "file_offset": 525563,
+      "observation": "division by float32 2.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x480340",
+          "name": "FUN_00480340",
+          "info_evidence_id": "ev_7c04ef331c35de880ee2a057f56598c93c293209db20c69f7ba77e02ca92bd50"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x004804d6",
+          "file_offset": 525526,
+          "bytes": "ff1598104000",
+          "assembly": "call   DWORD PTR ds:0x401098"
+        },
+        {
+          "va": "0x004804dc",
+          "file_offset": 525532,
+          "bytes": "8b0d34104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x491034"
+        },
+        {
+          "va": "0x004804e2",
+          "file_offset": 525538,
+          "bytes": "8d14dd00000000",
+          "assembly": "lea    edx,[ebx*8+0x0]"
+        },
+        {
+          "va": "0x004804e9",
+          "file_offset": 525545,
+          "bytes": "2bd3",
+          "assembly": "sub    edx,ebx"
+        },
+        {
+          "va": "0x004804eb",
+          "file_offset": 525547,
+          "bytes": "8d0493",
+          "assembly": "lea    eax,[ebx+edx*4]"
+        },
+        {
+          "va": "0x004804ee",
+          "file_offset": 525550,
+          "bytes": "d9448110",
+          "assembly": "fld    DWORD PTR [ecx+eax*4+0x10]"
+        },
+        {
+          "va": "0x004804f2",
+          "file_offset": 525554,
+          "bytes": "833d0010490000",
+          "assembly": "cmp    DWORD PTR ds:0x491000,0x0"
+        },
+        {
+          "va": "0x004804f9",
+          "file_offset": 525561,
+          "bytes": "7508",
+          "assembly": "jne    0x480503"
+        },
+        {
+          "va": "0x004804fb",
+          "file_offset": 525563,
+          "bytes": "d83570134000",
+          "assembly": "fdiv   DWORD PTR ds:0x401370"
+        },
+        {
+          "va": "0x00480501",
+          "file_offset": 525569,
+          "bytes": "eb0b",
+          "assembly": "jmp    0x48050e"
+        },
+        {
+          "va": "0x00480503",
+          "file_offset": 525571,
+          "bytes": "ff3570134000",
+          "assembly": "push   DWORD PTR ds:0x401370"
+        },
+        {
+          "va": "0x00480509",
+          "file_offset": 525577,
+          "bytes": "e85a11f8ff",
+          "assembly": "call   0x401668"
+        },
+        {
+          "va": "0x0048050e",
+          "file_offset": 525582,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x00480510",
+          "file_offset": 525584,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x00480512",
+          "file_offset": 525586,
+          "bytes": "0f85c3000000",
+          "assembly": "jne    0x4805db"
+        },
+        {
+          "va": "0x00480518",
+          "file_offset": 525592,
+          "bytes": "ff158c114000",
+          "assembly": "call   DWORD PTR ds:0x40118c"
+        },
+        {
+          "va": "0x0048051e",
+          "file_offset": 525598,
+          "bytes": "8b0d6c104900",
+          "assembly": "mov    ecx,DWORD PTR ds:0x49106c"
+        },
+        {
+          "va": "0x00480524",
+          "file_offset": 525604,
+          "bytes": "8d14bf",
+          "assembly": "lea    edx,[edi+edi*4]"
+        }
+      ]
+    },
+    {
+      "name": "dice_range",
+      "address": "0x48863f",
+      "file_offset": 558655,
+      "observation": "multiply float32 6.0 then add 1.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x4885f0",
+          "name": "FUN_004885f0",
+          "info_evidence_id": "ev_299c9ede1ef9bd3da547ed04a5f04b6b25c6417fd294147e68f3d95d328cf48e"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x00488622",
+          "file_offset": 558626,
+          "bytes": "8945dc",
+          "assembly": "mov    DWORD PTR [ebp-0x24],eax"
+        },
+        {
+          "va": "0x00488625",
+          "file_offset": 558629,
+          "bytes": "8945ac",
+          "assembly": "mov    DWORD PTR [ebp-0x54],eax"
+        },
+        {
+          "va": "0x00488628",
+          "file_offset": 558632,
+          "bytes": "8d45cc",
+          "assembly": "lea    eax,[ebp-0x34]"
+        },
+        {
+          "va": "0x0048862b",
+          "file_offset": 558635,
+          "bytes": "c745cc0a000000",
+          "assembly": "mov    DWORD PTR [ebp-0x34],0xa"
+        },
+        {
+          "va": "0x00488632",
+          "file_offset": 558642,
+          "bytes": "50",
+          "assembly": "push   eax"
+        },
+        {
+          "va": "0x00488633",
+          "file_offset": 558643,
+          "bytes": "ff155c104000",
+          "assembly": "call   DWORD PTR ds:0x40105c"
+        },
+        {
+          "va": "0x00488639",
+          "file_offset": 558649,
+          "bytes": "d95da8",
+          "assembly": "fstp   DWORD PTR [ebp-0x58]"
+        },
+        {
+          "va": "0x0048863c",
+          "file_offset": 558652,
+          "bytes": "d945a8",
+          "assembly": "fld    DWORD PTR [ebp-0x58]"
+        },
+        {
+          "va": "0x0048863f",
+          "file_offset": 558655,
+          "bytes": "d80d50144000",
+          "assembly": "fmul   DWORD PTR ds:0x401450"
+        },
+        {
+          "va": "0x00488645",
+          "file_offset": 558661,
+          "bytes": "d805e8134000",
+          "assembly": "fadd   DWORD PTR ds:0x4013e8"
+        },
+        {
+          "va": "0x0048864b",
+          "file_offset": 558667,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x0048864d",
+          "file_offset": 558669,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x0048864f",
+          "file_offset": 558671,
+          "bytes": "7576",
+          "assembly": "jne    0x4886c7"
+        },
+        {
+          "va": "0x00488651",
+          "file_offset": 558673,
+          "bytes": "ff158c114000",
+          "assembly": "call   DWORD PTR ds:0x40118c"
+        },
+        {
+          "va": "0x00488657",
+          "file_offset": 558679,
+          "bytes": "d95db4",
+          "assembly": "fstp   DWORD PTR [ebp-0x4c]"
+        },
+        {
+          "va": "0x0048865a",
+          "file_offset": 558682,
+          "bytes": "8d55ac",
+          "assembly": "lea    edx,[ebp-0x54]"
+        },
+        {
+          "va": "0x0048865d",
+          "file_offset": 558685,
+          "bytes": "8d4ddc",
+          "assembly": "lea    ecx,[ebp-0x24]"
+        },
+        {
+          "va": "0x00488660",
+          "file_offset": 558688,
+          "bytes": "c745ac04000000",
+          "assembly": "mov    DWORD PTR [ebp-0x54],0x4"
+        }
+      ]
+    },
+    {
+      "name": "card_range",
+      "address": "0x482166",
+      "file_offset": 532838,
+      "observation": "multiply float32 16.0 then add 1.0",
+      "classification": "static observation; semantic roles require procedure context",
+      "ghidra_body_owners": [
+        {
+          "entry": "0x4820d0",
+          "name": "FUN_004820d0",
+          "info_evidence_id": "ev_9a47705b643390a9b33134587bb05501bfc089bad18808203bcb58f0d8ff7491"
+        }
+      ],
+      "context": [
+        {
+          "va": "0x00482139",
+          "file_offset": 532793,
+          "bytes": "897594",
+          "assembly": "mov    DWORD PTR [ebp-0x6c],esi"
+        },
+        {
+          "va": "0x0048213c",
+          "file_offset": 532796,
+          "bytes": "897584",
+          "assembly": "mov    DWORD PTR [ebp-0x7c],esi"
+        },
+        {
+          "va": "0x0048213f",
+          "file_offset": 532799,
+          "bytes": "c68570ffffff00",
+          "assembly": "mov    BYTE PTR [ebp-0x90],0x0"
+        },
+        {
+          "va": "0x00482146",
+          "file_offset": 532806,
+          "bytes": "c745ac04000280",
+          "assembly": "mov    DWORD PTR [ebp-0x54],0x80020004"
+        },
+        {
+          "va": "0x0048214d",
+          "file_offset": 532813,
+          "bytes": "c745a40a000000",
+          "assembly": "mov    DWORD PTR [ebp-0x5c],0xa"
+        },
+        {
+          "va": "0x00482154",
+          "file_offset": 532820,
+          "bytes": "ff155c104000",
+          "assembly": "call   DWORD PTR ds:0x40105c"
+        },
+        {
+          "va": "0x0048215a",
+          "file_offset": 532826,
+          "bytes": "d99d6cffffff",
+          "assembly": "fstp   DWORD PTR [ebp-0x94]"
+        },
+        {
+          "va": "0x00482160",
+          "file_offset": 532832,
+          "bytes": "d9856cffffff",
+          "assembly": "fld    DWORD PTR [ebp-0x94]"
+        },
+        {
+          "va": "0x00482166",
+          "file_offset": 532838,
+          "bytes": "d80dec134000",
+          "assembly": "fmul   DWORD PTR ds:0x4013ec"
+        },
+        {
+          "va": "0x0048216c",
+          "file_offset": 532844,
+          "bytes": "d805e8134000",
+          "assembly": "fadd   DWORD PTR ds:0x4013e8"
+        },
+        {
+          "va": "0x00482172",
+          "file_offset": 532850,
+          "bytes": "dfe0",
+          "assembly": "fnstsw ax"
+        },
+        {
+          "va": "0x00482174",
+          "file_offset": 532852,
+          "bytes": "a80d",
+          "assembly": "test   al,0xd"
+        },
+        {
+          "va": "0x00482176",
+          "file_offset": 532854,
+          "bytes": "0f8552110000",
+          "assembly": "jne    0x4832ce"
+        },
+        {
+          "va": "0x0048217c",
+          "file_offset": 532860,
+          "bytes": "ff158c114000",
+          "assembly": "call   DWORD PTR ds:0x40118c"
+        },
+        {
+          "va": "0x00482182",
+          "file_offset": 532866,
+          "bytes": "8b450c",
+          "assembly": "mov    eax,DWORD PTR [ebp+0xc]"
+        },
+        {
+          "va": "0x00482185",
+          "file_offset": 532869,
+          "bytes": "33d2",
+          "assembly": "xor    edx,edx"
+        },
+        {
+          "va": "0x00482187",
+          "file_offset": 532871,
+          "bytes": "8a10",
+          "assembly": "mov    dl,BYTE PTR [eax]"
+        },
+        {
+          "va": "0x00482189",
+          "file_offset": 532873,
+          "bytes": "899524ffffff",
+          "assembly": "mov    DWORD PTR [ebp-0xdc],edx"
+        }
+      ]
+    }
+  ]
+}

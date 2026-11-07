@@ -1,0 +1,25 @@
+{
+  "name": "estanciero-moderno",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "node tests/game.test.js && node tests/online.test.js && node tests/online-client.test.js && node tests/ui.test.js && node tests/transport.test.js && node tests/experience.test.js && node tests/postgres.test.js",
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "db:init": "node scripts/db-init.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "pg": "^8.23.1",
+    "socket.io": "^4.8.4",
+    "socket.io-client": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.15"
+  }
+}
