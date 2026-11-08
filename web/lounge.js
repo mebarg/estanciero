@@ -1,7 +1,7 @@
 import { pieces } from './pieces.js';
 export class Lounge {
- constructor({session,document:doc,onSelect=()=>{}}){
-  this.session=session;this.doc=doc;this.onSelect=onSelect;this.loading=false;this.request=null;this.rooms=[];
+ constructor({session,document:doc,notify=()=>{},onSelect=()=>{}}){
+  this.notify=notify;this.requestIds=new Set();this.session=session;this.doc=doc;this.onSelect=onSelect;this.loading=false;this.request=null;this.rooms=[];
   doc.getElementById('refresh-lounge').onclick=()=>this.refresh();
   doc.getElementById('cancel-admission').onclick=()=>session.cancelSeat().catch(error=>this.error(error));
   doc.getElementById('claim-seat').onclick=async()=>{const button=doc.getElementById('claim-seat');button.disabled=true;try{await session.claimSeat(this.request.id,Number(doc.getElementById('admission-piece').value));}catch(error){this.error(error);try{const room=await session.inspect(this.request.code);this.pieces(room.members);}catch{}}finally{button.disabled=false;}};
@@ -28,12 +28,12 @@ export class Lounge {
   }
  }
  pieces(members){const select=this.doc.getElementById('admission-piece'),previous=Number(select.value),free=pieces.map((piece,id)=>({piece,id})).filter(({id})=>!members.some(member=>member.piece===id));select.replaceChildren(...free.map(({piece,id})=>{const option=this.element('option',piece.name);option.value=String(id);return option;}));select.value=String(free.some(({id})=>id===previous)?previous:free[0]?.id??'');this.doc.getElementById('claim-seat').disabled=!free.length;}
- admission(request){this.request=request;const doc=this.doc;doc.getElementById('admission-panel').hidden=!request;if(!request){this.render();return;}
+ admission(request){const previous=this.request;if(request&&['approved','rejected'].includes(request.status)&&(previous?.id!==request.id||previous?.status!==request.status))this.notify(request.status==='approved'?'accepted':'rejected');this.request=request;const doc=this.doc;doc.getElementById('admission-panel').hidden=!request;if(!request){this.render();return;}
   const descriptions={pending:'Tu solicitud fue enviada. Esperá la respuesta de quien creó la mesa.',approved:'¡Te aceptaron! Elegí una pieza libre para entrar.',rejected:'No aceptaron tu solicitud. Podés buscar otra mesa.',expired:'La solicitud venció. Podés volver a pedir un lugar.',cancelled:'La solicitud se canceló. Podés volver a pedir un lugar.',started:'La mesa empezó o ya no admite jugadores.'};
   doc.getElementById('admission-status').textContent=descriptions[request.status]||'';doc.getElementById('admission-choice').hidden=request.status!=='approved';doc.getElementById('cancel-admission').hidden=!['pending','approved'].includes(request.status);
   if(request.status==='approved')this.pieces(request.members||[]);this.render();
  }
- hostRequests(requests){const panel=this.doc.getElementById('join-requests');panel.hidden=!requests.length;
+ hostRequests(requests){if(requests.some(request=>!this.requestIds.has(request.id)))this.notify('request');this.requestIds=new Set(requests.map(request=>request.id));const panel=this.doc.getElementById('join-requests');panel.hidden=!requests.length;
   const rows=requests.map(request=>{const row=this.element('div',undefined,'join-request');row.append(this.element('strong',request.name));for(const [label,accept] of [['Aceptar',true],['Rechazar',false]]){const button=this.element('button',label,'outline');button.onclick=async()=>{button.disabled=true;try{await this.session.decideSeat(request.id,accept);}catch(error){this.doc.getElementById('requests-error').textContent=error.message;}finally{button.disabled=false;}};row.append(button);}return row;});this.doc.getElementById('requests-list').replaceChildren(...rows);
  }
 }

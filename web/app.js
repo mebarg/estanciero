@@ -1,3 +1,4 @@
+import { TableFeedback,innerEdge } from './feedback.js';
 import { TableSounds, TableExperience, centerOf } from './experience.js';
 import { Lounge } from './lounge.js';
 import { ChatPanel } from './chat.js';
@@ -17,21 +18,29 @@ const online=new OnlineSession({onRoom:receiveOnline,onChat:(messages,meta)=>cha
   $('retry-online').hidden=!online.pendingCommand||online.pending;
   if(onlineMode&&online.room?.game)render();
 }});
-const lounge=new Lounge({session:online,document});
-const chat=new ChatPanel({session:online,document});
+const lounge=new Lounge({session:online,document,notify:kind=>{sounds.play(kind);feedback.pulse($(kind==='request'?'join-requests':'admission-panel'));}});
+const chat=new ChatPanel({session:online,document,notify:kind=>{sounds.play(kind);feedback.pulse($('chat-button'));}});
 const sounds=new TableSounds();
+const feedback=new TableFeedback({document,sounds});
+let seenRoom=null;
 const experience=new TableExperience({dice:$('dice'),total:$('dice-total'),caption:$('motion-caption'),count:$('motion-count'),sounds,
   onBoard:()=>drawBoard(true),onChange:()=>render(),movingElement:()=>$('moving-token'),
   positionName:id=>spaces[id].name,playerName:id=>state.players[id]?.name||'Jugador'});
 let pendingCard=null,pendingPurchase=false,presentation=Promise.resolve();
 function syncSoundButton(){const button=$('sound-button');button.textContent=sounds.enabled?'Sonido: sí':'Sonido: no';button.setAttribute('aria-pressed',String(sounds.enabled));button.setAttribute('aria-label',sounds.enabled?'Silenciar sonidos del juego':'Activar sonidos del juego');}
-$('sound-button').onclick=()=>{sounds.toggle();syncSoundButton();if(sounds.enabled)sounds.play('land');};
+function syncAudioSettings(){syncSoundButton();$('audio-volume').value=String(Math.round(sounds.volume*100));$('audio-volume-value').textContent=Math.round(sounds.volume*100)+'%';$('audio-effects').checked=sounds.effects;$('audio-alerts').checked=sounds.alerts;}
+$('sound-button').onclick=()=>{sounds.toggle();syncAudioSettings();if(sounds.enabled)sounds.play('land');};
+$('audio-settings-button').onclick=()=>{syncAudioSettings();$('audio-dialog').showModal();};
+$('close-audio').onclick=()=>$('audio-dialog').close();
+$('audio-volume').addEventListener('input',()=>{sounds.configure({volume:Number($('audio-volume').value)/100});syncAudioSettings();});
+for(const [id,option] of [['audio-effects','effects'],['audio-alerts','alerts']])$(id).addEventListener('change',()=>{sounds.configure({[option]:$(id).checked});syncAudioSettings();});
+$('audio-preview').onclick=async()=>{await sounds.unlock();sounds.play('purchase');sounds.play('chat');};
 document.addEventListener?.('pointerdown',()=>sounds.unlock(),{passive:true});
 document.addEventListener?.('keydown',()=>sounds.unlock());
 function finishArrival(){
   if(experience.busy)return;
   const purchase=pendingPurchase&&state.phase==='buy'&&(!onlineMode||state.turn===online.playerId);
-  if(pendingCard&&state.lastCard?.sequence===pendingCard){pendingCard=null;pendingPurchase=false;sounds.play('card');showReceivedCard(purchase);}
+  if(pendingCard&&state.lastCard?.sequence===pendingCard){pendingCard=null;pendingPurchase=false;showReceivedCard(purchase);}
   else if(purchase){pendingPurchase=false;showPurchase();}
   else {pendingCard=null;pendingPurchase=false;}
 }
@@ -40,6 +49,7 @@ function canRollDice(){return ['order','roll'].includes(state.phase)&&!rolling&&
 function onlineError(error){$('online-status').textContent=error.message;$('online-error').textContent=error.message;}
 function applyState(next,{notify=true}={}) {
   const previous=state;state=next;
+  if(notify)feedback.enqueue(previous,next,{online:onlineMode,playerId:online.playerId});
   if(!state.motion&&experience.anticipation!==null){experience.cancel();rolling=false;}
   if(state.turn!==previous.turn||state.players[state.turn].position!==previous.players[previous.turn].position)selected=state.players[state.turn].position;
   const mine=!onlineMode||state.turn===online.playerId;
@@ -48,28 +58,28 @@ function applyState(next,{notify=true}={}) {
   const motion=notify&&state.motion&&state.motion.sequence!==previous.motion?.sequence?state.motion:null;
   if(motion){
     rolling=false;
-    presentation=experience.play(motion,polygons).then(completed=>{if(completed){render();finishArrival();}}).catch(()=>{experience.cancel();render();finishArrival();});
+    presentation=experience.play(motion,polygons).then(completed=>{if(completed){render();feedback.flush();finishArrival();}}).catch(()=>{experience.cancel();render();feedback.flush();finishArrival();});
   }else{
     render();
     if(notify&&!experience.busy){
-      if(state.phase==='over'&&previous.phase!=='over')sounds.play('win');
-      else if(state.players.some((p,i)=>p.cash>(previous.players[i]?.cash??p.cash)))sounds.play('money');
-      else if(state.players.some((p,i)=>p.cash<(previous.players[i]?.cash??p.cash)))sounds.play('pay');
+      feedback.flush();
       finishArrival();
     }
   }
 }
 
 function receiveOnline(room) {
-  const entering=!onlineMode;
-  if(entering){experience.cancel();pendingCard=null;pendingPurchase=false;afterArrival=null;localState=state;onlineMode=true;for(const d of document.querySelectorAll('dialog'))d.close();}
+  const entering=!onlineMode,starting=onlineMode&&$('online-lobby').hidden===false&&!!room.game;
+  if(seenRoom?.code===room.code&&room.members.some(member=>!seenRoom.members.includes(member.id)))sounds.play('joined');
+  seenRoom={code:room.code,members:room.members.map(member=>member.id)};
+  if(entering){feedback.reset();experience.cancel();pendingCard=null;pendingPurchase=false;afterArrival=null;localState=state;onlineMode=true;for(const d of document.querySelectorAll('dialog'))d.close();}
   $('mode-label').textContent='Partida online';$('online-bar').hidden=false;
   $('online-room-code').textContent='SALA '+room.code;
   $('online-identity').textContent='Jugás como '+room.members[online.playerId].name;
   const url=new URL(location.href);url.searchParams.set('sala',room.code);history.replaceState(null,'',url);
   $('online-lobby').hidden=!!room.game;$('game-layout').hidden=!room.game;
   if(room.game){
-    if(entering){state=room.game;selected=state.players[state.turn].position;render();if(state.phase==='buy'&&state.turn===online.playerId)showPurchase();}
+    if(entering||starting){feedback.reset();state=room.game;selected=state.players[state.turn].position;render();if(state.phase==='buy'&&state.turn===online.playerId)showPurchase();if(starting){sounds.play('turn');feedback.say('La partida comenzó. Sorteen quién empieza.');}}
     else applyState(room.game);
     if($('arrival-dialog').classList.contains('purchase-arrival')&&(state.phase!=='buy'||state.turn!==online.playerId||$('arrival-dialog').dataset.space!==String(state.players[state.turn].position))){$('arrival-dialog').close();}
   }else{
@@ -80,7 +90,7 @@ function receiveOnline(room) {
   }
 }
 async function returnLocal(){
-  await online.leave();experience.cancel();pendingCard=null;pendingPurchase=false;afterArrival=null;rolling=false;onlineMode=false;state=localState;selected=state.players[state.turn].position;
+  await online.leave();feedback.reset();seenRoom=null;experience.cancel();pendingCard=null;pendingPurchase=false;afterArrival=null;rolling=false;onlineMode=false;state=localState;selected=state.players[state.turn].position;
   for(const d of document.querySelectorAll('dialog'))d.close();
   $('online-bar').hidden=true;$('online-lobby').hidden=true;$('game-layout').hidden=false;
   $('mode-label').innerHTML='<i></i> Partida local';const url=new URL(location.href);url.searchParams.delete('sala');history.replaceState(null,'',url);render();
@@ -99,15 +109,28 @@ function drawBoard(force=false) {
   const svg=$('board'); svg.replaceChildren();
   svg.append(svgEl('image',{href:'assets/tablero-original.jpg',x:0,y:0,width:776,height:706}));
   polygons.forEach((points,id)=>{
-    const tile=spaces[id], g=svgEl('g',{class:`tile ${id===selected?'selected':''} ${state.phase!=='order'&&id===(experience.moving?.position??state.players[state.turn].position)?'active-space':''}`,tabindex:'0',role:'button','aria-label':`${id}. ${tile.name}${tile.price ? ', '+money(tile.price):''}`});
+    const tile=spaces[id], g=svgEl('g',{id:`space-${id}`,class:`tile ${id===selected?'selected':''} ${state.phase!=='order'&&id===(experience.moving?.position??state.players[state.turn].position)?'active-space':''}`,tabindex:'0',role:'button','aria-label':`${id}. ${tile.name}${tile.price ? ', '+money(tile.price):''}`});
     const pts=Array.from({length:4},(_,i)=>[points[i*2],points[i*2+1]]), cx=pts.reduce((s,p)=>s+p[0],0)/4, cy=pts.reduce((s,p)=>s+p[1],0)/4;
     g.append(svgEl('polygon',{points:pts.map(p=>p.join(',')).join(' '),fill:'transparent'}));
     const owned=state.properties[id];
     // Los nombres y precios ya están impresos en el tablero.
     // La capa SVG sólo agrega interacción y estado de la partida.
     if(owned) {
-      g.append(svgEl('circle',{cx,cy,r:6,fill:colors[owned.owner],stroke:'#fff','stroke-width':2}));
-      if(owned.level) g.append(svgEl('text',{x:cx+10,y:cy+4,class:'ownership-level'},owned.level===5?'E':String(owned.level)));
+      g.setAttribute('aria-label',`${id}. ${tile.name}, de ${state.players[owned.owner].name}${owned.level?', '+(owned.level===5?'una estancia':owned.level+' chacras'):''}${owned.mortgaged?', hipotecado':''}`);
+      const {a,b}=innerEdge(points);
+      g.append(svgEl('line',{x1:a.x*.85+b.x*.15,y1:a.y*.85+b.y*.15,x2:a.x*.15+b.x*.85,y2:a.y*.15+b.y*.85,stroke:colors[owned.owner],'stroke-width':6,class:'owner-stripe','aria-hidden':'true'}));
+      if(owned.mortgaged)g.append(svgEl('text',{x:cx,y:cy+4,class:'ownership-level','text-anchor':'middle'},'H'));
+      if(owned.level){
+        const buildings=svgEl('g',{id:`buildings-${id}`,class:'board-buildings',role:'img','aria-label':owned.level===5?'Una estancia':`${owned.level} chacras`});
+        const count=owned.level===5?1:owned.level;
+        for(let i=0;i<count;i++){
+          const t=(i+.5)/count,ex=a.x+(b.x-a.x)*t,ey=a.y+(b.y-a.y)*t,x=ex*.78+cx*.22,y=ey*.78+cy*.22,scale=owned.level===5?1.35:.85;
+          const house=svgEl('g',{transform:`translate(${x},${y}) scale(${scale})`,class:owned.level===5?'estate-marker':'house-marker'});
+          house.append(svgEl('path',{d:'M-5 0 L0-5 L5 0 L4 0 L4 6 L-4 6 L-4 0 Z'}));
+          house.append(svgEl('path',{d:'M-1 6 V2 H1 V6',class:'building-door'}));buildings.append(house);
+        }
+        buildings.append(svgEl('title',{},owned.level===5?'Una estancia':`${owned.level} chacras`));g.append(buildings);
+      }
     }
     const occupants=state.players.filter(p=>p.position===id&&!p.bankrupt&&p.id!==experience.moving?.playerId);
     occupants.forEach((p,i)=>{
@@ -200,7 +223,7 @@ function render() {
   if(state.phase==='debt')actions=`<p class="debt-summary">Debe ${money(state.debt.amount)} ${state.debt.creditor===null?'al banco':'a '+esc(state.players[state.debt.creditor].name)}. Disponible: ${money(p.cash)}.</p><button class="primary" id="debt-assets">Gestionar patrimonio</button><small class="management-hint">Vendé mejoras, hipotecá o negociá. Al reunir el importe, el pago se realiza automáticamente.</small><button class="quiet full danger" id="bankrupt-button">Entregar bienes y declarar quiebra</button>`;
   if(state.phase==='auction') {
     const a=state.auction,prop=state.properties[a.id];
-    actions=`<div class="auction-summary"><b>${esc(spaces[a.id].name)}</b><p>${a.highBidder===null?'Sin ofertas todavía.':`Mayor oferta: ${money(a.highBid)} de ${esc(state.players[a.highBidder].name)}.`}</p></div><form id="bid-form"><label for="bid-amount">Tu oferta</label><input id="bid-amount" type="number" min="${a.highBid+1}" step="1" required value="${a.highBid+100}">${prop?.mortgaged?'<label class="choice"><input id="auction-redeem" type="checkbox"> Levantar la hipoteca si gano (capital + 10%). Si la conservo, pago 10% ahora y 10% al levantarla.</label>':''}<button class="primary" type="submit">Ofertar</button></form><button class="quiet full" id="pass-button">Retirarme de este remate</button>`;
+    actions=`<div class="auction-summary" id="auction-summary"><b>${esc(spaces[a.id].name)}</b><span class="auction-label">OFERTA ACTUAL</span><strong id="auction-amount">${money(a.highBid)}</strong><p>${a.highBidder===null?'Sin ofertas todavía.':`Mayor oferta: ${money(a.highBid)} de ${esc(state.players[a.highBidder].name)}.`}</p></div><form id="bid-form"><label for="bid-amount">Tu oferta</label><input id="bid-amount" type="number" min="${a.highBid+1}" step="1" required value="${a.highBid+100}">${prop?.mortgaged?'<label class="choice"><input id="auction-redeem" type="checkbox"> Levantar la hipoteca si gano (capital + 10%). Si la conservo, pago 10% ahora y 10% al levantarla.</label>':''}<button class="primary" type="submit">Ofertar</button></form><button class="quiet full" id="pass-button">Retirarme de este remate</button>`;
   }
   if(state.phase==='trade') {
     const t=state.trade,prop=t.kind==='card'?null:state.properties[t.id];
@@ -230,9 +253,9 @@ function render() {
     $('accept-trade').addEventListener('click',()=>dispatch({type:'accept-trade',redeem:!!$('trade-redeem')?.checked}));
   }
   $('player-count').textContent=`${state.players.length} JUGADORES`;
-  $('players').innerHTML=state.players.map(player=>`<div class="player-row ${player.id===shownId?'is-active':''} ${player.bankrupt?'is-out':''}">${tokenHtml(player)}<div><b>${esc(player.name)}</b><small>${player.bankrupt?'En bancarrota':titleCount(player.id)+(onlineMode?' · '+(online.room.members[player.id].connected?'Conectado':'Sin conexión'):'')}</small></div><strong>${money(player.cash)}</strong></div>`).join('');
+  $('players').innerHTML=state.players.map(player=>`<div id="player-row-${player.id}" class="player-row ${player.id===shownId?'is-active':''} ${player.bankrupt?'is-out':''}">${tokenHtml(player)}<div><b>${esc(player.name)}</b><small>${player.bankrupt?'En bancarrota':titleCount(player.id)+(onlineMode?' · '+(online.room.members[player.id].connected?'Conectado':'Sin conexión'):'')}</small></div><strong id="balance-${player.id}">${money(player.cash)}</strong></div>`).join('');
   $('history').innerHTML=state.log.slice(0,5).map((entry,i)=>`<li><span>${String(state.log.length-i).padStart(2,'0')}</span>${esc(entry)}</li>`).join('');
-  drawBoard();renderProperty();renderClaims();
+  drawBoard();renderProperty();renderClaims();feedback.refresh();
 }
 async function roll() {
   if(!canRollDice())return;
@@ -262,7 +285,8 @@ function showArrival(html,{kind='event',title='Tarjeta recibida',after=null}={})
 function showReceivedCard(purchase=false) {
   const card=state.lastCard,deck=card.deck==='luck'?'Suerte':'Destino';
   const person=state.players[card.playerId??state.turn];
-  showArrival(`<div class="drawn-card ${card.deck}"><span class="drawn-symbol" aria-hidden="true">${card.deck==='luck'?'!':'?'}</span><h2>${deck}</h2><p class="drawn-recipient">Una tarjeta para ${esc(person.name)}</p><p class="drawn-text">${esc(card.text)}</p></div><p class="arrival-note">${state.phase==='card-choice'?'Al continuar, elegí si pagás la multa o levantás Suerte.':state.phase==='debt'?'Se registró una deuda. Podés reunir el dinero gestionando tu patrimonio.':'El efecto ya se aplicó a la partida.'}</p><button class="primary" id="acknowledge-card">Continuar <span>→</span></button>`,{title:'Tarjeta de '+deck,after:purchase?()=>{if(state.phase==='buy')showPurchase();}:null});
+  showArrival(`<div id="received-card" class="card-reveal"><div class="card-back ${card.deck}" aria-hidden="true"><span>${card.deck==='luck'?'!':'?'}</span>${deck}</div><div class="drawn-card ${card.deck}"><span class="drawn-symbol" aria-hidden="true">${card.deck==='luck'?'!':'?'}</span><h2>${deck}</h2><p class="drawn-recipient">Una tarjeta para ${esc(person.name)}</p><p class="drawn-text">${esc(card.text)}</p></div></div><p class="arrival-note">${state.phase==='card-choice'?'Al continuar, elegí si pagás la multa o levantás Suerte.':state.phase==='debt'?'Se registró una deuda. Podés reunir el dinero gestionando tu patrimonio.':'El efecto ya se aplicó a la partida.'}</p><button class="primary" id="acknowledge-card">Continuar <span>→</span></button>`,{title:'Tarjeta de '+deck,after:purchase?()=>{if(state.phase==='buy')showPurchase();}:null});
+  feedback.revealCard(card.deck);
   $('acknowledge-card').onclick=()=>$('arrival-dialog').close();
 }
 function showPurchase() {
@@ -289,7 +313,7 @@ function nameFields() {
   }));
 }
 $('count').addEventListener('change',nameFields);
-$('setup-form').addEventListener('submit',e=>{e.preventDefault();experience.cancel();pendingCard=null;pendingPurchase=false; const names=[...document.querySelectorAll('#name-fields input')].map(el=>el.value);state=createGame(names,{seed:crypto.getRandomValues(new Uint32Array(1))[0],pieces:[...document.querySelectorAll('.piece-select')].map(el=>Number(el.value))});selected=1;save();$('setup-dialog').close();render();});
+$('setup-form').addEventListener('submit',e=>{e.preventDefault();feedback.reset();experience.cancel();pendingCard=null;pendingPurchase=false; const names=[...document.querySelectorAll('#name-fields input')].map(el=>el.value);state=createGame(names,{seed:crypto.getRandomValues(new Uint32Array(1))[0],pieces:[...document.querySelectorAll('.piece-select')].map(el=>Number(el.value))});selected=1;save();$('setup-dialog').close();render();});
 $('cancel-setup').addEventListener('click',()=>$('setup-dialog').close());
 $('new-button').addEventListener('click',openSetup);
 $('close-info').addEventListener('click',()=>$('info-dialog').close());
@@ -360,7 +384,7 @@ $('copy-invite').onclick=async()=>{
   catch{showInfo(`<h2>Invitá a tu mesa.</h2><p>Compartí este enlace o el código ${esc(online.room.code)}.</p><input aria-label="Enlace de invitación" readonly value="${esc(url.href)}">`);}
 };
 const loungeTimer=setInterval(()=>{if($('online-dialog').open&&onlineEntry==='lounge')void lounge.refresh();},10000);loungeTimer.unref?.();
-nameFields(); render();fillOnlinePieces();syncSoundButton();
+nameFields(); render();fillOnlinePieces();syncAudioSettings();
 const invite=new URL(location.href).searchParams.get('sala');
 if(invite)openOnline(invite.toUpperCase());
 else if(!saved)openSetup();

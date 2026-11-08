@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import { readFileSync } from 'node:fs';
 import * as game from '../web/game.js';
+import { TableFeedback,innerEdge } from '../web/feedback.js';
 import { Lounge } from '../web/lounge.js';
 import { ChatPanel } from '../web/chat.js';
 import { OnlineSession } from '../web/online.js';
@@ -24,11 +25,11 @@ function boot({animationSleep,animate=false}={}){
   insertAdjacentHTML(_,html){this.innerHTML=this.innerHTML+html;}
  }
  for(const m of readFileSync(new URL('../web/index.html',import.meta.url),'utf8').matchAll(/id="([^"]+)"/g))nodes.set(m[1],new Element());
- const dialogs=()=>['mode-dialog','online-dialog','setup-dialog','info-dialog','arrival-dialog'].map(id=>nodes.get(id));
+ const dialogs=()=>['mode-dialog','online-dialog','setup-dialog','info-dialog','arrival-dialog','audio-dialog'].map(id=>nodes.get(id));
  const document={getElementById:id=>nodes.get(id)||null,createElement:tag=>new Element(tag),createElementNS:(_,tag)=>new Element(tag),querySelectorAll:selector=>selector==='dialog'?dialogs():[]};
  const data=new Map(),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,v)};
  class TestExperience extends TableExperience {constructor(options){super({...options,canAnimate:()=>animate,reduced:()=>false,...(animationSleep?{sleep:animationSleep}:{})});}}
- const context=vm.createContext({...game,Lounge,ChatPanel,OnlineSession,TableSounds,TableExperience:TestExperience,centerOf,cards,pieces,pieceWindow,pieceSheet,polygons,document,localStorage,crypto,structuredClone,Uint32Array,Uint8Array,setTimeout,setInterval,clearInterval,queueMicrotask,URL,location:{href:'http://localhost:5187/'},history:{replaceState(){}},console});
+ const context=vm.createContext({...game,TableFeedback,innerEdge,Lounge,ChatPanel,OnlineSession,TableSounds,TableExperience:TestExperience,centerOf,cards,pieces,pieceWindow,pieceSheet,polygons,document,localStorage,crypto,structuredClone,Uint32Array,Uint8Array,setTimeout,setInterval,clearInterval,queueMicrotask,URL,location:{href:'http://localhost:5187/'},history:{replaceState(){}},console});
  vm.runInContext(readFileSync(new URL('../web/app.js',import.meta.url),'utf8').replace(/^import .*;\n/gm,''),context);
  return {nodes,run:code=>vm.runInContext(code,context),data};
 }
@@ -113,4 +114,22 @@ test('lounge: salas seguras, solicitud, elección de pieza y decisiones del anfi
  nodes.get('admission-piece').value='2';await nodes.get('claim-seat').onclick();assert.equal(run('claimed.piece'),2);
  run("online.decideSeat=async(id,accept)=>{globalThis.decided={id,accept};};lounge.hostRequests([{id:'request_2',name:'Otra persona'}]);");assert.equal(nodes.get('join-requests').hidden,false);await nodes.get('requests-list').children[0].children[1].onclick();assert.equal(run('decided.accept'),true);
  run('lounge.hostRequests([])');assert.equal(nodes.get('join-requests').hidden,true);
+});
+
+test('audio: controles separados y construcciones visibles, con cuatro chacras o una estancia',()=>{
+ const {nodes,run}=boot();nodes.get('audio-settings-button').onclick();assert.equal(nodes.get('audio-dialog').open,true);
+ nodes.get('audio-volume').value='35';nodes.get('audio-volume').listeners.input[0]();assert.equal(run('sounds.volume'),.35);assert.equal(nodes.get('audio-volume-value').textContent,'35%');
+ nodes.get('audio-effects').checked=false;nodes.get('audio-effects').listeners.change[0]();assert.equal(run('sounds.effects'),false);assert.equal(run('sounds.alerts'),true);
+ nodes.get('audio-alerts').checked=false;nodes.get('audio-alerts').listeners.change[0]();assert.equal(run('sounds.alerts'),false);
+ nodes.get('close-audio').onclick();assert.equal(nodes.get('audio-dialog').open,false);
+ run("state=createGame(['Ana','Luis']);for(const id of [1,2,3])state.properties[id]={owner:0,level:4,mortgaged:false,interestDue:false};drawBoard();");
+ const land=nodes.get('board').children.find(node=>node.id==='space-1'),houses=land.children.find(node=>node.id==='buildings-1');assert.equal(houses.children.filter(node=>node.class==='house-marker').length,4);assert.ok(land.children.some(node=>node.class==='owner-stripe'));
+ run('state.properties[1].level=5;drawBoard();');const estate=nodes.get('board').children.find(node=>node.id==='space-1').children.find(node=>node.id==='buildings-1');assert.equal(estate.children.filter(node=>node.class==='estate-marker').length,1);
+});
+
+test('avisos: chat histórico y presencia no suenan; solicitud y aprobación se anuncian una sola vez',()=>{
+ const {run}=boot();run("globalThis.cues=[];sounds.play=kind=>cues.push(kind);online.playerId=0;chat.update([{id:'msg1',playerId:1,name:'Luis',piece:1,text:'hola',createdAt:'2026-11-07T12:00:00Z'}],{code:'ABCD2345',history:true,added:[{playerId:1}]});");assert.equal(run('cues.length'),0);
+ run("chat.update([{id:'msg1',playerId:1,name:'Luis',piece:1,text:'hola',createdAt:'2026-11-07T12:00:00Z'},{id:'msg2',playerId:1,name:'Luis',piece:1,text:'¿Estás?',createdAt:'2026-11-07T12:01:00Z'}],{code:'ABCD2345',history:false,added:[{playerId:1}]});");assert.equal(run("cues.filter(kind=>kind==='chat').length"),1);
+ run("lounge.hostRequests([{id:'req1',name:'Visitante'}]);lounge.hostRequests([{id:'req1',name:'Visitante'}]);lounge.admission({id:'mine',status:'approved',members:[]});lounge.admission({id:'mine',status:'approved',members:[]});");assert.equal(run("cues.filter(kind=>kind==='request').length"),1);assert.equal(run("cues.filter(kind=>kind==='accepted').length"),1);
+ run("state=createGame(['Ana','Luis']);state.phase='roll';state.order=null;globalThis.old=structuredClone(state);applyState(structuredClone(state));");assert.equal(run("cues.filter(kind=>kind==='turn').length"),0);
 });

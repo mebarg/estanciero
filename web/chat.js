@@ -1,8 +1,8 @@
 import { pieces } from './pieces.js';
 
 export class ChatPanel {
- constructor({session,document:doc=globalThis.document}){
-  this.session=session;this.doc=doc;this.code=null;this.unread=0;this.sending=false;
+ constructor({session,notify=()=>{},document:doc=globalThis.document}){
+  this.notify=notify;this.session=session;this.doc=doc;this.code=null;this.unread=0;this.sending=false;
   this.button=doc.getElementById('chat-button');this.panel=doc.getElementById('chat-panel');this.list=doc.getElementById('chat-messages');this.input=doc.getElementById('chat-input');this.send=doc.getElementById('chat-send');this.error=doc.getElementById('chat-error');
   this.button.onclick=()=>this.toggle();doc.getElementById('chat-close').onclick=()=>this.toggle(false);
   this.panel.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();this.toggle(false);}});
@@ -32,6 +32,7 @@ export class ChatPanel {
   this.list.replaceChildren(...children);
   if(nearBottom||history||added.some(message=>message.playerId===this.session.playerId))this.list.scrollTop=this.list.scrollHeight;
   if(this.panel.hidden&&!history)this.unread+=added.filter(message=>message.playerId!==this.session.playerId).length;
+  if(!history&&this.panel.hidden&&added.some(message=>message.playerId!==this.session.playerId))this.notify('chat');
   this.badge();
  }
 }

@@ -38,9 +38,11 @@ Para versionar el código y actualizar el servidor desde GitHub: [guía de Git](
 - Tablero de 42 casilleros con fichas interactivas.
 - Seis piezas para elegir: gaucho, bota, perro, caballo, mate y gallo.
 - Sorteo de salida, dados, dobles, turnos, Descanso y comisaría según el reglamento 60 Aniversario.
-- Dados que ruedan y cambian de cara, fichas que saltan entre casilleros y sonidos con control de silencio. El recorrido también representa retrocesos y traslados a Comisaría.
+- Dados que ruedan y cambian de cara, fichas que saltan entre casilleros y audio con volumen y controles separados para efectos y avisos. El recorrido también representa retrocesos y traslados a Comisaría.
 - Compra de campos, ferrocarriles y compañías; reclamo de alquileres y premios antes de la próxima tirada.
-- Provincias completas, construcción pareja de chacras y estancias.
+- Provincias completas, construcción pareja de chacras y estancias, visibles sobre el tablero.
+- Escrituras que viajan al patrimonio, saldos animados, cartas que salen del mazo y remates con martillo.
+- Avisos de turno, mensajes y solicitudes de ingreso, con respeto por el movimiento reducido.
 - 32 tarjetas de Suerte y Destino, con mazos rotativos y sus efectos.
 - Ventana al recibir Suerte o Destino, casilla del jugador de turno resaltada y escritura ampliada con precio y alquileres al ofrecer una compra.
 - Hipotecas, levantamientos, ventas de mejoras, propuestas de venta y remates.

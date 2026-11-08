@@ -144,6 +144,7 @@ function nextBankAuction(s,resume) {
 }
 function auctionFinish(s) {
   const a=s.auction,tile=spaces[a.id];s.auction=null;
+  s.lastAuction={sequence:(s.lastAuction?.sequence||0)+1,id:a.id,winner:a.highBidder,amount:a.highBid};
   if(a.highBidder!==null){
     const old=s.properties[a.id]||{owner:a.highBidder,level:0,mortgaged:false};
     const buyer=s.players[a.highBidder],fee=transferCost(tile,old,a.redeem);
@@ -338,6 +339,7 @@ export function validSave(s) {
     if(cardIds.length!==Object.keys(cards).length||new Set(cardIds).size!==cardIds.length)return false;
     if(s.lastCard&&(!cards[s.lastCard.id]||s.lastCard.deck!==cards[s.lastCard.id].deck||s.lastCard.text!==cards[s.lastCard.id].text||s.lastCard.demonstration!==false))return false;
     if(s.lastCard&&((s.lastCard.sequence!==undefined&&(!integer(s.lastCard.sequence)||s.lastCard.sequence<1))||(s.lastCard.playerId!==undefined&&(!integer(s.lastCard.playerId)||s.lastCard.playerId>=s.players.length))))return false;
+    if(s.lastAuction){const a=s.lastAuction;if(!integer(a.sequence)||a.sequence<1||!integer(a.id)||!spaces[a.id]?.price||!integer(a.amount)||(a.winner===null?a.amount!==0:!integer(a.winner)||!s.players[a.winner]||a.amount<1))return false;}
     const remaining=s.players.filter(p=>!p.bankrupt);
     if(s.phase==='over')return alive(s,s.winner)&&!s.debt&&!s.auction&&!s.trade;
     return s.winner===null&&remaining.length>=2&&(!s.players[s.turn].bankrupt||['end','auction','debt','trade'].includes(s.phase));

@@ -1,5 +1,6 @@
 // Sólo presentación: nunca decide los dados, el movimiento ni los efectos de una carta.
-const soundKey='estanciero-sonido-v1';
+const soundKey='estanciero-sonido-v1',audioKey='estanciero-audio-v2';
+const alertSounds=new Set(['turn','chat','request','accepted','rejected','joined']);
 const pipPositions={1:[4],2:[0,8],3:[0,4,8],4:[0,2,6,8],5:[0,2,4,6,8],6:[0,2,3,5,6,8]};
 export const centerOf=points=>({x:(points[0]+points[2]+points[4]+points[6])/4,y:(points[1]+points[3]+points[5]+points[7])/4});
 export function hopFrames(from,to,{jail=false}={}) {
@@ -18,28 +19,40 @@ export function dieRotation(value,turnsX=0,turnsY=0){
 }
 export class TableSounds {
   constructor({storage=globalThis.localStorage,Context=globalThis.AudioContext||globalThis.webkitAudioContext,fetcher=globalThis.fetch}={}) {
-    this.storage=storage;this.Context=Context;this.fetcher=fetcher;this.diceBuffer=null;this.diceSource=null;this.diceRolling=false;this.context=null;this.enabled=true;
-    try{this.enabled=storage?.getItem(soundKey)!=='off';}catch{}
+    this.storage=storage;this.Context=Context;this.fetcher=fetcher;this.diceBuffer=null;this.diceSource=null;this.diceRolling=false;this.context=null;this.enabled=true;this.volume=1;this.effects=true;this.alerts=true;this.sources=new Map();
+    try{this.enabled=storage?.getItem(soundKey)!=='off';const prefs=JSON.parse(storage?.getItem(audioKey)||'null');if(prefs){if(typeof prefs.enabled==='boolean')this.enabled=prefs.enabled;if(Number.isFinite(prefs.volume))this.volume=Math.max(0,Math.min(1,prefs.volume));if(typeof prefs.effects==='boolean')this.effects=prefs.effects;if(typeof prefs.alerts==='boolean')this.alerts=prefs.alerts;}}catch{}
   }
   unlock(){
     if(!this.enabled||!this.Context)return Promise.resolve(false);
     try{
-      if(!this.context){this.context=new this.Context();this.master=this.context.createGain();this.master.gain.value=.18;this.master.connect(this.context.destination);this.diceGain=this.context.createGain();this.diceGain.gain.value=4;this.diceGain.connect(this.master);}
+      if(!this.context){this.context=new this.Context();this.master=this.context.createGain();this.master.gain.value=.18*this.volume;this.master.connect(this.context.destination);this.effectsGain=this.context.createGain();this.effectsGain.gain.value=this.effects?1:0;this.effectsGain.connect(this.master);this.alertsGain=this.context.createGain();this.alertsGain.gain.value=this.alerts?1:0;this.alertsGain.connect(this.master);this.diceGain=this.context.createGain();this.diceGain.gain.value=4;this.diceGain.connect(this.effectsGain);}
       const resumed=this.context.state==='suspended'?this.context.resume():Promise.resolve();
-      return Promise.all([resumed,this.loadDice()]).then(()=>this.context.state==='running').catch(()=>false);
+      return Promise.all([resumed,this.effects?this.loadDice():false]).then(()=>this.context.state==='running').catch(()=>false);
     }catch{return Promise.resolve(false);}
   }
-  toggle(){this.enabled=!this.enabled;try{this.storage?.setItem(soundKey,this.enabled?'on':'off');}catch{}if(this.master)this.master.gain.value=this.enabled ? .18 : 0;if(this.enabled)this.unlock();else this.stopDice();return this.enabled;}
+  savePreferences(){try{this.storage?.setItem(audioKey,JSON.stringify({enabled:this.enabled,volume:this.volume,effects:this.effects,alerts:this.alerts}));this.storage?.setItem(soundKey,this.enabled?'on':'off');}catch{}}
+  configure(options={}){
+    if(Number.isFinite(options.volume))this.volume=Math.max(0,Math.min(1,options.volume));
+    for(const key of ['effects','alerts'])if(typeof options[key]==='boolean')this[key]=options[key];
+    if(this.master)this.master.gain.value=this.enabled ? .18*this.volume : 0;
+    if(this.effectsGain)this.effectsGain.gain.value=this.effects?1:0;if(this.alertsGain)this.alertsGain.gain.value=this.alerts?1:0;
+    if(!this.enabled||!this.effects){this.stopDice();this.stopCategory('effects');}if(!this.enabled||!this.alerts)this.stopCategory('alerts');
+    this.savePreferences();
+  }
+  toggle(){this.enabled=!this.enabled;this.configure();if(this.enabled)void this.unlock();return this.enabled;}
+  allowed(category='effects'){return this.enabled&&this.volume>0&&this[category]&&this.context?.state==='running';}
+  stopCategory(category){for(const [source,bus] of this.sources)if(bus===category){try{source.stop();}catch{}this.sources.delete(source);}}
+  track(source,category,cleanup){this.sources.set(source,category);source.onended=()=>{this.sources.delete(source);cleanup();};}
   loadDice(){
     if(this.diceBuffer)return Promise.resolve(this.diceBuffer);
     if(this.diceLoading)return this.diceLoading;
     if(!this.fetcher||!this.context?.decodeAudioData)return Promise.resolve(false);
-    this.diceLoading=Promise.resolve().then(()=>this.fetcher.call(globalThis,'assets/dados.mp3',{cache:'reload',...(globalThis.AbortSignal?.timeout?{signal:globalThis.AbortSignal.timeout(5000)}:{})})).then(response=>{if(!response.ok)throw new Error('Audio no disponible');return response.arrayBuffer();}).then(bytes=>this.context.decodeAudioData(bytes)).then(buffer=>{this.diceBuffer=buffer;this.audioError=null;if(this.diceRolling)this.startDice();return buffer;}).catch(error=>{this.diceLoading=null;this.audioError=error;return false;});
+    this.diceLoading=Promise.resolve().then(()=>this.fetcher.call(globalThis,'assets/dados.mp3',{cache:'reload',...(globalThis.AbortSignal?.timeout?{signal:globalThis.AbortSignal.timeout(5000)}:{})})).then(response=>{if(!response.ok)throw new Error('Audio no disponible');return response.arrayBuffer();}).then(bytes=>this.context.decodeAudioData(bytes)).then(buffer=>{this.diceBuffer=buffer;this.audioError=null;if(this.diceRolling&&this.effects)this.startDice();return buffer;}).catch(error=>{this.diceLoading=null;this.audioError=error;return false;});
     return this.diceLoading;
   }
   async prepareDice(){await this.unlock();return !!this.diceBuffer&&this.enabled;}
   startDice(){
-    if(!this.enabled)return;this.diceRolling=true;
+    if(!this.enabled||!this.effects||!this.volume)return;this.diceRolling=true;
     if(!this.diceBuffer||this.diceSource||this.context?.state!=='running')return;
     try{const source=this.context.createBufferSource();source.buffer=this.diceBuffer;source.connect(this.diceGain);source.onended=()=>{source.disconnect();if(this.diceSource===source)this.diceSource=null;};this.diceSource=source;source.start();}catch{}
   }
@@ -47,19 +60,39 @@ export class TableSounds {
     this.diceRolling=false;const source=this.diceSource;this.diceSource=null;
     if(source){try{source.stop();source.disconnect();}catch{}}
   }
-  tone(frequency,duration=.08,delay=0,type='sine',volume=.25){
-    if(!this.enabled||!this.context||this.context.state!=='running')return;
-    try{const time=this.context.currentTime+delay,osc=this.context.createOscillator(),gain=this.context.createGain();osc.type=type;osc.frequency.setValueAtTime(frequency,time);gain.gain.setValueAtTime(.001,time);gain.gain.exponentialRampToValueAtTime(volume,time+.008);gain.gain.exponentialRampToValueAtTime(.001,time+duration);osc.connect(gain);gain.connect(this.master);osc.onended=()=>{osc.disconnect();gain.disconnect();};osc.start(time);osc.stop(time+duration+.01);}catch{}
+  tone(frequency,duration=.08,delay=0,type='sine',volume=.25,category='effects'){
+    if(!this.allowed(category))return;
+    try{const time=this.context.currentTime+delay,osc=this.context.createOscillator(),gain=this.context.createGain();osc.type=type;osc.frequency.setValueAtTime(frequency,time);gain.gain.setValueAtTime(.001,time);gain.gain.exponentialRampToValueAtTime(volume,time+.008);gain.gain.exponentialRampToValueAtTime(.001,time+duration);osc.connect(gain);gain.connect(category==='alerts'?this.alertsGain:this.effectsGain);this.track(osc,category,()=>{osc.disconnect();gain.disconnect();});osc.start(time);osc.stop(time+duration+.01);}catch{}
+  }
+  noise(duration=.15,delay=0,volume=.12,frequency=1700){
+    if(!this.allowed())return;
+    try{const time=this.context.currentTime+delay,length=Math.ceil(this.context.sampleRate*duration),buffer=this.context.createBuffer(1,length,this.context.sampleRate),data=buffer.getChannelData(0);
+      for(let i=0;i<length;i++)data[i]=(Math.random()*2-1)*(1-i/length);
+      const source=this.context.createBufferSource(),filter=this.context.createBiquadFilter(),gain=this.context.createGain();source.buffer=buffer;filter.type='bandpass';filter.frequency.value=frequency;filter.Q.value=.6;gain.gain.value=volume;source.connect(filter);filter.connect(gain);gain.connect(this.effectsGain);this.track(source,'effects',()=>{source.disconnect();filter.disconnect();gain.disconnect();});source.start(time);
+    }catch{this.tone(frequency,.045,delay,'triangle',volume*.35);}
   }
   play(kind){
+    const category=alertSounds.has(kind)?'alerts':'effects';if(!this.allowed(category))return;
+    const note=(f,d=.1,t=0,type='sine',v=.2)=>this.tone(f,d,t,type,v,category);
     if(kind==='rattle')return;
-    else if(kind==='step')this.tone(260,.045,0,'triangle',.2);
-    else if(kind==='land'){this.tone(392,.1);this.tone(523,.12,.075);}
-    else if(kind==='card'){this.tone(659,.1);this.tone(880,.15,.09);}
-    else if(kind==='money'){this.tone(1047,.07);this.tone(1319,.11,.07);}
-    else if(kind==='pay')this.tone(220,.14,0,'triangle',.17);
-    else if(kind==='win')[523,659,784,1047].forEach((f,i)=>this.tone(f,.2,i*.13));
+    if(kind==='step')note(260,.045,0,'triangle',.2);
+    else if(kind==='land'){note(392,.1);note(523,.12,.075);}
+    else if(kind==='card'){this.noise(.23,0,.24,2000);this.noise(.15,.14,.13,2800);note(659,.08,.15,'sine',.09);}
+    else if(kind==='purchase'){this.noise(.08,0,.15,800);[523,659,784].forEach((f,i)=>note(f,.13,.06+i*.075,'triangle',.2));}
+    else if(kind==='build'){this.noise(.07,0,.2,450);note(165,.07,0,'triangle',.22);this.noise(.07,.11,.18,650);note(330,.09,.13,'triangle',.18);}
+    else if(kind==='bid'){note(440,.06);note(554,.09,.065);}
+    else if(kind==='gavel'){this.noise(.09,0,.36,380);note(110,.1,0,'triangle',.4);this.noise(.06,.13,.22,500);note(147,.08,.13,'triangle',.25);}
+    else if(kind==='money'){note(1047,.07);note(1319,.11,.07);}
+    else if(kind==='pay')note(220,.14,0,'triangle',.17);
+    else if(kind==='turn'){note(659,.12);note(880,.2,.14);}
+    else if(kind==='chat'){note(784,.055,0,'sine',.12);note(1047,.08,.065,'sine',.1);}
+    else if(kind==='request'){note(523,.1);note(659,.12,.13);note(523,.1,.26);}
+    else if(kind==='accepted'){note(523,.09);note(659,.09,.08);note(784,.16,.17);}
+    else if(kind==='rejected'){note(440,.1,0,'sine',.12);note(330,.13,.11,'sine',.12);}
+    else if(kind==='joined'){note(587,.08,0,'sine',.12);note(740,.12,.08,'sine',.12);}
+    else if(kind==='win')[523,659,784,1047].forEach((f,i)=>note(f,.2,i*.13));
   }
+
 }
 export class TableExperience {
   constructor({dice,total,caption,count,sounds,onBoard=()=>{},onChange=()=>{},positionName=id=>String(id),playerName=id=>String(id),movingElement=()=>null,reduced=()=>globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches??true,canAnimate=()=>typeof globalThis.Element?.prototype.animate==='function',sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms))}={}) {
